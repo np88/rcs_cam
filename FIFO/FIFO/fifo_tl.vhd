@@ -30,16 +30,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity fifo_tl is PORT (
-    clk : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    wr_en : IN STD_LOGIC;
-    rd_en : IN STD_LOGIC;
-    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    full : OUT STD_LOGIC;
-    empty : OUT STD_LOGIC;
-    underflow : OUT STD_LOGIC;
-    data_count : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    clk : IN STD_LOGIC; --- mapped to user clock (FPGA reference X1)
+    rst : IN STD_LOGIC; -- mapped to C (center button)
+    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to expansion headers
+    wr_en : IN STD_LOGIC; -- mapped to SW 10 (upper button)
+    rd_en : IN STD_LOGIC; -- mapped to SW 11 (lower button)
+    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to gpio LEDs
+    full : OUT STD_LOGIC; -- error LED
+    empty : OUT STD_LOGIC; -- error LED
+    underflow : OUT STD_LOGIC; -- not mapped
+    data_count : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) -- not mapped
   );
 end fifo_tl;
 
@@ -48,15 +48,15 @@ architecture Behavioral of fifo_tl is
 COMPONENT fifo_one_clock_domain
   PORT (
     clk : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    wr_en : IN STD_LOGIC;
-    rd_en : IN STD_LOGIC;
+    rst : IN STD_LOGIC; 
+    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0); 
+    wr_en : IN STD_LOGIC; 
+    rd_en : IN STD_LOGIC; 
     dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    full : OUT STD_LOGIC;
+    full : OUT STD_LOGIC; 
     empty : OUT STD_LOGIC;
     underflow : OUT STD_LOGIC;
-    data_count : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    data_count : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) 
   );
 END COMPONENT;
 

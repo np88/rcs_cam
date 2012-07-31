@@ -24,7 +24,8 @@
 
 NET "wr_en" LOC = U8;
 NET "rd_en" LOC = V8;
-NET "reset" LOC = AJ6;
+NET "rst" LOC = AJ6;
+NET "clk" LOC = AH15;
 NET "full" LOC = F6;
 NET "empty" LOC = T10;
 
