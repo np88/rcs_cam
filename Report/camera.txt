@@ -1,0 +1,14 @@
+Kamera:
+Seite 23: 
+Slave Mode Operation
+OV7620 can be programmable to be slave device. Default OV7620 is a master device, it provides Hsync, Vsync output. If used as slave device, (register 29 bit 6=1), external master device must provide:
+
+System clock CLK to XCLK1 pin;
+Horizontal sync Hsync to CHSYNC pin, positive acted.
+Vertical frame sync Vsync to VSYNC pin, positive acted.
+
+When in slave mode, OV7620 tri-state CHSYNC and VSYNC output pin and use as input pin. To synchronize the chip, OV7620 use external system clock CLK synchronize external horizontal sync Hsync, then use synchronized horizontal sync to synchronize external vertical frame sync Vsync. But to match internal counter, these three must keep exact relation as below:
+Hsync period is 2*858 * CLK
+Vsync period is 525* 2*858 * CLK
+
+
