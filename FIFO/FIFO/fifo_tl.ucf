@@ -22,7 +22,11 @@
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[21]" LOC = P34;
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[22]" LOC = M32;
 
-NET "wr_en" LOC = AN33;
+NET "wr_en" LOC = U8;
+NET "rd_en" LOC = V8;
+NET "reset" LOC = AJ6;
+NET "full" LOC = F6;
+NET "empty" LOC = T10;
 
 NET "din[0]" LOC = AL34;
 NET "din[1]" LOC = AK32;
@@ -32,4 +36,13 @@ NET "din[4]" LOC = AK34;
 NET "din[5]" LOC = AH32;
 NET "din[6]" LOC = AG32;
 NET "din[7]" LOC = AE32;
+
+NET "dout[0]" LOC = H18;
+NET "dout[1]" LOC = L18;
+NET "dout[2]" LOC = G15;
+NET "dout[3]" LOC = AD26;
+NET "dout[4]" LOC = G16;
+NET "dout[5]" LOC = AD25;
+NET "dout[6]" LOC = AD24;
+NET "dout[7]" LOC = AE24;
 
