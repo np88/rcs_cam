@@ -1,0 +1,17 @@
+set -xsthdpdir "./_cg/_dbg/fifo_one_clock_domain_xsd"
+run
+-ifn "./_cg/_dbg/fifo_one_clock_domain.prj"
+-ifmt VHDL
+-ofmt NGC
+-ofn "./_cg/_dbg/fifo_one_clock_domain.ngc"
+-p xc5vlx110t-1ff1136
+-iobuf NO
+-work_lib work
+-ent fifo_one_clock_domain
+-arch virtex5
+-top fifo_one_clock_domain
+-bus_delimiter <>
+-lso "./_cg/_dbg/_default.lso"
+-hdl_compilation_order user
+-ifmt mixed
+-iob False
