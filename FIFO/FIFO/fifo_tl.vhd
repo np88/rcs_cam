@@ -30,16 +30,16 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity fifo_tl is PORT (
-    clk : IN STD_LOGIC; --- mapped to user clock (FPGA reference X1)
-    rst : IN STD_LOGIC; -- mapped to C (center button)
-    din : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to expansion headers
-    wr_en : IN STD_LOGIC; -- mapped to SW 10 (upper button)
-    rd_en : IN STD_LOGIC; -- mapped to SW 11 (lower button)
-    dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to gpio LEDs
-    full : OUT STD_LOGIC; -- error LED
-    empty : OUT STD_LOGIC; -- error LED
-    underflow : OUT STD_LOGIC; -- not mapped
-    data_count : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) -- not mapped
+    clk_i : IN STD_LOGIC; --- mapped to user clock (FPGA reference X1)
+    rst_i : IN STD_LOGIC; -- mapped to C (center button)
+    din_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to expansion headers
+    wr_en_i : IN STD_LOGIC; -- mapped to SW 10 (upper button)
+    rd_en_i : IN STD_LOGIC; -- mapped to SW 11 (lower button)
+    dout_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to gpio LEDs
+    full_o : OUT STD_LOGIC; -- error LED
+    empty_o : OUT STD_LOGIC; -- error LED
+    underflow_o : OUT STD_LOGIC; -- not mapped
+    data_count_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) -- not mapped
   );
 end fifo_tl;
 
@@ -60,20 +60,44 @@ COMPONENT fifo_one_clock_domain
   );
 END COMPONENT;
 
+-- edge detector
+COMPONENT edge_detector is
+    Port ( clk_i : in  STD_LOGIC;
+			  rst_i : in  STD_LOGIC;
+           signal_i : in  STD_LOGIC;
+           edge_o : out  STD_LOGIC);
+END COMPONENT;
+
+signal read_enable_edge, write_enable_edge: STD_LOGIC;
 
 begin
-fifo: fifo_one_clock_domain PORT MAP (
-    clk => clk,
-    rst => rst,
-    din => din,
-    wr_en => wr_en,
-    rd_en => rd_en,
-    dout => dout,
-    full => full,
-    empty => empty,
-    underflow => underflow,
-    data_count => data_count
-  );
+
+	fifo: fifo_one_clock_domain PORT MAP (
+		 clk => clk_i,
+		 rst => rst_i,
+		 din => din_i,
+		 wr_en => write_enable_edge,
+		 rd_en => read_enable_edge,
+		 dout => dout_o,
+		 full => full_o,
+		 empty => empty_o,
+		 underflow => underflow_o,
+		 data_count => data_count_o
+	);
+  
+	rd_en_edge_detector: edge_detector PORT MAP (
+		clk_i => clk_i,
+		rst_i => rst_i,
+      signal_i => rd_en_i,
+      edge_o => read_enable_edge
+	);
+
+	wr_en_edge_detector: edge_detector PORT MAP (
+		clk_i => clk_i,
+		rst_i => rst_i,
+      signal_i => rd_en_i,
+      edge_o => write_enable_edge
+	);	
 
 end Behavioral;
 
