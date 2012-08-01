@@ -39,12 +39,16 @@ entity fifo_tl is PORT (
     full_o : OUT STD_LOGIC; -- error LED
     empty_o : OUT STD_LOGIC; -- error LED
     underflow_o : OUT STD_LOGIC; -- not mapped
-    data_count_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) -- not mapped
+    valid_o : OUT STD_LOGIC; -- not mapped
+	 data_count_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0) -- not mapped
   );
 end fifo_tl;
 
 architecture Behavioral of fifo_tl is
 -- fifo component
+
+constant data_out_width: integer := 16;
+
 COMPONENT fifo_one_clock_domain
   PORT (
     clk : IN STD_LOGIC;
@@ -56,7 +60,8 @@ COMPONENT fifo_one_clock_domain
     full : OUT STD_LOGIC; 
     empty : OUT STD_LOGIC;
     underflow : OUT STD_LOGIC;
-    data_count : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) 
+	 valid: OUT  std_logic;
+    data_count : OUT STD_LOGIC_VECTOR(data_out_width-1 DOWNTO 0) 
   );
 END COMPONENT;
 
@@ -82,6 +87,7 @@ begin
 		 full => full_o,
 		 empty => empty_o,
 		 underflow => underflow_o,
+		 valid => valid_o,
 		 data_count => data_count_o
 	);
   
@@ -95,7 +101,7 @@ begin
 	wr_en_edge_detector: edge_detector PORT MAP (
 		clk_i => clk_i,
 		rst_i => rst_i,
-      signal_i => rd_en_i,
+      signal_i => wr_en_i,
       edge_o => write_enable_edge
 	);	
 
