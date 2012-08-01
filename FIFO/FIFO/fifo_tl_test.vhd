@@ -104,23 +104,23 @@ BEGIN
    -- Clock process definitions
    write_enable: process
    begin
-		wait for clk_i_period*9;
+		wait for clk_i_period*15;
 		loop
 			wr_en_i <= '0';
-			wait for clk_i_period*5/2;
+			wait for clk_i_period*5;
 			wr_en_i <= '1';
-			wait for clk_i_period*5/2;
+			wait for clk_i_period*5;
 		end loop;
    end process;	
 	
    read_enable: process
    begin
-		wait for clk_i_period*40;
+		wait for clk_i_period*50;
 		loop
 			rd_en_i <= '0';
-			wait for clk_i_period*5/2;
+			wait for clk_i_period*5;
 			rd_en_i <= '1';
-			wait for clk_i_period*5/2;
+			wait for clk_i_period*5;
 		end loop;
    end process;		
  
@@ -133,8 +133,9 @@ BEGIN
 		wait for clk_i_period*10;	
 		rst_i <= '0';
 		din_i <= "01010101";
+		wait for clk_i_period*10;
 		loop
-			wait for clk_i_period*5;
+			wait for clk_i_period*10;
 			din_i <= STD_LOGIC_VECTOR(unsigned(din_i) + 1);
 		end loop;
 

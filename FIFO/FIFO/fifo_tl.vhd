@@ -40,7 +40,7 @@ entity fifo_tl is PORT (
     empty_o : OUT STD_LOGIC; -- error LED
     underflow_o : OUT STD_LOGIC; -- not mapped
     valid_o : OUT STD_LOGIC; -- not mapped
-	 data_count_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0) -- not mapped
+	 data_count_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) -- not mapped
   );
 end fifo_tl;
 

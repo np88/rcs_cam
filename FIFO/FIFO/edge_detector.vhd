@@ -8,7 +8,7 @@
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
--- Description: 
+-- Description: Module to detect edges in incoming signals, e.g. from buttons
 --
 -- Dependencies: 
 --
@@ -39,14 +39,23 @@ end edge_detector;
 architecture Behavioral of edge_detector is
 	signal signal_buffer: STD_LOGIC;
 begin
-	if (rst_i = '1') then
-		edge_o = '0';
-		signal_buffer = '0';
-	else
-		if (clk_i'event and clk_i = '1') then
-			
+
+	detect: process (rst_i, clk_i)
+	begin
+		if (rst_i = '1') then
+			edge_o <= '0';
+			signal_buffer <= '0';
+		else
+			if (clk_i'event and clk_i = '1') then
+				if (signal_buffer = '0' and signal_i = '1') then 
+					edge_o <= '1';
+				else
+					edge_o <= '0';
+				end if;
+				signal_buffer <= signal_i;	
+			end if;
 		end if;
-	end if;
+	end process;
 
 end Behavioral;
 
