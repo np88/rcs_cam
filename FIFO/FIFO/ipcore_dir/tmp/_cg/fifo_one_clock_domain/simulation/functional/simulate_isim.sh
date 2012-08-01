@@ -46,9 +46,9 @@
 # PART OF THIS FILE AT ALL TIMES.
 #--------------------------------------------------------------------------------
 
-echo "Compiling Core Verilog UNISIM/Behavioral model"
-vlogcomp -work work ../../../fifo_one_clock_domain.v
-vhpcomp -work work ../../example_design/fifo_one_clock_domain_top.vhd
+echo "Compiling Core VHDL UNISIM/Behavioral model"
+vhpcomp  -work work ../../../fifo_one_clock_domain.vhd
+vhpcomp  -work work ../../example_design/fifo_one_clock_domain_top.vhd
 
 echo "Compiling Test Bench Files"
 vhpcomp -work work ../fg_tb_pkg.vhd
@@ -59,7 +59,6 @@ vhpcomp -work work ../fg_tb_pctrl.vhd
 vhpcomp -work work ../fg_tb_synth.vhd 
 vhpcomp -work work ../fg_tb_top.vhd
 
-vlogcomp -work work $XILINX/verilog/src/glbl.v
-fuse work.fg_tb_top work.glbl -L xilinxcorelib_ver -L unisims_ver -o fg_tb_top.exe
+fuse work.fg_tb_top -L xilinxcorelib -L unisim -o fg_tb_top.exe
 
 ./fg_tb_top.exe -gui -tclbatch ./wave_isim.tcl

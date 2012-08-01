@@ -99,6 +99,7 @@ ARCHITECTURE simulation_arch OF fg_tb_synth IS
     -- FIFO interface signal declarations
     SIGNAL clk_i	                  :   STD_LOGIC;
     SIGNAL data_count                     :   STD_LOGIC_VECTOR(16-1 DOWNTO 0);
+    SIGNAL valid                          :   STD_LOGIC;
     SIGNAL rst	                          :   STD_LOGIC;
     SIGNAL underflow                      :   STD_LOGIC;
     SIGNAL wr_en                          :   STD_LOGIC;
@@ -260,6 +261,7 @@ ARCHITECTURE simulation_arch OF fg_tb_synth IS
           PORT MAP (
            CLK                       => clk_i,
            DATA_COUNT                => data_count,
+           VALID                     => valid,
            RST                       => rst,
            UNDERFLOW                 => underflow,
            WR_EN 		     => wr_en,

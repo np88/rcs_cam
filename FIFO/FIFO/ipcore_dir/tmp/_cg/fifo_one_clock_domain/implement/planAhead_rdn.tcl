@@ -61,7 +61,7 @@ opt_design
 place_design 
 route_design 
 write_sdf -rename_top_module fifo_one_clock_domain_top -file routed.sdf 
-write_verilog -nolib -mode sim -sdf_anno false -rename_top_module fifo_one_clock_domain_top routed.v
+write_vhdl -mode sim routed.vhd
 report_timing -nworst 30 -path_type full -file routed.twr
 report_drc -file report.drc
 write_bitstream -bitgen_options {-g UnconstrainedPins:Allow}

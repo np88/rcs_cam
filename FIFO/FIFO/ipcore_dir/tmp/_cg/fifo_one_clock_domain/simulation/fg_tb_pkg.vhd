@@ -200,6 +200,7 @@ PACKAGE fg_tb_pkg IS
    PORT (
            CLK                       : IN  std_logic;
      	   DATA_COUNT                : OUT std_logic_vector(16-1 DOWNTO 0);
+           VALID                     : OUT std_logic;
            RST                       : IN  std_logic;
            UNDERFLOW                 : OUT std_logic;
            WR_EN 		     : IN  std_logic;

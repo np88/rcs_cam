@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 13.4
-# Date: Tue Jul 31 15:32:33 2012
+# Date: Wed Aug  1 10:32:31 2012
 #
 ##############################################################
 #
@@ -21,7 +21,7 @@ SET addpads = false
 SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
 SET createndf = false
-SET designentry = Verilog
+SET designentry = VHDL
 SET device = xc5vlx110t
 SET devicefamily = virtex5
 SET flowvendor = Other
@@ -32,8 +32,8 @@ SET package = ff1136
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -1
-SET verilogsim = true
-SET vhdlsim = false
+SET verilogsim = false
+SET vhdlsim = true
 # END Project Options
 # BEGIN Select
 SELECT Fifo_Generator xilinx.com:ip:fifo_generator:8.4
@@ -200,7 +200,7 @@ CSET use_clock_enable=false
 CSET use_dout_reset=true
 CSET use_embedded_registers=false
 CSET use_extra_logic=false
-CSET valid_flag=false
+CSET valid_flag=true
 CSET valid_sense=Active_High
 CSET wach_type=FIFO
 CSET wdch_type=FIFO
@@ -216,4 +216,4 @@ CSET wuser_width=1
 MISC pkg_timestamp=2011-10-22T06:08:52Z
 # END Extra information
 GENERATE
-# CRC: 7c80c3db
+# CRC: 54ea62c3

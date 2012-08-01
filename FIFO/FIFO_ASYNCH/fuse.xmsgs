@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3025: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3031: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3340: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3465: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3756: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3772: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3853: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3866: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3025: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3031: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3339: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3340: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3464: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3465: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3516: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3627: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3756: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3772: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3853: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3866: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3025: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3031: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3340: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3465: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3756: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3772: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3853: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3866: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3025: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3031: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3339: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3340: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3464: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3465: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3516: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3627: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3756: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3772: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3853: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/O.87xd/rtf/vhdl/src/simprims/primitive/other/X_ARAMB36_INTERNAL.vhd" Line 3866: Range is empty (null range)
+</msg>
+
+</messages>
+

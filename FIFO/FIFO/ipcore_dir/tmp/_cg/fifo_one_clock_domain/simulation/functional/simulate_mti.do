@@ -48,9 +48,9 @@
 vlib work 
 vmap work work 
 
-echo "Compiling Core Verilog UNISIM/Behavioral model"
-vlog -work work ../../../fifo_one_clock_domain.v
-vcom -work work ../../example_design/fifo_one_clock_domain_top.vhd
+echo "Compiling Core VHDL UNISIM/Behavioral model"
+vcom  -work work ../../../fifo_one_clock_domain.vhd
+vcom  -work work ../../example_design/fifo_one_clock_domain_top.vhd
 
 echo "Compiling Test Bench Files"
 vcom -work work ../fg_tb_pkg.vhd
@@ -61,8 +61,7 @@ vcom -work work ../fg_tb_pctrl.vhd
 vcom -work work ../fg_tb_synth.vhd 
 vcom -work work ../fg_tb_top.vhd
 
-vlog -work work $env(XILINX)/verilog/src/glbl.v
-vsim  -t ps -voptargs="+acc" -L XilinxCoreLib_ver -L unisims_ver glbl work.fg_tb_top
+vsim  -t ps -voptargs="+acc" -L XilinxCoreLib -L unisim work.fg_tb_top
 
 add log -r /*
 do wave_mti.do

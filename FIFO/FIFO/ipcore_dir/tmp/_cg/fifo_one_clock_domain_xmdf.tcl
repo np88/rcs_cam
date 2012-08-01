@@ -175,12 +175,12 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_one_clo
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type symbol
 incr fcount
 
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_one_clock_domain.v
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type verilog
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_one_clock_domain.vhd
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type vhdl
 incr fcount
 
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_one_clock_domain.veo
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type verilog_template
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_one_clock_domain.vho
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type vhdl_template
 incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_one_clock_domain.xco

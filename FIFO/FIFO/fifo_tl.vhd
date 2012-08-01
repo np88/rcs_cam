@@ -74,14 +74,13 @@ COMPONENT edge_detector is
 END COMPONENT;
 
 signal read_enable_edge, write_enable_edge: STD_LOGIC;
-signal data_in : STD_LOGIC_VECTOR(7 downto 0);  -- test data (+buttons)
 
 begin
 
 	fifo: fifo_one_clock_domain PORT MAP (
 		 clk => clk_i,
 		 rst => rst_i,
-		 din => data_in,
+		 din => din_i,
 		 wr_en => write_enable_edge,
 		 rd_en => read_enable_edge,
 		 dout => dout_o,
@@ -92,8 +91,6 @@ begin
 		 data_count => data_count_o
 	);
 	
-	-- map test signal 
-	data_in <= (others => '0');
   
 	rd_en_edge_detector: edge_detector PORT MAP (
 		clk_i => clk_i,

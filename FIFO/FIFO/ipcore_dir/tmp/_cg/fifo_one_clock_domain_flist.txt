@@ -1,4 +1,5 @@
 # Output products list for <fifo_one_clock_domain>
+_xmsgs/pn_parser.xmsgs
 fifo_generator_ug175.pdf
 fifo_generator_v8_4_readme.txt
 fifo_one_clock_domain/example_design/fifo_one_clock_domain_top.ucf
@@ -35,8 +36,8 @@ fifo_one_clock_domain.asy
 fifo_one_clock_domain.gise
 fifo_one_clock_domain.ngc
 fifo_one_clock_domain.sym
-fifo_one_clock_domain.v
-fifo_one_clock_domain.veo
+fifo_one_clock_domain.vhd
+fifo_one_clock_domain.vho
 fifo_one_clock_domain.xco
 fifo_one_clock_domain.xise
 fifo_one_clock_domain_flist.txt

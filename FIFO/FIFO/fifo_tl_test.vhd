@@ -138,8 +138,6 @@ BEGIN
 			wait for clk_i_period*10;
 			din_i <= STD_LOGIC_VECTOR(unsigned(din_i) + 1);
 		end loop;
-
-      wait;
    end process;
 
 END;

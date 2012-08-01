@@ -75,6 +75,7 @@ entity fifo_one_clock_domain_top is
    PORT (
            CLK                       : IN  std_logic;
      	   DATA_COUNT                : OUT std_logic_vector(16-1 DOWNTO 0);
+           VALID                     : OUT std_logic;
            RST                       : IN  std_logic;
            UNDERFLOW                 : OUT std_logic;
            WR_EN 		     : IN  std_logic;
@@ -97,6 +98,7 @@ architecture xilinx of fifo_one_clock_domain_top is
    PORT (
            CLK                       : IN  std_logic;
      	   DATA_COUNT                : OUT std_logic_vector(16-1 DOWNTO 0);
+           VALID                     : OUT std_logic;
            RST                       : IN  std_logic;
            UNDERFLOW                 : OUT std_logic;
            WR_EN 		     : IN  std_logic;
@@ -120,6 +122,7 @@ clk_buf: bufg
 fg0 : fifo_one_clock_domain     PORT MAP (
            CLK                       => clk_i,
            DATA_COUNT                => data_count,
+           VALID                     => valid,
            RST                       => rst,
            UNDERFLOW                 => underflow,
            WR_EN 		     => wr_en,

@@ -1,5 +1,5 @@
-Kamera:
-Seite 23: 
+Camera:
+Page 23, Data Sheet: 
 Slave Mode Operation
 OV7620 can be programmable to be slave device. Default OV7620 is a master device, it provides Hsync, Vsync output. If used as slave device, (register 29 bit 6=1), external master device must provide:
 
@@ -10,5 +10,16 @@ Vertical frame sync Vsync to VSYNC pin, positive acted.
 When in slave mode, OV7620 tri-state CHSYNC and VSYNC output pin and use as input pin. To synchronize the chip, OV7620 use external system clock CLK synchronize external horizontal sync Hsync, then use synchronized horizontal sync to synchronize external vertical frame sync Vsync. But to match internal counter, these three must keep exact relation as below:
 Hsync period is 2*858 * CLK
 Vsync period is 525* 2*858 * CLK
+
+Infos VGA:
+http://lslwww.epfl.ch/pages/teaching/cours_lsl/ca_es/VGA.pdf
+* The screen refresh process begins in the top left corner and paints 1 pixel at a time from left to right. At the end of the first
+row, the row increments and the column address is reset to the first column. Once the entire screen has been painted, the refresh process begins again
+* The video signal must redraw the entire screen 60 times per second to provide for motion in the image and to reduce flicker: this period is called the refresh rate. Refresh rates higher than 60 Hz are used in PC monitors
+* In 640 by 480-pixel mode, with a 60 Hz refresh rate, this is approximately 40 ns per pixel. A 25 MHz clock has a period of 40 ns * The vertical sync signal tells the monitor to start displaying a new image or framme, and the monitor starts in the upper left corner with pixel (0,0)
+* The horizontal sync signal tells the monitor to refresh another row of 640 pixels
+* After 480 rows of pixels are refreshed with 480 horizontal sync signals, a vertical sync signal resets the monitor to the upper left corner and the process continues
+* During the time when pixel data is not being displayed and the beam is returning to the left column to start another horizontal scan, the RGB signals should all be set to black color (all zero)
+* In a PC graphics card, a dedicated memory location is used to store the color value of every pixel in the display. This memory is read out as the beam scanns across the screen to produce the RGB signals
 
 

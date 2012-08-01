@@ -82,6 +82,6 @@ trce -e 10 routed.ncd mapped.pcf -o routed
 echo 'Running design through bitgen'
 bitgen -w routed
 
-echo 'Running netgen to create gate level Verilog model'
-netgen -ofmt verilog -sim -tm fifo_one_clock_domain_top -pcf mapped.pcf -w -sdf_anno false routed.ncd routed.v
+echo 'Running netgen to create gate level VHDL model'
+netgen -ofmt vhdl -sim -tm fifo_one_clock_domain_top -pcf mapped.pcf -w routed.ncd routed.vhd
 

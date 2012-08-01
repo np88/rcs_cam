@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/DIST/home/peters/cam_repo/FIFO/FIFO_ASYNCH/fifo_asynch_test_isim_par.exe" -prj "/DIST/home/peters/cam_repo/FIFO/FIFO_ASYNCH/fifo_asynch_test_par.prj" "work.fifo_asynch_test" 

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-07-31T17:22:00</DateModified>
+  <DateModified>2012-08-01T15:16:56</DateModified>
   <ModuleName>fifo_tl</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2012-08-01T13:59:10</SummaryTimeStamp>
   <SavedFilePath>/DIST/home/peters/cam_repo/FIFO/FIFO/iseconfig/fifo_tl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/DIST/home/peters/cam_repo/FIFO/FIFO</ImplementationReportsDirectory>
-  <DateInitialized>2012-07-31T17:22:00</DateInitialized>
+  <ImplementationReportsDirectory>/DIST/home/peters/cam_repo/FIFO/FIFO/</ImplementationReportsDirectory>
+  <DateInitialized>2012-08-01T11:19:39</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
