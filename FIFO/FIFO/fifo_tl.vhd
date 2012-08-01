@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity fifo_tl is PORT (
     clk_i : IN STD_LOGIC; --- mapped to user clock (FPGA reference X1)
     rst_i : IN STD_LOGIC; -- mapped to C (center button)
-    din_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to expansion headers
+    din_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to GPIO DIP Switches
     wr_en_i : IN STD_LOGIC; -- mapped to SW 10 (upper button)
     rd_en_i : IN STD_LOGIC; -- mapped to SW 11 (lower button)
     dout_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- mapped to gpio LEDs
@@ -74,13 +74,14 @@ COMPONENT edge_detector is
 END COMPONENT;
 
 signal read_enable_edge, write_enable_edge: STD_LOGIC;
+signal data_in : STD_LOGIC_VECTOR(7 downto 0);  -- test data (+buttons)
 
 begin
 
 	fifo: fifo_one_clock_domain PORT MAP (
 		 clk => clk_i,
 		 rst => rst_i,
-		 din => din_i,
+		 din => data_in,
 		 wr_en => write_enable_edge,
 		 rd_en => read_enable_edge,
 		 dout => dout_o,
@@ -90,6 +91,9 @@ begin
 		 valid => valid_o,
 		 data_count => data_count_o
 	);
+	
+	-- map test signal 
+	data_in <= (others => '0');
   
 	rd_en_edge_detector: edge_detector PORT MAP (
 		clk_i => clk_i,
