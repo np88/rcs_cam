@@ -2,3 +2,47 @@ Port Connection of Microblaze:
 General Control Ports (clock, reset)
 Input Port from FIFO: Interrupt (fifo full), data (16 Bit bus), both on same channel
 Output to Fifo: read enable
+
+
+DMA: http://www.xilinx.com/support/documentation/ip_documentation/xps_central_dma.pdf
+
+The operation of the XPS Central DMA is initiated by writing values into the following DMA registers:
+• Source Address register (SA): The source address for the transfer is written into this register.
+• Destination Address register (DA): The destination address for the transfer is written into this register.
+• DMA Control Register (DMACR): The parameters of the DMA transfer are controlled by setting the following
+values in this register.
+• Source Increment (SINC): SINC should be set to ’0’, if and only if the Source Address register is written
+with a keyhole address such that a single address is associated with a sequence of data.
+Note: An example of a keyhole address is a memory mapped FIFO that maps as an element at a single address but
+can consume or produce an endless sequence of data. A variation on a keyhole address is a wide keyhole where a
+number of consecutive addresses map to the element. When SINC = ’0’, XPS Central DMA will perform all read
+transactions to the same address. It is the responsibility of the corresponding slave to impose a keyhole behavior. For
+bursts, this implies that the slave will not increment the keyhole address during the burst or will make the keyhole at least
+as wide as the burst size. It is not feasible to use SINC = ’0’ with a non-keyhole slave such as a memory. Even though
+the DMA Controller would deliver a non-incremented address during the address phase of PLB transactions, the
+memory would increment it during bursts. (See also DINC, which is subject to the same considerations when set to ’0’.)
+• If the source address should increment for each data transferred, SINC should set to ’1’.
+• Destination Increment (DINC): DINC should be set to ’0’ if and only if the Destination Address is written
+with a keyhole address such that a single address is associated with a sequence of data.
+Note: See the note for SINC = ‘0’ above. The case DINC = ‘0’ has the same considerations except for the destination
+address.
+• If the destination address should increment for each data transferred, DINC should set to ’1’.
+
+The data transfer starts by reading data from the source address into an internal FIFO followed by the transfer of
+data from the FIFO to the destination address. This repeats until all the data is moved. The DMA Status Registers
+get updated as the DMA operation progresses.
+While it is moving data as the bus master, the XPS Central DMA Controller attempts to move data efficiently. It
+utilizes burst transactions where possible.
+The status of the DMA operation is available in the DMA Status Register (DMASR). The DMABSY bit equal to ’1’
+represents that a DMA operation is underway. When equal to ’0’, it represents the completion of a DMA transfer.
+Alternatively, the DMA Done (DD) interrupt can be used to detect when a DMA operation is complete.
+If an error condition is detected during a bus transfer, the DMA operation will be aborted at its current point of
+progress. The error is reported through the DMA Error (DE) interrupt condition and the DMA Bus Error (DBE)
+status bit.
+
+Especially interesting:
+p. 12 ff, source address, destination address and length address register
+
+Reading via DMA from FIFO:
+Idea: FIFO generates interrupt when it is full, CPU writes amount of data to be read to DMA (start reading process) and sets read enable to one. --> DMA has to read from FIFO in every clock cycle. If that is not possible, a seperate read impulse generator module can be used to generate the necessary write enable signal.
+
