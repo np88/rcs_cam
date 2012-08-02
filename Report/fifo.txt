@@ -1,4 +1,5 @@
 First FIFO try, common clock domain for read and write (working post route simulation):
+Clock is connected to 100 MHz User Clock
 
 entity fifo_tl is PORT (
     clk_i : IN STD_LOGIC; --- mapped to user clock (FPGA reference X1)
@@ -16,3 +17,24 @@ entity fifo_tl is PORT (
 end fifo_tl;
 
 
+Second FIFO try, two different clock domains for read and write (working post route simulation available)
+entity FIFO_asynch_tl is PORT (
+		 rst_i : IN STD_LOGIC;
+		 wr_clk_i : IN STD_LOGIC;
+		 rd_clk_i : IN STD_LOGIC;
+		 din_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 wr_en_i : IN STD_LOGIC;
+		 rd_en_i : IN STD_LOGIC;
+		 dout_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		 full_o : OUT STD_LOGIC;
+		 empty_o : OUT STD_LOGIC;
+		 valid_o : OUT STD_LOGIC;
+		 underflow_o : OUT STD_LOGIC;
+		 rd_data_count_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 wr_data_count_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	  );
+end FIFO_asynch_tl;
+
+Write clock is connected to 100 MHz User Clock,
+read clok is connected to 33 MHz clock generator. 
+(details in data sheet, p. 19/20)

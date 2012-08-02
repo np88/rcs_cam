@@ -1,0 +1,4 @@
+Port Connection of Microblaze:
+General Control Ports (clock, reset)
+Input Port from FIFO: Interrupt (fifo full), data (16 Bit bus), both on same channel
+Output to Fifo: read enable
