@@ -75,7 +75,8 @@ implementation/mdm_0_wrapper.ngc \
 implementation/proc_sys_reset_0_wrapper.ngc \
 implementation/xps_intc_0_wrapper.ngc \
 implementation/gpio_fifo_wrapper.ngc \
-implementation/xps_dma_wrapper.ngc
+implementation/xps_dma_wrapper.ngc \
+implementation/ddr2_mem_controller_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

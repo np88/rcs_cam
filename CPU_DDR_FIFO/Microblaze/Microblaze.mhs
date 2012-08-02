@@ -17,8 +17,21 @@
 
  PORT fpga_sys_clk_100MHz_i = CLK_S, DIR = I, SIGIS = CLK, CLK_FREQ = 100000000
  PORT fpga_rst_i = sys_rst_s, DIR = I, SIGIS = RST, RST_POLARITY = 1
- PORT gpio_FIFO_data_full_i = gpio_FIFO_GPIO_IO_I, DIR = I, VEC = [0:16]
+ PORT gpio_FIFO_data_full_i = gpio_FIFO_GPIO_IO_I, DIR = I, VEC = [16:0]
  PORT gpio_FIFO_read_enable_o = gpio_FIFO_GPIO2_IO_O, DIR = O
+ PORT ddr2_mem_controller_DDR2_Clk_pin = ddr2_mem_controller_DDR2_Clk, DIR = O, SIGIS = CLK, VEC = [1:0]
+ PORT ddr2_mem_controller_DDR2_Clk_n_pin = ddr2_mem_controller_DDR2_Clk_n, DIR = O, SIGIS = CLK, VEC = [1:0]
+ PORT ddr2_mem_controller_DDR2_CE_pin = ddr2_mem_controller_DDR2_CE, DIR = O
+ PORT ddr2_mem_controller_DDR2_CS_n_pin = ddr2_mem_controller_DDR2_CS_n, DIR = O
+ PORT ddr2_mem_controller_DDR2_ODT_pin = ddr2_mem_controller_DDR2_ODT, DIR = O
+ PORT ddr2_mem_controller_DDR2_RAS_n_pin = ddr2_mem_controller_DDR2_RAS_n, DIR = O
+ PORT ddr2_mem_controller_DDR2_WE_n_pin = ddr2_mem_controller_DDR2_WE_n, DIR = O
+ PORT ddr2_mem_controller_DDR2_BankAddr_pin = ddr2_mem_controller_DDR2_CAS_n, DIR = O, VEC = [1:0]
+ PORT ddr2_mem_controller_DDR2_Addr_pin = ddr2_mem_controller_DDR2_Addr, DIR = O, VEC = [12:0]
+ PORT ddr2_mem_controller_DDR2_DQ = ddr2_mem_controller_DDR2_DQ, DIR = IO, VEC = [63:0]
+ PORT ddr2_mem_controller_DDR2_DM_pin = ddr2_mem_controller_DDR2_DM, DIR = O, VEC = [7:0]
+ PORT ddr2_mem_controller_DDR2_DQS = ddr2_mem_controller_DDR2_DQS, DIR = IO, VEC = [7:0]
+ PORT ddr2_mem_controller_DDR2_DQS_n = ddr2_mem_controller_DDR2_DQS_n, DIR = IO, VEC = [7:0]
 
 
 BEGIN microblaze
@@ -96,8 +109,8 @@ BEGIN xps_bram_if_cntlr
  PARAMETER INSTANCE = xps_bram_if_cntlr_0
  PARAMETER C_SPLB_NATIVE_DWIDTH = 32
  PARAMETER HW_VER = 1.00.b
- PARAMETER C_BASEADDR = 0x83c18000
- PARAMETER C_HIGHADDR = 0x83c19fff
+ PARAMETER C_BASEADDR = 0x8a208000
+ PARAMETER C_HIGHADDR = 0x8a209fff
  BUS_INTERFACE SPLB = mb_plb
  BUS_INTERFACE PORTA = xps_bram_if_cntlr_0_port
 END
@@ -117,10 +130,16 @@ BEGIN clock_generator
  PARAMETER C_CLKOUT0_BUF = TRUE
  PARAMETER C_EXT_RESET_HIGH = 0
  PARAMETER HW_VER = 4.03.a
+ PARAMETER C_CLKOUT1_FREQ = 50000000
+ PARAMETER C_CLKOUT2_FREQ = 90000000
+ PARAMETER C_CLKOUT3_FREQ = 20000000
  PORT CLKIN = CLK_S
  PORT CLKOUT0 = clk_100_0000MHz
  PORT RST = sys_rst_s
  PORT LOCKED = Dcm_all_locked
+ PORT CLKOUT1 = clock_generator_0_CLKOUT1
+ PORT CLKOUT2 = clock_generator_0_CLKOUT2
+ PORT CLKOUT3 = clock_generator_0_CLKOUT3
 END
 
 BEGIN mdm
@@ -166,8 +185,8 @@ BEGIN xps_gpio
  PARAMETER C_GPIO_WIDTH = 17
  PARAMETER C_ALL_INPUTS = 1
  PARAMETER C_GPIO2_WIDTH = 1
- PARAMETER C_BASEADDR = 0x83c14000
- PARAMETER C_HIGHADDR = 0x83c143ff
+ PARAMETER C_BASEADDR = 0x8730c000
+ PARAMETER C_HIGHADDR = 0x8730c3ff
  BUS_INTERFACE SPLB = mb_plb
  PORT GPIO_IO_I = gpio_FIFO_GPIO_IO_I
  PORT IP2INTC_Irpt = gpio_FIFO_IP2INTC_Irpt
@@ -177,13 +196,43 @@ END
 BEGIN xps_central_dma
  PARAMETER INSTANCE = xps_dma
  PARAMETER HW_VER = 2.03.a
- PARAMETER C_BASEADDR = 0xffffffff
- PARAMETER C_HIGHADDR = 0x00000000
  PARAMETER C_FIFO_DEPTH = 16
  PARAMETER C_RD_BURST_SIZE = 16
  PARAMETER C_WR_BURST_SIZE = 16
+ PARAMETER C_BASEADDR = 0x80200000
+ PARAMETER C_HIGHADDR = 0x8020ffff
  BUS_INTERFACE MPLB = mb_plb
  BUS_INTERFACE SPLB = mb_plb
  PORT IP2INTC_Irpt = xps_dma_IP2INTC_Irpt
+END
+
+BEGIN mpmc
+ PARAMETER INSTANCE = ddr2_mem_controller
+ PARAMETER HW_VER = 6.05.a
+ PARAMETER C_MEM_PARTNO = MT4HTF3264H-53E
+ PARAMETER C_MEM_DATA_WIDTH = 64
+ PARAMETER C_MEM_ODT_TYPE = 1
+ PARAMETER C_MPMC_BASEADDR = 0x90000000
+ PARAMETER C_MPMC_HIGHADDR = 0x9fffffff
+ BUS_INTERFACE SPLB0 = mb_plb
+ PORT DDR2_Clk = ddr2_mem_controller_DDR2_Clk
+ PORT DDR2_Clk_n = ddr2_mem_controller_DDR2_Clk_n
+ PORT DDR2_CE = ddr2_mem_controller_DDR2_CE
+ PORT DDR2_CS_n = ddr2_mem_controller_DDR2_CS_n
+ PORT DDR2_ODT = ddr2_mem_controller_DDR2_ODT
+ PORT DDR2_RAS_n = ddr2_mem_controller_DDR2_RAS_n
+ PORT DDR2_CAS_n = ddr2_mem_controller_DDR2_CAS_n
+ PORT DDR2_WE_n = ddr2_mem_controller_DDR2_WE_n
+ PORT DDR2_BankAddr = ddr2_mem_controller_DDR2_BankAddr
+ PORT DDR2_Addr = ddr2_mem_controller_DDR2_Addr
+ PORT DDR2_DQ = ddr2_mem_controller_DDR2_DQ
+ PORT DDR2_DM = ddr2_mem_controller_DDR2_DM
+ PORT DDR2_DQS = ddr2_mem_controller_DDR2_DQS
+ PORT DDR2_DQS_n = ddr2_mem_controller_DDR2_DQS_n
+ PORT MPMC_Clk0 = clk_100_0000MHz
+ PORT MPMC_Clk0_DIV2 = clock_generator_0_CLKOUT1
+ PORT MPMC_Clk90 = clock_generator_0_CLKOUT2
+ PORT MPMC_Clk_200MHz = clock_generator_0_CLKOUT3
+ PORT MPMC_Rst = sys_periph_reset
 END
 

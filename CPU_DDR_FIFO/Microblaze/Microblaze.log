@@ -379,3 +379,740 @@ Done writing filter settings to:
 	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.filters
 Done writing Tab View settings to:
 	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+WARNING:EDK:4107 - IPNAME: xps_central_dma, INSTANCE: xps_dma - base address C_BASEADDR (0xffffffff) is greater than high address C_HIGHADDR (0x00000000) - /DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/Microblaze.mhs line 180 
+WARNING:EDK:3967 - xps_central_dma (xps_dma) - ADDRESS specified by PARAMETER C_BASEADDR is ignored - /DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/_xps_tempmhsfilename.mhs line 164 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x83c14000-0x83c143ff) gpio_FIFO	mb_plb
+  (0x83c18000-0x83c19fff) xps_bram_if_cntlr_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+Generated Addresses Successfully
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Assigned Driver mpmc 4.01.a for instance mpmc_0
+mpmc_0 has been added to the project
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:mpmc_0) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral mpmc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:mpmc_0) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: mpmc_0, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral mpmc_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral DDR2 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral DDR2 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x83c14000-0x83c143ff) gpio_FIFO	mb_plb
+  (0x83c18000-0x83c19fff) xps_bram_if_cntlr_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x83c14000-0x83c143ff) gpio_FIFO	mb_plb
+  (0x83c18000-0x83c19fff) xps_bram_if_cntlr_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:DDR2) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: DDR2, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:memory_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+bram_block_0 has been added to the project
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:memory_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:memory_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+bram_block_0 has been deleted from the project
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:memory_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: memory_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+
+********************************************************************************
+At Local date and time: Thu Aug  2 13:34:29 2012
+ make -f Microblaze.make clean started...
+rm -f implementation/Microblaze.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+touch __xps/ise/Microblaze.xpssyn
+rm -f implementation/Microblaze.bmm
+rm -rf implementation/cache
+rm -f implementation/Microblaze.bit
+rm -f implementation/Microblaze.ncd
+rm -f implementation/Microblaze_bd.bmm 
+rm -f implementation/Microblaze_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/Microblaze_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp Microblaze.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf SDK
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+touch __xps/ise/Microblaze.xpssim
+rm -f _impact.cmd
+Done!
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x83c14000-0x83c143ff) gpio_FIFO	mb_plb
+  (0x83c18000-0x83c19fff) xps_bram_if_cntlr_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MPMC_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MPMC_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PARAMETER: C_MEM_PARTNO - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Clk_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CE - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_ODT - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_RAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_CAS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_WE_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_BankAddr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_Addr - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQ - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DM - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: DDR2_DQS_n - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x01ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+
+********************************************************************************
+At Local date and time: Thu Aug  2 13:44:41 2012
+ make -f Microblaze.make clean started...
+rm -f implementation/Microblaze.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+touch __xps/ise/Microblaze.xpssyn
+rm -f implementation/Microblaze.bmm
+rm -rf implementation/cache
+rm -f implementation/Microblaze.bit
+rm -f implementation/Microblaze.ncd
+rm -f implementation/Microblaze_bd.bmm 
+rm -f implementation/Microblaze_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/Microblaze_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp Microblaze.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf SDK
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+touch __xps/ise/Microblaze.xpssim
+rm -f _impact.cmd
+Done!
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x82a08000-0x82a09fff) xps_bram_if_cntlr_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x85208000-0x852083ff) gpio_FIFO	mb_plb
+  (0x86000000-0x87ffffff) ddr2_mem_controller	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk0_DIV2 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk90 - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Clk_200MHz - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+
+********************************************************************************
+At Local date and time: Thu Aug  2 14:04:43 2012
+ make -f Microblaze.make clean started...
+rm -f implementation/Microblaze.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+touch __xps/ise/Microblaze.xpssyn
+rm -f implementation/Microblaze.bmm
+rm -rf implementation/cache
+rm -f implementation/Microblaze.bit
+rm -f implementation/Microblaze.ncd
+rm -f implementation/Microblaze_bd.bmm 
+rm -f implementation/Microblaze_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/Microblaze_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp Microblaze.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf SDK
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+touch __xps/ise/Microblaze.xpssim
+rm -f _impact.cmd
+Done!
+Warning - external port ddr2_mem_controller_DDR2_BankAddr_pin width [2] does not match net ddr2_mem_controller_DDR2_CAS_n width [1]
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:4056 - INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff and INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:dlmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+ERROR:EDK:4056 - INST:ddr2_mem_controller BASEADDR-HIGHADDR:0000000000-0x07ffffff and INST:ilmb_cntlr BASEADDR-HIGHADDR:0000000000-0x0000ffff - address space overlap!
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x82a08000-0x82a083ff) gpio_FIFO	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x86208000-0x86209fff) xps_bram_if_cntlr_0	mb_plb
+  (0x88000000-0x8fffffff) ddr2_mem_controller	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x82a08000-0x82a083ff) gpio_FIFO	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x86208000-0x86209fff) xps_bram_if_cntlr_0	mb_plb
+  (0x88000000-0x8fffffff) ddr2_mem_controller	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:4125 - IPNAME: mpmc, INSTANCE: ddr2_mem_controller, PORT: MPMC_Rst - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a connection in the MHS. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x82a08000-0x82a083ff) gpio_FIFO	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x86208000-0x86209fff) xps_bram_if_cntlr_0	mb_plb
+  (0x88000000-0x8fffffff) ddr2_mem_controller	mb_plb
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+Generated Addresses Successfully
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+ERROR:EDK:3900 - issued from TCL procedure "::hw_mpmc_v6_05_a::iplevel_drc_partno" line 11
+C_MEM_PARTNO (IPNAME:mpmc, INSTANCE:ddr2_mem_controller) - The parameter C_MEM_PARTNO must be specified.  Please open the MPMC IP Configuator and set a valid part number. 
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x80200000-0x8020ffff) xps_dma	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x8730c000-0x8730c3ff) gpio_FIFO	mb_plb
+  (0x8a208000-0x8a209fff) xps_bram_if_cntlr_0	mb_plb
+  (0x90000000-0x9fffffff) ddr2_mem_controller	mb_plb
+Generated Addresses Successfully
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/cam_repo/CPU_DDR_FIFO/Microblaze/etc/Microblaze.gui

@@ -5,11 +5,11 @@
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="BUSINTERFACE">
     <HEADERS HSCROLL="0" VSCROLL="0">
-      <VARIABLE COL_INDEX="0" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="0" COL_WIDTH="187" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Bus Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" IS_VISIBLE="FALSE" VIEWDISP="Bus Standard" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="3" COL_WIDTH="176" IS_VISIBLE="TRUE" VIEWDISP="IP Type" VIEWTYPE="HEADER"/>
-      <VARIABLE COL_INDEX="4" COL_WIDTH="1026" IS_VISIBLE="TRUE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="4" COL_WIDTH="558" IS_VISIBLE="TRUE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="5" IS_VISIBLE="FALSE" VIEWDISP="IP Classification" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="6" IS_VISIBLE="FALSE" VIEWDISP="Type" VIEWTYPE="HEADER"/>
     </HEADERS>
@@ -17,9 +17,10 @@
     <SET ID="xps_intc_0" IS_EXPANDED="TRUE"/>
     <SET ID="gpio_FIFO" IS_EXPANDED="TRUE"/>
     <SET ID="xps_dma" IS_EXPANDED="TRUE"/>
+    <SET ID="ddr2_mem_controller" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="xps_intc_0"/>
+        <VARIABLE ID="ddr2_mem_controller"/>
       </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
@@ -30,15 +31,16 @@
       <VARIABLE ID="dlmb_cntlr" ROW_INDEX="5"/>
       <VARIABLE ID="ilmb_cntlr" ROW_INDEX="6"/>
       <VARIABLE ID="lmb_bram" ROW_INDEX="4"/>
-      <VARIABLE ID="xps_timer_0" ROW_INDEX="13"/>
+      <VARIABLE ID="xps_timer_0" ROW_INDEX="14"/>
       <VARIABLE ID="xps_bram_if_cntlr_0" ROW_INDEX="8"/>
       <VARIABLE ID="xps_bram_if_cntlr_0_block" ROW_INDEX="7"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="14"/>
-      <VARIABLE ID="mdm_0" ROW_INDEX="9"/>
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="15"/>
-      <VARIABLE ID="xps_intc_0" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
-      <VARIABLE ID="gpio_FIFO" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
-      <VARIABLE ID="xps_dma" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="15"/>
+      <VARIABLE ID="mdm_0" ROW_INDEX="10"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="16"/>
+      <VARIABLE ID="xps_intc_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
+      <VARIABLE ID="gpio_FIFO" IS_EXPANDED="TRUE" ROW_INDEX="13"/>
+      <VARIABLE ID="xps_dma" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
+      <VARIABLE ID="ddr2_mem_controller" IS_EXPANDED="TRUE" ROW_INDEX="9"/>
     </SEQUENCES>
   </SET>
 
@@ -84,7 +86,7 @@
   </SET>
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
-    <HEADERS HSCROLL="0" VSCROLL="0">
+    <HEADERS HSCROLL="0" VSCROLL="147">
       <VARIABLE COL_INDEX="0" COL_WIDTH="337" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="536" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" IS_VISIBLE="FALSE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
@@ -100,31 +102,36 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="75,630,200" VERSION="0"/>
     <SET ID="ExternalPorts" IS_EXPANDED="TRUE"/>
+    <SET ID="mb_plb" IS_EXPANDED="TRUE"/>
+    <SET ID="mdm_0" IS_EXPANDED="TRUE"/>
+    <SET ID="proc_sys_reset_0" IS_EXPANDED="TRUE"/>
     <SET ID="xps_intc_0" IS_EXPANDED="TRUE"/>
     <SET ID="xps_dma" IS_EXPANDED="TRUE"/>
+    <SET ID="ddr2_mem_controller" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="IP2INTC_Irpt" PARENT="xps_dma"/>
+        <VARIABLE ID="MPMC_InitDone" PARENT="ddr2_mem_controller"/>
       </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="ExternalPorts" IS_EXPANDED="TRUE" ROW_INDEX="0"/>
       <VARIABLE ID="microblaze_0" ROW_INDEX="4"/>
-      <VARIABLE ID="mb_plb" ROW_INDEX="3"/>
+      <VARIABLE ID="mb_plb" IS_EXPANDED="TRUE" ROW_INDEX="3"/>
       <VARIABLE ID="ilmb" ROW_INDEX="2"/>
       <VARIABLE ID="dlmb" ROW_INDEX="1"/>
       <VARIABLE ID="dlmb_cntlr" ROW_INDEX="6"/>
       <VARIABLE ID="ilmb_cntlr" ROW_INDEX="7"/>
       <VARIABLE ID="lmb_bram" ROW_INDEX="5"/>
-      <VARIABLE ID="xps_timer_0" ROW_INDEX="14"/>
+      <VARIABLE ID="xps_timer_0" ROW_INDEX="15"/>
       <VARIABLE ID="xps_bram_if_cntlr_0" ROW_INDEX="9"/>
       <VARIABLE ID="xps_bram_if_cntlr_0_block" ROW_INDEX="8"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="15"/>
-      <VARIABLE ID="mdm_0" ROW_INDEX="10"/>
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="16"/>
-      <VARIABLE ID="xps_intc_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
-      <VARIABLE ID="gpio_FIFO" ROW_INDEX="13"/>
-      <VARIABLE ID="xps_dma" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="16"/>
+      <VARIABLE ID="mdm_0" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
+      <VARIABLE ID="proc_sys_reset_0" IS_EXPANDED="TRUE" ROW_INDEX="17"/>
+      <VARIABLE ID="xps_intc_0" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
+      <VARIABLE ID="gpio_FIFO" ROW_INDEX="14"/>
+      <VARIABLE ID="xps_dma" IS_EXPANDED="TRUE" ROW_INDEX="13"/>
+      <VARIABLE ID="ddr2_mem_controller" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
     </SEQUENCES>
   </SET>
 
@@ -200,11 +207,8 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="75,630,200" VERSION="0"/>
     <SET ID="microblaze_0" IS_EXPANDED="TRUE"/>
-    <SET ID="Unmapped Addresses" IS_EXPANDED="TRUE"/>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="microblaze_0.gpio_FIFO:C_BASEADDR:C_HIGHADDR" PARENT="microblaze_0"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
   </SET>
 
