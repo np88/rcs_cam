@@ -1,0 +1,41 @@
+SET_FLAG DEBUG FALSE
+SET_FLAG MODE INTERACTIVE
+SET_FLAG STANDALONE_MODE FALSE
+SET_PREFERENCE devicefamily virtex5
+SET_PREFERENCE device xc5vlx110t
+SET_PREFERENCE speedgrade -1
+SET_PREFERENCE package ff1136
+SET_PREFERENCE verilogsim false
+SET_PREFERENCE vhdlsim true
+SET_PREFERENCE simulationfiles Structural
+SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
+SET_PREFERENCE outputdirectory /DIST/home/peters/cam_repo/CPU_DDR_FIFO/ipcore_dir/
+SET_PREFERENCE workingdirectory /DIST/home/peters/cam_repo/CPU_DDR_FIFO/ipcore_dir/tmp/
+SET_PREFERENCE subworkingdirectory /DIST/home/peters/cam_repo/CPU_DDR_FIFO/ipcore_dir/tmp/_cg/
+SET_PREFERENCE transientdirectory /DIST/home/peters/cam_repo/CPU_DDR_FIFO/ipcore_dir/tmp/_cg/_dbg/
+SET_PREFERENCE designentry VHDL
+SET_PREFERENCE flowvendor Other
+SET_PREFERENCE addpads false
+SET_PREFERENCE projectname coregen
+SET_PREFERENCE formalverification false
+SET_PREFERENCE asysymbol false
+SET_PREFERENCE implementationfiletype Ngc
+SET_PREFERENCE foundationsym false
+SET_PREFERENCE createndf false
+SET_PREFERENCE removerpms false
+SET_PARAMETER Component_Name Microblaze
+SET_CORE_NAME MicroBlaze MCS
+SET_CORE_VERSION 1.0
+SET_CORE_VLNV xilinx.com:ip:microblaze_mcs:1.0
+SET_CORE_CLASS com.xilinx.ip.microblaze_mcs_v1_0.microblaze_mcs_v1_0
+SET_CORE_PATH /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0
+SET_CORE_GUIPATH /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/gui/microblaze_mcs_v1_0.tcl
+SET_CORE_DATASHEET /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/ds865_microblaze_mcs.pdf
+ADD_CORE_DOCUMENT </DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/ds865_microblaze_mcs.pdf><MicroBlaze MCS Data Sheet>
+ADD_CORE_DOCUMENT <http://www.xilinx.com/cgi-bin/SW_Docs_Redirect/sw_docs_redirect?locale=en&ver=13.4&topic=sw+manuals&sub=mb_ref_guide.pdf><MicroBlaze Processor Reference Guide>
+ADD_CORE_DOCUMENT </DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/lmb_bram_if_cntlr.pdf><LMB BRAM Interface Controller Data Sheet>
+ADD_CORE_DOCUMENT </DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/lmb_v10.pdf><Local Memory Bus (LMB) V10 Data Sheet>
+ADD_CORE_DOCUMENT </DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/mdm.pdf><MicroBlaze Debug Module (MDM) Data Sheet>
+ADD_CORE_DOCUMENT <http://www.xilinx.com/cgi-bin/SW_Docs_Redirect/sw_docs_redirect?locale=en&ver=13.4&topic=sw+manuals&sub=SDK_Doc/index.html><Xilinx Software Development Kit Help>
+ADD_CORE_DOCUMENT </DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/microblaze_mcs_v1_0_vinfo.html><Version Information>
+ADD_CORE_DOCUMENT </DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/microblaze_mcs_v1_0/doc/microblaze_mcs_v1_0_readme.txt><README File>
