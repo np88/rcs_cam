@@ -1,0 +1,90 @@
+Synthesis:
+To have the translate part run correctly, I needed to include the fifo_X.ngc file
+
+Problems with ISE:
+* Philipp's tutorial is ONLY for ISE 13.1. ISE 13.4 works different for some parts. (E.g. Board is not supported and HW needs to be added, not removed)
+* FPGA Board xupv5-lx110t is not supported by ISE 13.4. So to get the pin out automatically, the project should be created using ISE 13.1 (this is particulary important for the DDR2 controller as it is basically impossible to get all the settings and the pinput right that is done by ISE). For 13.1 it is not really  obvoius how to connect the interrupts and the interrupt controller. So the Board support package could not be created properly and there was an include problem in the SDK (xil_cache.h could not be found). Tried using ISE 13.4 for connecting the interrupts to the controller and exporting the project to SDK solved the problem. But there was another problem doing it this way: After programming the FPGA the program would not start and produce following error:
+ 
+Unexpected error while launching program: 
+JTAG chain configuration
+--------------------------------------------------
+Device   ID Code        IR Length    Part Name
+ 1       f5059093          16        XCF32P
+ 2       f5059093          16        XCF32P
+ 3       59608093           8        XC9500XL
+ 4       0a001093           8        System_ACE_CF
+ 5       a2ad6093          10        XC5VLX110T
+
+MicroBlaze Processor Configuration :
+-------------------------------------
+Version............................8.20.b
+Optimization.......................Performance
+Interconnect.......................PLB_v46
+MMU Type...........................No_MMU
+No of PC Breakpoints...............1
+No of Read Addr/Data Watchpoints...0
+No of Write Addr/Data Watchpoints..0
+Instruction Cache Support..........off
+Data Cache Support.................off
+Exceptions  Support................off
+FPU  Support.......................off
+Hard Divider Support...............off
+Hard Multiplier Support............on - (Mul32)
+Barrel Shifter Support.............on
+MSR clr/set Instruction Support....on
+Compare Instruction Support........on
+Data Cache Write-back Support......off
+Fault Tolerance Support............off
+Stack Protection Support...........off
+
+
+JTAG chain configuration
+--------------------------------------------------
+Device   ID Code        IR Length    Part Name
+ 1       f5059093          16        XCF32P
+ 2       f5059093          16        XCF32P
+ 3       59608093           8        XC9500XL
+ 4       0a001093           8        System_ACE_CF
+ 5       a2ad6093          10        XC5VLX110T
+
+MicroBlaze Processor Configuration :
+-------------------------------------
+Version............................8.20.b
+Optimization.......................Performance
+Interconnect.......................PLB_v46
+MMU Type...........................No_MMU
+No of PC Breakpoints...............1
+No of Read Addr/Data Watchpoints...0
+No of Write Addr/Data Watchpoints..0
+Instruction Cache Support..........off
+Data Cache Support.................off
+Exceptions  Support................off
+FPU  Support.......................off
+Hard Divider Support...............off
+Hard Multiplier Support............on - (Mul32)
+Barrel Shifter Support.............on
+MSR clr/set Instruction Support....on
+Compare Instruction Support........on
+Data Cache Write-back Support......off
+Fault Tolerance Support............off
+Stack Protection Support...........off
+
+
+So what actually needs to be done to connect the interrupts and the interrupt sources in 13.1 and earlier:
+"Once you have instantiated all peripherals, you will have to configure which of them
+generate interrupts. This can be done within the tab Ports of the System Assembly
+View panel. Click, on the Net column, the intr property of the interrupt controller (i.e.,
+xps intc 0) (the properties will show up by clicking on the plus sign next the peripheral’s
+name), a dialog window opens up where you can select interrupt sources and prioritize
+them according to the requirements or needs. Further, at this point, we need to create a
+connection between the interrupt controller and the MicroBlaze processor, such that the
+interrupt controller can communicate the processor that an interrupt has occurred. To
+this end, select the interrupt controller again in the Ports tab of the System Assembly
+View panel. Then select its Irq property and choose New Connection from the scroll-
+down list. Now, select the processor (i.e., microblaze) from the list of components in
+the Ports tab, and set its INTERRUPT property to the signal created for the interrupt
+controller. This signal’s name should be something like xps intc irq 0 and should appear
+in the scroll-down list." (Excerpt from HLD lab ex. 2 description)
+
+BUT: You need to right-click on the header panel and activate "Net" so that it actually will be displayed! Otherwise it might take quite a lot of time looking for it. 
+
