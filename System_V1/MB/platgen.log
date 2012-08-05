@@ -110,6 +110,7 @@ Address Map for Processor microblaze_0
   (0000000000-0x0000ffff) dlmb_cntlr	dlmb
   (0000000000-0x0000ffff) ilmb_cntlr	ilmb
   (0x81400000-0x8140ffff) xps_external	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
   (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
   (0x85b8e000-0x85b8e3ff) LEDs_Positions	mb_plb
@@ -135,7 +136,7 @@ INFO:EDK - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v
    46_v1_05_a/data/plb_v46_v2_1_0.mpd line 69 
 INFO:EDK - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 9 -
+   C_PLBV46_NUM_SLAVES value to 10 -
    /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v
    46_v1_05_a/data/plb_v46_v2_1_0.mpd line 70 
 INFO:EDK - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
@@ -230,11 +231,19 @@ INFO:EDK - IPNAME: xps_gpio, INSTANCE:xps_external - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
    /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 72 
+INFO:EDK - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 64 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
+   ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 71 
+INFO:EDK - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
+   ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 73 
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 9 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 10 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
@@ -798,6 +807,22 @@ INFO:EDK - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tcl is overriding PARAMETER
    0x0000000000000000000000000000000000000000000000000000000000000000 -
    /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_
    v6_03_a/data/mpmc_v2_1_0.mpd line 948 
+INFO:EDK - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding PARAMETER
+   C_NUM_INTR_INPUTS value to 3 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
+   ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 77 
+INFO:EDK - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding PARAMETER
+   C_KIND_OF_INTR value to 0b11111111111111111111111111111100 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
+   ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 78 
+INFO:EDK - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding PARAMETER
+   C_KIND_OF_EDGE value to 0b11111111111111111111111111111111 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
+   ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 79 
+INFO:EDK - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding PARAMETER
+   C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
+   ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 80 
 
 Running system level update procedures...
 
@@ -839,63 +864,14 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
-IPNAME:microblaze INSTANCE:microblaze_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 - Copying cache
-implementation netlist
-IPNAME:plb_v46 INSTANCE:mb_plb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 54 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:ilmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 61 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:dlmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 68 - Copying cache implementation netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 75 - Copying cache
-implementation netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 84 - Copying cache
-implementation netlist
-IPNAME:bram_block INSTANCE:lmb_bram -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 93 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:leds_8bit -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 100 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:leds_positions -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 113 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:push_buttons_5bit -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 126 - Copying cache
-implementation netlist
-IPNAME:mpmc INSTANCE:ddr2_sdram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 139 - Copying cache implementation netlist
-IPNAME:xps_timer INSTANCE:xps_timer_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 178 - Copying cache
-implementation netlist
-IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 188 - Copying cache
-implementation netlist
-IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_0_block -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 198 - Copying cache
-implementation netlist
-IPNAME:mdm INSTANCE:mdm_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-229 - Copying cache implementation netlist
-IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 241 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:gpio_fifo -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 254 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:xps_external -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 267 - Copying cache
-implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
 /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 93 - elaborating IP
 IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_0_block -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 198 - elaborating IP
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 200 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 204 - elaborating IP
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 206 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 
@@ -918,16 +894,64 @@ Running XST synthesis ...
 INFO:EDK - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:microblaze_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 -
+Running XST synthesis
+INSTANCE:mb_plb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 54 -
+Running XST synthesis
+INSTANCE:ilmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 61 - Running
+XST synthesis
+INSTANCE:dlmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 68 - Running
+XST synthesis
+INSTANCE:dlmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 75 -
+Running XST synthesis
+INSTANCE:ilmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 84 -
+Running XST synthesis
+INSTANCE:lmb_bram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 93 -
+Running XST synthesis
+INSTANCE:leds_8bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 100 -
+Running XST synthesis
+INSTANCE:leds_positions - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
+113 - Running XST synthesis
+INSTANCE:push_buttons_5bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
+126 - Running XST synthesis
+INSTANCE:ddr2_sdram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 140 -
+Running XST synthesis
+INSTANCE:xps_timer_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 179 -
+Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
+line 190 - Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_0_block -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 200 - Running XST synthesis
 INSTANCE:clock_generator_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-204 - Running XST synthesis
+206 - Running XST synthesis
+INSTANCE:mdm_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 231 -
+Running XST synthesis
+INSTANCE:proc_sys_reset_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
+243 - Running XST synthesis
+INSTANCE:gpio_fifo - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 256 -
+Running XST synthesis
+INSTANCE:xps_external - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 271
+- Running XST synthesis
+INSTANCE:xps_intc_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 279 -
+Running XST synthesis
 
 Running NGCBUILD ...
+IPNAME:microblaze_0_wrapper INSTANCE:microblaze_0 -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 - Running NGCBUILD
+IPNAME:ilmb_wrapper INSTANCE:ilmb -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 61 - Running NGCBUILD
+IPNAME:dlmb_wrapper INSTANCE:dlmb -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 68 - Running NGCBUILD
+IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 140 - Running NGCBUILD
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 204 - Running NGCBUILD
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 206 - Running NGCBUILD
+IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 279 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/MB.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 23.00 seconds
+Total run time: 604.00 seconds

@@ -78,7 +78,8 @@ implementation/clock_generator_0_wrapper.ngc \
 implementation/mdm_0_wrapper.ngc \
 implementation/proc_sys_reset_0_wrapper.ngc \
 implementation/gpio_fifo_wrapper.ngc \
-implementation/xps_external_wrapper.ngc
+implementation/xps_external_wrapper.ngc \
+implementation/xps_intc_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

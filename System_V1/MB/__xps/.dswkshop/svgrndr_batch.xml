@@ -39,6 +39,8 @@
 
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_external.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_external.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_external.svg"/>
 
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_intc_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_intc_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_intc_0.svg"/>
+
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/MB_blkd.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/MB_blkd.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/MB_blkd.svg"/>
 
 </RENDERBATCH>

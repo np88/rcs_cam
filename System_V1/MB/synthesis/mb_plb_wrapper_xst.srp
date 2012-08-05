@@ -309,7 +309,7 @@ Analyzing hierarchy for entity <plb_v46> in library <plb_v46_v1_05_a> (architect
 	C_PLBV46_DWIDTH = 64
 	C_PLBV46_MID_WIDTH = 1
 	C_PLBV46_NUM_MASTERS = 2
-	C_PLBV46_NUM_SLAVES = 9
+	C_PLBV46_NUM_SLAVES = 10
 
 Analyzing hierarchy for entity <plb_addrpath> in library <plb_v46_v1_05_a> (architecture <implementation>) with generics.
 	C_FAMILY = "virtex5"
@@ -329,7 +329,7 @@ Analyzing hierarchy for entity <plb_rd_datapath> in library <plb_v46_v1_05_a> (a
 Analyzing hierarchy for entity <plb_slave_ors> in library <plb_v46_v1_05_a> (architecture <implementation>) with generics.
 	C_FAMILY = "virtex5"
 	C_NUM_MASTERS = 2
-	C_NUM_SLAVES = 9
+	C_NUM_SLAVES = 10
 	C_PLB_DWIDTH = 64
 
 Analyzing hierarchy for entity <plb_arbiter_logic> in library <plb_v46_v1_05_a> (architecture <implementation>) with generics.
@@ -344,7 +344,7 @@ Analyzing hierarchy for entity <plb_arbiter_logic> in library <plb_v46_v1_05_a> 
 	C_IRQ_ACTIVE = '1'
 	C_MID_BITS = 1
 	C_NUM_MASTERS = 2
-	C_NUM_SLAVES = 9
+	C_NUM_SLAVES = 10
 	C_OPTIMIZE_1M = true
 	C_PLB_AWIDTH = 32
 	C_PLB_DWIDTH = 64
@@ -391,22 +391,22 @@ Analyzing hierarchy for entity <mux_onehot_f> in library <proc_common_v3_00_a> (
 
 Analyzing hierarchy for entity <or_gate> in library <plb_v46_v1_05_a> (architecture <imp>) with generics.
 	C_BUS_WIDTH = 1
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 
 Analyzing hierarchy for entity <or_gate> in library <plb_v46_v1_05_a> (architecture <imp>) with generics.
 	C_BUS_WIDTH = 2
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 
 Analyzing hierarchy for entity <or_gate> in library <plb_v46_v1_05_a> (architecture <imp>) with generics.
 	C_BUS_WIDTH = 64
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 
 Analyzing hierarchy for entity <or_gate> in library <plb_v46_v1_05_a> (architecture <imp>) with generics.
 	C_BUS_WIDTH = 4
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 
 Analyzing hierarchy for entity <plb_arb_encoder> in library <plb_v46_v1_05_a> (architecture <implementation>) with generics.
@@ -505,7 +505,7 @@ Analyzing generic Entity <plb_v46> in library <plb_v46_v1_05_a> (Architecture <s
 	C_PLBV46_DWIDTH = 64
 	C_PLBV46_MID_WIDTH = 1
 	C_PLBV46_NUM_MASTERS = 2
-	C_PLBV46_NUM_SLAVES = 9
+	C_PLBV46_NUM_SLAVES = 10
     Set property "syn_maxfan = 10000" for signal <PLB_Rst> in unit <plb_v46>.
     Set property "syn_maxfan = 10000" for signal <SPLB_Rst> in unit <plb_v46>.
     Set property "syn_maxfan = 10000" for signal <MPLB_Rst> in unit <plb_v46>.
@@ -520,6 +520,7 @@ Analyzing generic Entity <plb_v46> in library <plb_v46_v1_05_a> (Architecture <s
     Set user-defined property "INIT =  1" for instance <GEN_SPLB_RST[6].I_SPLB_RST> in unit <plb_v46>.
     Set user-defined property "INIT =  1" for instance <GEN_SPLB_RST[7].I_SPLB_RST> in unit <plb_v46>.
     Set user-defined property "INIT =  1" for instance <GEN_SPLB_RST[8].I_SPLB_RST> in unit <plb_v46>.
+    Set user-defined property "INIT =  1" for instance <GEN_SPLB_RST[9].I_SPLB_RST> in unit <plb_v46>.
     Set user-defined property "INIT =  1" for instance <GEN_MPLB_RST[0].I_MPLB_RST> in unit <plb_v46>.
     Set user-defined property "INIT =  1" for instance <GEN_MPLB_RST[1].I_MPLB_RST> in unit <plb_v46>.
 Entity <plb_v46> analyzed. Unit <plb_v46> generated.
@@ -593,31 +594,31 @@ Entity <plb_rd_datapath> analyzed. Unit <plb_rd_datapath> generated.
 Analyzing generic Entity <plb_slave_ors> in library <plb_v46_v1_05_a> (Architecture <implementation>).
 	C_FAMILY = "virtex5"
 	C_NUM_MASTERS = 2
-	C_NUM_SLAVES = 9
+	C_NUM_SLAVES = 10
 	C_PLB_DWIDTH = 64
 Entity <plb_slave_ors> analyzed. Unit <plb_slave_ors> generated.
 
 Analyzing generic Entity <or_gate.1> in library <plb_v46_v1_05_a> (Architecture <imp>).
 	C_BUS_WIDTH = 1
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 Entity <or_gate.1> analyzed. Unit <or_gate.1> generated.
 
 Analyzing generic Entity <or_gate.2> in library <plb_v46_v1_05_a> (Architecture <imp>).
 	C_BUS_WIDTH = 2
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 Entity <or_gate.2> analyzed. Unit <or_gate.2> generated.
 
 Analyzing generic Entity <or_gate.3> in library <plb_v46_v1_05_a> (Architecture <imp>).
 	C_BUS_WIDTH = 64
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 Entity <or_gate.3> analyzed. Unit <or_gate.3> generated.
 
 Analyzing generic Entity <or_gate.4> in library <plb_v46_v1_05_a> (Architecture <imp>).
 	C_BUS_WIDTH = 4
-	C_OR_WIDTH = 9
+	C_OR_WIDTH = 10
 	C_USE_LUT_OR = true
 Entity <or_gate.4> analyzed. Unit <or_gate.4> generated.
 
@@ -633,7 +634,7 @@ Analyzing generic Entity <plb_arbiter_logic> in library <plb_v46_v1_05_a> (Archi
 	C_IRQ_ACTIVE = '1'
 	C_MID_BITS = 1
 	C_NUM_MASTERS = 2
-	C_NUM_SLAVES = 9
+	C_NUM_SLAVES = 10
 	C_OPTIMIZE_1M = true
 	C_PLB_AWIDTH = 32
 	C_PLB_DWIDTH = 64
@@ -1310,8 +1311,8 @@ Macro Statistics
 # FSMs                                                 : 1
 # Counters                                             : 1
  4-bit down counter                                    : 1
-# Registers                                            : 149
- Flip-Flops                                            : 149
+# Registers                                            : 150
+ Flip-Flops                                            : 150
 
 =========================================================================
 
@@ -1340,7 +1341,7 @@ Optimizing unit <plb_v46> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb_wrapper> is equivalent to the following 11 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[8].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[7].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[6].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[5].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[4].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[3].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_MPLB_RST[1].I_MPLB_RST> in Unit <mb_plb_wrapper> is equivalent to the following 12 FFs/Latches : <mb_plb/GEN_MPLB_RST[0].I_MPLB_RST> <mb_plb/GEN_SPLB_RST[9].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[8].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[7].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[6].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[5].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[4].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[3].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[2].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[1].I_SPLB_RST> <mb_plb/GEN_SPLB_RST[0].I_SPLB_RST> <mb_plb/I_PLB_RST> 
 FlipFlop mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbSecRdInProgReg_i has been replicated 2 time(s)
 FlipFlop mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0 has been replicated 2 time(s)
 FlipFlop mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1 has been replicated 2 time(s)
@@ -1351,8 +1352,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 161
- Flip-Flops                                            : 161
+# Registers                                            : 162
+ Flip-Flops                                            : 162
 
 =========================================================================
 
@@ -1377,26 +1378,26 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 1658
+# IOs                              : 1748
 
 Cell Usage :
-# BELS                             : 556
+# BELS                             : 559
 #      GND                         : 1
 #      INV                         : 4
 #      LUT2                        : 32
 #      LUT3                        : 14
-#      LUT4                        : 283
-#      LUT5                        : 24
-#      LUT6                        : 141
+#      LUT4                        : 195
+#      LUT5                        : 113
+#      LUT6                        : 143
 #      MUXCY                       : 52
 #      MUXF7                       : 4
 #      VCC                         : 1
-# FlipFlops/Latches                : 161
+# FlipFlops/Latches                : 162
 #      FD                          : 1
 #      FDR                         : 117
 #      FDRE                        : 23
 #      FDRS                        : 4
-#      FDS                         : 12
+#      FDS                         : 13
 #      FDSE                        : 4
 =========================================================================
 
@@ -1407,19 +1408,19 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             161  out of  69120     0%  
- Number of Slice LUTs:                  498  out of  69120     0%  
-    Number used as Logic:               498  out of  69120     0%  
+ Number of Slice Registers:             162  out of  69120     0%  
+ Number of Slice LUTs:                  501  out of  69120     0%  
+    Number used as Logic:               501  out of  69120     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    521
-   Number with an unused Flip Flop:     360  out of    521    69%  
-   Number with an unused LUT:            23  out of    521     4%  
-   Number of fully used LUT-FF pairs:   138  out of    521    26%  
+ Number of LUT Flip Flop pairs used:    525
+   Number with an unused Flip Flop:     363  out of    525    69%  
+   Number with an unused LUT:            24  out of    525     4%  
+   Number of fully used LUT-FF pairs:   138  out of    525    26%  
    Number of unique control sets:        18
 
 IO Utilization: 
- Number of IOs:                        1658
+ Number of IOs:                        1748
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
@@ -1445,7 +1446,7 @@ Clock Information:
 -----------------------------------+-------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                 | Load  |
 -----------------------------------+-------------------------------------------------------+-------+
-PLB_Clk                            | NONE(mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/arbreset_i)| 161   |
+PLB_Clk                            | NONE(mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/arbreset_i)| 162   |
 -----------------------------------+-------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -1458,9 +1459,9 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 3.079ns (Maximum Frequency: 324.781MHz)
-   Minimum input arrival time before clock: 3.730ns
+   Minimum input arrival time before clock: 3.914ns
    Maximum output required time after clock: 2.747ns
-   Maximum combinational path delay: 2.350ns
+   Maximum combinational path delay: 2.550ns
 
 Timing Detail:
 --------------
@@ -1469,7 +1470,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'PLB_Clk'
   Clock period: 3.079ns (frequency: 324.781MHz)
-  Total number of paths / destination ports: 1006 / 320
+  Total number of paths / destination ports: 1036 / 320
 -------------------------------------------------------------------------
 Delay:               3.079ns (Levels of Logic = 3)
   Source:            mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1 (FF)
@@ -1492,29 +1493,29 @@ Delay:               3.079ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'PLB_Clk'
-  Total number of paths / destination ports: 1430 / 178
+  Total number of paths / destination ports: 1581 / 179
 -------------------------------------------------------------------------
-Offset:              3.730ns (Levels of Logic = 4)
-  Source:            Sl_addrAck<3> (PAD)
+Offset:              3.914ns (Levels of Logic = 4)
+  Source:            Sl_addrAck<4> (PAD)
   Destination:       mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbPriRdMasterReg_i_0 (FF)
   Destination Clock: PLB_Clk rising
 
-  Data Path: Sl_addrAck<3> to mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbPriRdMasterReg_i_0
+  Data Path: Sl_addrAck<4> to mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbPriRdMasterReg_i_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O            1   0.094   0.480  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/ADDRACK_OR/Y_0_or0000_SW0 (N190)
+     LUT5:I0->O            1   0.094   0.480  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/ADDRACK_OR/Y_0_or0000_SW0 (N190)
      LUT6:I5->O           16   0.094   1.151  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/ADDRACK_OR/Y_0_or0000 (PLB_SaddrAck)
      LUT6:I0->O            1   0.094   0.710  mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn_SW0 (N192)
      LUT6:I3->O            3   0.094   0.347  mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn (mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn)
      FDRE:CE                   0.213          mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/ArbPriRdBurstReg
     ----------------------------------------
-    Total                      3.730ns (1.042ns logic, 2.688ns route)
-                                       (27.9% logic, 72.1% route)
+    Total                      3.914ns (1.226ns logic, 2.688ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'PLB_Clk'
-  Total number of paths / destination ports: 376 / 226
+  Total number of paths / destination ports: 384 / 229
 -------------------------------------------------------------------------
 Offset:              2.747ns (Levels of Logic = 5)
   Source:            mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/ArbSecWrInProgPriorReg_0 (FF)
@@ -1537,33 +1538,33 @@ Offset:              2.747ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 2726 / 370
+  Total number of paths / destination ports: 3030 / 372
 -------------------------------------------------------------------------
-Delay:               2.350ns (Levels of Logic = 3)
-  Source:            Sl_wrComp<3> (PAD)
+Delay:               2.550ns (Levels of Logic = 3)
+  Source:            Sl_wrComp<4> (PAD)
   Destination:       PLB_wrPrim<0> (PAD)
 
-  Data Path: Sl_wrComp<3> to PLB_wrPrim<0>
+  Data Path: Sl_wrComp<4> to PLB_wrPrim<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O            1   0.094   0.480  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRCOMP_OR/Y_0_or0000_SW0 (N178)
-     LUT6:I5->O           13   0.094   1.135  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRCOMP_OR/Y_0_or0000 (PLB_SwrComp)
-     LUT6:I0->O            0   0.094   0.000  mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/wrPrim1 (PLB_wrPrim<8>)
+     LUT5:I0->O            1   0.094   0.480  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRCOMP_OR/Y_0_or0000_SW0 (N178)
+     LUT6:I5->O           16   0.094   1.151  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRCOMP_OR/Y_0_or0000 (PLB_SwrComp)
+     LUT6:I0->O            0   0.094   0.000  mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/wrPrim1 (PLB_wrPrim<9>)
     ----------------------------------------
-    Total                      2.350ns (0.735ns logic, 1.615ns route)
-                                       (31.3% logic, 68.7% route)
+    Total                      2.550ns (0.919ns logic, 1.631ns route)
+                                       (36.0% logic, 64.0% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 19.69 secs
+Total CPU time to Xst completion: 19.99 secs
  
 --> 
 
 
-Total memory usage is 687260 kilobytes
+Total memory usage is 687716 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  304 (   0 filtered)
