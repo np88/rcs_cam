@@ -1,1 +1,0 @@
-vhdtdtfi -lib work /DIST/home/peters/cam_repo/CPU_DDR_FIFO2_13_1/Microblaze/__xps/Microblaze.vhd -prj CPU_DDR_FIFO2 -o Microblaze.spl -module Microblaze -template /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 

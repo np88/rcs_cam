@@ -1,9 +1,0 @@
-V3 6
-FL /DIST/home/peters/cam_repo/CPU_DDR_FIFO2_13_1/Microblaze/hdl/gpio_fifo_wrapper.vhd 2012/08/03.17:54:27 O.40d
-EN work/gpio_fifo_wrapper 1344009899 \
-      FL /DIST/home/peters/cam_repo/CPU_DDR_FIFO2_13_1/Microblaze/hdl/gpio_fifo_wrapper.vhd \
-      PB ieee/std_logic_1164 1296775758 LB UNISIM PH unisim/VCOMPONENTS 1296775759 \
-      LB xps_gpio_v2_00_a
-AR work/gpio_fifo_wrapper/STRUCTURE 1344009900 \
-      FL /DIST/home/peters/cam_repo/CPU_DDR_FIFO2_13_1/Microblaze/hdl/gpio_fifo_wrapper.vhd \
-      EN work/gpio_fifo_wrapper 1344009899 CP xps_gpio
