@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Sun Aug  5 13:52:24 2012">
+  <application stringID="Xst" timeStamp="Sun Aug  5 14:35:56 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -69,7 +69,7 @@
       <item DEFAULT="/" stringID="XST_HIERARCHYSEPARATOR" value="/"/>
       <item DEFAULT="YES" label="-iobuf" stringID="XST_IOBUF" value="NO"/>
       <item DEFAULT="" label="-sd" stringID="XST_SD" value="{../implementation/leds_8bit_wrapper}"/>
-      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;/DIST/home/peters/System_V1/MB/pcores/&quot; &quot;/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/&quot; &quot;/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/&quot; }"/>
+      <item DEFAULT="" label="-vlgincdir" stringID="XST_VLGINCDIR" value="{&quot;/DIST/home/peters/cam_repo/System_V1/MB/pcores/&quot; &quot;/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/&quot; &quot;/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/&quot; }"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
@@ -117,9 +117,9 @@
           <item dataType="int" stringID="XST_GND" value="1"/>
           <item dataType="int" stringID="XST_LUT2" value="12"/>
           <item dataType="int" stringID="XST_LUT3" value="7"/>
-          <item dataType="int" stringID="XST_LUT4" value="24"/>
-          <item dataType="int" stringID="XST_LUT5" value="4"/>
-          <item dataType="int" stringID="XST_LUT6" value="10"/>
+          <item dataType="int" stringID="XST_LUT4" value="25"/>
+          <item dataType="int" stringID="XST_LUT5" value="2"/>
+          <item dataType="int" stringID="XST_LUT6" value="11"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="125">

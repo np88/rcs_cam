@@ -6,8 +6,8 @@ Command Line:
 xc5vlx110tff1136-1 -intstyle silent -i -sd .. ilmb_wrapper.ngc ../ilmb_wrapper
 
 Reading NGO file
-"/DIST/home/peters/System_V1/MB/implementation/ilmb_wrapper/ilmb_wrapper.ngc"
-...
+"/DIST/home/peters/cam_repo/System_V1/MB/implementation/ilmb_wrapper/ilmb_wrappe
+r.ngc" ...
 
 Partition Implementation Status
 -------------------------------
@@ -20,7 +20,7 @@ NGCBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 249056 kilobytes
+Total memory usage is 249060 kilobytes
 
 Writing NGC file "../ilmb_wrapper.ngc" ...
 Total REAL time to NGCBUILD completion:  2 sec

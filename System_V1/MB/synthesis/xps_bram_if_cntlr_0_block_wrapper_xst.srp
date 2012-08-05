@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "xps_bram_if_cntlr_0_block_wrapper_xst.prj"
-Verilog Include Directory          : {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx110tff1136-1
@@ -52,10 +52,10 @@ Cores Search Directories           : {../implementation/xps_bram_if_cntlr_0_bloc
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" in Library xps_bram_if_cntlr_0_block_elaborate_v1_00_a.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" in Library xps_bram_if_cntlr_0_block_elaborate_v1_00_a.
 Entity <xps_bram_if_cntlr_0_block_elaborate> compiled.
 Entity <xps_bram_if_cntlr_0_block_elaborate> (Architecture <STRUCTURE>) compiled.
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/xps_bram_if_cntlr_0_block_wrapper.vhd" in Library work.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/xps_bram_if_cntlr_0_block_wrapper.vhd" in Library work.
 Entity <xps_bram_if_cntlr_0_block_wrapper> compiled.
 Entity <xps_bram_if_cntlr_0_block_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -86,13 +86,13 @@ Analyzing generic Entity <xps_bram_if_cntlr_0_block_elaborate> in library <xps_b
 	C_NUM_WE = 4
 	C_PORT_AWIDTH = 32
 	C_PORT_DWIDTH = 32
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 164: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_0> in unit <xps_bram_if_cntlr_0_block_elaborate>.
     Set user-defined property "INIT_FILE =  xps_bram_if_cntlr_0_block_combined_0.mem" for instance <ramb36_0> in unit <xps_bram_if_cntlr_0_block_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_0> in unit <xps_bram_if_cntlr_0_block_elaborate>.
@@ -103,13 +103,13 @@ WARNING:Xst:2211 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cnt
     Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <ramb36_0> in unit <xps_bram_if_cntlr_0_block_elaborate>.
     Set user-defined property "WRITE_WIDTH_A =  18" for instance <ramb36_0> in unit <xps_bram_if_cntlr_0_block_elaborate>.
     Set user-defined property "WRITE_WIDTH_B =  18" for instance <ramb36_0> in unit <xps_bram_if_cntlr_0_block_elaborate>.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'DOPA' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
-WARNING:Xst:753 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'DOPB' of component 'RAMB36'.
-WARNING:Xst:2211 - "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Instantiating black box module <RAMB36>.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTLATA' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTREGA' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'DOPA' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTLATB' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'CASCADEOUTREGB' of component 'RAMB36'.
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Unconnected output port 'DOPB' of component 'RAMB36'.
+WARNING:Xst:2211 - "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd" line 207: Instantiating black box module <RAMB36>.
     Set user-defined property "BMM_INFO =   " for instance <ramb36_1> in unit <xps_bram_if_cntlr_0_block_elaborate>.
     Set user-defined property "INIT_FILE =  xps_bram_if_cntlr_0_block_combined_1.mem" for instance <ramb36_1> in unit <xps_bram_if_cntlr_0_block_elaborate>.
     Set user-defined property "RAM_EXTENSION_A =  NONE" for instance <ramb36_1> in unit <xps_bram_if_cntlr_0_block_elaborate>.
@@ -130,7 +130,7 @@ Entity <xps_bram_if_cntlr_0_block_elaborate> analyzed. Unit <xps_bram_if_cntlr_0
 Performing bidirectional port resolution...
 
 Synthesizing Unit <xps_bram_if_cntlr_0_block_elaborate>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd".
 WARNING:Xst:647 - Input <BRAM_Addr_A<0:18>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <BRAM_Addr_A<30:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <BRAM_Addr_B<0:18>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -146,7 +146,7 @@ Unit <xps_bram_if_cntlr_0_block_elaborate> synthesized.
 
 
 Synthesizing Unit <xps_bram_if_cntlr_0_block_wrapper>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/xps_bram_if_cntlr_0_block_wrapper.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/xps_bram_if_cntlr_0_block_wrapper.vhd".
 Unit <xps_bram_if_cntlr_0_block_wrapper> synthesized.
 
 
@@ -368,13 +368,13 @@ Offset:              2.190ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.55 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.51 secs
  
 --> 
 
 
-Total memory usage is 402820 kilobytes
+Total memory usage is 402684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   25 (   0 filtered)

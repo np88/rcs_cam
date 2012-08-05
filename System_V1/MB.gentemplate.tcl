@@ -1,5 +1,5 @@
 proc pngeninsttemplate {} {
-  cd /DIST/home/peters/System_V1/MB
+  cd /DIST/home/peters/cam_repo/System_V1/MB
   if { [ catch { xload xmp MB.xmp } result ] } {
     exit 10
   }

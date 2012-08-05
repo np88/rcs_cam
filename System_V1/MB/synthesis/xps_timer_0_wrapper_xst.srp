@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "xps_timer_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx110tff1136-1
@@ -250,7 +250,7 @@ Entity <tc_core> (Architecture <imp>) compiled.
 Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_timer_v1_02_a/hdl/vhdl/xps_timer.vhd" in Library xps_timer_v1_02_a.
 Entity <xps_timer> compiled.
 Entity <xps_timer> (Architecture <imp>) compiled.
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/xps_timer_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/xps_timer_0_wrapper.vhd" in Library work.
 Entity <xps_timer_0_wrapper> compiled.
 Entity <xps_timer_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -1138,7 +1138,7 @@ Unit <xps_timer> synthesized.
 
 
 Synthesizing Unit <xps_timer_0_wrapper>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/xps_timer_0_wrapper.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/xps_timer_0_wrapper.vhd".
 Unit <xps_timer_0_wrapper> synthesized.
 
 
@@ -1474,13 +1474,13 @@ Offset:              0.471ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 16.80 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 16.69 secs
  
 --> 
 
 
-Total memory usage is 733640 kilobytes
+Total memory usage is 733636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  267 (   0 filtered)

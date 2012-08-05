@@ -10,4 +10,4 @@ run
 -hierarchy_separator /
 -iobuf NO
 -sd {../implementation/leds_positions_wrapper}
--vlgincdir {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+-vlgincdir {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

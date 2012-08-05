@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "ilmb_wrapper_xst.prj"
-Verilog Include Directory          : {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx110tff1136-1
@@ -55,7 +55,7 @@ Cores Search Directories           : {../implementation/ilmb_wrapper}
 Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_v10_v2_00_a/hdl/vhdl/lmb_v10.vhd" in Library lmb_v10_v2_00_a.
 Entity <lmb_v10> compiled.
 Entity <lmb_v10> (Architecture <IMP>) compiled.
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/ilmb_wrapper.vhd" in Library work.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/ilmb_wrapper.vhd" in Library work.
 Entity <ilmb_wrapper> compiled.
 Entity <ilmb_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -100,7 +100,7 @@ Unit <lmb_v10> synthesized.
 
 
 Synthesizing Unit <ilmb_wrapper>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/ilmb_wrapper.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/ilmb_wrapper.vhd".
 Unit <ilmb_wrapper> synthesized.
 
 
@@ -319,13 +319,13 @@ Delay:               0.000ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.08 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.86 secs
  
 --> 
 
 
-Total memory usage is 401752 kilobytes
+Total memory usage is 401664 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

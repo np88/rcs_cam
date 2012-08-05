@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "xps_bram_if_cntlr_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx110tff1136-1
@@ -254,7 +254,7 @@ Entity <xbic_slave_attach_burst> (Architecture <implementation>) compiled.
 Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_bram_if_cntlr_v1_00_b/hdl/vhdl/xps_bram_if_cntlr.vhd" in Library xps_bram_if_cntlr_v1_00_b.
 Entity <xps_bram_if_cntlr> compiled.
 Entity <xps_bram_if_cntlr> (Architecture <implementation>) compiled.
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/xps_bram_if_cntlr_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/xps_bram_if_cntlr_0_wrapper.vhd" in Library work.
 Entity <xps_bram_if_cntlr_0_wrapper> compiled.
 Entity <xps_bram_if_cntlr_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -468,7 +468,7 @@ Unit <xps_bram_if_cntlr> synthesized.
 
 
 Synthesizing Unit <xps_bram_if_cntlr_0_wrapper>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/xps_bram_if_cntlr_0_wrapper.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/xps_bram_if_cntlr_0_wrapper.vhd".
 Unit <xps_bram_if_cntlr_0_wrapper> synthesized.
 
 
@@ -746,12 +746,12 @@ Delay:               0.000ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 8.07 secs
+Total CPU time to Xst completion: 8.15 secs
  
 --> 
 
 
-Total memory usage is 415820 kilobytes
+Total memory usage is 415780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   46 (   0 filtered)

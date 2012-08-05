@@ -150,8 +150,8 @@ begin
 
   Push_Buttons_5Bit : xps_gpio
     generic map (
-      C_BASEADDR => X"81400000",
-      C_HIGHADDR => X"8140ffff",
+      C_BASEADDR => X"8d105000",
+      C_HIGHADDR => X"8d1053ff",
       C_SPLB_AWIDTH => 32,
       C_SPLB_DWIDTH => 64,
       C_SPLB_P2P => 0,

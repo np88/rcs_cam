@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "dlmb_cntlr_wrapper_xst.prj"
-Verilog Include Directory          : {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx110tff1136-1
@@ -85,7 +85,7 @@ Package body <lmb_bram_if_funcs> compiled.
 Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_00_a/hdl/vhdl/lmb_bram_if_cntlr.vhd" in Library lmb_bram_if_cntlr_v3_00_a.
 Entity <lmb_bram_if_cntlr> compiled.
 Entity <lmb_bram_if_cntlr> (Architecture <imp>) compiled.
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/dlmb_cntlr_wrapper.vhd" in Library work.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/dlmb_cntlr_wrapper.vhd" in Library work.
 Entity <dlmb_cntlr_wrapper> compiled.
 Entity <dlmb_cntlr_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -234,7 +234,7 @@ Unit <lmb_bram_if_cntlr> synthesized.
 
 
 Synthesizing Unit <dlmb_cntlr_wrapper>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/dlmb_cntlr_wrapper.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/dlmb_cntlr_wrapper.vhd".
 Unit <dlmb_cntlr_wrapper> synthesized.
 
 
@@ -440,13 +440,13 @@ Delay:               0.468ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.80 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.00 secs
  
 --> 
 
 
-Total memory usage is 376376 kilobytes
+Total memory usage is 376372 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   37 (   0 filtered)

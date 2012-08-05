@@ -76,7 +76,9 @@ implementation/xps_bram_if_cntlr_0_wrapper.ngc \
 implementation/xps_bram_if_cntlr_0_block_wrapper.ngc \
 implementation/clock_generator_0_wrapper.ngc \
 implementation/mdm_0_wrapper.ngc \
-implementation/proc_sys_reset_0_wrapper.ngc
+implementation/proc_sys_reset_0_wrapper.ngc \
+implementation/gpio_fifo_wrapper.ngc \
+implementation/xps_external_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

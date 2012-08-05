@@ -25,7 +25,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input Format                       : MIXED
 Input File Name                    : "proc_sys_reset_0_wrapper_xst.prj"
-Verilog Include Directory          : {"/DIST/home/peters/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+Verilog Include Directory          : {"/DIST/home/peters/cam_repo/System_V1/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
 
 ---- Target Parameters
 Target Device                      : xc5vlx110tff1136-1
@@ -64,7 +64,7 @@ Entity <sequence> (Architecture <imp>) compiled.
 Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_sys_reset_v3_00_a/hdl/vhdl/proc_sys_reset.vhd" in Library proc_sys_reset_v3_00_a.
 Entity <proc_sys_reset> compiled.
 Entity <proc_sys_reset> (Architecture <imp>) compiled.
-Compiling vhdl file "/DIST/home/peters/System_V1/MB/hdl/proc_sys_reset_0_wrapper.vhd" in Library work.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/MB/hdl/proc_sys_reset_0_wrapper.vhd" in Library work.
 Entity <proc_sys_reset_0_wrapper> compiled.
 Entity <proc_sys_reset_0_wrapper> (Architecture <STRUCTURE>) compiled.
 
@@ -239,7 +239,7 @@ Unit <proc_sys_reset> synthesized.
 
 
 Synthesizing Unit <proc_sys_reset_0_wrapper>.
-    Related source file is "/DIST/home/peters/System_V1/MB/hdl/proc_sys_reset_0_wrapper.vhd".
+    Related source file is "/DIST/home/peters/cam_repo/System_V1/MB/hdl/proc_sys_reset_0_wrapper.vhd".
 Unit <proc_sys_reset_0_wrapper> synthesized.
 
 
@@ -483,12 +483,12 @@ Offset:              0.471ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.26 secs
+Total CPU time to Xst completion: 6.41 secs
  
 --> 
 
 
-Total memory usage is 406292 kilobytes
+Total memory usage is 406392 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

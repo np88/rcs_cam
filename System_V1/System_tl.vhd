@@ -30,37 +30,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity System_tl is port (
-    fpga_0_LEDs_8Bit_GPIO_IO_pin : inout std_logic_vector(0 to 7);
-    fpga_0_LEDs_Positions_GPIO_IO_pin : inout std_logic_vector(0 to 4);
-    fpga_0_Push_Buttons_5Bit_GPIO_IO_pin : inout std_logic_vector(0 to 4);
-    fpga_0_DDR2_SDRAM_DDR2_Clk_pin : out std_logic_vector(1 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin : out std_logic_vector(1 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_CE_pin : out std_logic_vector(1 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_CS_n_pin : out std_logic_vector(1 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_ODT_pin : out std_logic_vector(1 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin : out std_logic;
-    fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin : out std_logic;
-    fpga_0_DDR2_SDRAM_DDR2_WE_n_pin : out std_logic;
-    fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin : out std_logic_vector(1 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_Addr_pin : out std_logic_vector(12 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_DQ_pin : inout std_logic_vector(63 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_DM_pin : out std_logic_vector(7 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_DQS_pin : inout std_logic_vector(7 downto 0);
-    fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : inout std_logic_vector(7 downto 0);
-    fpga_0_clk_1_sys_clk_pin : in std_logic;
-    fpga_0_rst_1_sys_rst_pin : in std_logic
-  );
-end System_tl;
-
-architecture Behavioral of System_tl is
-
-	COMPONENT MB
-	PORT(
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
-		fpga_0_rst_1_sys_rst_pin : IN std_logic;    
-		fpga_0_LEDs_8Bit_GPIO_IO_pin : INOUT std_logic_vector(0 to 7);
-		fpga_0_LEDs_Positions_GPIO_IO_pin : INOUT std_logic_vector(0 to 4);
-		fpga_0_Push_Buttons_5Bit_GPIO_IO_pin : INOUT std_logic_vector(0 to 4);
+		fpga_0_rst_1_sys_rst_pin : IN std_logic;
+		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);    
 		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_pin : INOUT std_logic_vector(7 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);      
@@ -74,7 +46,37 @@ architecture Behavioral of System_tl is
 		fpga_0_DDR2_SDRAM_DDR2_WE_n_pin : OUT std_logic;
 		fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin : OUT std_logic_vector(1 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_Addr_pin : OUT std_logic_vector(12 downto 0);
-		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0)
+		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0);
+		LEDs_Positions_GPIO_IO_O_pin : OUT std_logic_vector(4 downto 0);
+		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0)
+  );
+end System_tl;
+
+architecture Behavioral of System_tl is
+
+	COMPONENT MB
+	PORT(
+		fpga_0_clk_1_sys_clk_pin : IN std_logic;
+		fpga_0_rst_1_sys_rst_pin : IN std_logic;
+		gpio_FIFO_I : IN std_logic_vector(17 downto 0);
+		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);    
+		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_DQS_pin : INOUT std_logic_vector(7 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);      
+		fpga_0_DDR2_SDRAM_DDR2_Clk_pin : OUT std_logic_vector(1 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin : OUT std_logic_vector(1 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_CE_pin : OUT std_logic_vector(1 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_CS_n_pin : OUT std_logic_vector(1 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_ODT_pin : OUT std_logic_vector(1 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin : OUT std_logic;
+		fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin : OUT std_logic;
+		fpga_0_DDR2_SDRAM_DDR2_WE_n_pin : OUT std_logic;
+		fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin : OUT std_logic_vector(1 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_Addr_pin : OUT std_logic_vector(12 downto 0);
+		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0);
+		gpio_FIFO_O : OUT std_logic;
+		LEDs_Positions_GPIO_IO_O_pin : OUT std_logic_vector(4 downto 0);
+		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
 
@@ -100,12 +102,13 @@ architecture Behavioral of System_tl is
 	attribute box_type : string;
 	attribute box_type of MB : component is "user_black_box";
 	
+	signal gpio_FIFO_I : std_logic_vector(17 downto 0); 
+	signal pos_leds: std_logic_vector(4 downto 0); 
+	
 begin
+	--pos_leds <= Push_Buttons_5Bit_GPIO_IO_I_pin;
 
 	Inst_MB: MB PORT MAP(
-		fpga_0_LEDs_8Bit_GPIO_IO_pin => fpga_0_LEDs_8Bit_GPIO_IO_pin,
-		fpga_0_LEDs_Positions_GPIO_IO_pin => fpga_0_Push_Buttons_5Bit_GPIO_IO_pin,
-		fpga_0_Push_Buttons_5Bit_GPIO_IO_pin => fpga_0_Push_Buttons_5Bit_GPIO_IO_pin,
 		fpga_0_DDR2_SDRAM_DDR2_Clk_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_pin,
 		fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin,
 		fpga_0_DDR2_SDRAM_DDR2_CE_pin => fpga_0_DDR2_SDRAM_DDR2_CE_pin,
@@ -121,7 +124,12 @@ begin
 		fpga_0_DDR2_SDRAM_DDR2_DQS_pin => fpga_0_DDR2_SDRAM_DDR2_DQS_pin,
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin => fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin,
 		fpga_0_clk_1_sys_clk_pin => fpga_0_clk_1_sys_clk_pin,
-		fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin
+		fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin,
+		gpio_FIFO_I => gpio_FIFO_I,
+		gpio_FIFO_O => open,
+		LEDs_Positions_GPIO_IO_O_pin => LEDs_Positions_GPIO_IO_O_pin,
+		Push_Buttons_5Bit_GPIO_IO_I_pin => Push_Buttons_5Bit_GPIO_IO_I_pin,
+		LEDs_8Bit_GPIO_IO_O_pin => LEDs_8Bit_GPIO_IO_O_pin
 	);
 
 

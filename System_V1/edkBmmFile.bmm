@@ -1,4 +1,4 @@
-// File: /DIST/home/peters/System_V1/MB/implementation/MB.bmm
+// File: /DIST/home/peters/cam_repo/System_V1/MB/implementation/MB.bmm
 
 ADDRESS_MAP microblaze_0 MICROBLAZE 100
 	ADDRESS_SPACE lmb_bram_combined COMBINED [0x00000000:0x0000ffff]

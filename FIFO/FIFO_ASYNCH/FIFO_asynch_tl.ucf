@@ -1,8 +1,8 @@
 NET "wr_en_i" LOC = U8;
 NET "rd_en_i" LOC = V8;
 NET "rst_i" LOC = AJ6;
-NET "rd_clk_i" LOC = AH15;
-NET "wr_clk_i" LOC = AH17;
+NET "rd_clk_i" LOC = AH15; # 100 MHz
+NET "wr_clk_i" LOC = AH17; # 33 MHz
 
 NET "full_o" LOC = F6;
 NET "empty_o" LOC = T10;

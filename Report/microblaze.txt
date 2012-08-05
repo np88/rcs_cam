@@ -46,3 +46,11 @@ p. 12 ff, source address, destination address and length address register
 Reading via DMA from FIFO:
 Idea: FIFO generates interrupt when it is full, CPU writes amount of data to be read to DMA (start reading process) and sets read enable to one. --> DMA has to read from FIFO in every clock cycle. If that is not possible, a seperate read impulse generator module can be used to generate the necessary write enable signal.
 
+
+Mapping:
+If manual mapping needs to be done, there can occur some errors if ISE mapped e.g. the DDR2 before:
+"Incompatible IOB's are locked to the same bank"..."Conflicting IO Standards" 
+
+Solution: http://www.xilinx.com/support/answers/30772.htm (error is caused the standards that are set by default. if any information will be put into the manual ucf-file, they will override the automatically generated file)
+
+
