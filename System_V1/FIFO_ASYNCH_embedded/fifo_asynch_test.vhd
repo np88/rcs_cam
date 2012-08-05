@@ -51,9 +51,9 @@ ARCHITECTURE behavior OF fifo_asynch_test IS
          rd_en_i : IN  std_logic;
          dout_o : OUT  std_logic_vector(C_fifo_input_width downto 0);
          full_o : OUT  std_logic;
+			almost_full_o : OUT STD_LOGIC;
          empty_o : OUT  std_logic;
          valid_o : OUT  std_logic;
-         underflow_o : OUT  std_logic;
          rd_data_count_o : OUT  std_logic_vector(C_fifo_width downto 0);
          wr_data_count_o : OUT  std_logic_vector(C_fifo_width downto 0)
         );
@@ -73,7 +73,7 @@ ARCHITECTURE behavior OF fifo_asynch_test IS
    signal full_o : std_logic;
    signal empty_o : std_logic;
    signal valid_o : std_logic;
-   signal underflow_o : std_logic;
+   signal almost_full_o : std_logic;
    signal rd_data_count_o : std_logic_vector(C_fifo_width downto 0);
    signal wr_data_count_o : std_logic_vector(C_fifo_width downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
@@ -95,9 +95,9 @@ BEGIN
           rd_en_i => rd_en_i,
           dout_o => dout_o,
           full_o => full_o,
+			 almost_full_o => almost_full_o,
           empty_o => empty_o,
           valid_o => valid_o,
-          underflow_o => underflow_o,
           rd_data_count_o => rd_data_count_o,
           wr_data_count_o => wr_data_count_o
         );

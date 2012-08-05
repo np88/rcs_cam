@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-08-05T18:24:20</DateModified>
+  <DateModified>2012-08-05T19:43:06</DateModified>
   <ModuleName>System_tl</ModuleName>
-  <SummaryTimeStamp>2012-08-05T18:12:12</SummaryTimeStamp>
+  <SummaryTimeStamp>2012-08-05T19:41:48</SummaryTimeStamp>
   <SavedFilePath>/DIST/home/peters/cam_repo/System_V1/iseconfig/System_tl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/DIST/home/peters/cam_repo/System_V1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/DIST/home/peters/cam_repo/System_V1/</ImplementationReportsDirectory>
   <DateInitialized>2012-08-05T14:18:37</DateInitialized>
   <XMP_File>/DIST/home/peters/cam_repo/System_V1/MB/MB.xmp</XMP_File>
   <EnableMessageFiltering>false</EnableMessageFiltering>

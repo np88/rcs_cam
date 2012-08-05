@@ -153,6 +153,13 @@ BEGIN
     IF(status(1) = '1') THEN
     END IF;
     
+    
+    IF(status(4) = '1') THEN
+      assert false
+       report "Almost Full flag Mismatch/timeout"
+       severity error;
+    END IF;
+    
     IF(status(5) = '1') THEN
       assert false
        report "Empty flag Mismatch/timeout"
@@ -195,7 +202,7 @@ BEGIN
    GENERIC MAP(
               FREEZEON_ERROR => 0,
  	      TB_STOP_CNT    => 2,
- 	      TB_SEED        => 10 
+ 	      TB_SEED        => 34 
  	      )
   PORT MAP(
 	   WR_CLK        => wr_clk,

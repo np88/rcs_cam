@@ -1,4 +1,5 @@
 # Output products list for <fifo_two_clock_domains>
+_xmsgs/pn_parser.xmsgs
 fifo_generator_ug175.pdf
 fifo_generator_v8_4_readme.txt
 fifo_two_clock_domains/example_design/fifo_two_clock_domains_top.ucf
@@ -32,10 +33,12 @@ fifo_two_clock_domains/simulation/timing/wave_isim.tcl
 fifo_two_clock_domains/simulation/timing/wave_mti.do
 fifo_two_clock_domains/simulation/timing/wave_ncsim.sv
 fifo_two_clock_domains.asy
+fifo_two_clock_domains.gise
 fifo_two_clock_domains.ngc
 fifo_two_clock_domains.sym
 fifo_two_clock_domains.vhd
 fifo_two_clock_domains.vho
 fifo_two_clock_domains.xco
+fifo_two_clock_domains.xise
 fifo_two_clock_domains_flist.txt
 fifo_two_clock_domains_xmdf.tcl

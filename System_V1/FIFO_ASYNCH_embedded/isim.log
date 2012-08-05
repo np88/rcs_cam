@@ -1,13 +1,13 @@
 ISim log file
-Running: /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_isim_beh.wdb 
+Running: /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_isim_par.exe -intstyle ise -gui -sdfmax /uut/=netgen/par/FIFO_asynch_tl_timesim.sdf -sdfroot /uut -tclbatch isim.cmd -wdb /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_isim_par.wdb 
 ISim O.87xd (signature 0x8ddf5b5d)
 This is a Full version of ISim.
+INFO: SDF backannotation was successful with SDF file netgen/par/FIFO_asynch_tl_timesim.sdf, for root module /uut/.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/fifo_asynch_test/uut/fifo_asynch/U0/gconvfifo/inst_conv_fifo/).
 Finished circuit initialization process.
 # run 1.00us
 # run 1.00us

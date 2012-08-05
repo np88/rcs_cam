@@ -41,9 +41,9 @@ entity FIFO_asynch_tl is PORT (
 		 rd_en_i : IN STD_LOGIC;
 		 dout_o : OUT STD_LOGIC_VECTOR(C_fifo_input_width DOWNTO 0);
 		 full_o : OUT STD_LOGIC;
+		 almost_full_o : OUT STD_LOGIC;
 		 empty_o : OUT STD_LOGIC;
 		 valid_o : OUT STD_LOGIC;
-		 underflow_o : OUT STD_LOGIC;
 		 rd_data_count_o : OUT STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0);
 		 wr_data_count_o : OUT STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0)
 	  );
@@ -56,19 +56,19 @@ architecture Behavioral of FIFO_asynch_tl is
 	-- FIFO with 2 clock domains
 	COMPONENT fifo_two_clock_domains
 	  PORT (
-		 rst : IN STD_LOGIC;
-		 wr_clk : IN STD_LOGIC;
-		 rd_clk : IN STD_LOGIC;
-		 din : IN STD_LOGIC_VECTOR(C_fifo_input_width DOWNTO 0);
-		 wr_en : IN STD_LOGIC;
-		 rd_en : IN STD_LOGIC;
-		 dout : OUT STD_LOGIC_VECTOR(C_fifo_input_width DOWNTO 0);
-		 full : OUT STD_LOGIC;
-		 empty : OUT STD_LOGIC;
-		 valid : OUT STD_LOGIC;
-		 underflow : OUT STD_LOGIC;
-		 rd_data_count : OUT STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0);
-		 wr_data_count : OUT STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0)
+		rst : IN STD_LOGIC;
+		wr_clk : IN STD_LOGIC;
+		rd_clk : IN STD_LOGIC;
+		din : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		wr_en : IN STD_LOGIC;
+		rd_en : IN STD_LOGIC;
+		dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		full : OUT STD_LOGIC;
+		almost_full : OUT STD_LOGIC;
+		empty : OUT STD_LOGIC;
+		valid : OUT STD_LOGIC;
+		rd_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		wr_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	  );
 	END COMPONENT;	 
 	
@@ -95,8 +95,8 @@ begin
 			 dout => dout_o,
 			 full => full_o,
 			 empty => empty_o,
+			 almost_full => almost_full_o,
 			 valid => valid_o,
-			 underflow => underflow_o,
 			 rd_data_count => rd_data_count_o,
 			 wr_data_count => wr_data_count_o
 		);

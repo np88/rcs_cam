@@ -75,15 +75,15 @@ entity fifo_two_clock_domains_top is
    PORT (
            WR_CLK                    : IN  std_logic;
      	   RD_CLK                    : IN  std_logic;
-     	   WR_DATA_COUNT             : OUT std_logic_vector(16-1 DOWNTO 0);
-           RD_DATA_COUNT             : OUT std_logic_vector(16-1 DOWNTO 0);
+     	   WR_DATA_COUNT             : OUT std_logic_vector(4-1 DOWNTO 0);
+           RD_DATA_COUNT             : OUT std_logic_vector(4-1 DOWNTO 0);
            VALID                     : OUT std_logic;
+           ALMOST_FULL               : OUT std_logic;
            RST                       : IN  std_logic;
-           UNDERFLOW                 : OUT std_logic;
            WR_EN 		     : IN  std_logic;
            RD_EN                     : IN  std_logic;
-           DIN                       : IN  std_logic_vector(8-1 DOWNTO 0);
-           DOUT                      : OUT std_logic_vector(8-1 DOWNTO 0);
+           DIN                       : IN  std_logic_vector(16-1 DOWNTO 0);
+           DOUT                      : OUT std_logic_vector(16-1 DOWNTO 0);
            FULL                      : OUT std_logic;
            EMPTY                     : OUT std_logic);
 end fifo_two_clock_domains_top;
@@ -101,15 +101,15 @@ architecture xilinx of fifo_two_clock_domains_top is
    PORT (
            WR_CLK                    : IN  std_logic;
      	   RD_CLK                    : IN  std_logic;
-     	   WR_DATA_COUNT             : OUT std_logic_vector(16-1 DOWNTO 0);
-           RD_DATA_COUNT             : OUT std_logic_vector(16-1 DOWNTO 0);
+     	   WR_DATA_COUNT             : OUT std_logic_vector(4-1 DOWNTO 0);
+           RD_DATA_COUNT             : OUT std_logic_vector(4-1 DOWNTO 0);
            VALID                     : OUT std_logic;
+           ALMOST_FULL               : OUT std_logic;
            RST                       : IN  std_logic;
-           UNDERFLOW                 : OUT std_logic;
            WR_EN 		     : IN  std_logic;
            RD_EN                     : IN  std_logic;
-           DIN                       : IN  std_logic_vector(8-1 DOWNTO 0);
-           DOUT                      : OUT std_logic_vector(8-1 DOWNTO 0);
+           DIN                       : IN  std_logic_vector(16-1 DOWNTO 0);
+           DOUT                      : OUT std_logic_vector(16-1 DOWNTO 0);
            FULL                      : OUT std_logic;
            EMPTY                     : OUT std_logic);
   end component;
@@ -136,8 +136,8 @@ fg0 : fifo_two_clock_domains     PORT MAP (
            WR_DATA_COUNT             => wr_data_count,
            RD_DATA_COUNT             => rd_data_count,
            VALID                     => valid,
+           ALMOST_FULL               => almost_full,
            RST                       => rst,
-           UNDERFLOW                 => underflow,
            WR_EN 		     => wr_en,
            RD_EN                     => rd_en,
            DIN                       => din,

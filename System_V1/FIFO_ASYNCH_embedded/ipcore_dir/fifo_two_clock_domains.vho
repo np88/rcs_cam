@@ -65,7 +65,6 @@ COMPONENT fifo_two_clock_domains
     almost_full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
-    underflow : OUT STD_LOGIC;
     rd_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     wr_data_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
@@ -89,7 +88,6 @@ your_instance_name : fifo_two_clock_domains
     almost_full => almost_full,
     empty => empty,
     valid => valid,
-    underflow => underflow,
     rd_data_count => rd_data_count,
     wr_data_count => wr_data_count
   );
