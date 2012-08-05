@@ -106,7 +106,7 @@ architecture Behavioral of System_tl is
 	signal pos_leds: std_logic_vector(4 downto 0); 
 	
 begin
-	--pos_leds <= Push_Buttons_5Bit_GPIO_IO_I_pin;
+	gpio_FIFO_I(4 downto 0) <= Push_Buttons_5Bit_GPIO_IO_I_pin;
 
 	Inst_MB: MB PORT MAP(
 		fpga_0_DDR2_SDRAM_DDR2_Clk_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_pin,

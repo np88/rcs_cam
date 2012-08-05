@@ -34,3 +34,30 @@ Net Push_Buttons_5Bit_GPIO_IO_I_pin[1] LOC = AJ7 | IOSTANDARD=LVCMOS33;
 Net Push_Buttons_5Bit_GPIO_IO_I_pin[2] LOC = V8 | IOSTANDARD=LVCMOS33; 
 Net Push_Buttons_5Bit_GPIO_IO_I_pin[3] LOC = AK7 | IOSTANDARD=LVCMOS33; 
 Net Push_Buttons_5Bit_GPIO_IO_I_pin[4] LOC = U8 | IOSTANDARD=LVCMOS33; 
+
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[0]" LOC = AN33;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[1]" LOC = AN34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[2]" LOC = AM32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[3]" LOC = AJ34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[4]" LOC = AM33;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[5]" LOC = AL33;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[6]" LOC = AL34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[7]" LOC = AK32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[8]" LOC = AJ32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[9]" LOC = AK33;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[10]" LOC = AK34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[11]" LOC = AH32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[12]" LOC = AG32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[13]" LOC = AE32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[14]" LOC = AH34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[15]" LOC = W32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[16]" LOC = Y32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[17]" LOC = Y34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[18]" LOC = AD32;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[19]" LOC = AA34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[20]" LOC = N34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[21]" LOC = P34;
+#NET "cpu0_i/gpio_external_GPIO_IO_pin[22]" LOC = M32;
+
+
+

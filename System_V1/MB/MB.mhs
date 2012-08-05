@@ -49,6 +49,7 @@ BEGIN microblaze
  BUS_INTERFACE IPLB = mb_plb
  BUS_INTERFACE DEBUG = microblaze_0_mdm_bus
  PORT MB_RESET = mb_reset
+ PORT INTERRUPT = xps_intc_0_Irq
 END
 
 BEGIN plb_v46
@@ -283,5 +284,6 @@ BEGIN xps_intc
  PARAMETER C_HIGHADDR = 0x8180ffff
  BUS_INTERFACE SPLB = mb_plb
  PORT Intr = xps_timer_0_Interrupt & gpio_FIFO_IP2INTC_Irpt & Push_Buttons_5Bit_IP2INTC_Irpt
+ PORT Irq = xps_intc_0_Irq
 END
 

@@ -200,6 +200,9 @@
 <msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">microblaze</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_DCACHE_ADDR_TAG</arg> value to <arg fmt="%s" index="6">0</arg> - <arg fmt="%s" index="7">/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_10_a/data/microblaze_v2_1_0.mpd line 350</arg> 
 </msg>
 
+<msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">microblaze</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_USE_INTERRUPT</arg> value to <arg fmt="%s" index="6">1</arg> - <arg fmt="%s" index="7">/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_10_a/data/microblaze_v2_1_0.mpd line 384</arg> 
+</msg>
+
 <msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">microblaze</arg>, INSTANCE:<arg fmt="%s" index="2">microblaze_0</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_USE_EXT_BRK</arg> value to <arg fmt="%s" index="6">1</arg> - <arg fmt="%s" index="7">/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_10_a/data/microblaze_v2_1_0.mpd line 385</arg> 
 </msg>
 

@@ -298,6 +298,10 @@ INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/micro
    blaze_v8_10_a/data/microblaze_v2_1_0.mpd line 350 
 INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_INTERRUPT value to 1 -
+   /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/micro
+   blaze_v8_10_a/data/microblaze_v2_1_0.mpd line 384 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
    PARAMETER C_USE_EXT_BRK value to 1 -
    /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/micro
    blaze_v8_10_a/data/microblaze_v2_1_0.mpd line 385 
@@ -867,11 +871,11 @@ Managing cache ...
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 93 - elaborating IP
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 94 - elaborating IP
 IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_0_block -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 200 - elaborating IP
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 201 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 206 - elaborating IP
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 207 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 
@@ -881,7 +885,7 @@ Inserting wrapper level ...
 Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -896,62 +900,62 @@ INFO:EDK - The following instances are synthesized with XST. The MPD option
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
 INSTANCE:microblaze_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 -
 Running XST synthesis
-INSTANCE:mb_plb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 54 -
+INSTANCE:mb_plb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 55 -
 Running XST synthesis
-INSTANCE:ilmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 61 - Running
+INSTANCE:ilmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 62 - Running
 XST synthesis
-INSTANCE:dlmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 68 - Running
+INSTANCE:dlmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 69 - Running
 XST synthesis
-INSTANCE:dlmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 75 -
+INSTANCE:dlmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 76 -
 Running XST synthesis
-INSTANCE:ilmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 84 -
+INSTANCE:ilmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 85 -
 Running XST synthesis
-INSTANCE:lmb_bram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 93 -
+INSTANCE:lmb_bram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 94 -
 Running XST synthesis
-INSTANCE:leds_8bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 100 -
+INSTANCE:leds_8bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 101 -
 Running XST synthesis
 INSTANCE:leds_positions - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-113 - Running XST synthesis
+114 - Running XST synthesis
 INSTANCE:push_buttons_5bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-126 - Running XST synthesis
-INSTANCE:ddr2_sdram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 140 -
+127 - Running XST synthesis
+INSTANCE:ddr2_sdram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 141 -
 Running XST synthesis
-INSTANCE:xps_timer_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 179 -
+INSTANCE:xps_timer_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 180 -
 Running XST synthesis
 INSTANCE:xps_bram_if_cntlr_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 190 - Running XST synthesis
+line 191 - Running XST synthesis
 INSTANCE:xps_bram_if_cntlr_0_block -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 200 - Running XST synthesis
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 201 - Running XST synthesis
 INSTANCE:clock_generator_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-206 - Running XST synthesis
-INSTANCE:mdm_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 231 -
+207 - Running XST synthesis
+INSTANCE:mdm_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 232 -
 Running XST synthesis
 INSTANCE:proc_sys_reset_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-243 - Running XST synthesis
-INSTANCE:gpio_fifo - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 256 -
+244 - Running XST synthesis
+INSTANCE:gpio_fifo - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 257 -
 Running XST synthesis
-INSTANCE:xps_external - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 271
+INSTANCE:xps_external - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 272
 - Running XST synthesis
-INSTANCE:xps_intc_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 279 -
+INSTANCE:xps_intc_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 280 -
 Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:microblaze_0_wrapper INSTANCE:microblaze_0 -
 /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 - Running NGCBUILD
 IPNAME:ilmb_wrapper INSTANCE:ilmb -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 61 - Running NGCBUILD
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 62 - Running NGCBUILD
 IPNAME:dlmb_wrapper INSTANCE:dlmb -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 68 - Running NGCBUILD
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 69 - Running NGCBUILD
 IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 140 - Running NGCBUILD
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 141 - Running NGCBUILD
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 206 - Running NGCBUILD
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 207 - Running NGCBUILD
 IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 279 - Running NGCBUILD
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 280 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/MB.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 604.00 seconds
+Total run time: 605.00 seconds

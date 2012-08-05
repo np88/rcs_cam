@@ -774,3 +774,141 @@ Xilinx EDK 13.1 Build EDK_O.40d
 
 Xilinx EDK 13.1 Build EDK_O.40d
 
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Sun Aug  5 18:23:33 2012
+ make -f MB.make clean started...
+rm -f implementation/MB.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+touch __xps/ise/MB.xpssyn
+rm -f implementation/MB.bmm
+rm -f implementation/MB.bit
+rm -f implementation/MB.ncd
+rm -f implementation/MB_bd.bmm 
+rm -f implementation/MB_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/MB_routed
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp MB.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+touch __xps/ise/MB.xpssim
+rm -f _impact.cmd
+Done!
+
+Running DRCs...
+
+Overriding IP level properties ...
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x0000ffff) dlmb_cntlr	dlmb
+  (0000000000-0x0000ffff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) xps_external	mb_plb
+  (0x81800000-0x8180ffff) xps_intc_0	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0x85b8e000-0x85b8e3ff) LEDs_Positions	mb_plb
+  (0x8730c000-0x8730c3ff) gpio_FIFO	mb_plb
+  (0x88a8a400-0x88a8a7ff) LEDs_8Bit	mb_plb
+  (0x8a208000-0x8a209fff) xps_bram_if_cntlr_0	mb_plb
+  (0x8d105000-0x8d1053ff) Push_Buttons_5Bit	mb_plb
+  (0x90000000-0x9fffffff) DDR2_SDRAM	mb_plb
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 10 slave(s) 
+IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK - PORT: bscan_tdo1, CONNECTOR: bscan_tdo1 - No driver found. Port will be driven to GND - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 230 
+WARNING:EDK - PORT: bscan_tdi, CONNECTOR: bscan_tdi - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 223 
+WARNING:EDK - PORT: bscan_reset, CONNECTOR: bscan_reset - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 224 
+WARNING:EDK - PORT: bscan_shift, CONNECTOR: bscan_shift - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 225 
+WARNING:EDK - PORT: bscan_update, CONNECTOR: bscan_update - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 226 
+WARNING:EDK - PORT: bscan_capture, CONNECTOR: bscan_capture - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 227 
+WARNING:EDK - PORT: bscan_sel1, CONNECTOR: bscan_sel1 - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 228 
+WARNING:EDK - PORT: bscan_drck1, CONNECTOR: bscan_drck1 - floating connection - /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v2_00_b/data/mdm_v2_1_0.mpd line 229 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/cam_repo/System_V1/MB/etc/MB.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/cam_repo/System_V1/MB/etc/MB.gui
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+

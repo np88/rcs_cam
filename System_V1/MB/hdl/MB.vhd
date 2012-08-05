@@ -3599,6 +3599,7 @@ architecture STRUCTURE of MB is
   signal xps_bram_if_cntlr_0_port_BRAM_EN : std_logic;
   signal xps_bram_if_cntlr_0_port_BRAM_Rst : std_logic;
   signal xps_bram_if_cntlr_0_port_BRAM_WEN : std_logic_vector(0 to 3);
+  signal xps_intc_0_Irq : std_logic;
   signal xps_timer_0_Interrupt : std_logic;
 
   attribute BOX_TYPE : STRING;
@@ -3660,7 +3661,7 @@ begin
       CLK => clk_100_0000MHzPLL0,
       RESET => dlmb_LMB_Rst,
       MB_RESET => mb_reset,
-      INTERRUPT => net_gnd0,
+      INTERRUPT => xps_intc_0_Irq,
       EXT_BRK => Ext_BRK,
       EXT_NM_BRK => Ext_NM_BRK,
       DBG_STOP => net_gnd0,
@@ -7014,7 +7015,7 @@ begin
       Sl_rdBTerm => mb_plb_Sl_rdBTerm(9),
       Sl_MIRQ => mb_plb_Sl_MIRQ(18 to 19),
       Intr => pgassign1,
-      Irq => open
+      Irq => xps_intc_0_Irq
     );
 
 end architecture STRUCTURE;
