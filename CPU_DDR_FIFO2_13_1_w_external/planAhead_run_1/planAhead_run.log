@@ -1,0 +1,671 @@
+WARNING: 64bit architecture not detected. Defaulting to 32bit.
+
+****** PlanAhead v13.1
+  **** Build 117799 by hdbuild on Thu Feb 17 11:35:36 PST 2011
+    ** Copyright 1986-1999, 2001-2011 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 0] Loading parts and site information from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file '/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file '/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+start_gui -source /DIST/home/peters/cam_repo/CPU_DDR_FIFO2/pa.fromNetlist.tcl
+starting gui ...
+# create_project -name CPU_DDR_FIFO2 -dir "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/planAhead_run_1" -part xc5vlx110tff1136-1
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/CPU_DDR_FIFO_tl.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/DIST/home/peters/cam_repo/CPU_DDR_FIFO2} {../FIFO/FIFO_ASYNCH/ipcore_dir} }
+# add_files "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ilmb_wrapper.ncf" "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf" "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/dlmb_wrapper.ncf" "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/microblaze_0_wrapper.ncf" "/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ddr2_sdram_wrapper.ncf" "../FIFO/FIFO_ASYNCH/ipcore_dir/fifo_two_clock_domains.ncf" -fileset [get_property constrset [current_run]]
+# set_param project.paUcfFile  "CPU_DDR_FIFO_tl.ucf"
+# add_files "CPU_DDR_FIFO_tl.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design
+INFO: Design is defaulting to constrset part: xc5vlx110tff1136-1
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design CPU_DDR_FIFO_tl.ngc ...
+WARNING:NetListWriters:298 - No output is written to CPU_DDR_FIFO_tl.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file CPU_DDR_FIFO_tl.edif ...
+ngc2edif: Total memory usage is 22728 kilobytes
+
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/CPU_DDR_FIFO_tl.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/CPU_DDR_FIFO_tl.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design Mikroblaze.ngc ...
+WARNING:NetListWriters:298 - No output is written to Mikroblaze.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Mikroblaze.edif ...
+ngc2edif: Total memory usage is 28500 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ngc' for (cell view 'Mikroblaze', library 'CPU_DDR_FIFO_tl_lib', file 'CPU_DDR_FIFO_tl.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/Mikroblaze.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/Mikroblaze.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design microblaze_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to microblaze_0_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Data_Flow_I/msr_reg_i/ex_MSR_i<31 : 17> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Data_Flow_I/msr_reg_i/mem_MSR_i<31 : 17> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Data_Flow_I/msr_reg_i/of_MSR_i<31 : 17> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Data_Flow_I/msr_reg_i/wb_MSR_cmb<30 : 28> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Decode_I/of_PipeRun_carry<8 : 1> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Use_Debug_Logic.Debug_Perf/control_reg<8 : 0> on
+   block microblaze_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/Performance.Use_Debug_Logic.Debug_Perf/status_reg<25 : 0> on
+   block microblaze_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus microblaze_0/ex_MSR<30 : 0> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus microblaze_0/mem_MSR<30 : 0> on block
+   microblaze_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file microblaze_0_wrapper.edif ...
+ngc2edif: Total memory usage is 28196 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/microblaze_0_wrapper.ngc' for (cell view 'microblaze_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/microblaze_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/microblaze_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design mb_plb_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to mb_plb_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/GTR_ONE_MASTER.FIXED_ARB_
+   GEN.I_PRIOR_ENC/lutout<6 : 0> on block mb_plb_wrapper is not reconstructed,
+   because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file mb_plb_wrapper.edif ...
+ngc2edif: Total memory usage is 24032 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/mb_plb_wrapper.ngc' for (cell view 'mb_plb_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/mb_plb_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/mb_plb_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design ilmb_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to ilmb_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ilmb_wrapper.edif ...
+ngc2edif: Total memory usage is 22632 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ilmb_wrapper.ngc' for (cell view 'ilmb_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/ilmb_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/ilmb_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design dlmb_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to dlmb_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file dlmb_wrapper.edif ...
+ngc2edif: Total memory usage is 22640 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/dlmb_wrapper.ngc' for (cell view 'dlmb_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/dlmb_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/dlmb_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design dlmb_cntlr_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to dlmb_cntlr_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file dlmb_cntlr_wrapper.edif ...
+ngc2edif: Total memory usage is 22716 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/dlmb_cntlr_wrapper.ngc' for (cell view 'dlmb_cntlr_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/dlmb_cntlr_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/dlmb_cntlr_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design ilmb_cntlr_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to ilmb_cntlr_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ilmb_cntlr_wrapper.edif ...
+ngc2edif: Total memory usage is 22720 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ilmb_cntlr_wrapper.ngc' for (cell view 'ilmb_cntlr_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/ilmb_cntlr_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/ilmb_cntlr_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design lmb_bram_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to lmb_bram_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file lmb_bram_wrapper.edif ...
+ngc2edif: Total memory usage is 23504 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/lmb_bram_wrapper.ngc' for (cell view 'lmb_bram_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/lmb_bram_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/lmb_bram_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design leds_8bit_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to leds_8bit_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   LEDs_8Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<31 : 0> on block
+   leds_8bit_wrapper is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file leds_8bit_wrapper.edif ...
+ngc2edif: Total memory usage is 22900 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/leds_8bit_wrapper.ngc' for (cell view 'leds_8bit_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/leds_8bit_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/leds_8bit_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design push_buttons_5bit_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   push_buttons_5bit_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<15 : 12>
+   on block push_buttons_5bit_wrapper is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<15 : 12>
+   on block push_buttons_5bit_wrapper is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<15 : 12>
+   on block push_buttons_5bit_wrapper is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<3 : 0> on block
+   push_buttons_5bit_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<3 : 0> on block
+   push_buttons_5bit_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<31 : 0> on block
+   push_buttons_5bit_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i<31 : 0> on block
+   push_buttons_5bit_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Push_Buttons_5Bit/PLBV46_I/plb_be_muxed<3 : 0> on block
+   push_buttons_5bit_wrapper is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file push_buttons_5bit_wrapper.edif ...
+ngc2edif: Total memory usage is 22972 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/push_buttons_5bit_wrapper.ngc' for (cell view 'push_buttons_5bit_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/push_buttons_5bit_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/push_buttons_5bit_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design dip_switches_8bit_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   dip_switches_8bit_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   DIP_Switches_8Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<31 : 0> on block
+   dip_switches_8bit_wrapper is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file dip_switches_8bit_wrapper.edif ...
+ngc2edif: Total memory usage is 22920 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/dip_switches_8bit_wrapper.ngc' for (cell view 'dip_switches_8bit_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/dip_switches_8bit_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/dip_switches_8bit_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design ddr2_sdram_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to ddr2_sdram_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus DDR2_SDRAM/Rst_tocore<5 : 0> on block
+   ddr2_sdram_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_ctrl_path_0/arbiter_0/arb_pattern_type_
+   0/instantiate_arb_pattern_type_fifos[0].arb_pattern_type_fifo_/gen_pi_arbrdmo
+   dwr_noecc.pi_arbpatterntype_fifo/fifo_reg<5 : 0> on block ddr2_sdram_wrapper
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_ctrl_path_0/ctrl_path_0/ctrl_bram_datao
+   ut<17 : 0> on block ddr2_sdram_wrapper is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_init_0/calib_start
+   _shift0_r<15 : 0> on block ddr2_sdram_wrapper is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_init_0/calib_start
+   _shift1_r<15 : 0> on block ddr2_sdram_wrapper is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_init_0/calib_start
+   _shift3_r<15 : 0> on block ddr2_sdram_wrapper is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_init_0/ddr_addr_r<
+   11 : 0> on block ddr2_sdram_wrapper is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_init_0/init_state_
+   r1<26 : 0> on block ddr2_sdram_wrapper is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_init_0/init_state_
+   r2<23 : 0> on block ddr2_sdram_wrapper is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0
+   /Result<5 : 0> on block ddr2_sdram_wrapper is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0
+   /calib_done_tmp<3 : 0> on block ddr2_sdram_wrapper is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_write/init_data_r_
+   mux0000<11 : 0> on block ddr2_sdram_wrapper is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ddr2_sdram_wrapper.edif ...
+ngc2edif: Total memory usage is 34412 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ddr2_sdram_wrapper.ngc' for (cell view 'ddr2_sdram_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/ddr2_sdram_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/ddr2_sdram_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design xps_timer_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to xps_timer_0_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/PLBv46_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<6 : 0> on block
+   xps_timer_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/PLBv46_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<6 : 0> on block
+   xps_timer_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/PLBv46_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<6 : 0> on block
+   xps_timer_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/TC_CORE_I/COUNTER_0_I/load_load_reg_be<24 : 0> on block
+   xps_timer_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/TC_CORE_I/GEN_SECOND_TIMER.COUNTER_1_I/load_load_reg_be<24 : 0>
+   on block xps_timer_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_CE<25 : 0> on block
+   xps_timer_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_CE<25 : 0> on block
+   xps_timer_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus xps_timer_0/TC_CORE_I/tCSR0_Reg<31 : 21>
+   on block xps_timer_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus xps_timer_0/TC_CORE_I/tCSR1_Reg<31 : 21>
+   on block xps_timer_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file xps_timer_0_wrapper.edif ...
+ngc2edif: Total memory usage is 23680 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/xps_timer_0_wrapper.ngc' for (cell view 'xps_timer_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_timer_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_timer_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design xps_bram_if_cntlr_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   xps_bram_if_cntlr_0_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file xps_bram_if_cntlr_0_wrapper.edif ...
+ngc2edif: Total memory usage is 22984 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/xps_bram_if_cntlr_0_wrapper.ngc' for (cell view 'xps_bram_if_cntlr_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_bram_if_cntlr_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_bram_if_cntlr_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design xps_bram_if_cntlr_0_block_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   xps_bram_if_cntlr_0_block_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file xps_bram_if_cntlr_0_block_wrapper.edif ...
+ngc2edif: Total memory usage is 22932 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/xps_bram_if_cntlr_0_block_wrapper.ngc' for (cell view 'xps_bram_if_cntlr_0_block_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_bram_if_cntlr_0_block_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_bram_if_cntlr_0_block_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design clock_generator_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   clock_generator_0_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file clock_generator_0_wrapper.edif ...
+ngc2edif: Total memory usage is 22620 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/clock_generator_0_wrapper.ngc' for (cell view 'clock_generator_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/clock_generator_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/clock_generator_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design mdm_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to mdm_0_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Config_Reg<31 : 0> on block MDM_Core is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file mdm_0_wrapper.edif ...
+ngc2edif: Total memory usage is 23264 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/mdm_0_wrapper.ngc' for (cell view 'mdm_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/mdm_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/mdm_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design proc_sys_reset_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   proc_sys_reset_0_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus proc_sys_reset_0/SEQ/core_dec<2 : 0> on
+   block proc_sys_reset_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus proc_sys_reset_0/SEQ/pr_dec<2 : 0> on
+   block proc_sys_reset_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file proc_sys_reset_0_wrapper.edif ...
+ngc2edif: Total memory usage is 22720 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/proc_sys_reset_0_wrapper.ngc' for (cell view 'proc_sys_reset_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/proc_sys_reset_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/proc_sys_reset_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design xps_intc_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to xps_intc_0_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus xps_intc_0/read_data<10 : 0> on block
+   xps_intc_0_wrapper is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file xps_intc_0_wrapper.edif ...
+ngc2edif: Total memory usage is 22896 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/xps_intc_0_wrapper.ngc' for (cell view 'xps_intc_0_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_intc_0_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/xps_intc_0_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design gpio_fifo_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to gpio_fifo_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<15 : 12> on block
+   gpio_fifo_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<15 : 12> on block
+   gpio_fifo_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<15 : 12> on block
+   gpio_fifo_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<31 : 0> on block
+   gpio_fifo_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i<31 : 0> on block
+   gpio_fifo_wrapper is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file gpio_fifo_wrapper.edif ...
+ngc2edif: Total memory usage is 23192 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/gpio_fifo_wrapper.ngc' for (cell view 'gpio_fifo_wrapper', library 'Mikroblaze_lib', file 'Mikroblaze.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/gpio_fifo_wrapper.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/gpio_fifo_wrapper.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design fifo_two_clock_domains.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   fifo_two_clock_domains.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file fifo_two_clock_domains.edif ...
+ngc2edif: Total memory usage is 24200 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/FIFO/FIFO_ASYNCH/ipcore_dir/fifo_two_clock_domains.ngc' for (cell view 'fifo_two_clock_domains', library 'CPU_DDR_FIFO_tl_lib', file 'CPU_DDR_FIFO_tl.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/fifo_two_clock_domains.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-3992-weekino/ngc2edif/fifo_two_clock_domains.edif]
+INFO: [HD-ArchReader 18] Reading macro library /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn
+Parsing EDIF File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+Finished Parsing EDIF File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+INFO: [HD-ArchReader 15] Reading bus macro file /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/pr_bus_macros.xml
+INFO: [HD-ArchReader 7] Loading clock regions from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockBuffers.xml
+INFO: [HD-ArchReader 3] Loading package from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/Package.xml
+INFO: [HD-ArchReader 4] Loading io standards from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/IOStandards.xml
+INFO: [HD-ArchReader 5] Loading pkg sso from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/SSORules.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/drc.xml
+INFO: [HD-LIB 0] Reading timing library /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+INFO: [HD-LIB 1] Done reading timing library /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ilmb_wrapper.ncf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ilmb_wrapper.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf]
+WARNING: [Common-14] Messaging disabled: Constraints-11 limit exceeded.
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_CE_pin[0] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:27]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_CE_pin[1] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:28]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_CS_n_pin[0] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:29]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_CS_n_pin[1] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:30]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_ODT_pin[0] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:31]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_ODT_pin[1] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:32]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:33]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:34]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_WE_n_pin will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:35]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin[0] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:36]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin[1] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:37]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[0] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:38]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[1] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:39]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[2] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:40]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[3] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:41]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[4] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:42]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[5] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:43]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[6] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:44]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[7] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:45]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[8] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:46]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[9] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:47]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[10] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:48]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[11] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:49]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of SSTL18_II for net fpga_0_DDR2_SDRAM_DDR2_Addr_pin[12] will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:50]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of LVCMOS33 for net fpga_0_clk_1_sys_clk_pin will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:141]
+INFO: [Constraints-98] IO constraint IOSTANDARD with a setting of LVCMOS33 for net fpga_0_rst_1_sys_rst_pin will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:143]
+INFO: [Constraints-98] IO constraint PULL with a setting of PULLUP for net fpga_0_rst_1_sys_rst_pin will not be propagated through the buffer.  The constraint should be associated with the net that is connected to the top level port. [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf:143]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/dlmb_wrapper.ncf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/dlmb_wrapper.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/microblaze_0_wrapper.ncf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/microblaze_0_wrapper.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ddr2_sdram_wrapper.ncf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/ddr2_sdram_wrapper.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/FIFO/FIFO_ASYNCH/ipcore_dir/fifo_two_clock_domains.ncf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/FIFO/FIFO_ASYNCH/ipcore_dir/fifo_two_clock_domains.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/CPU_DDR_FIFO_tl.ucf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/CPU_DDR_FIFO2/CPU_DDR_FIFO_tl.ucf]
+INFO: [Designutils-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+Time (s): 26.380u 3.050s 28.550w. Memory (MB): 1379.262p 128.109g
+Time (s): 29.920u 3.410s 30.970w. Memory (MB): 1379.262p 145.125g
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead

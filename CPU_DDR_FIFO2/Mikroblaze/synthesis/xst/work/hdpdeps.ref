@@ -1,9 +1,0 @@
-V3 6
-FL /DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze/hdl/push_buttons_5bit_wrapper.vhd 2012/08/02.18:19:49 O.40d
-EN work/push_buttons_5bit_wrapper 1343924687 \
-      FL /DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze/hdl/push_buttons_5bit_wrapper.vhd \
-      PB ieee/std_logic_1164 1296775758 LB UNISIM PH unisim/VCOMPONENTS 1296775759 \
-      LB xps_gpio_v2_00_a
-AR work/push_buttons_5bit_wrapper/STRUCTURE 1343924688 \
-      FL /DIST/home/peters/cam_repo/CPU_DDR_FIFO2/Mikroblaze/hdl/push_buttons_5bit_wrapper.vhd \
-      EN work/push_buttons_5bit_wrapper 1343924687 CP xps_gpio

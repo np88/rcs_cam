@@ -1,0 +1,1 @@
+vhdtdtfi -prj CPU_DDR_FIFO2 -o /DIST/home/peters/cam_repo/CPU_DDR_FIFO2_13_1/Microblaze_top.vhi -module Microblaze_top -template /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Microblaze/Microblaze_top.vhd 
