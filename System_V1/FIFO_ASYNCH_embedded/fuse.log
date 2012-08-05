@@ -1,0 +1,34 @@
+Running: /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_isim_beh.exe -prj /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_beh.prj work.fifo_asynch_test 
+ISim O.87xd (signature 0x8ddf5b5d)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/ipcore_dir/fifo_two_clock_domains.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/remote_sources/_/FIFO/edge_detector.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_CONST.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_asynch_tl.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 101164 KB
+Fuse CPU Usage: 1970 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package fifo_const
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity fifo_generator_v8_4_bhv_as [\fifo_generator_v8_4_bhv_as(16,"...]
+Compiling architecture behavioral of entity fifo_generator_v8_4_conv [\fifo_generator_v8_4_conv(0,0,10...]
+Compiling architecture behavioral of entity fifo_generator_v8_4 [\fifo_generator_v8_4(0,0,10,"Bla...]
+Compiling architecture fifo_two_clock_domains_a of entity fifo_two_clock_domains [fifo_two_clock_domains_default]
+Compiling architecture behavioral of entity edge_detector [edge_detector_default]
+Compiling architecture behavioral of entity FIFO_asynch_tl [fifo_asynch_tl_default]
+Compiling architecture behavior of entity fifo_asynch_test
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 19 VHDL Units
+Built simulation executable /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test_isim_beh.exe
+Fuse Memory Usage: 218288 KB
+Fuse CPU Usage: 2280 ms
+GCC CPU Usage: 5760 ms

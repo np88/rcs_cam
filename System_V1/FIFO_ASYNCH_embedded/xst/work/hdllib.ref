@@ -1,0 +1,8 @@
+PB fifo_const fifo_const /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_CONST.vhd sub00/vhpl01 1344185977
+EN fifo_asynch_tl NULL /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_asynch_tl.vhd sub00/vhpl06 1344185982
+EN fifo_two_clock_domains NULL /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/ipcore_dir/fifo_two_clock_domains.vhd sub00/vhpl02 1344185978
+AR fifo_two_clock_domains fifo_two_clock_domains_a /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/ipcore_dir/fifo_two_clock_domains.vhd sub00/vhpl03 1344185979
+PH fifo_const NULL /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_CONST.vhd sub00/vhpl00 1344185976
+AR edge_detector behavioral /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/remote_sources/_/FIFO/edge_detector.vhd sub00/vhpl05 1344185981
+AR fifo_asynch_tl behavioral /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_asynch_tl.vhd sub00/vhpl07 1344185983
+EN edge_detector NULL /DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/remote_sources/_/FIFO/edge_detector.vhd sub00/vhpl04 1344185980

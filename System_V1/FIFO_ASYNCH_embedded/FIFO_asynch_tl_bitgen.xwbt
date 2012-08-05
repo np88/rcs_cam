@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_asynch_tl.ncd
+OUTFILE=/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/FIFO_asynch_tl.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded
+LICENSE=ISE
+USER_INFO=206284492_210292096_210294313_801
