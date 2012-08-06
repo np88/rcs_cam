@@ -5,7 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="sim" num="172" delta="old" >Generating IP...
+<msg type="warning" file="sim" num="0" delta="new" >The IP Fifo Generator 8.4 does not exist within the repository, and cannot be recustomized or regenerated. It is not available in CoreGen 13.1, and may have been removed or replaced. To generate Fifo Generator 8.4 please use a previous version of ISE in which this IP is available, or add the user repository which contains this IP.
+</msg>
+
+<msg type="info" file="sim" num="927" delta="old" >Generating component instance &apos;<arg fmt="%s" index="1">fifo_two_clock_domains</arg>&apos; of &apos;<arg fmt="%s" index="2">xilinx.com:ip:fifo_generator:8.4</arg>&apos; from &apos;<arg fmt="%s" index="3">/DIST/home/peters/cam_repo/FIFO/FIFO_ASYNCH/ipcore_dir/</arg>&apos;.
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">The chosen IP does not support an SYM schematic symbol.</arg>
 </msg>
 
 </messages>

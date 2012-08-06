@@ -29,7 +29,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity FIFO_asynch_tl is PORT (
+entity FIFO_asynch13_1_tl is PORT (
 		 rst_i : IN STD_LOGIC;
 		 wr_clk_i : IN STD_LOGIC;
 		 rd_clk_i : IN STD_LOGIC;

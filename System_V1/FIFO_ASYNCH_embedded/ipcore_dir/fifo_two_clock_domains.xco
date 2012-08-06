@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 13.4
-# Date: Sun Aug  5 17:21:21 2012
+# Date: Mon Aug  6 15:26:00 2012
 #
 ##############################################################
 #
@@ -116,7 +116,7 @@ CSET fifo_implementation_rdch=Common_Clock_Block_RAM
 CSET fifo_implementation_wach=Common_Clock_Block_RAM
 CSET fifo_implementation_wdch=Common_Clock_Block_RAM
 CSET fifo_implementation_wrch=Common_Clock_Block_RAM
-CSET full_flags_reset_value=1
+CSET full_flags_reset_value=0
 CSET full_threshold_assert_value=13
 CSET full_threshold_assert_value_axis=1023
 CSET full_threshold_assert_value_rach=1023
@@ -216,4 +216,4 @@ CSET wuser_width=1
 MISC pkg_timestamp=2011-10-22T06:08:52Z
 # END Extra information
 GENERATE
-# CRC: 4d3b0c90
+# CRC: 7e5f39e9

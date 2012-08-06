@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version 13.4
-# Date: Wed Aug  1 12:31:17 2012
+# Xilinx Core Generator version 13.1
+# Date: Mon Aug  6 15:15:10 2012
 #
 ##############################################################
 #
@@ -12,16 +12,12 @@
 #
 ##############################################################
 #
-#  Generated from component: xilinx.com:ip:fifo_generator:8.4
-#
-##############################################################
-#
 # BEGIN Project Options
 SET addpads = false
 SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
 SET createndf = false
-SET designentry = VHDL
+SET designentry = Advanced
 SET device = xc5vlx110t
 SET devicefamily = virtex5
 SET flowvendor = Other
@@ -32,7 +28,7 @@ SET package = ff1136
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -1
-SET verilogsim = false
+SET verilogsim = true
 SET vhdlsim = true
 # END Project Options
 # BEGIN Select
@@ -213,7 +209,7 @@ CSET write_data_count_width=16
 CSET wuser_width=1
 # END Parameters
 # BEGIN Extra information
-MISC pkg_timestamp=2011-10-22T06:08:52Z
+MISC pkg_timestamp=0
 # END Extra information
 GENERATE
-# CRC: 41a67da5
+# CRC: d546fdb3

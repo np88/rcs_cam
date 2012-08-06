@@ -127,7 +127,7 @@ END COMPONENT;
       c_error_injection_type_wdch => 0,
       c_error_injection_type_wrch => 0,
       c_family => "virtex5",
-      c_full_flags_rst_val => 1,
+      c_full_flags_rst_val => 0,
       c_has_almost_empty => 0,
       c_has_almost_full => 1,
       c_has_axi_aruser => 0,

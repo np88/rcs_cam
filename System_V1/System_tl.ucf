@@ -29,11 +29,11 @@ Net LEDs_Positions_GPIO_IO_O_pin[1] LOC=AF23 | IOSTANDARD=LVCMOS33;
 Net LEDs_Positions_GPIO_IO_O_pin[2] LOC=AG12 | IOSTANDARD=LVCMOS33; 
 Net LEDs_Positions_GPIO_IO_O_pin[3] LOC=AG23 | IOSTANDARD=LVCMOS33; 
 Net LEDs_Positions_GPIO_IO_O_pin[4] LOC=AF13 | IOSTANDARD=LVCMOS33; 
-Net Push_Buttons_5Bit_GPIO_IO_I_pin[0] LOC = AJ6 | IOSTANDARD=LVCMOS33; 
-Net Push_Buttons_5Bit_GPIO_IO_I_pin[1] LOC = AJ7 | IOSTANDARD=LVCMOS33; 
-Net Push_Buttons_5Bit_GPIO_IO_I_pin[2] LOC = V8 | IOSTANDARD=LVCMOS33; 
-Net Push_Buttons_5Bit_GPIO_IO_I_pin[3] LOC = AK7 | IOSTANDARD=LVCMOS33; 
-Net Push_Buttons_5Bit_GPIO_IO_I_pin[4] LOC = U8 | IOSTANDARD=LVCMOS33; 
+Net Push_Buttons_5Bit_GPIO_IO_I_pin[0] LOC = AJ6 | IOSTANDARD=LVCMOS33; # center
+Net Push_Buttons_5Bit_GPIO_IO_I_pin[1] LOC = AJ7 | IOSTANDARD=LVCMOS33; # west
+Net Push_Buttons_5Bit_GPIO_IO_I_pin[2] LOC = V8 | IOSTANDARD=LVCMOS33; # south
+Net Push_Buttons_5Bit_GPIO_IO_I_pin[3] LOC = AK7 | IOSTANDARD=LVCMOS33; # east
+Net Push_Buttons_5Bit_GPIO_IO_I_pin[4] LOC = U8 | IOSTANDARD=LVCMOS33; # north
 
 
 #NET "switches_i[0]" LOC = U25 | IOSTANDARD=SSTL18_II;
@@ -44,6 +44,8 @@ NET "switches_i[4]" LOC = AE27 | IOSTANDARD=SSTL18_II;
 NET "switches_i[5]" LOC = AE26 | IOSTANDARD=SSTL18_II;
 NET "switches_i[6]" LOC = AC25 | IOSTANDARD=SSTL18_II;
 NET "switches_i[7]" LOC = AC24 | IOSTANDARD=SSTL18_II;
+
+NET "cam_clock_i" LOC = AH17 | IOSTANDARD=LVCMOS33; # 33 MHz
 
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[0]" LOC = AN33;
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[1]" LOC = AN34;

@@ -11,5 +11,8 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/fifo_asynch_test.vhd&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_V1/FIFO_ASYNCH_embedded/netgen/par/FIFO_asynch_tl_timesim.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 
