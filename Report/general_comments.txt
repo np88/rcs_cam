@@ -88,3 +88,8 @@ in the scroll-down list." (Excerpt from HLD lab ex. 2 description)
 
 BUT: You need to right-click on the header panel and activate "Net" so that it actually will be displayed! Otherwise it might take quite a lot of time looking for it. 
 
+
+Synthesis:
+If some ports are left open because they are not needed, this can cause errors during synthesis. There might be the mistake that not only those ports are unconnected which are supposed to be unconnected but some other unexpected ports, too. This can be resolved by connecting the unneeded ports to some dummy ports. (reading warnings might help here if the architecture does not work as expected).
+Another problem can occur, if submodule files are missing. Pins belonging to those modules can be tied to ground and the modules are simply not working at all.
+
