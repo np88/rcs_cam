@@ -85,7 +85,7 @@ architecture Behavioral of System_tl is
 		);
 	END COMPONENT;
 
-	COMPONENT FIFO_asynch_tl
+	COMPONENT FIFO_asynch13_1_tl
 	  PORT (
 		 rst_i : IN STD_LOGIC;
 		 wr_clk_i : IN STD_LOGIC;
@@ -117,9 +117,9 @@ architecture Behavioral of System_tl is
 begin
 	gpio_FIFO_I(C_fifo_input_width downto 0) <= fifo_read_data;
 	gpio_FIFO_I(17 downto 16) <= fifo_full & almost_full;
+	--fifo_write_data(C_fifo_input_width downto 8) <= "01101101";
 	fifo_write_data(7 downto 1) <= switches_i(7 downto 1);
 	fifo_write_data(0) <= '1';
-	LEDs_8Bit_GPIO_IO_O_pin <= fifo_read_data (7 downto 0);
 
 	Inst_MB: MB PORT MAP(
 		fpga_0_DDR2_SDRAM_DDR2_Clk_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_pin,
@@ -142,17 +142,17 @@ begin
 		gpio_FIFO_O => fifo_read_enable,
 		LEDs_Positions_GPIO_IO_O_pin => LEDs_Positions_GPIO_IO_O_pin,
 		Push_Buttons_5Bit_GPIO_IO_I_pin => Push_Buttons_5Bit_GPIO_IO_I_pin,
-		LEDs_8Bit_GPIO_IO_O_pin => open
+		LEDs_8Bit_GPIO_IO_O_pin => LEDs_8Bit_GPIO_IO_O_pin
 	);
 
 
-	Inst_FIFO_Asynch: FIFO_asynch_tl PORT MAP (
+	Inst_FIFO_Asynch: FIFO_asynch13_1_tl PORT MAP (
 		 rst_i => Push_Buttons_5Bit_GPIO_IO_I_pin(0), --(center button)
 		 wr_clk_i => cam_clock_i,
 		 rd_clk_i => fpga_0_clk_1_sys_clk_pin,
 		 din_i => fifo_write_data,
 		 wr_en_i => Push_Buttons_5Bit_GPIO_IO_I_pin(4), -- (top button)
-		 rd_en_i => Push_Buttons_5Bit_GPIO_IO_I_pin(2),
+		 rd_en_i => fifo_read_enable,
 		 dout_o => fifo_read_data,
 		 full_o => fifo_full,
 		 almost_full_o => almost_full,

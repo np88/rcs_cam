@@ -1,5 +1,0 @@
-vhdl isim_temp "ipcore_dir/fifo_two_clock_domains.vhd"
-vhdl isim_temp "remote_sources/_/FIFO/edge_detector.vhd"
-vhdl isim_temp "FIFO_CONST.vhd"
-vhdl isim_temp "FIFO_asynch_tl.vhd"
-vhdl isim_temp "fifo_asynch_test.vhd"

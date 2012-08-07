@@ -868,55 +868,6 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
-IPNAME:microblaze INSTANCE:microblaze_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 - Copying cache
-implementation netlist
-IPNAME:plb_v46 INSTANCE:mb_plb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 55 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:ilmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 62 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:dlmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 69 - Copying cache implementation netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 76 - Copying cache
-implementation netlist
-IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 85 - Copying cache
-implementation netlist
-IPNAME:bram_block INSTANCE:lmb_bram -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 94 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:leds_8bit -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 101 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:leds_positions -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 114 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:push_buttons_5bit -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 127 - Copying cache
-implementation netlist
-IPNAME:mpmc INSTANCE:ddr2_sdram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
-line 141 - Copying cache implementation netlist
-IPNAME:xps_timer INSTANCE:xps_timer_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 180 - Copying cache
-implementation netlist
-IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 191 - Copying cache
-implementation netlist
-IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_0_block -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 201 - Copying cache
-implementation netlist
-IPNAME:mdm INSTANCE:mdm_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
-232 - Copying cache implementation netlist
-IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 244 - Copying cache
-implementation netlist
-IPNAME:xps_gpio INSTANCE:xps_external -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 273 - Copying cache
-implementation netlist
-IPNAME:xps_intc INSTANCE:xps_intc_0 -
-/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 281 - Copying cache
-implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
@@ -934,7 +885,7 @@ Inserting wrapper level ...
 Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -947,18 +898,64 @@ Running XST synthesis ...
 INFO:EDK - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:microblaze_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 -
+Running XST synthesis
+INSTANCE:mb_plb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 55 -
+Running XST synthesis
+INSTANCE:ilmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 62 - Running
+XST synthesis
+INSTANCE:dlmb - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 69 - Running
+XST synthesis
+INSTANCE:dlmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 76 -
+Running XST synthesis
+INSTANCE:ilmb_cntlr - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 85 -
+Running XST synthesis
+INSTANCE:lmb_bram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 94 -
+Running XST synthesis
+INSTANCE:leds_8bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 101 -
+Running XST synthesis
+INSTANCE:leds_positions - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
+114 - Running XST synthesis
+INSTANCE:push_buttons_5bit - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
+127 - Running XST synthesis
+INSTANCE:ddr2_sdram - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 141 -
+Running XST synthesis
+INSTANCE:xps_timer_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 180 -
+Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs
+line 191 - Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_0_block -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 201 - Running XST synthesis
 INSTANCE:clock_generator_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
 207 - Running XST synthesis
+INSTANCE:mdm_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 232 -
+Running XST synthesis
+INSTANCE:proc_sys_reset_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line
+244 - Running XST synthesis
 INSTANCE:gpio_fifo - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 257 -
+Running XST synthesis
+INSTANCE:xps_external - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 273
+- Running XST synthesis
+INSTANCE:xps_intc_0 - /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 281 -
 Running XST synthesis
 
 Running NGCBUILD ...
+IPNAME:microblaze_0_wrapper INSTANCE:microblaze_0 -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 41 - Running NGCBUILD
+IPNAME:ilmb_wrapper INSTANCE:ilmb -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 62 - Running NGCBUILD
+IPNAME:dlmb_wrapper INSTANCE:dlmb -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 69 - Running NGCBUILD
+IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 141 - Running NGCBUILD
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 /DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 207 - Running NGCBUILD
+IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
+/DIST/home/peters/cam_repo/System_V1/MB/MB.mhs line 281 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/MB.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 52.00 seconds
+Total run time: 596.00 seconds

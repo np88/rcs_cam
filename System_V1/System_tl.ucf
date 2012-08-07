@@ -47,6 +47,8 @@ NET "switches_i[7]" LOC = AC24 | IOSTANDARD=SSTL18_II;
 
 NET "cam_clock_i" LOC = AH17 | IOSTANDARD=LVCMOS33; # 33 MHz
 
+NET "fpga_0_clk_1_sys_clk_pin" LOC = AH15 | IOSTANDARD=LVCMOS33;
+
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[0]" LOC = AN33;
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[1]" LOC = AN34;
 #NET "cpu0_i/gpio_external_GPIO_IO_pin[2]" LOC = AM32;

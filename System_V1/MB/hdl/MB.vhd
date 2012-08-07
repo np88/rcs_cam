@@ -25,7 +25,7 @@ entity MB is
     fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : inout std_logic_vector(7 downto 0);
     fpga_0_clk_1_sys_clk_pin : in std_logic;
     fpga_0_rst_1_sys_rst_pin : in std_logic;
-    gpio_FIFO_I : in std_logic_vector(0 to 17);
+    gpio_FIFO_I : in std_logic_vector(17 downto 0);
     gpio_FIFO_O : out std_logic;
     Push_Buttons_5Bit_GPIO_IO_I_pin : in std_logic_vector(0 to 4);
     LEDs_Positions_GPIO_IO_O_pin : out std_logic_vector(0 to 4);
@@ -3630,7 +3630,7 @@ begin
 
   CLK_S <= fpga_0_clk_1_sys_clk_pin;
   sys_rst_s <= fpga_0_rst_1_sys_rst_pin;
-  gpio_FIFO_GPIO_IO_I <= gpio_FIFO_I;
+  gpio_FIFO_GPIO_IO_I(0 to 17) <= gpio_FIFO_I(17 downto 0);
   gpio_FIFO_O <= gpio_FIFO_GPIO2_IO_O(0);
   Push_Buttons_5Bit_GPIO_IO_I <= Push_Buttons_5Bit_GPIO_IO_I_pin;
   LEDs_Positions_GPIO_IO_O_pin <= LEDs_Positions_GPIO_IO_O;

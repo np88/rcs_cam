@@ -93,3 +93,5 @@ Synthesis:
 If some ports are left open because they are not needed, this can cause errors during synthesis. There might be the mistake that not only those ports are unconnected which are supposed to be unconnected but some other unexpected ports, too. This can be resolved by connecting the unneeded ports to some dummy ports. (reading warnings might help here if the architecture does not work as expected).
 Another problem can occur, if submodule files are missing. Pins belonging to those modules can be tied to ground and the modules are simply not working at all.
 
+It is important to connect all the IOs in the top level to HW pins if they are used in the design. Otherwise there can be errors like: Microblaze is under reset, unable to stop
+

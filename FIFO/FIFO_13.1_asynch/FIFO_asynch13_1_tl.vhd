@@ -46,7 +46,7 @@ entity FIFO_asynch13_1_tl is PORT (
 	  );
 end FIFO_asynch13_1_tl;
 
-architecture Behavioral of FIFO_asynch_tl is
+architecture Behavioral of FIFO_asynch13_1_tl is
 
 	-- FIFO with 2 clock domains
 	COMPONENT fifo_13_1_asynch

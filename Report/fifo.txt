@@ -39,6 +39,3 @@ Write clock is connected to 100 MHz User Clock,
 read clok is connected to 33 MHz clock generator. 
 (details in data sheet, p. 19/20)
 
-Fifo from 13.4 and Microblaze 13.1 cause an error in SDK:
-MicroBlaze is under reset..
-(checking out, if the error is due to different ISE versions)

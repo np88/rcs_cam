@@ -17,7 +17,7 @@
   <files>
     <file xil_pn:name="MB/MB.xmp" xil_pn:type="FILE_XPS">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
     </file>
     <file xil_pn:name="System_tl.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="8"/>
@@ -26,27 +26,27 @@
     <file xil_pn:name="System_tl.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="../FIFO/FIFO/edge_detector.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="89"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
-    </file>
     <file xil_pn:name="FIFO_ASYNCH_embedded/FIFO_CONST.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="91"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
-    <file xil_pn:name="FIFO_ASYNCH_embedded/FIFO_asynch_tl.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="92"/>
+    <file xil_pn:name="FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="94"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
-    <file xil_pn:name="FIFO_ASYNCH_embedded/FIFO_asynch_tl.ngc" xil_pn:type="FILE_NGC">
+    <file xil_pn:name="FIFO_13_1_asynch/FIFO_asynch13_1_tl.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="FIFO_ASYNCH_embedded/ipcore_dir/fifo_two_clock_domains.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="92"/>
+    <file xil_pn:name="FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="96"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="FIFO_ASYNCH_embedded/ipcore_dir/fifo_two_clock_domains.ngc" xil_pn:type="FILE_NGC">
+    <file xil_pn:name="FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
+    <file xil_pn:name="FIFO_13_1_asynch/edge_detector.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="98"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
   </files>
 

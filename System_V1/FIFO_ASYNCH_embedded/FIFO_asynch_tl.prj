@@ -1,4 +1,0 @@
-vhdl work "ipcore_dir/fifo_two_clock_domains.vhd"
-vhdl work "remote_sources/_/FIFO/edge_detector.vhd"
-vhdl work "FIFO_CONST.vhd"
-vhdl work "FIFO_asynch_tl.vhd"
