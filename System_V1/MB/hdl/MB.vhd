@@ -29,7 +29,9 @@ entity MB is
     gpio_FIFO_O : out std_logic;
     Push_Buttons_5Bit_GPIO_IO_I_pin : in std_logic_vector(0 to 4);
     LEDs_Positions_GPIO_IO_O_pin : out std_logic_vector(0 to 4);
-    LEDs_8Bit_GPIO_IO_O_pin : out std_logic_vector(7 downto 0)
+    LEDs_8Bit_GPIO_IO_O_pin : out std_logic_vector(7 downto 0);
+    gpio_camera_I : in std_logic_vector(15 downto 0);
+    gpio_camera_IO : inout std_logic_vector(9 downto 0)
   );
 end MB;
 
@@ -3314,7 +3316,7 @@ architecture STRUCTURE of MB is
     );
   end component;
 
-  component xps_external_wrapper is
+  component gpio_camera_wrapper is
     port (
       SPLB_Clk : in std_logic;
       SPLB_Rst : in std_logic;
@@ -3359,12 +3361,12 @@ architecture STRUCTURE of MB is
       Sl_MRdErr : out std_logic_vector(0 to 1);
       Sl_MIRQ : out std_logic_vector(0 to 1);
       IP2INTC_Irpt : out std_logic;
-      GPIO_IO_I : in std_logic_vector(0 to 31);
-      GPIO_IO_O : out std_logic_vector(0 to 31);
-      GPIO_IO_T : out std_logic_vector(0 to 31);
-      GPIO2_IO_I : in std_logic_vector(0 to 31);
-      GPIO2_IO_O : out std_logic_vector(0 to 31);
-      GPIO2_IO_T : out std_logic_vector(0 to 31)
+      GPIO_IO_I : in std_logic_vector(0 to 15);
+      GPIO_IO_O : out std_logic_vector(0 to 15);
+      GPIO_IO_T : out std_logic_vector(0 to 15);
+      GPIO2_IO_I : in std_logic_vector(0 to 9);
+      GPIO2_IO_O : out std_logic_vector(0 to 9);
+      GPIO2_IO_T : out std_logic_vector(0 to 9)
     );
   end component;
 
@@ -3412,8 +3414,17 @@ architecture STRUCTURE of MB is
       Sl_rdWdAddr : out std_logic_vector(0 to 3);
       Sl_rdBTerm : out std_logic;
       Sl_MIRQ : out std_logic_vector(0 to 1);
-      Intr : in std_logic_vector(2 downto 0);
+      Intr : in std_logic_vector(3 downto 0);
       Irq : out std_logic
+    );
+  end component;
+
+  component IOBUF is
+    port (
+      I : in std_logic;
+      IO : inout std_logic;
+      O : out std_logic;
+      T : in std_logic
     );
   end component;
 
@@ -3464,6 +3475,11 @@ architecture STRUCTURE of MB is
   signal gpio_FIFO_GPIO2_IO_O : std_logic_vector(0 to 0);
   signal gpio_FIFO_GPIO_IO_I : std_logic_vector(0 to 17);
   signal gpio_FIFO_IP2INTC_Irpt : std_logic;
+  signal gpio_camera_GPIO2_IO_I : std_logic_vector(9 downto 0);
+  signal gpio_camera_GPIO2_IO_O : std_logic_vector(9 downto 0);
+  signal gpio_camera_GPIO2_IO_T : std_logic_vector(9 downto 0);
+  signal gpio_camera_GPIO_IO_I : std_logic_vector(0 to 15);
+  signal gpio_camera_IP2INTC_Irpt : std_logic;
   signal ilmb_LMB_ABus : std_logic_vector(0 to 31);
   signal ilmb_LMB_AddrStrobe : std_logic;
   signal ilmb_LMB_BE : std_logic_vector(0 to 3);
@@ -3588,7 +3604,7 @@ architecture STRUCTURE of MB is
   signal net_gnd128 : std_logic_vector(0 to 127);
   signal net_vcc0 : std_logic;
   signal net_vcc4 : std_logic_vector(0 to 3);
-  signal pgassign1 : std_logic_vector(2 downto 0);
+  signal pgassign1 : std_logic_vector(3 downto 0);
   signal sys_bus_reset : std_logic_vector(0 to 0);
   signal sys_periph_reset : std_logic_vector(0 to 0);
   signal sys_rst_s : std_logic;
@@ -3621,7 +3637,7 @@ architecture STRUCTURE of MB is
   attribute BOX_TYPE of mdm_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of proc_sys_reset_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of gpio_fifo_wrapper : component is "user_black_box";
-  attribute BOX_TYPE of xps_external_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of gpio_camera_wrapper : component is "user_black_box";
   attribute BOX_TYPE of xps_intc_0_wrapper : component is "user_black_box";
 
 begin
@@ -3635,9 +3651,11 @@ begin
   Push_Buttons_5Bit_GPIO_IO_I <= Push_Buttons_5Bit_GPIO_IO_I_pin;
   LEDs_Positions_GPIO_IO_O_pin <= LEDs_Positions_GPIO_IO_O;
   LEDs_8Bit_GPIO_IO_O_pin <= LEDs_8Bit_GPIO_IO_O;
-  pgassign1(2) <= xps_timer_0_Interrupt;
-  pgassign1(1) <= gpio_FIFO_IP2INTC_Irpt;
-  pgassign1(0) <= Push_Buttons_5Bit_IP2INTC_Irpt;
+  gpio_camera_GPIO_IO_I(0 to 15) <= gpio_camera_I(15 downto 0);
+  pgassign1(3) <= xps_timer_0_Interrupt;
+  pgassign1(2) <= gpio_FIFO_IP2INTC_Irpt;
+  pgassign1(1) <= Push_Buttons_5Bit_IP2INTC_Irpt;
+  pgassign1(0) <= gpio_camera_IP2INTC_Irpt;
   net_gnd0 <= '0';
   net_gnd1(0 downto 0) <= B"0";
   net_gnd10(0 to 9) <= B"0000000000";
@@ -6917,7 +6935,7 @@ begin
       GPIO2_IO_T => open
     );
 
-  xps_external : xps_external_wrapper
+  gpio_camera : gpio_camera_wrapper
     port map (
       SPLB_Clk => clk_100_0000MHzPLL0,
       SPLB_Rst => mb_plb_SPLB_Rst(8),
@@ -6961,13 +6979,13 @@ begin
       Sl_MWrErr => mb_plb_Sl_MWrErr(16 to 17),
       Sl_MRdErr => mb_plb_Sl_MRdErr(16 to 17),
       Sl_MIRQ => mb_plb_Sl_MIRQ(16 to 17),
-      IP2INTC_Irpt => open,
-      GPIO_IO_I => net_gnd32,
+      IP2INTC_Irpt => gpio_camera_IP2INTC_Irpt,
+      GPIO_IO_I => gpio_camera_GPIO_IO_I,
       GPIO_IO_O => open,
       GPIO_IO_T => open,
-      GPIO2_IO_I => net_gnd32,
-      GPIO2_IO_O => open,
-      GPIO2_IO_T => open
+      GPIO2_IO_I => gpio_camera_GPIO2_IO_I(9 downto 0),
+      GPIO2_IO_O => gpio_camera_GPIO2_IO_O(9 downto 0),
+      GPIO2_IO_T => gpio_camera_GPIO2_IO_T(9 downto 0)
     );
 
   xps_intc_0 : xps_intc_0_wrapper
@@ -7016,6 +7034,86 @@ begin
       Sl_MIRQ => mb_plb_Sl_MIRQ(18 to 19),
       Intr => pgassign1,
       Irq => xps_intc_0_Irq
+    );
+
+  iobuf_0 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(9),
+      IO => gpio_camera_IO(9),
+      O => gpio_camera_GPIO2_IO_I(9),
+      T => gpio_camera_GPIO2_IO_T(9)
+    );
+
+  iobuf_1 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(8),
+      IO => gpio_camera_IO(8),
+      O => gpio_camera_GPIO2_IO_I(8),
+      T => gpio_camera_GPIO2_IO_T(8)
+    );
+
+  iobuf_2 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(7),
+      IO => gpio_camera_IO(7),
+      O => gpio_camera_GPIO2_IO_I(7),
+      T => gpio_camera_GPIO2_IO_T(7)
+    );
+
+  iobuf_3 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(6),
+      IO => gpio_camera_IO(6),
+      O => gpio_camera_GPIO2_IO_I(6),
+      T => gpio_camera_GPIO2_IO_T(6)
+    );
+
+  iobuf_4 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(5),
+      IO => gpio_camera_IO(5),
+      O => gpio_camera_GPIO2_IO_I(5),
+      T => gpio_camera_GPIO2_IO_T(5)
+    );
+
+  iobuf_5 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(4),
+      IO => gpio_camera_IO(4),
+      O => gpio_camera_GPIO2_IO_I(4),
+      T => gpio_camera_GPIO2_IO_T(4)
+    );
+
+  iobuf_6 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(3),
+      IO => gpio_camera_IO(3),
+      O => gpio_camera_GPIO2_IO_I(3),
+      T => gpio_camera_GPIO2_IO_T(3)
+    );
+
+  iobuf_7 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(2),
+      IO => gpio_camera_IO(2),
+      O => gpio_camera_GPIO2_IO_I(2),
+      T => gpio_camera_GPIO2_IO_T(2)
+    );
+
+  iobuf_8 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(1),
+      IO => gpio_camera_IO(1),
+      O => gpio_camera_GPIO2_IO_I(1),
+      T => gpio_camera_GPIO2_IO_T(1)
+    );
+
+  iobuf_9 : IOBUF
+    port map (
+      I => gpio_camera_GPIO2_IO_O(0),
+      IO => gpio_camera_IO(0),
+      O => gpio_camera_GPIO2_IO_I(0),
+      T => gpio_camera_GPIO2_IO_T(0)
     );
 
 end architecture STRUCTURE;

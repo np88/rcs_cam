@@ -37,7 +37,9 @@ entity System_tl is port (
 		cam_clock_i : IN std_logic;
 		fpga_0_rst_1_sys_rst_pin : IN std_logic;
 		switches_i : IN std_logic_vector(7 downto 0);
+		gpio_camera_I : IN std_logic_vector(15 downto 0);  
 		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);    
+		gpio_camera_IO : INOUT std_logic_vector(9 downto 0);   
 		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_pin : INOUT std_logic_vector(7 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);      
@@ -64,7 +66,9 @@ architecture Behavioral of System_tl is
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
 		fpga_0_rst_1_sys_rst_pin : IN std_logic;
 		gpio_FIFO_I : IN std_logic_vector(17 downto 0);
+		gpio_camera_I : IN std_logic_vector(15 downto 0);  
 		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);    
+		gpio_camera_IO : INOUT std_logic_vector(9 downto 0);   
 		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_pin : INOUT std_logic_vector(7 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);      
@@ -117,7 +121,6 @@ architecture Behavioral of System_tl is
 begin
 	gpio_FIFO_I(C_fifo_input_width downto 0) <= fifo_read_data;
 	gpio_FIFO_I(17 downto 16) <= fifo_full & almost_full;
-	--fifo_write_data(C_fifo_input_width downto 8) <= "01101101";
 	fifo_write_data(7 downto 1) <= switches_i(7 downto 1);
 	fifo_write_data(0) <= '1';
 
@@ -138,6 +141,8 @@ begin
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin => fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin,
 		fpga_0_clk_1_sys_clk_pin => fpga_0_clk_1_sys_clk_pin,
 		fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin,
+		gpio_camera_I => gpio_camera_I,
+		gpio_camera_IO => gpio_camera_IO,
 		gpio_FIFO_I => gpio_FIFO_I,
 		gpio_FIFO_O => fifo_read_enable,
 		LEDs_Positions_GPIO_IO_O_pin => LEDs_Positions_GPIO_IO_O_pin,

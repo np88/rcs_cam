@@ -36,6 +36,8 @@
  PORT Push_Buttons_5Bit_GPIO_IO_I_pin = Push_Buttons_5Bit_GPIO_IO_I, DIR = I, VEC = [0:4]
  PORT LEDs_Positions_GPIO_IO_O_pin = LEDs_Positions_GPIO_IO_O, DIR = O, VEC = [0:4]
  PORT LEDs_8Bit_GPIO_IO_O_pin = LEDs_8Bit_GPIO_IO_O, DIR = O, VEC = [7:0]
+ PORT gpio_camera_I = gpio_camera_GPIO_IO_I, DIR = I, VEC = [15:0]
+ PORT gpio_camera_IO = gpio_camera_GPIO2_IO, DIR = IO, VEC = [9:0]
 
 
 BEGIN microblaze
@@ -271,11 +273,19 @@ BEGIN xps_gpio
 END
 
 BEGIN xps_gpio
- PARAMETER INSTANCE = xps_external
+ PARAMETER INSTANCE = gpio_camera
  PARAMETER HW_VER = 2.00.a
  PARAMETER C_BASEADDR = 0x81400000
  PARAMETER C_HIGHADDR = 0x8140ffff
+ PARAMETER C_INTERRUPT_PRESENT = 1
+ PARAMETER C_IS_DUAL = 1
+ PARAMETER C_GPIO_WIDTH = 16
+ PARAMETER C_ALL_INPUTS = 1
+ PARAMETER C_GPIO2_WIDTH = 10
  BUS_INTERFACE SPLB = mb_plb
+ PORT IP2INTC_Irpt = gpio_camera_IP2INTC_Irpt
+ PORT GPIO_IO_I = gpio_camera_GPIO_IO_I
+ PORT GPIO2_IO = gpio_camera_GPIO2_IO
 END
 
 BEGIN xps_intc
@@ -284,7 +294,7 @@ BEGIN xps_intc
  PARAMETER C_BASEADDR = 0x81800000
  PARAMETER C_HIGHADDR = 0x8180ffff
  BUS_INTERFACE SPLB = mb_plb
- PORT Intr = xps_timer_0_Interrupt & gpio_FIFO_IP2INTC_Irpt & Push_Buttons_5Bit_IP2INTC_Irpt
+ PORT Intr = xps_timer_0_Interrupt & gpio_FIFO_IP2INTC_Irpt & Push_Buttons_5Bit_IP2INTC_Irpt & gpio_camera_IP2INTC_Irpt
  PORT Irq = xps_intc_0_Irq
 END
 
