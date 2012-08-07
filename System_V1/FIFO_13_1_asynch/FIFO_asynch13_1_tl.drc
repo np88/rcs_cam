@@ -1,0 +1,8 @@
+Release 13.1 Drc O.40d (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Mon Aug  6 18:09:54 2012
+
+drc -z FIFO_asynch13_1_tl.ncd FIFO_asynch13_1_tl.pcf
+
+DRC detected 0 errors and 0 warnings.

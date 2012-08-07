@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.xst" -ofn "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc FIFO_asynch13_1_tl.ucf -p xc5vlx110t-ff1136-1 FIFO_asynch13_1_tl.ngc FIFO_asynch13_1_tl.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o FIFO_asynch13_1_tl_map.ncd FIFO_asynch13_1_tl.ngd FIFO_asynch13_1_tl.pcf 
+par -w -intstyle ise -ol high -mt off FIFO_asynch13_1_tl_map.ncd FIFO_asynch13_1_tl.ncd FIFO_asynch13_1_tl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml FIFO_asynch13_1_tl.twx FIFO_asynch13_1_tl.ncd -o FIFO_asynch13_1_tl.twr FIFO_asynch13_1_tl.pcf -ucf FIFO_asynch13_1_tl.ucf 
+bitgen -intstyle ise -f FIFO_asynch13_1_tl.ut FIFO_asynch13_1_tl.ncd 

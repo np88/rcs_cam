@@ -1,0 +1,137 @@
+--------------------------------------------------------------------------------
+Release 13.1 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise
+-v 3 -s 1 -n 3 -fastpaths -xml FIFO_asynch13_1_tl.twx FIFO_asynch13_1_tl.ncd -o
+FIFO_asynch13_1_tl.twr FIFO_asynch13_1_tl.pcf -ucf FIFO_asynch13_1_tl.ucf
+
+Design file:              FIFO_asynch13_1_tl.ncd
+Physical constraint file: FIFO_asynch13_1_tl.pcf
+Device,package,speed:     xc5vlx110t,ff1136,-1 (PRODUCTION 1.72 2011-02-03, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock rd_clk_i
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+rd_en_i     |    1.238(R)|    1.242(R)|rd_clk_i_BUFGP    |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock wr_clk_i
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+din_i<0>    |    2.403(R)|    0.555(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<1>    |    1.550(R)|    1.341(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<2>    |    1.610(R)|    1.284(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<3>    |    1.719(R)|    1.185(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<4>    |    1.505(R)|    1.381(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<5>    |    1.634(R)|    1.263(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<6>    |    1.651(R)|    1.246(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<7>    |    1.889(R)|    1.026(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<8>    |    1.129(R)|    1.727(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<9>    |    1.335(R)|    1.538(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<10>   |    0.957(R)|    1.890(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<11>   |    1.149(R)|    1.710(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<12>   |    1.204(R)|    1.660(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<13>   |    1.302(R)|    1.568(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<14>   |    1.347(R)|    1.528(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<15>   |    1.346(R)|    1.530(R)|wr_clk_i_BUFGP    |   0.000|
+wr_en_i     |    1.492(R)|    1.184(R)|wr_clk_i_BUFGP    |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock rd_clk_i to Pad
+------------------+------------+------------------+--------+
+                  | clk (edge) |                  | Clock  |
+Destination       |   to PAD   |Internal Clock(s) | Phase  |
+------------------+------------+------------------+--------+
+dout_o<0>         |   13.596(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<1>         |   13.560(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<2>         |   13.141(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<3>         |   12.634(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<4>         |   13.559(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<5>         |   12.909(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<6>         |   12.664(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<7>         |   12.646(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<8>         |   12.166(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<9>         |   12.077(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<10>        |   11.965(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<11>        |   11.947(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<12>        |   12.304(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<13>        |   12.078(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<14>        |   11.962(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<15>        |   12.529(R)|rd_clk_i_BUFGP    |   0.000|
+empty_o           |   11.714(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<0>|    9.354(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<1>|    9.154(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<2>|    9.347(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<3>|    9.288(R)|rd_clk_i_BUFGP    |   0.000|
+valid_o           |    9.086(R)|rd_clk_i_BUFGP    |   0.000|
+------------------+------------+------------------+--------+
+
+Clock wr_clk_i to Pad
+------------------+------------+------------------+--------+
+                  | clk (edge) |                  | Clock  |
+Destination       |   to PAD   |Internal Clock(s) | Phase  |
+------------------+------------+------------------+--------+
+almost_full_o     |    9.060(R)|wr_clk_i_BUFGP    |   0.000|
+full_o            |   11.772(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<0>|    9.154(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<1>|    9.284(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<2>|    9.332(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<3>|    9.479(R)|wr_clk_i_BUFGP    |   0.000|
+------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock rd_clk_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rd_clk_i       |    2.678|         |         |         |
+wr_clk_i       |    1.242|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock wr_clk_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rd_clk_i       |    1.270|         |         |         |
+wr_clk_i       |    2.953|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Aug  6 18:09:48 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 498 MB
+
+
+

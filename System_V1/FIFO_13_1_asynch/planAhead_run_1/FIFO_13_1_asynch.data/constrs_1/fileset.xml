@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="12">
+	<FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+		<Filter Type="Constrs"/>
+		<File Path="$PPRDIR/../ipcore_dir/fifo_13_1_asynch.ncf">
+		</File>
+		<File Path="$PPRDIR/../FIFO_asynch13_1_tl.ucf">
+		</File>
+		<Config>
+			<Option Name="TargetPart" Val="xc5vlx110tff1136-1"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

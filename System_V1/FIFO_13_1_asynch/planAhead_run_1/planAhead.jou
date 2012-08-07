@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1
+# Build 117799 by hdbuild on Thu Feb 17 11:35:36 PST 2011
+# Start of session at: Tue Aug  7 11:15:20 2012
+# Process ID: 4271
+# Log file: /DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/planAhead_run_1/planAhead.log
+# Journal file: /DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui -source /DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/pa.fromNetlist.tcl
+startgroup
+set_property loc IOB_X1Y218 [get_ports {dout_o[0]}]
+endgroup
+exit

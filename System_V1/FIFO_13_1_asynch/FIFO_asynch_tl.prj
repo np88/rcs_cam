@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/fifo_13_1_asynch.vhd"
+vhdl work "edge_detector.vhd"
+vhdl work "FIFO_asynch13_1_tl.vhd"

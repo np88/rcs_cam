@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch_tl.xst" -ofn "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch_tl.syr" 

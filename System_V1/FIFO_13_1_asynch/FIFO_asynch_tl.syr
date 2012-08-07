@@ -1,0 +1,172 @@
+Release 13.1 - xst O.40d (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+Reading design: FIFO_asynch_tl.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FIFO_asynch_tl.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FIFO_asynch_tl"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : FIFO_asynch_tl
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Off
+Reduce Control Sets                : Off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd" in Library work.
+Entity <fifo_13_1_asynch> compiled.
+Entity <fifo_13_1_asynch> (Architecture <fifo_13_1_asynch_a>) compiled.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/edge_detector.vhd" in Library work.
+Entity <edge_detector> compiled.
+Entity <edge_detector> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" in Library work.
+Entity <FIFO_asynch13_1_tl> compiled.
+ERROR:HDLParsers:3010 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 49. Entity FIFO_asynch_tl does not exist.
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 54. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 54. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 57. Undefined symbol 'STD_LOGIC_VECTOR'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 57. STD_LOGIC_VECTOR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 72. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 72. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 78. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 78. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 84. Undefined symbol 'rst_i'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 84. rst_i: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 85. Undefined symbol 'wr_clk_i'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 85. wr_clk_i: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 86. Undefined symbol 'rd_clk_i'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 86. rd_clk_i: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 87. Undefined symbol 'din_i'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 87. din_i: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 88. Undefined symbol 'write_enable_edge'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 88. write_enable_edge: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 89. Undefined symbol 'read_enable_edge'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 89. read_enable_edge: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 90. Undefined symbol 'dout_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 90. dout_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 91. Undefined symbol 'full_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 91. full_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 92. Undefined symbol 'almost_full_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 92. almost_full_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 93. Undefined symbol 'empty_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 93. empty_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 94. Undefined symbol 'valid_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 94. valid_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 95. Undefined symbol 'rd_data_count_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 95. rd_data_count_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 97. Undefined symbol 'wr_data_count_o'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 97. wr_data_count_o: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 102. Undefined symbol 'rd_en_i'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 102. rd_en_i: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 109. Undefined symbol 'wr_en_i'.
+ERROR:HDLParsers:1209 - "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" Line 109. wr_en_i: Undefined symbol (last report in this block)
+--> 
+
+
+Total memory usage is 354024 kilobytes
+
+Number of errors   :   39 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

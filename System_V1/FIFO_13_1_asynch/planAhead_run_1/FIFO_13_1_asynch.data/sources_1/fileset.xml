@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="12">
+	<FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+		<Filter Type="EDIFSrcs"/>
+		<File Path="$PPRDIR/../FIFO_asynch13_1_tl.ngc">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/fifo_13_1_asynch.ngc">
+		</File>
+		<Config>
+			<Option Name="DesignMode" Val="GateLvl"/>
+			<Option Name="GateLvlMode" Val="EDIF"/>
+			<Option Name="TopFile" Val="$PPRDIR/../FIFO_asynch13_1_tl.ngc"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

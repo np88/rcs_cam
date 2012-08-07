@@ -1,0 +1,88 @@
+WARNING: 64bit architecture not detected. Defaulting to 32bit.
+
+****** PlanAhead v13.1
+  **** Build 117799 by hdbuild on Thu Feb 17 11:35:36 PST 2011
+    ** Copyright 1986-1999, 2001-2011 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 0] Loading parts and site information from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file '/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file '/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml'
+start_gui -source /DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/pa.fromNetlist.tcl
+starting gui ...
+# create_project -name FIFO_13_1_asynch -dir "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/planAhead_run_1" -part xc5vlx110tff1136-1
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch} {ipcore_dir} }
+# add_files "ipcore_dir/fifo_13_1_asynch.ncf" -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_param project.paUcfFile  "FIFO_asynch13_1_tl.ucf"
+# add_files "FIFO_asynch13_1_tl.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design
+INFO: Design is defaulting to constrset part: xc5vlx110tff1136-1
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design FIFO_asynch13_1_tl.ngc ...
+WARNING:NetListWriters:298 - No output is written to FIFO_asynch13_1_tl.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file FIFO_asynch13_1_tl.edif ...
+ngc2edif: Total memory usage is 22616 kilobytes
+
+Parsing EDIF File [./.Xil-PlanAhead-4271-weekino/ngc2edif/FIFO_asynch13_1_tl.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-4271-weekino/ngc2edif/FIFO_asynch13_1_tl.edif]
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.1 - ngc2edif O.40d (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design fifo_13_1_asynch.ngc ...
+WARNING:NetListWriters:298 - No output is written to fifo_13_1_asynch.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file fifo_13_1_asynch.edif ...
+ngc2edif: Total memory usage is 22952 kilobytes
+
+Reading core file '/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.ngc' for (cell view 'fifo_13_1_asynch', library 'FIFO_asynch13_1_tl_lib', file 'FIFO_asynch13_1_tl.ngc')
+Parsing EDIF File [./.Xil-PlanAhead-4271-weekino/ngc2edif/fifo_13_1_asynch.edif]
+Finished Parsing EDIF File [./.Xil-PlanAhead-4271-weekino/ngc2edif/fifo_13_1_asynch.edif]
+INFO: [HD-ArchReader 18] Reading macro library /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn
+Parsing EDIF File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+Finished Parsing EDIF File [/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5lx/hd_int_macros.edn]
+INFO: [HD-ArchReader 15] Reading bus macro file /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/pr_bus_macros.xml
+INFO: [HD-ArchReader 7] Loading clock regions from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ClockBuffers.xml
+INFO: [HD-ArchReader 3] Loading package from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/Package.xml
+INFO: [HD-ArchReader 4] Loading io standards from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/IOStandards.xml
+INFO: [HD-ArchReader 5] Loading pkg sso from /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/virtex5/virtex5lxt/xc5vlx110t/ff1136/SSORules.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/drc.xml
+INFO: [HD-LIB 0] Reading timing library /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+INFO: [HD-LIB 1] Done reading timing library /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/virtex5/virtex5.lib .
+Parsing UCF File [/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.ncf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.ncf]
+Parsing UCF File [/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.ucf]
+Finished Parsing UCF File [/DIST/home/peters/cam_repo/System_V1/FIFO_13_1_asynch/FIFO_asynch13_1_tl.ucf]
+Time (s): 14.710u 1.030s 12.090w. Memory (MB): 1353.133p 105.984g
+Time (s): 18.080u 1.490s 14.660w. Memory (MB): 1353.133p 118.000g
+startgroup
+set_property loc IOB_X1Y218 [get_ports {dout_o[0]}]
+endgroup
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead
