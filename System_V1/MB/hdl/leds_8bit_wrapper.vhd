@@ -150,8 +150,8 @@ begin
 
   LEDs_8Bit : xps_gpio
     generic map (
-      C_BASEADDR => X"88a8a400",
-      C_HIGHADDR => X"88a8a7ff",
+      C_BASEADDR => X"8b987800",
+      C_HIGHADDR => X"8b987bff",
       C_SPLB_AWIDTH => 32,
       C_SPLB_DWIDTH => 64,
       C_SPLB_P2P => 0,

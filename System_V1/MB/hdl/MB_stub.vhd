@@ -30,8 +30,7 @@ entity MB_stub is
     Push_Buttons_5Bit_GPIO_IO_I_pin : in std_logic_vector(0 to 4);
     LEDs_Positions_GPIO_IO_O_pin : out std_logic_vector(0 to 4);
     LEDs_8Bit_GPIO_IO_O_pin : out std_logic_vector(7 downto 0);
-    gpio_camera_I : in std_logic_vector(15 downto 0);
-    gpio_camera_IO : inout std_logic_vector(9 downto 0)
+    gpio_camera_I : in std_logic_vector(18 downto 0)
   );
 end MB_stub;
 
@@ -60,8 +59,7 @@ architecture STRUCTURE of MB_stub is
       Push_Buttons_5Bit_GPIO_IO_I_pin : in std_logic_vector(0 to 4);
       LEDs_Positions_GPIO_IO_O_pin : out std_logic_vector(0 to 4);
       LEDs_8Bit_GPIO_IO_O_pin : out std_logic_vector(7 downto 0);
-      gpio_camera_I : in std_logic_vector(15 downto 0);
-      gpio_camera_IO : inout std_logic_vector(9 downto 0)
+      gpio_camera_I : in std_logic_vector(18 downto 0)
     );
   end component;
 
@@ -93,8 +91,7 @@ begin
       Push_Buttons_5Bit_GPIO_IO_I_pin => Push_Buttons_5Bit_GPIO_IO_I_pin,
       LEDs_Positions_GPIO_IO_O_pin => LEDs_Positions_GPIO_IO_O_pin,
       LEDs_8Bit_GPIO_IO_O_pin => LEDs_8Bit_GPIO_IO_O_pin,
-      gpio_camera_I => gpio_camera_I,
-      gpio_camera_IO => gpio_camera_IO
+      gpio_camera_I => gpio_camera_I
     );
 
 end architecture STRUCTURE;

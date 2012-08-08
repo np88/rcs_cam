@@ -24,11 +24,11 @@ Net LEDs_8Bit_GPIO_IO_O_pin[4] LOC = AD26 | IOSTANDARD=LVCMOS18;
 Net LEDs_8Bit_GPIO_IO_O_pin[5] LOC = G15 | IOSTANDARD=LVCMOS25; 
 Net LEDs_8Bit_GPIO_IO_O_pin[6] LOC = L18 | IOSTANDARD=LVCMOS25; 
 Net LEDs_8Bit_GPIO_IO_O_pin[7] LOC = H18 | IOSTANDARD=LVCMOS25; 
-Net LEDs_Positions_GPIO_IO_O_pin[0] LOC=E8 | IOSTANDARD=LVCMOS33; 
-Net LEDs_Positions_GPIO_IO_O_pin[1] LOC=AF23 | IOSTANDARD=LVCMOS33; 
-Net LEDs_Positions_GPIO_IO_O_pin[2] LOC=AG12 | IOSTANDARD=LVCMOS33; 
-Net LEDs_Positions_GPIO_IO_O_pin[3] LOC=AG23 | IOSTANDARD=LVCMOS33; 
-Net LEDs_Positions_GPIO_IO_O_pin[4] LOC=AF13 | IOSTANDARD=LVCMOS33; 
+Net LEDs_Positions_GPIO_IO_O_pin[0] LOC=E8 | IOSTANDARD=LVCMOS33; # center
+Net LEDs_Positions_GPIO_IO_O_pin[1] LOC=AF23 | IOSTANDARD=LVCMOS33; # west
+Net LEDs_Positions_GPIO_IO_O_pin[2] LOC=AG12 | IOSTANDARD=LVCMOS33; # south
+Net LEDs_Positions_GPIO_IO_O_pin[3] LOC=AG23 | IOSTANDARD=LVCMOS33; # east
+Net LEDs_Positions_GPIO_IO_O_pin[4] LOC=AF13 | IOSTANDARD=LVCMOS33; # north
 Net Push_Buttons_5Bit_GPIO_IO_I_pin[0] LOC = AJ6 | IOSTANDARD=LVCMOS33; # center
 Net Push_Buttons_5Bit_GPIO_IO_I_pin[1] LOC = AJ7 | IOSTANDARD=LVCMOS33; # west
 Net Push_Buttons_5Bit_GPIO_IO_I_pin[2] LOC = V8 | IOSTANDARD=LVCMOS33; # south
@@ -52,44 +52,45 @@ NET "fpga_0_clk_1_sys_clk_pin" LOC = AH15 | IOSTANDARD=LVCMOS33;
 #camera
 
 #Y0-Y7
-NET "gpio_camera_I[0]" LOC = H33;
-NET "gpio_camera_I[1]" LOC = F34;
-NET "gpio_camera_I[2]" LOC = H34;
-NET "gpio_camera_I[3]" LOC = G33;
-NET "gpio_camera_I[4]" LOC = G32;
-NET "gpio_camera_I[5]" LOC = H32;
-NET "gpio_camera_I[6]" LOC = J32;
-NET "gpio_camera_I[7]" LOC = J34;
+NET "cam_Y[0]" LOC = H33;
+NET "cam_Y[1]" LOC = F34;
+NET "cam_Y[2]" LOC = H34;
+NET "cam_Y[3]" LOC = G33;
+NET "cam_Y[4]" LOC = G32;
+NET "cam_Y[5]" LOC = H32;
+NET "cam_Y[6]" LOC = J32;
+NET "cam_Y[7]" LOC = J34;
 #UV0-UV7
-NET "gpio_camera_I[8]" LOC = L33;
-NET "gpio_camera_I[9]" LOC = M32;
-NET "gpio_camera_I[10]" LOC = P34;
-NET "gpio_camera_I[11]" LOC = N34;
-NET "gpio_camera_I[12]" LOC = AA34;
-NET "gpio_camera_I[13]" LOC = AD32;
-NET "gpio_camera_I[14]" LOC = Y34;
-NET "gpio_camera_I[15]" LOC = Y32;
+NET "cam_UV[0]" LOC = AK33;
+NET "cam_UV[1]" LOC = AJ32;
+NET "cam_UV[2]" LOC = AK32;
+NET "cam_UV[3]" LOC = AL34;
+NET "cam_UV[4]" LOC = AL33;
+NET "cam_UV[5]" LOC = AM33;
+NET "cam_UV[6]" LOC = AJ34;
+NET "cam_UV[7]" LOC = AM32;
+
 
 #PWDN
-NET "gpio_camera_IO[0]" LOC = W32;
+NET "cam_pwdn" LOC = L33;
 #RST
-NET "gpio_camera_IO[1]" LOC = AH34;
+NET "cam_rst" LOC = M32;
 #SDA
-NET "gpio_camera_IO[2]" LOC = AE32;
+NET "cam_sda" LOC = P34;
 #FODD
-NET "gpio_camera_IO[3]" LOC = AG32;
+NET "cam_fodd" LOC = N34;
 #SCL
-NET "gpio_camera_IO[4]" LOC = AH32;
+NET "cam_scl" LOC = AA34;
 #HREF
-NET "gpio_camera_IO[5]" LOC = AK34;
+NET "cam_href" LOC = AD32;
 #VSYNC
-NET "gpio_camera_IO[6]" LOC = AK33;
+NET "cam_vsyn" LOC = Y32;
 #PCLK
-NET "gpio_camera_IO[7]" LOC = AJ32;
+NET "cam_pclk" LOC = AH34;
 #EXCLK
-NET "gpio_camera_IO[8]" LOC = AK32;
+NET "cam_exclk" LOC = AE32;
 #VTO
-NET "gpio_camera_IO[9]" LOC = AL43;
+NET "cam_vto" LOC = AN33;
 
 
 

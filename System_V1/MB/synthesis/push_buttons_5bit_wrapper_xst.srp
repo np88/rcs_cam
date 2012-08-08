@@ -257,13 +257,13 @@ Analyzing hierarchy for entity <push_buttons_5bit_wrapper> in library <work> (ar
 Analyzing hierarchy for entity <xps_gpio> in library <xps_gpio_v2_00_a> (architecture <imp>) with generics.
 	C_ALL_INPUTS = 1
 	C_ALL_INPUTS_2 = 0
-	C_BASEADDR = "10001101000100000101000000000000"
+	C_BASEADDR = "10000101101110001110000000000000"
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "virtex5"
 	C_GPIO2_WIDTH = 32
 	C_GPIO_WIDTH = 5
-	C_HIGHADDR = "10001101000100000101001111111111"
+	C_HIGHADDR = "10000101101110001110001111111111"
 	C_INTERRUPT_PRESENT = 1
 	C_IS_DUAL = 0
 	C_SPLB_AWIDTH = 32
@@ -281,10 +281,10 @@ WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIP
 WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/xps_gpio.vhd" line 391: Loop body will iterate zero times
 
 Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000101101110001110000000000000",
+	                          "0000000000000000000000000000000010000101101110001110000000001111",
+	                          "0000000000000000000000000000000010000101101110001110000100000000",
+	                          "0000000000000000000000000000000010000101101110001110000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_FAMILY = "virtex5"
@@ -319,10 +319,10 @@ Analyzing hierarchy for entity <GPIO_Core> in library <xps_gpio_v2_00_a> (archit
 	C_TRI_DEFAULT_2 = "11111111111111111111111111111111"
 
 Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000101101110001110000000000000",
+	                          "0000000000000000000000000000000010000101101110001110000000001111",
+	                          "0000000000000000000000000000000010000101101110001110000100000000",
+	                          "0000000000000000000000000000000010000101101110001110000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_DPHASE_TIMEOUT = 128
@@ -335,10 +335,10 @@ Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_s
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (architecture <IMP>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000101101110001110000000000000",
+	                          "0000000000000000000000000000000010000101101110001110000000001111",
+	                          "0000000000000000000000000000000010000101101110001110000100000000",
+	                          "0000000000000000000000000000000010000101101110001110000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS_AWIDTH = 32
 	C_FAMILY = "nofamily"
@@ -351,7 +351,7 @@ Analyzing hierarchy for entity <counter_f> in library <proc_common_v3_00_a> (arc
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
 	C_AB = 28
 	C_AW = 32
-	C_BAR = "10001101000100000101000000000000"
+	C_BAR = "10000101101110001110000000000000"
 	C_FAMILY = "nofamily"
 
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
@@ -387,7 +387,7 @@ Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (arc
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
 	C_AB = 24
 	C_AW = 32
-	C_BAR = "10001101000100000101000100000000"
+	C_BAR = "10000101101110001110000100000000"
 	C_FAMILY = "nofamily"
 
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
@@ -511,13 +511,13 @@ Entity <push_buttons_5bit_wrapper> analyzed. Unit <push_buttons_5bit_wrapper> ge
 Analyzing generic Entity <xps_gpio> in library <xps_gpio_v2_00_a> (Architecture <imp>).
 	C_ALL_INPUTS = 1
 	C_ALL_INPUTS_2 = 0
-	C_BASEADDR = "10001101000100000101000000000000"
+	C_BASEADDR = "10000101101110001110000000000000"
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "virtex5"
 	C_GPIO2_WIDTH = 32
 	C_GPIO_WIDTH = 5
-	C_HIGHADDR = "10001101000100000101001111111111"
+	C_HIGHADDR = "10000101101110001110001111111111"
 	C_INTERRUPT_PRESENT = 1
 	C_IS_DUAL = 0
 	C_SPLB_AWIDTH = 32
@@ -539,10 +539,10 @@ WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIP
 Entity <xps_gpio> analyzed. Unit <xps_gpio> generated.
 
 Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000101101110001110000000000000",
+	                          "0000000000000000000000000000000010000101101110001110000000001111",
+	                          "0000000000000000000000000000000010000101101110001110000100000000",
+	                          "0000000000000000000000000000000010000101101110001110000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_FAMILY = "virtex5"
@@ -556,10 +556,10 @@ Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v
 Entity <plbv46_slave_single> analyzed. Unit <plbv46_slave_single> generated.
 
 Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000101101110001110000000000000",
+	                          "0000000000000000000000000000000010000101101110001110000000001111",
+	                          "0000000000000000000000000000000010000101101110001110000100000000",
+	                          "0000000000000000000000000000000010000101101110001110000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_DPHASE_TIMEOUT = 128
@@ -574,10 +574,10 @@ WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIP
 Entity <plb_slave_attachment> analyzed. Unit <plb_slave_attachment> generated.
 
 Analyzing generic Entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (Architecture <IMP>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000101101110001110000000000000",
+	                          "0000000000000000000000000000000010000101101110001110000000001111",
+	                          "0000000000000000000000000000000010000101101110001110000100000000",
+	                          "0000000000000000000000000000000010000101101110001110000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS_AWIDTH = 32
 	C_FAMILY = "nofamily"
@@ -587,7 +587,7 @@ Entity <plb_address_decoder> analyzed. Unit <plb_address_decoder> generated.
 Analyzing generic Entity <pselect_f.1> in library <proc_common_v3_00_a> (Architecture <imp>).
 	C_AB = 28
 	C_AW = 32
-	C_BAR = "10001101000100000101000000000000"
+	C_BAR = "10000101101110001110000000000000"
 	C_FAMILY = "nofamily"
 Entity <pselect_f.1> analyzed. Unit <pselect_f.1> generated.
 
@@ -629,7 +629,7 @@ Entity <pselect_f.6> analyzed. Unit <pselect_f.6> generated.
 Analyzing generic Entity <pselect_f.7> in library <proc_common_v3_00_a> (Architecture <imp>).
 	C_AB = 24
 	C_AW = 32
-	C_BAR = "10001101000100000101000100000000"
+	C_BAR = "10000101101110001110000100000000"
 	C_FAMILY = "nofamily"
 Entity <pselect_f.7> analyzed. Unit <pselect_f.7> generated.
 
@@ -1344,9 +1344,9 @@ Cell Usage :
 #      GND                         : 1
 #      LUT2                        : 18
 #      LUT3                        : 7
-#      LUT4                        : 28
-#      LUT5                        : 11
-#      LUT6                        : 20
+#      LUT4                        : 22
+#      LUT5                        : 13
+#      LUT6                        : 24
 #      MUXF7                       : 1
 #      VCC                         : 1
 # FlipFlops/Latches                : 138
@@ -1420,7 +1420,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.145ns (Maximum Frequency: 317.965MHz)
+   Minimum period: 3.050ns (Maximum Frequency: 327.869MHz)
    Minimum input arrival time before clock: 1.747ns
    Maximum output required time after clock: 1.280ns
    Maximum combinational path delay: No path found
@@ -1431,27 +1431,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 3.145ns (frequency: 317.965MHz)
+  Clock period: 3.050ns (frequency: 327.869MHz)
   Total number of paths / destination ports: 828 / 167
 -------------------------------------------------------------------------
-Delay:               3.145ns (Levels of Logic = 3)
-  Source:            Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg (FF)
+Delay:               3.050ns (Levels of Logic = 3)
+  Source:            Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12 (FF)
   Destination:       Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg to Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0
+  Data Path: Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12 to Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              4   0.471   1.085  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg)
-     LUT6:I0->O            6   0.094   0.816  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS110 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS110)
-     LUT4:I0->O            3   0.094   0.491  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS1150 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/N01)
-     LUT6:I5->O            1   0.094   0.000  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/sl_addrack_i_ns1 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy_mux0000_norst)
-     FDR:D                    -0.018          Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy
+     FDR:C->Q              1   0.471   1.069  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12)
+     LUT6:I0->O            6   0.094   0.737  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS133 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS133)
+     LUT6:I3->O            3   0.094   0.491  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS1129 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/N01)
+     LUT6:I5->O            1   0.094   0.000  Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns2 (Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns)
+     FDR:D                    -0.018          Push_Buttons_5Bit/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i
     ----------------------------------------
-    Total                      3.145ns (0.753ns logic, 2.392ns route)
-                                       (23.9% logic, 76.1% route)
+    Total                      3.050ns (0.753ns logic, 2.297ns route)
+                                       (24.7% logic, 75.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
@@ -1494,13 +1494,13 @@ Offset:              1.280ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 21.47 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 21.32 secs
  
 --> 
 
 
-Total memory usage is 1050248 kilobytes
+Total memory usage is 1050244 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  224 (   0 filtered)
