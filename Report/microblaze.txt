@@ -54,3 +54,8 @@ If manual mapping needs to be done, there can occur some errors if ISE mapped e.
 Solution: http://www.xilinx.com/support/answers/30772.htm (error is caused the standards that are set by default. if any information will be put into the manual ucf-file, they will override the automatically generated file)
 
 
+Interrupts:
+For the microblaze processor a whole gpio channel needs to be enabled for interrupt. It is not possible to enable a curtain bit on the specific channel. So if there are signals that are not supposed to cause an interrupt, those need to be placed on a different channels (e.g. clocks etc.). A gpio usually has two channels, both of them can be generate interrupts individually.
+
+Important Remark:
+If something is changed in the microblaze architecture via the xps (even if it is only turning around some LSB and MSB), do a regenerate of the addresses and then clean all generated files (project -> clean all generated filed). This can save a lot of time looking for uncomprehensible mistakes in the design.
