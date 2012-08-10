@@ -75,9 +75,12 @@ architecture Behavioral of System_tl is
 	PORT(
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
 		fpga_0_rst_1_sys_rst_pin : IN std_logic;
-		gpio_FIFO_I : IN std_logic_vector(17 downto 0);
-		gpio_camera_I : IN std_logic_vector(18 downto 0);  
-		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);       
+		gpio_FIFO_almost_full_I : IN std_logic;
+		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);
+		gpio_camera_I1 : IN std_logic_vector(2 downto 0);
+		gpio_camera_I2 : IN std_logic_vector(9 downto 0);
+		xps_FIFO_data_I : IN std_logic_vector(15 downto 0);
+		xps_FIFO_data_rd_cnt_I : IN std_logic_vector(9 downto 0);    
 		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_pin : INOUT std_logic_vector(7 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);      
@@ -92,9 +95,10 @@ architecture Behavioral of System_tl is
 		fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin : OUT std_logic_vector(1 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_Addr_pin : OUT std_logic_vector(12 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0);
-		gpio_FIFO_O : OUT std_logic;
 		LEDs_Positions_GPIO_IO_O_pin : OUT std_logic_vector(4 downto 0);
-		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0)
+		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0);
+		gpio_FIFO_rd_wr_en_O : OUT std_logic_vector(1 downto 0);
+		read_clk_fifo_O : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -120,24 +124,23 @@ architecture Behavioral of System_tl is
 	attribute box_type : string;
 	attribute box_type of MB : component is "user_black_box";
 	
-	signal gpio_FIFO_I : std_logic_vector(17 downto 0); 
-	signal fifo_write_data : std_logic_vector(15 downto 0); 
+	signal fifo_data_in : std_logic_vector(15 downto 0); 
 	signal pos_leds: std_logic_vector(4 downto 0); 
-	signal almost_full, fifo_full, fifo_empty, fifo_read_enable, valid, wr_en_i : std_logic;
-	signal fifo_read_data: std_logic_vector(C_fifo_input_width downto 0);
-	signal wr_data_count, rd_data_count: STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0);
-	signal gpio_camera_I : std_logic_vector(18 downto 0); 
+	signal fifo_almost_full, fifo_full, fifo_empty, fifo_rd_en_i, fifo_valid, fifo_wr_en_i, fifo_read_clk : std_logic;
+	signal fifo_data_out: std_logic_vector(C_fifo_input_width downto 0);
+	signal fifo_wr_data_count, fifo_rd_data_count: STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0);
+	signal gpio_camera_I2 : std_logic_vector(9 downto 0); 
+	signal gpio_camera_I1 : std_logic_vector(2 downto 0); 
+	signal gpio_FIFO_rd_wr_en_O : std_logic_vector(1 downto 0); 
 
 begin
-	gpio_FIFO_I(C_fifo_width downto 0) <= rd_data_count;
-	gpio_FIFO_I(15 downto C_fifo_width+1) <= (others => '0');
-	gpio_FIFO_I(17 downto 16) <= fifo_full & almost_full;
-	fifo_write_data <= cam_Y & cam_uv;
-	gpio_camera_I <= cam_pclk & cam_vsyn & cam_href & fifo_read_data;
+
+	fifo_data_in <= cam_Y & cam_uv;
+	gpio_camera_I1 <= '0' & cam_vsyn & cam_href;
 	--gpio_camera_IO <='0'&'0'&cam_sda&cam_fodd&cam_scl&cam_href&cam_vsyn&cam_pclk&cam_exclk&cam_vto;
 	cam_pwdn <= '0';
 	cam_rst <= '0';
-
+	fifo_rd_en_i <= gpio_FIFO_rd_wr_en_O(1);
 
 	Inst_MB: MB PORT MAP(
 		fpga_0_DDR2_SDRAM_DDR2_Clk_pin => fpga_0_DDR2_SDRAM_DDR2_Clk_pin,
@@ -156,12 +159,16 @@ begin
 		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin => fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin,
 		fpga_0_clk_1_sys_clk_pin => fpga_0_clk_1_sys_clk_pin,
 		fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin,
-		gpio_camera_I => gpio_camera_I,
-		gpio_FIFO_I => gpio_FIFO_I,
-		gpio_FIFO_O => fifo_read_enable,
-		LEDs_Positions_GPIO_IO_O_pin => open,
+		gpio_FIFO_almost_full_I => fifo_almost_full,
 		Push_Buttons_5Bit_GPIO_IO_I_pin => Push_Buttons_5Bit_GPIO_IO_I_pin,
-		LEDs_8Bit_GPIO_IO_O_pin => LEDs_8Bit_GPIO_IO_O_pin
+		LEDs_Positions_GPIO_IO_O_pin => open,
+		LEDs_8Bit_GPIO_IO_O_pin => LEDs_8Bit_GPIO_IO_O_pin,
+		gpio_camera_I1 => gpio_camera_I1,
+		gpio_FIFO_rd_wr_en_O => gpio_FIFO_rd_wr_en_O,
+		gpio_camera_I2 => gpio_camera_I2,
+		xps_FIFO_data_I => fifo_data_out,
+		xps_FIFO_data_rd_cnt_I => fifo_rd_data_count,
+		read_clk_fifo_O => fifo_read_clk
 	);
 
 
@@ -169,22 +176,23 @@ begin
 		 rst_i => Push_Buttons_5Bit_GPIO_IO_I_pin(0), --(center button)
 		 wr_clk_i => cam_clock_i,
 		 rd_clk_i => fpga_0_clk_1_sys_clk_pin,
-		 din_i => fifo_write_data,
-		 wr_en_i => wr_en_i, -- (top button)
-		 rd_en_i => fifo_read_enable,
-		 dout_o => fifo_read_data,
+		 din_i => fifo_data_in,
+		 wr_en_i => fifo_wr_en_i, -- (top button)
+		 rd_en_i => fifo_rd_en_i,
+		 dout_o => fifo_data_out,
 		 full_o => fifo_full,
-		 almost_full_o => almost_full,
+		 almost_full_o => fifo_almost_full,
 		 empty_o => LEDs_Positions_GPIO_IO_O_pin(0), --center
 		 valid_o => LEDs_Positions_GPIO_IO_O_pin(1), -- west
-		 rd_data_count_o => rd_data_count,
-		 wr_data_count_o => wr_data_count
+		 rd_data_count_o => fifo_rd_data_count,
+		 wr_data_count_o => fifo_wr_data_count
 	);
 	--wr_en_i <= Push_Buttons_5Bit_GPIO_IO_I_pin(4) and gpio_camera_IO(7);
-	wr_en_i <= cam_pclk and Push_Buttons_5Bit_GPIO_IO_I_pin(4);
+	fifo_rd_en_i <= gpio_FIFO_rd_wr_en_O(1) and fifo_read_clk;
+	fifo_wr_en_i <= cam_pclk and gpio_FIFO_rd_wr_en_O(0);
 	LEDs_Positions_GPIO_IO_O_pin(2) <= fifo_full; -- south
-	LEDs_Positions_GPIO_IO_O_pin(3) <= almost_full; -- east
-	LEDs_Positions_GPIO_IO_O_pin(4) <= wr_en_i; --north
+	LEDs_Positions_GPIO_IO_O_pin(3) <= fifo_almost_full; -- east
+	LEDs_Positions_GPIO_IO_O_pin(4) <= fifo_wr_en_i; --north
 
 end Behavioral;
 

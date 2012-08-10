@@ -19,13 +19,16 @@ PORT (
 	fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	fpga_0_clk_1_sys_clk_pin : IN STD_LOGIC;
 	fpga_0_rst_1_sys_rst_pin : IN STD_LOGIC;
-	gpio_FIFO_I : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-	gpio_FIFO_O : OUT STD_LOGIC;
-	Push_Buttons_5Bit_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(0 TO 4);
-	LEDs_Positions_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(0 TO 4);
+	gpio_FIFO_almost_full_I : IN STD_LOGIC;
+	Push_Buttons_5Bit_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+	LEDs_Positions_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
 	LEDs_8Bit_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	gpio_camera_I : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	gpio_camera_IO : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	gpio_camera_I1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+	gpio_FIFO_rd_wr_en_O : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	gpio_camera_I2 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	xps_FIFO_data_I : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	xps_FIFO_data_rd_cnt_I : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	read_clk_fifo_O : OUT STD_LOGIC
 	);
 END MB;
 

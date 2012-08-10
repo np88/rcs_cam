@@ -3,8 +3,12 @@ General Control Ports (clock, reset)
 Input Port from FIFO: Interrupt (fifo full), data (16 Bit bus), both on same channel
 Output to Fifo: read enable
 
+MB Tutorial:
+http://ecasp.ece.iit.edu/mbtutorial.pdf
 
-DMA: http://www.xilinx.com/support/documentation/ip_documentation/xps_central_dma.pdf
+DMA: 
+http://www.xilinx.com/support/documentation/ip_documentation/xps_central_dma.pd
+Example: http://backblog.betriebswerk-landshut.de/2010/06/10/xilinx-microblaze-xdmacentral-dma-controller/
 
 The operation of the XPS Central DMA is initiated by writing values into the following DMA registers:
 • Source Address register (SA): The source address for the transfer is written into this register.

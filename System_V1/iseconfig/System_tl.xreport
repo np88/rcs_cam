@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-08-08T18:57:33</DateModified>
+  <DateModified>2012-08-10T12:56:20</DateModified>
   <ModuleName>System_tl</ModuleName>
-  <SummaryTimeStamp>2012-08-07T10:44:28</SummaryTimeStamp>
+  <SummaryTimeStamp>2012-08-09T16:22:29</SummaryTimeStamp>
   <SavedFilePath>/DIST/home/peters/cam_repo/System_V1/iseconfig/System_tl.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/DIST/home/peters/cam_repo/System_V1/</ImplementationReportsDirectory>
   <DateInitialized>2012-08-05T14:18:37</DateInitialized>
@@ -18,7 +18,7 @@
     <toc-item title="Performance Summary" target="Performance Summary" />
     <toc-item title="Failing Constraints" target="Failing Constraints" />
     <toc-item title="Detailed Reports" target="Detailed Reports" />
-    <table-item tableState="CollapsedTable" tableKey="CurrentErrors" />
+    <table-item tableState="ExpandedTable" tableKey="CurrentErrors" />
    </view>
    <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY" hidden="true" type="HTML" file="System_tl_envsettings.html" label="System Settings" />
    <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="System_tl_map.xrpt" label="IOB Properties" />
