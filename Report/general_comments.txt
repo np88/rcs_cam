@@ -95,3 +95,5 @@ Another problem can occur, if submodule files are missing. Pins belonging to tho
 
 It is important to connect all the IOs in the top level to HW pins if they are used in the design. Otherwise there can be errors like: Microblaze is under reset, unable to stop
 
+
+Microblaze threads: http://forums.xilinx.com/xlnx/attachments/xlnx/EDK/781/3/ML505_MB_XMK_92.pdf
