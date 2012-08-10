@@ -1,0 +1,48 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/microblaze_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/microblaze_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/microblaze_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/mb_plb.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/mb_plb.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/mb_plb.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/ilmb.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/ilmb.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/ilmb.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/dlmb.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/dlmb.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/dlmb.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/dlmb_cntlr.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/dlmb_cntlr.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/dlmb_cntlr.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/ilmb_cntlr.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/ilmb_cntlr.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/ilmb_cntlr.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/lmb_bram.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/lmb_bram.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/lmb_bram.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/LEDs_8Bit.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/LEDs_8Bit.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/LEDs_8Bit.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/LEDs_Positions.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/LEDs_Positions.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/LEDs_Positions.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/Push_Buttons_5Bit.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/Push_Buttons_5Bit.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/Push_Buttons_5Bit.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/DDR2_SDRAM.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/DDR2_SDRAM.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/DDR2_SDRAM.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_timer_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_timer_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_timer_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_bram_if_cntlr_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_bram_if_cntlr_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_bram_if_cntlr_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_bram_if_cntlr_0_block.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_bram_if_cntlr_0_block.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_bram_if_cntlr_0_block.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/clock_generator_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/clock_generator_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/clock_generator_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/mdm_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/mdm_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/mdm_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/proc_sys_reset_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/proc_sys_reset_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/proc_sys_reset_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/gpio_FIFO.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/gpio_FIFO.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/gpio_FIFO.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/gpio_camera.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/gpio_camera.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/gpio_camera.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_intc_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_intc_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_intc_0.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_FIFO_data.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/xps_FIFO_data.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/xps_FIFO_data.svg"/>
+
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/MB_blkd.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_V1/MB/SDK/SDK_Export/hw/imgs/MB_blkd.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_V1/MB/__xps/.dswkshop/MB_blkd.svg"/>
+
+</RENDERBATCH>
