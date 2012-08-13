@@ -47,9 +47,6 @@ status bit.
 Especially interesting:
 p. 12 ff, source address, destination address and length address register
 
-Reading via DMA from FIFO:
-Idea: FIFO generates interrupt when it is full, CPU writes amount of data to be read to DMA (start reading process) and sets read enable to one. --> DMA has to read from FIFO in every clock cycle. If that is not possible, a seperate read impulse generator module can be used to generate the necessary write enable signal.
-
 
 Mapping:
 If manual mapping needs to be done, there can occur some errors if ISE mapped e.g. the DDR2 before:

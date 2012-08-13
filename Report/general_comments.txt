@@ -97,3 +97,11 @@ It is important to connect all the IOs in the top level to HW pins if they are u
 
 
 Microblaze threads: http://forums.xilinx.com/xlnx/attachments/xlnx/EDK/781/3/ML505_MB_XMK_92.pdf
+
+No spaces in SDK pathes, causes problems (it even tells you, that it does not work properly, if path contains spaces..)
+
+TFT:
+http://forums.xilinx.com/t5/EDK-and-Platform-Studio/TFT-Display-with-EDK-xps-tft-IP-Core/td-p/20412
+
+EPC:
+ATTENTION: Inverted logic, so ALL inputs except clock are inverted! 
