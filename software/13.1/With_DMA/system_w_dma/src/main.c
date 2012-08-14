@@ -79,11 +79,9 @@ void gpio_camera_isr(void * param){
 		index2 = 0;
 		index3 = 0;
 		rd_wr_en = 0x3; // enable writing into fifo
-		XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, rd_wr_en);
 		start_reading = 1;
 	} else if ( ((cam1&0x2) != 0) && (get_pic==0) && (read_en == 1) ){
-		rd_wr_en &= 0x02;
-		XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, rd_wr_en);
+		start_reading = 0;
 		read_en = 0;
 	}
 
@@ -98,11 +96,10 @@ void gpio_camera_isr(void * param){
 	//}
 
 	// fifo empty is set
-	if ( (cam1&0x4) != 0 && start_reading == 1 && read_en == 0){
-		start_reading = 0;
-		rd_wr_en &= 0x01;
-		XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, rd_wr_en);
-	}
+	//if ( (cam1&0x4) != 0 && start_reading == 1 && read_en == 0){
+	//	start_reading = 0;
+	//	xil_printf("%D\n", index1);
+	//}
 
 	//if ((XDmaCentral_GetStatus(&dma)&XDMC_DMASR_BUS_ERROR_MASK) != 0)
 	//	index1++;
@@ -163,8 +160,6 @@ void init(){
 
 	// enable interrupt banks (mask is used to choose channel, whole channel is interrupt enabled!)
 	// that is, why extra channels are needed for data that causes interrupts
-	XGpio_InterruptGlobalEnable(&gpio_fifo_en_full);
-	XGpio_InterruptEnable(&gpio_fifo_en_full, XGPIO_IR_CH1_MASK);
 
 	XGpio_InterruptGlobalEnable(&gpio_camera);
 	XGpio_InterruptEnable(&gpio_camera, XGPIO_IR_CH1_MASK); // only Is are interrupt enabled, only vsync
@@ -211,8 +206,6 @@ int main()
 {
 	// buffer for data from fifo
 
-	 u32 i = 0;
-
     init_platform();
     init();
 
@@ -227,13 +220,45 @@ int main()
     }
 
     //XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, 0x3);
-
-    //while(1){
-    //	u32 data = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-    //}
+    u16 i = 0;
+    volatile u32 tmp;
+    volatile u32 cnt = 0;
+   /* while(1){
+ //   	u32 data = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+	//		xil_printf("%x\n",tmp);
+			cnt++;
+    }*/
 
     while(1){
     	// read while fifo is not empty
+
     	while (start_reading == 1){
     		num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
     		if (num > 0){

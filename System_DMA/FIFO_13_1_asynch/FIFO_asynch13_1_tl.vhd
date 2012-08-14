@@ -41,8 +41,8 @@ entity FIFO_asynch13_1_tl is PORT (
 		 almost_full_o : OUT STD_LOGIC;
 		 empty_o : OUT STD_LOGIC;
 		 valid_o : OUT STD_LOGIC;
-		 rd_data_count_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 wr_data_count_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		 rd_data_count_o : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+		 wr_data_count_o : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
 	  );
 end FIFO_asynch13_1_tl;
 
@@ -62,8 +62,8 @@ architecture Behavioral of FIFO_asynch13_1_tl is
 		 almost_full : OUT STD_LOGIC;
 		 empty : OUT STD_LOGIC;
 		 valid : OUT STD_LOGIC;
-		 rd_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 wr_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		 rd_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+		 wr_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
 	  );
 	END COMPONENT;	 
 	
@@ -85,7 +85,7 @@ begin
 			 wr_clk => wr_clk_i,
 			 rd_clk => rd_clk_i,
 			 din => din_i,
-			 wr_en => write_enable_edge,
+			 wr_en => wr_en,
 			 rd_en => read_enable_edge,
 			 dout => dout_o,
 			 full => full_o,
@@ -103,12 +103,5 @@ begin
       edge_o => read_enable_edge
 	);
 
-	wr_en_edge_detector: edge_detector PORT MAP (
-		clk_i => wr_clk_i,
-		rst_i => rst_i,
-      signal_i => wr_en_i,
-      edge_o => write_enable_edge
-	);	
-	
 end Behavioral;
 

@@ -11,28 +11,33 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Mon Aug  6 18:08:43 2012
+Mapped Date    : Tue Aug 14 16:00:27 2012
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    2
 Slice Logic Utilization:
-  Number of Slice Registers:                    85 out of  69,120    1%
-    Number used as Flip Flops:                  85
-  Number of Slice LUTs:                         51 out of  69,120    1%
-    Number used as logic:                       51 out of  69,120    1%
-      Number using O6 output only:              51
+  Number of Slice Registers:                   264 out of  69,120    1%
+    Number used as Flip Flops:                 264
+  Number of Slice LUTs:                        211 out of  69,120    1%
+    Number used as logic:                      209 out of  69,120    1%
+      Number using O6 output only:             141
+      Number using O5 output only:              28
+      Number using O5 and O6:                   40
+    Number used as exclusive route-thru:         2
+  Number of route-thrus:                        30
+    Number using O6 output only:                30
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    43 out of  17,280    1%
-  Number of LUT Flip Flop pairs used:           96
-    Number with an unused Flip Flop:            11 out of      96   11%
-    Number with an unused LUT:                  45 out of      96   46%
-    Number of fully used LUT-FF pairs:          40 out of      96   41%
-    Number of unique control sets:              15
+  Number of occupied Slices:                   116 out of  17,280    1%
+  Number of LUT Flip Flop pairs used:          322
+    Number with an unused Flip Flop:            58 out of     322   18%
+    Number with an unused LUT:                 111 out of     322   34%
+    Number of fully used LUT-FF pairs:         153 out of     322   47%
+    Number of unique control sets:              16
     Number of slice register sites lost
-      to control set restrictions:              23 out of  69,120    1%
+      to control set restrictions:              28 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -43,23 +48,23 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        49 out of     640    7%
-    Number of LOCed IOBs:                       23 out of      49   46%
+  Number of bonded IOBs:                        71 out of     640   11%
+    Number of LOCed IOBs:                       23 out of      71   32%
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                       1 out of     148    1%
-    Number using BlockRAM only:                  1
+  Number of BlockRAM/FIFO:                      15 out of     148   10%
+    Number using BlockRAM only:                 15
     Total primitives used:
-      Number of 18k BlockRAM used:               1
-    Total Memory used (KB):                     18 out of   5,328    1%
+      Number of 36k BlockRAM used:              15
+    Total Memory used (KB):                    540 out of   5,328   10%
   Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
     Number used as BUFGs:                        2
 
-Average Fanout of Non-Clock Nets:                2.77
+Average Fanout of Non-Clock Nets:                5.52
 
-Peak Memory Usage:  751 MB
-Total REAL time to MAP completion:  23 secs 
-Total CPU time to MAP completion:   22 secs 
+Peak Memory Usage:  757 MB
+Total REAL time to MAP completion:  39 secs 
+Total CPU time to MAP completion:   34 secs 
 
 Table of Contents
 -----------------
@@ -117,14 +122,14 @@ INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
    1.050 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 49 IOs, 23 are locked
-   and 26 are not locked. If you would like to print the names of these IOs,
+INFO:Place:834 - Only a subset of IOs are locked. Out of 71 IOs, 23 are locked
+   and 48 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   1 block(s) optimized away
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -132,6 +137,10 @@ Section 5 - Removed Logic
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		fifo_asynch/XST_GND
+VCC 		fifo_asynch/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
 
 Section 6 - IOB Properties
 --------------------------
@@ -180,6 +189,17 @@ Section 6 - IOB Properties
 | rd_data_count_o<1>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | rd_data_count_o<2>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | rd_data_count_o<3>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<4>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<5>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<6>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<7>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<8>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<9>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<10>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<11>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<12>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<13>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rd_data_count_o<14>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | rd_en_i                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | rst_i                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | valid_o                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -188,6 +208,17 @@ Section 6 - IOB Properties
 | wr_data_count_o<1>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | wr_data_count_o<2>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | wr_data_count_o<3>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<4>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<5>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<6>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<7>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<8>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<9>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<10>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<11>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<12>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<13>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| wr_data_count_o<14>                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | wr_en_i                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 

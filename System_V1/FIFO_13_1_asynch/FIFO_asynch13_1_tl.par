@@ -1,7 +1,7 @@
 Release 13.1 par O.40d (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-weekino::  Mon Aug 06 18:09:10 2012
+weekino::  Tue Aug 14 16:01:10 2012
 
 par -w -intstyle ise -ol high -mt off FIFO_asynch13_1_tl_map.ncd
 FIFO_asynch13_1_tl.ncd FIFO_asynch13_1_tl.pcf 
@@ -28,52 +28,54 @@ Device speed data version:  "PRODUCTION 1.72 2011-02-03".
 Device Utilization Summary:
 
    Number of BUFGs                           2 out of 32      6%
-   Number of External IOBs                  49 out of 640     7%
-      Number of LOCed IOBs                  23 out of 49     46%
+   Number of External IOBs                  71 out of 640    11%
+      Number of LOCed IOBs                  23 out of 71     32%
 
-   Number of RAMB18X2SDPs                    1 out of 148     1%
-   Number of Slices                         43 out of 17280   1%
-   Number of Slice Registers                85 out of 69120   1%
-      Number used as Flip Flops             85
+   Number of RAMB36_EXPs                    15 out of 148    10%
+   Number of Slices                        116 out of 17280   1%
+   Number of Slice Registers               264 out of 69120   1%
+      Number used as Flip Flops            264
       Number used as Latches                 0
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                     51 out of 69120   1%
-   Number of Slice LUT-Flip Flop pairs      96 out of 69120   1%
+   Number of Slice LUTS                    211 out of 69120   1%
+   Number of Slice LUT-Flip Flop pairs     322 out of 69120   1%
 
 
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 11 secs 
-Finished initial Timing Analysis.  REAL time: 11 secs 
+Starting initial Timing Analysis.  REAL time: 13 secs 
+Finished initial Timing Analysis.  REAL time: 13 secs 
 
 Starting Router
 
 
-Phase  1  : 413 unrouted;      REAL time: 13 secs 
+Phase  1  : 2852 unrouted;      REAL time: 15 secs 
 
-Phase  2  : 327 unrouted;      REAL time: 13 secs 
+Phase  2  : 2120 unrouted;      REAL time: 15 secs 
 
-Phase  3  : 66 unrouted;      REAL time: 13 secs 
+Phase  3  : 414 unrouted;      REAL time: 17 secs 
 
-Phase  4  : 82 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  4  : 455 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
 
 Updating file: FIFO_asynch13_1_tl.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+Updating file: FIFO_asynch13_1_tl.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 42 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 2 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
-Total REAL time to Router completion: 22 secs 
-Total CPU time to Router completion: 21 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 2 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 2 secs 
+Total REAL time to Router completion: 1 mins 2 secs 
+Total CPU time to Router completion: 53 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -93,11 +95,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net wr_ | SETUP       |         N/A|     2.953ns|     N/A|           0
-  clk_i_BUFGP                               | HOLD        |     0.406ns|            |       0|           0
+  Autotimespec constraint for clock net rd_ | SETUP       |         N/A|     3.293ns|     N/A|           0
+  clk_i_BUFGP                               | HOLD        |     0.432ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net rd_ | SETUP       |         N/A|     2.678ns|     N/A|           0
-  clk_i_BUFGP                               | HOLD        |     0.482ns|            |       0|           0
+  Autotimespec constraint for clock net wr_ | SETUP       |         N/A|     3.478ns|     N/A|           0
+  clk_i_BUFGP                               | HOLD        |     0.279ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -113,10 +115,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 27 secs 
-Total CPU time to PAR completion: 26 secs 
+Total REAL time to PAR completion: 1 mins 7 secs 
+Total CPU time to PAR completion: 58 secs 
 
-Peak Memory Usage:  666 MB
+Peak Memory Usage:  675 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -54,8 +54,8 @@ fifo_13_1_asynch your_instance_name (
   .almost_full(almost_full), // output almost_full
   .empty(empty), // output empty
   .valid(valid), // output valid
-  .rd_data_count(rd_data_count), // output [9 : 0] rd_data_count
-  .wr_data_count(wr_data_count) // output [9 : 0] wr_data_count
+  .rd_data_count(rd_data_count), // output [14 : 0] rd_data_count
+  .wr_data_count(wr_data_count) // output [14 : 0] wr_data_count
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -21,7 +21,7 @@ package FIFO_CONST is
 --
 -- Declare constants
 --
- constant C_fifo_width		: integer := 9;
+ constant C_fifo_width		: integer := 14;
  constant C_fifo_input_width		: integer := 15;
 --
 -- Declare functions and procedure

@@ -41,8 +41,8 @@ entity FIFO_asynch13_1_tl is PORT (
 		 almost_full_o : OUT STD_LOGIC;
 		 empty_o : OUT STD_LOGIC;
 		 valid_o : OUT STD_LOGIC;
-		 rd_data_count_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 wr_data_count_o : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		 rd_data_count_o : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+		 wr_data_count_o : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
 	  );
 end FIFO_asynch13_1_tl;
 
@@ -62,8 +62,8 @@ architecture Behavioral of FIFO_asynch13_1_tl is
 		 almost_full : OUT STD_LOGIC;
 		 empty : OUT STD_LOGIC;
 		 valid : OUT STD_LOGIC;
-		 rd_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-		 wr_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+		 rd_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+		 wr_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
 	  );
 	END COMPONENT;	 
 	

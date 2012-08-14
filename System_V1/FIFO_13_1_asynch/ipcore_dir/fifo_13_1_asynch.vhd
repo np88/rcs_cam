@@ -53,8 +53,8 @@ ENTITY fifo_13_1_asynch IS
     almost_full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    wr_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+    rd_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+    wr_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
   );
 END fifo_13_1_asynch;
 
@@ -73,8 +73,8 @@ COMPONENT wrapped_fifo_13_1_asynch
     almost_full : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
     valid : OUT STD_LOGIC;
-    rd_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    wr_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+    rd_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0);
+    wr_data_count : OUT STD_LOGIC_VECTOR(14 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -106,7 +106,7 @@ END COMPONENT;
       c_axis_type => 0,
       c_common_clock => 0,
       c_count_type => 0,
-      c_data_count_width => 10,
+      c_data_count_width => 15,
       c_default_value => "BlankString",
       c_din_width => 16,
       c_din_width_axis => 1,
@@ -189,7 +189,7 @@ END COMPONENT;
       c_overflow_low => 0,
       c_preload_latency => 1,
       c_preload_regs => 0,
-      c_prim_fifo_type => "1kx18",
+      c_prim_fifo_type => "8kx4",
       c_prog_empty_thresh_assert_val => 2,
       c_prog_empty_thresh_assert_val_axis => 1022,
       c_prog_empty_thresh_assert_val_rach => 1022,
@@ -205,14 +205,14 @@ END COMPONENT;
       c_prog_empty_type_wach => 5,
       c_prog_empty_type_wdch => 5,
       c_prog_empty_type_wrch => 5,
-      c_prog_full_thresh_assert_val => 1021,
+      c_prog_full_thresh_assert_val => 32765,
       c_prog_full_thresh_assert_val_axis => 1023,
       c_prog_full_thresh_assert_val_rach => 1023,
       c_prog_full_thresh_assert_val_rdch => 1023,
       c_prog_full_thresh_assert_val_wach => 1023,
       c_prog_full_thresh_assert_val_wdch => 1023,
       c_prog_full_thresh_assert_val_wrch => 1023,
-      c_prog_full_thresh_negate_val => 1020,
+      c_prog_full_thresh_negate_val => 32764,
       c_prog_full_type => 0,
       c_prog_full_type_axis => 5,
       c_prog_full_type_rach => 5,
@@ -221,10 +221,10 @@ END COMPONENT;
       c_prog_full_type_wdch => 5,
       c_prog_full_type_wrch => 5,
       c_rach_type => 0,
-      c_rd_data_count_width => 10,
-      c_rd_depth => 1024,
+      c_rd_data_count_width => 15,
+      c_rd_depth => 32768,
       c_rd_freq => 1,
-      c_rd_pntr_width => 10,
+      c_rd_pntr_width => 15,
       c_rdch_type => 0,
       c_reg_slice_mode_axis => 0,
       c_reg_slice_mode_rach => 0,
@@ -251,8 +251,8 @@ END COMPONENT;
       c_wach_type => 0,
       c_wdch_type => 0,
       c_wr_ack_low => 0,
-      c_wr_data_count_width => 10,
-      c_wr_depth => 1024,
+      c_wr_data_count_width => 15,
+      c_wr_depth => 32768,
       c_wr_depth_axis => 1024,
       c_wr_depth_rach => 16,
       c_wr_depth_rdch => 1024,
@@ -260,7 +260,7 @@ END COMPONENT;
       c_wr_depth_wdch => 1024,
       c_wr_depth_wrch => 16,
       c_wr_freq => 1,
-      c_wr_pntr_width => 10,
+      c_wr_pntr_width => 15,
       c_wr_pntr_width_axis => 10,
       c_wr_pntr_width_rach => 4,
       c_wr_pntr_width_rdch => 10,

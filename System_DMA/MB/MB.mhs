@@ -38,8 +38,8 @@
  PORT gpio_camera_I1 = gpio_camera_GPIO_IO_I, DIR = I, VEC = [2:0]
  PORT gpio_FIFO_rd_wr_en_O = gpio_FIFO_GPIO2_IO_O, DIR = O, VEC = [1:0]
  PORT gpio_camera_I2 = gpio_camera_GPIO2_IO_I, DIR = I, VEC = [9:0]
- PORT xps_FIFO_data_I = xps_FIFO_data_I_GPIO_IO_I, DIR = I, VEC = [31:0]
- PORT xps_FIFO_data_rd_cnt_I = xps_FIFO_data_GPIO2_IO_I, DIR = I, VEC = [9:0]
+ PORT xps_FIFO_data_I = xps_FIFO_data_I_GPIO_IO_I, DIR = I, VEC = [0:31]
+ PORT xps_FIFO_data_rd_cnt_I = xps_FIFO_data_GPIO2_IO_I, DIR = I, VEC = [19:0]
  PORT read_clk_fifo_O = clock_generator_0_CLKOUT3, DIR = O, SIGIS = CLK, CLK_FREQ = 100000000
  PORT xps_epc_0_PRH_Data_I_pin = xps_epc_0_PRH_Data_I, DIR = I, VEC = [0:31]
  PORT xps_epc_0_PRH_CS_n_pin = xps_epc_0_PRH_CS_n, DIR = O
@@ -314,7 +314,7 @@ BEGIN xps_gpio
  PARAMETER C_GPIO_WIDTH = 32
  PARAMETER C_ALL_INPUTS = 1
  PARAMETER C_IS_DUAL = 1
- PARAMETER C_GPIO2_WIDTH = 10
+ PARAMETER C_GPIO2_WIDTH = 20
  PARAMETER C_ALL_INPUTS_2 = 1
  PARAMETER C_BASEADDR = 0x8730c000
  PARAMETER C_HIGHADDR = 0x8730c3ff

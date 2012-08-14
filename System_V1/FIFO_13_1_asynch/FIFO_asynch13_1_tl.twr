@@ -36,7 +36,7 @@ Setup/Hold to clock rd_clk_i
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-rd_en_i     |    1.238(R)|    1.242(R)|rd_clk_i_BUFGP    |   0.000|
+rd_en_i     |    2.335(R)|    0.285(R)|rd_clk_i_BUFGP    |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock wr_clk_i
@@ -44,74 +44,96 @@ Setup/Hold to clock wr_clk_i
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-din_i<0>    |    2.403(R)|    0.555(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<1>    |    1.550(R)|    1.341(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<2>    |    1.610(R)|    1.284(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<3>    |    1.719(R)|    1.185(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<4>    |    1.505(R)|    1.381(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<5>    |    1.634(R)|    1.263(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<6>    |    1.651(R)|    1.246(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<7>    |    1.889(R)|    1.026(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<8>    |    1.129(R)|    1.727(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<9>    |    1.335(R)|    1.538(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<10>   |    0.957(R)|    1.890(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<11>   |    1.149(R)|    1.710(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<12>   |    1.204(R)|    1.660(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<13>   |    1.302(R)|    1.568(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<14>   |    1.347(R)|    1.528(R)|wr_clk_i_BUFGP    |   0.000|
-din_i<15>   |    1.346(R)|    1.530(R)|wr_clk_i_BUFGP    |   0.000|
-wr_en_i     |    1.492(R)|    1.184(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<0>    |    1.443(R)|    1.344(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<1>    |    1.552(R)|    1.351(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<2>    |    1.333(R)|    1.539(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<3>    |    0.642(R)|    2.252(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<4>    |    1.587(R)|    1.212(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<5>    |    1.130(R)|    1.738(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<6>    |    1.285(R)|    1.582(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<7>    |    1.569(R)|    2.087(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<8>    |    1.210(R)|    2.866(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<9>    |    1.324(R)|    2.723(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<10>   |    1.151(R)|    2.712(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<11>   |    1.278(R)|    2.733(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<12>   |    1.536(R)|    2.537(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<13>   |    0.705(R)|    2.710(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<14>   |    1.738(R)|    2.784(R)|wr_clk_i_BUFGP    |   0.000|
+din_i<15>   |    1.151(R)|    3.035(R)|wr_clk_i_BUFGP    |   0.000|
+wr_en_i     |    1.941(R)|    1.352(R)|wr_clk_i_BUFGP    |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock rd_clk_i to Pad
-------------------+------------+------------------+--------+
-                  | clk (edge) |                  | Clock  |
-Destination       |   to PAD   |Internal Clock(s) | Phase  |
-------------------+------------+------------------+--------+
-dout_o<0>         |   13.596(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<1>         |   13.560(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<2>         |   13.141(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<3>         |   12.634(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<4>         |   13.559(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<5>         |   12.909(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<6>         |   12.664(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<7>         |   12.646(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<8>         |   12.166(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<9>         |   12.077(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<10>        |   11.965(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<11>        |   11.947(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<12>        |   12.304(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<13>        |   12.078(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<14>        |   11.962(R)|rd_clk_i_BUFGP    |   0.000|
-dout_o<15>        |   12.529(R)|rd_clk_i_BUFGP    |   0.000|
-empty_o           |   11.714(R)|rd_clk_i_BUFGP    |   0.000|
-rd_data_count_o<0>|    9.354(R)|rd_clk_i_BUFGP    |   0.000|
-rd_data_count_o<1>|    9.154(R)|rd_clk_i_BUFGP    |   0.000|
-rd_data_count_o<2>|    9.347(R)|rd_clk_i_BUFGP    |   0.000|
-rd_data_count_o<3>|    9.288(R)|rd_clk_i_BUFGP    |   0.000|
-valid_o           |    9.086(R)|rd_clk_i_BUFGP    |   0.000|
-------------------+------------+------------------+--------+
+-------------------+------------+------------------+--------+
+                   | clk (edge) |                  | Clock  |
+Destination        |   to PAD   |Internal Clock(s) | Phase  |
+-------------------+------------+------------------+--------+
+dout_o<0>          |   12.503(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<1>          |   13.146(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<2>          |   13.068(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<3>          |   11.616(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<4>          |   12.623(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<5>          |   12.161(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<6>          |   12.132(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<7>          |   14.440(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<8>          |   13.081(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<9>          |   13.415(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<10>         |   13.322(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<11>         |   13.026(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<12>         |   13.020(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<13>         |   12.827(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<14>         |   13.057(R)|rd_clk_i_BUFGP    |   0.000|
+dout_o<15>         |   13.206(R)|rd_clk_i_BUFGP    |   0.000|
+empty_o            |   11.822(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<0> |    8.846(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<1> |    9.032(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<2> |    9.065(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<3> |    8.852(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<4> |    9.065(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<5> |    9.015(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<6> |    9.023(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<7> |    9.019(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<8> |    9.026(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<9> |    8.833(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<10>|    9.002(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<11>|    9.038(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<12>|    8.905(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<13>|    8.835(R)|rd_clk_i_BUFGP    |   0.000|
+rd_data_count_o<14>|    8.840(R)|rd_clk_i_BUFGP    |   0.000|
+valid_o            |    9.251(R)|rd_clk_i_BUFGP    |   0.000|
+-------------------+------------+------------------+--------+
 
 Clock wr_clk_i to Pad
-------------------+------------+------------------+--------+
-                  | clk (edge) |                  | Clock  |
-Destination       |   to PAD   |Internal Clock(s) | Phase  |
-------------------+------------+------------------+--------+
-almost_full_o     |    9.060(R)|wr_clk_i_BUFGP    |   0.000|
-full_o            |   11.772(R)|wr_clk_i_BUFGP    |   0.000|
-wr_data_count_o<0>|    9.154(R)|wr_clk_i_BUFGP    |   0.000|
-wr_data_count_o<1>|    9.284(R)|wr_clk_i_BUFGP    |   0.000|
-wr_data_count_o<2>|    9.332(R)|wr_clk_i_BUFGP    |   0.000|
-wr_data_count_o<3>|    9.479(R)|wr_clk_i_BUFGP    |   0.000|
-------------------+------------+------------------+--------+
+-------------------+------------+------------------+--------+
+                   | clk (edge) |                  | Clock  |
+Destination        |   to PAD   |Internal Clock(s) | Phase  |
+-------------------+------------+------------------+--------+
+almost_full_o      |    9.255(R)|wr_clk_i_BUFGP    |   0.000|
+full_o             |   12.005(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<0> |    9.037(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<1> |    8.868(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<2> |    8.969(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<3> |    8.851(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<4> |    8.823(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<5> |    9.012(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<6> |    8.832(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<7> |    8.984(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<8> |    8.995(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<9> |    8.853(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<10>|    8.964(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<11>|    9.015(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<12>|    8.814(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<13>|    8.865(R)|wr_clk_i_BUFGP    |   0.000|
+wr_data_count_o<14>|    8.951(R)|wr_clk_i_BUFGP    |   0.000|
+-------------------+------------+------------------+--------+
 
 Clock to Setup on destination clock rd_clk_i
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-rd_clk_i       |    2.678|         |         |         |
-wr_clk_i       |    1.242|         |         |         |
+rd_clk_i       |    3.293|         |         |         |
+wr_clk_i       |    1.253|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock wr_clk_i
@@ -119,19 +141,19 @@ Clock to Setup on destination clock wr_clk_i
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-rd_clk_i       |    1.270|         |         |         |
-wr_clk_i       |    2.953|         |         |         |
+rd_clk_i       |    1.489|         |         |         |
+wr_clk_i       |    3.478|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Aug  6 18:09:48 2012 
+Analysis completed Tue Aug 14 16:02:30 2012 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 498 MB
+Peak Memory Usage: 502 MB
 
 
 
