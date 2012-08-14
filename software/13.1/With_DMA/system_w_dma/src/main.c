@@ -80,7 +80,7 @@ void gpio_camera_isr(void * param){
 		index3 = 0;
 		rd_wr_en = 0x3; // enable writing into fifo
 		XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, rd_wr_en);
-		start_reading++;
+		start_reading = 1;
 	} else if ( ((cam1&0x2) != 0) && (get_pic==0) && (read_en == 1) ){
 		rd_wr_en &= 0x02;
 		XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, rd_wr_en);
@@ -98,8 +98,8 @@ void gpio_camera_isr(void * param){
 	//}
 
 	// fifo empty is set
-	if ( (cam1&0x4) != 0 && start_reading == 1){
-		//start_reading = 0;
+	if ( (cam1&0x4) != 0 && start_reading == 1 && read_en == 0){
+		start_reading = 0;
 		rd_wr_en &= 0x01;
 		XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, rd_wr_en);
 	}
@@ -223,10 +223,10 @@ int main()
     // allocate buffer (a lot of space is needed for pictures)
     buf = malloc(16*1000000);
     if (buf == 0){
-    	return 0; // error occured
+    	return 1; // error occured
     }
 
-    XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, 0x3);
+    //XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, 0x3);
 
     //while(1){
     //	u32 data = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
@@ -234,11 +234,13 @@ int main()
 
     while(1){
     	// read while fifo is not empty
-    	while (read_en == 1){
+    	while (start_reading == 1){
     		num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
-    		num_bytes[index2++] = num;
-    		for (i = 0; i < num; i++)
-    			buf[index1++] = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+    		if (num > 0){
+    			num_bytes[index2++] = num;
+    			for (i = 0; i < num; i++)
+    				buf[index1++] = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+    		}
     	}
     }
 
