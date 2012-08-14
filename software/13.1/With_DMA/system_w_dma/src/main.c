@@ -33,7 +33,8 @@ void print(char *str);
 #define DISPLAY_ROWS     480
 
 
-XGpio gpio_fifo_data, gpio_leds, gpio_button, gpio_pos_leds, gpio_camera, gpio_fifo_en_full;
+//XGpio gpio_fifo_data, gpio_leds, gpio_button, gpio_pos_leds, gpio_camera, gpio_fifo_en_full;
+XGpio gpio_button;
 XIntc intc;
 XDmaCentral dma;
 static u32 num_bytes[100];
@@ -51,13 +52,13 @@ volatile u32 data = 0, read_count = 0;
 volatile u32 cam1 = 0, cam2 = 0;
 volatile u32 * fifo_address = (u32 *) XPAR_XPS_EPC_0_PRH0_BASEADDR;
 
-void gpio_fifo_empty_isr(void * param){
+/*void gpio_fifo_empty_isr(void * param){
 	u32 dat = XGpio_DiscreteRead(&gpio_fifo_en_full, 1);
 	u16 cnt = 0;
 
 
 	XGpio_InterruptClear(&gpio_fifo_en_full, XGPIO_IR_CH1_MASK);
-}
+}*/
 
 
 void gpio_button_pressed_isr(void * param){
@@ -69,7 +70,7 @@ void gpio_button_pressed_isr(void * param){
 }
 
 void gpio_camera_isr(void * param){
-	cam1 = XGpio_DiscreteRead(&gpio_camera, 1);
+	//cam1 = XGpio_DiscreteRead(&gpio_camera, 1);
 
 	// vsync is 1, so new frame can be read
 	if (((cam1&0x2)!=0) && get_pic==1){
@@ -104,7 +105,7 @@ void gpio_camera_isr(void * param){
 	//if ((XDmaCentral_GetStatus(&dma)&XDMC_DMASR_BUS_ERROR_MASK) != 0)
 	//	index1++;
 
-	XGpio_InterruptClear(&gpio_camera, XGPIO_IR_CH1_MASK);
+	//XGpio_InterruptClear(&gpio_camera, XGPIO_IR_CH1_MASK);
 }
 
 
@@ -137,20 +138,13 @@ void init(){
 	XDmaCentral_SetControl(&dma, XDMC_DMACR_DEST_INCR_MASK);
 
 	// gpio
-	XGpio_Initialize(&gpio_fifo_data, XPAR_XPS_FIFO_DATA_DEVICE_ID);
-	XGpio_Initialize(&gpio_fifo_en_full, XPAR_GPIO_FIFO_DEVICE_ID);
-	XGpio_Initialize(&gpio_leds, XPAR_LEDS_8BIT_DEVICE_ID);
-	XGpio_Initialize(&gpio_pos_leds, XPAR_LEDS_POSITIONS_DEVICE_ID);
+	//XGpio_Initialize(&gpio_fifo_en_full, XPAR_GPIO_FIFO_DEVICE_ID);
 	XGpio_Initialize(&gpio_button, XPAR_PUSH_BUTTONS_5BIT_DEVICE_ID);
-	XGpio_Initialize(&gpio_camera, XPAR_GPIO_CAMERA_DEVICE_ID);
 
-	XGpio_SetDataDirection(&gpio_fifo_data, 1, 0xFFFFFFFF);
-	XGpio_SetDataDirection(&gpio_fifo_data, 2, 0xFFFFFFFF);
-	XGpio_SetDataDirection(&gpio_fifo_en_full, 1, 0xFFFFFFFF);
-	XGpio_SetDataDirection(&gpio_fifo_en_full, 2, 0x0);
-	XGpio_SetDataDirection(&gpio_camera, 1, 0xFFFFFFFF);
-	XGpio_SetDataDirection(&gpio_camera, 2, 0xFFFFFFFF);
-	XGpio_SetDataDirection(&gpio_leds, 1, 0x0);
+	//XGpio_SetDataDirection(&gpio_fifo_en_full, 1, 0xFFFFFFFF);
+	//XGpio_SetDataDirection(&gpio_fifo_en_full, 2, 0x0);
+	//XGpio_SetDataDirection(&gpio_camera, 1, 0xFFFFFFFF);
+	//XGpio_SetDataDirection(&gpio_camera, 2, 0xFFFFFFFF);
 	XGpio_SetDataDirection(&gpio_button, 1, 0xFFFFFFFF);
 	//XGpio_SetDataDirection(&gpio_pos_leds, 1, 0x0);
 
@@ -161,15 +155,15 @@ void init(){
 	// enable interrupt banks (mask is used to choose channel, whole channel is interrupt enabled!)
 	// that is, why extra channels are needed for data that causes interrupts
 
-	XGpio_InterruptGlobalEnable(&gpio_camera);
-	XGpio_InterruptEnable(&gpio_camera, XGPIO_IR_CH1_MASK); // only Is are interrupt enabled, only vsync
+	//XGpio_InterruptGlobalEnable(&gpio_camera);
+	//XGpio_InterruptEnable(&gpio_camera, XGPIO_IR_CH1_MASK); // only Is are interrupt enabled, only vsync
 
 	XGpio_InterruptGlobalEnable(&gpio_button);
 	XGpio_InterruptEnable(&gpio_button, XGPIO_IR_CH1_MASK);
 
 	//XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_GPIO_FIFO_IP2INTC_IRPT_INTR, (XInterruptHandler) gpio_fifo_empty_isr, (void*)0 );
 	XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_PUSH_BUTTONS_5BIT_IP2INTC_IRPT_INTR , (XInterruptHandler) gpio_button_pressed_isr, (void*)0 );
-	XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_GPIO_CAMERA_IP2INTC_IRPT_INTR , (XInterruptHandler) gpio_camera_isr, (void*)0 );
+	//XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_GPIO_CAMERA_IP2INTC_IRPT_INTR , (XInterruptHandler) gpio_camera_isr, (void*)0 );
 
 	XIntc_DeviceInterruptHandler(XPAR_XPS_INTC_0_DEVICE_ID);
 
@@ -177,7 +171,7 @@ void init(){
 
 	//XIntc_Enable(&intc, XPAR_XPS_INTC_0_GPIO_FIFO_IP2INTC_IRPT_INTR);
 	XIntc_Enable(&intc, XPAR_XPS_INTC_0_PUSH_BUTTONS_5BIT_IP2INTC_IRPT_INTR);
-	XIntc_Enable(&intc, XPAR_XPS_INTC_0_GPIO_CAMERA_IP2INTC_IRPT_INTR);
+	//XIntc_Enable(&intc, XPAR_XPS_INTC_0_GPIO_CAMERA_IP2INTC_IRPT_INTR);
 
 
 	microblaze_enable_interrupts();
@@ -211,7 +205,7 @@ int main()
 
 
 
-    XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, 0x00);
+    //XGpio_DiscreteWrite(&gpio_fifo_en_full, 2, 0x00);
 
     // allocate buffer (a lot of space is needed for pictures)
     buf = malloc(16*1000000);
@@ -223,44 +217,22 @@ int main()
     u16 i = 0;
     volatile u32 tmp;
     volatile u32 cnt = 0;
-   /* while(1){
+    while(1){
  //   	u32 data = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-			tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
-	//		xil_printf("%x\n",tmp);
-			cnt++;
-    }*/
+			//tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+	   index1 = 0;
+	   while(index1 < 16*1000000)
+	   	   buf[index1++] = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+	   	   //num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
+		    //xil_printf("%x\n",tmp);
+			//cnt++;
+    }
 
     while(1){
     	// read while fifo is not empty
 
     	while (start_reading == 1){
-    		num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
+    		//num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
     		if (num > 0){
     			num_bytes[index2++] = num;
     			//XDmaCentral_Transfer(&dma, (u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR, &buf + index3, num);

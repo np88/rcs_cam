@@ -16,12 +16,10 @@
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="180,450,180" VERSION="0"/>
     <SET ID="dlmb_cntlr" IS_EXPANDED="TRUE"/>
     <SET ID="lmb_bram" IS_EXPANDED="TRUE"/>
-    <SET ID="LEDs_Positions" IS_EXPANDED="TRUE"/>
     <SET ID="Push_Buttons_5Bit" IS_EXPANDED="TRUE"/>
     <SET ID="DDR2_SDRAM" IS_EXPANDED="TRUE"/>
     <SET ID="gpio_FIFO" IS_EXPANDED="TRUE"/>
-    <SET ID="gpio_camera" IS_EXPANDED="TRUE"/>
-    <SET ID="xps_FIFO_data" IS_EXPANDED="TRUE"/>
+    <SET ID="xps_FIFO_cam_data" IS_EXPANDED="TRUE"/>
     <SET ID="xps_central_dma_0" IS_EXPANDED="TRUE"/>
     <SET ID="xps_epc_0" IS_EXPANDED="TRUE"/>
     <STATUS>
@@ -37,20 +35,17 @@
       <VARIABLE ID="dlmb_cntlr" IS_EXPANDED="TRUE" ROW_INDEX="5"/>
       <VARIABLE ID="ilmb_cntlr" ROW_INDEX="6"/>
       <VARIABLE ID="lmb_bram" IS_EXPANDED="TRUE" ROW_INDEX="4"/>
-      <VARIABLE ID="LEDs_8Bit" ROW_INDEX="14"/>
-      <VARIABLE ID="LEDs_Positions" IS_EXPANDED="TRUE" ROW_INDEX="15"/>
-      <VARIABLE ID="Push_Buttons_5Bit" IS_EXPANDED="TRUE" ROW_INDEX="16"/>
+      <VARIABLE ID="Push_Buttons_5Bit" IS_EXPANDED="TRUE" ROW_INDEX="14"/>
       <VARIABLE ID="DDR2_SDRAM" IS_EXPANDED="TRUE" ROW_INDEX="9"/>
-      <VARIABLE ID="xps_timer_0" ROW_INDEX="20"/>
+      <VARIABLE ID="xps_timer_0" ROW_INDEX="17"/>
       <VARIABLE ID="xps_bram_if_cntlr_0" ROW_INDEX="8"/>
       <VARIABLE ID="xps_bram_if_cntlr_0_block" ROW_INDEX="7"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="21"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="18"/>
       <VARIABLE ID="mdm_0" ROW_INDEX="10"/>
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="22"/>
-      <VARIABLE ID="gpio_FIFO" IS_EXPANDED="TRUE" ROW_INDEX="17"/>
-      <VARIABLE ID="gpio_camera" IS_EXPANDED="TRUE" ROW_INDEX="18"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="19"/>
+      <VARIABLE ID="gpio_FIFO" IS_EXPANDED="TRUE" ROW_INDEX="15"/>
       <VARIABLE ID="xps_intc_0" ROW_INDEX="11"/>
-      <VARIABLE ID="xps_FIFO_data" IS_EXPANDED="TRUE" ROW_INDEX="19"/>
+      <VARIABLE ID="xps_FIFO_cam_data" IS_EXPANDED="TRUE" ROW_INDEX="16"/>
       <VARIABLE ID="xps_central_dma_0" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
       <VARIABLE ID="xps_epc_0" IS_EXPANDED="TRUE" ROW_INDEX="13"/>
     </SEQUENCES>
@@ -98,7 +93,7 @@
   </SET>
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
-    <HEADERS HSCROLL="0" VSCROLL="123">
+    <HEADERS HSCROLL="0" VSCROLL="0">
       <VARIABLE COL_INDEX="0" COL_WIDTH="394" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="269" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Direction" VIEWTYPE="HEADER"/>
@@ -113,21 +108,14 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="0,630,180" VERSION="0"/>
     <SET ID="ExternalPorts" IS_EXPANDED="TRUE"/>
+    <SET ID="Push_Buttons_5Bit" IS_EXPANDED="TRUE"/>
     <SET ID="gpio_FIFO" IS_EXPANDED="TRUE">
       <SET ID="gpio_0" IS_EXPANDED="TRUE"/>
     </SET>
     <SET ID="xps_intc_0" IS_EXPANDED="TRUE"/>
-    <SET ID="xps_FIFO_data" IS_EXPANDED="TRUE">
-      <SET ID="gpio_0" IS_EXPANDED="TRUE"/>
-    </SET>
     <SET ID="xps_central_dma_0" IS_EXPANDED="TRUE"/>
-    <SET ID="xps_epc_0" IS_EXPANDED="TRUE">
-      <SET ID="epc_0" IS_EXPANDED="TRUE"/>
-    </SET>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="xps_FIFO_data_I" PARENT="ExternalPorts"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="FALSE">
       <VARIABLE ID="ExternalPorts" IS_EXPANDED="TRUE" ROW_INDEX="0"/>
@@ -138,22 +126,19 @@
       <VARIABLE ID="dlmb_cntlr" ROW_INDEX="6"/>
       <VARIABLE ID="ilmb_cntlr" ROW_INDEX="7"/>
       <VARIABLE ID="lmb_bram" ROW_INDEX="5"/>
-      <VARIABLE ID="LEDs_8Bit" ROW_INDEX="15"/>
-      <VARIABLE ID="LEDs_Positions" ROW_INDEX="16"/>
-      <VARIABLE ID="Push_Buttons_5Bit" ROW_INDEX="17"/>
+      <VARIABLE ID="Push_Buttons_5Bit" IS_EXPANDED="TRUE" ROW_INDEX="15"/>
       <VARIABLE ID="DDR2_SDRAM" ROW_INDEX="10"/>
-      <VARIABLE ID="xps_timer_0" ROW_INDEX="21"/>
+      <VARIABLE ID="xps_timer_0" ROW_INDEX="18"/>
       <VARIABLE ID="xps_bram_if_cntlr_0" ROW_INDEX="9"/>
       <VARIABLE ID="xps_bram_if_cntlr_0_block" ROW_INDEX="8"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="22"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="19"/>
       <VARIABLE ID="mdm_0" ROW_INDEX="11"/>
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="23"/>
-      <VARIABLE ID="gpio_FIFO" IS_EXPANDED="TRUE" ROW_INDEX="18"/>
-      <VARIABLE ID="gpio_camera" ROW_INDEX="19"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="20"/>
+      <VARIABLE ID="gpio_FIFO" IS_EXPANDED="TRUE" ROW_INDEX="16"/>
       <VARIABLE ID="xps_intc_0" IS_EXPANDED="TRUE" ROW_INDEX="12"/>
-      <VARIABLE ID="xps_FIFO_data" IS_EXPANDED="TRUE" ROW_INDEX="20"/>
+      <VARIABLE ID="xps_FIFO_cam_data" ROW_INDEX="17"/>
       <VARIABLE ID="xps_central_dma_0" IS_EXPANDED="TRUE" ROW_INDEX="13"/>
-      <VARIABLE ID="xps_epc_0" IS_EXPANDED="TRUE" ROW_INDEX="14"/>
+      <VARIABLE ID="xps_epc_0" ROW_INDEX="14"/>
     </SEQUENCES>
   </SET>
 

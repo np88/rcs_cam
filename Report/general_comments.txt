@@ -105,3 +105,21 @@ http://forums.xilinx.com/t5/EDK-and-Platform-Studio/TFT-Display-with-EDK-xps-tft
 
 EPC:
 ATTENTION: Inverted logic! 
+
+Test: Read Speed: (interrupts enabled, about 5 gpios) 
+Test 1:
+   while(1){  // f = 3,378 MHz
+	tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR); 
+    }
+Test 2:
+   while(1){  // f = 684,9 MHz
+	tmp = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR); 
+	num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
+    }
+Test 3:
+   while(1){ f = 2,083 MHz (no difference if interrupt initialization is commented out and with removing of some gpios)
+	   index1 = 0;
+	   while(index1 < 16*1000000)
+	   	   buf[index1++] = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
+    }
+

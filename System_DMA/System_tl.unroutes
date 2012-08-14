@@ -1,0 +1,29 @@
+Release 13.1 - par O.40d (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Tue Aug 14 18:59:01 2012
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 17 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   Inst_MB/dlmb_LMB_ABus<30>
+   Inst_MB/dlmb_LMB_ABus<31>
+   Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>
+   Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>
+   cam_exclk_IBUF
+   cam_fodd_IBUF
+   cam_pclk_IBUF
+   cam_scl_IBUF
+   cam_sda_IBUF
+   cam_vto_IBUF
+   switches_i<1>_IBUF
+   switches_i<2>_IBUF
+   switches_i<3>_IBUF
+   switches_i<4>_IBUF
+   switches_i<5>_IBUF
+   switches_i<6>_IBUF
+   switches_i<7>_IBUF
+
+

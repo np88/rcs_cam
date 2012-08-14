@@ -1,0 +1,13 @@
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc5vlx110tff1136-1
+-top gpio_fifo_wrapper
+-ifmt MIXED
+-ifn gpio_fifo_wrapper_xst.prj
+-ofn ../implementation/gpio_fifo_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation/gpio_fifo_wrapper}
+-vlgincdir {"/DIST/home/peters/cam_repo/System_DMA/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

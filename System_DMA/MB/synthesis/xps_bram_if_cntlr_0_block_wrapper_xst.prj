@@ -1,0 +1,2 @@
+VHDL xps_bram_if_cntlr_0_block_elaborate_v1_00_a /DIST/home/peters/cam_repo/System_DMA/MB/hdl/elaborate/xps_bram_if_cntlr_0_block_elaborate_v1_00_a/hdl/vhdl/xps_bram_if_cntlr_0_block_elaborate.vhd
+vhdl work ../hdl/xps_bram_if_cntlr_0_block_wrapper.vhd

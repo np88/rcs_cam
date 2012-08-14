@@ -1,0 +1,5 @@
+set -tmpdir "/DIST/home/peters/cam_repo/System_DMA/xst/projnav.tmp"
+set -xsthdpdir "/DIST/home/peters/cam_repo/System_DMA/xst"
+elaborate
+-ifn FIFO_asynch13_1_tl.prj
+-ifmt mixed

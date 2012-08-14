@@ -15,10 +15,6 @@
 
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/lmb_bram.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/lmb_bram.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/lmb_bram.svg"/>
 
-  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/LEDs_8Bit.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/LEDs_8Bit.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/LEDs_8Bit.svg"/>
-
-  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/LEDs_Positions.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/LEDs_Positions.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/LEDs_Positions.svg"/>
-
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/Push_Buttons_5Bit.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/Push_Buttons_5Bit.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/Push_Buttons_5Bit.svg"/>
 
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/DDR2_SDRAM.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/DDR2_SDRAM.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/DDR2_SDRAM.svg"/>
@@ -37,11 +33,9 @@
 
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/gpio_FIFO.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/gpio_FIFO.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/gpio_FIFO.svg"/>
 
-  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/gpio_camera.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/gpio_camera.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/gpio_camera.svg"/>
-
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_intc_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_intc_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/xps_intc_0.svg"/>
 
-  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_FIFO_data.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_FIFO_data.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/xps_FIFO_data.svg"/>
+  <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_FIFO_cam_data.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_FIFO_cam_data.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/xps_FIFO_cam_data.svg"/>
 
   <RENDERIMG RASNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_central_dma_0.jpg" SVGNAME="/DIST/home/peters/cam_repo/System_DMA/MB/SDK/SDK_Export/hw/imgs/xps_central_dma_0.svg" TMPSVGFN="/DIST/home/peters/cam_repo/System_DMA/MB/__xps/.dswkshop/xps_central_dma_0.svg"/>
 

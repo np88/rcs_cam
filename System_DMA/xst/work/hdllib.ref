@@ -1,0 +1,12 @@
+PB fifo_const fifo_const /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_CONST.vhd sub00/vhpl05 1344963142
+AR system_tl behavioral /DIST/home/peters/cam_repo/System_DMA/System_dma_tl.vhd sub00/vhpl11 1344963148
+EN fifo_13_1_asynch NULL /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd sub00/vhpl00 1344963137
+EN mb NULL /DIST/home/peters/cam_repo/System_DMA/MB/hdl/MB.vhd sub00/vhpl06 1344963143
+PH fifo_const NULL /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_CONST.vhd sub00/vhpl04 1344963141
+AR edge_detector behavioral /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/edge_detector.vhd sub00/vhpl03 1344963140
+EN system_tl NULL /DIST/home/peters/cam_repo/System_DMA/System_dma_tl.vhd sub00/vhpl10 1344963147
+AR fifo_13_1_asynch fifo_13_1_asynch_a /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd sub00/vhpl01 1344963138
+EN fifo_asynch13_1_tl NULL /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd sub00/vhpl08 1344963145
+AR mb structure /DIST/home/peters/cam_repo/System_DMA/MB/hdl/MB.vhd sub00/vhpl07 1344963144
+AR fifo_asynch13_1_tl behavioral /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd sub00/vhpl09 1344963146
+EN edge_detector NULL /DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/edge_detector.vhd sub00/vhpl02 1344963139

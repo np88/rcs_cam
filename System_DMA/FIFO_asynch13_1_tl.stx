@@ -1,0 +1,46 @@
+Release 13.1 - xst O.40d (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /DIST/home/peters/cam_repo/System_DMA/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> 
+Parameter xsthdpdir set to /DIST/home/peters/cam_repo/System_DMA/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd" in Library work.
+Entity <fifo_13_1_asynch> compiled.
+Entity <fifo_13_1_asynch> (Architecture <fifo_13_1_asynch_a>) compiled.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/edge_detector.vhd" in Library work.
+Architecture behavioral of Entity edge_detector is up to date.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" in Library work.
+Entity <fifo_asynch13_1_tl> compiled.
+Entity <fifo_asynch13_1_tl> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/MB/hdl/MB.vhd" in Library work.
+Architecture structure of Entity mb is up to date.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.53 secs
+ 
+--> 
+
+
+Total memory usage is 321444 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -75,13 +75,11 @@ architecture Behavioral of System_tl is
 	PORT(
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
 		fpga_0_rst_1_sys_rst_pin : IN std_logic;
-		gpio_FIFO_almost_full_I : IN std_logic; --gpio 
-		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0); --gpio
-		gpio_camera_I1 : IN std_logic_vector(2 downto 0); --gpio
-		gpio_camera_I2 : IN std_logic_vector(9 downto 0); --gpio
-		xps_FIFO_data_I : IN std_logic_vector(31 downto 0); --gpio, Y and UV signals
-		xps_FIFO_data_rd_cnt_I : IN std_logic_vector(19 downto 0); --gpio
-		xps_epc_0_PRH_Data_I_pin : IN std_logic_vector(31 downto 0);
+		gpio_FIFO_almost_full_I : IN std_logic;
+		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);
+		xps_FIFO_cam_data_I : IN std_logic;
+		xps_FIFO_data_rd_cnt_I : IN std_logic_vector(19 downto 0);
+		xps_epc_0_PRH_Data_I_pin : IN std_logic_vector(0 to 31);
 		xps_epc_0_PRH_Rdy_pin : IN std_logic;
 		xps_epc_0_PRH_Rst_pin : IN std_logic;    
 		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
@@ -98,10 +96,8 @@ architecture Behavioral of System_tl is
 		fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin : OUT std_logic_vector(1 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_Addr_pin : OUT std_logic_vector(12 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0);
-		LEDs_Positions_GPIO_IO_O_pin : OUT std_logic_vector(4 downto 0); --gpio
-		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0); --gpio
-		gpio_FIFO_rd_wr_en_O : OUT std_logic_vector(1 downto 0); --gpio
-		read_clk_fifo_O : OUT std_logic; --gpio
+		gpio_FIFO_rd_wr_en_O : OUT std_logic_vector(1 downto 0);
+		read_clk_fifo_O : OUT std_logic;
 		xps_epc_0_PRH_CS_n_pin : OUT std_logic
 		);
 	END COMPONENT;
@@ -161,16 +157,11 @@ begin
 		fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin,
 		gpio_FIFO_almost_full_I => fifo_almost_full,
 		Push_Buttons_5Bit_GPIO_IO_I_pin => Push_Buttons_5Bit_GPIO_IO_I_pin,
-		LEDs_Positions_GPIO_IO_O_pin => open,
-		LEDs_8Bit_GPIO_IO_O_pin => open,
-		gpio_camera_I1 => gpio_camera_I1,
+		xps_FIFO_cam_data_I => cam_vsyn,
 		gpio_FIFO_rd_wr_en_O => gpio_FIFO_rd_wr_en_O,
-		gpio_camera_I2 => gpio_camera_I2,
-		xps_FIFO_data_I => epc_data_i,
 		xps_FIFO_data_rd_cnt_I => fifo_rd_in_gpio,
 		read_clk_fifo_O => fifo_read_clk,
 		xps_epc_0_PRH_Data_I_pin => epc_data_i,
-		--xps_epc_0_PRH_Data_O_pin => epc_data_o,
 		xps_epc_0_PRH_CS_n_pin => xps_epc_0_PRH_CS_n_pin, -- inverted logic
 		xps_epc_0_PRH_Rdy_pin => fifo_ready, -- fifo is ready when it is not empty
 		xps_epc_0_PRH_Rst_pin => NOT fpga_0_rst_1_sys_rst_pin -- inverted logic
@@ -199,7 +190,7 @@ begin
 	fifo_rd_en_i <= NOT xps_epc_0_PRH_CS_n_pin;
 	LEDs_Positions_GPIO_IO_O_pin(2) <= fifo_full; -- south
 	LEDs_Positions_GPIO_IO_O_pin(3) <= fifo_rd_en_i; -- east
-	LEDs_Positions_GPIO_IO_O_pin(4) <= fifo_wr_en_i; --north
+	LEDs_Positions_GPIO_IO_O_pin(4) <= cam_href; --north
 	LEDs_8Bit_GPIO_IO_O_pin <= fifo_data_out(7 downto 0);
 
 

@@ -21,13 +21,9 @@ PORT (
 	fpga_0_rst_1_sys_rst_pin : IN STD_LOGIC;
 	gpio_FIFO_almost_full_I : IN STD_LOGIC;
 	Push_Buttons_5Bit_GPIO_IO_I_pin : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-	LEDs_Positions_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
-	LEDs_8Bit_GPIO_IO_O_pin : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	gpio_camera_I1 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 	gpio_FIFO_rd_wr_en_O : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-	gpio_camera_I2 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	xps_FIFO_data_I : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-	xps_FIFO_data_rd_cnt_I : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	xps_FIFO_cam_data_I : IN STD_LOGIC;
+	xps_FIFO_data_rd_cnt_I : IN STD_LOGIC_VECTOR(0 TO 19);
 	read_clk_fifo_O : OUT STD_LOGIC;
 	xps_epc_0_PRH_Data_I_pin : IN STD_LOGIC_VECTOR(0 TO 31);
 	xps_epc_0_PRH_CS_n_pin : OUT STD_LOGIC;

@@ -67,8 +67,6 @@ implementation/dlmb_wrapper.ngc \
 implementation/dlmb_cntlr_wrapper.ngc \
 implementation/ilmb_cntlr_wrapper.ngc \
 implementation/lmb_bram_wrapper.ngc \
-implementation/leds_8bit_wrapper.ngc \
-implementation/leds_positions_wrapper.ngc \
 implementation/push_buttons_5bit_wrapper.ngc \
 implementation/ddr2_sdram_wrapper.ngc \
 implementation/xps_timer_0_wrapper.ngc \
@@ -78,9 +76,8 @@ implementation/clock_generator_0_wrapper.ngc \
 implementation/mdm_0_wrapper.ngc \
 implementation/proc_sys_reset_0_wrapper.ngc \
 implementation/gpio_fifo_wrapper.ngc \
-implementation/gpio_camera_wrapper.ngc \
 implementation/xps_intc_0_wrapper.ngc \
-implementation/xps_fifo_data_wrapper.ngc \
+implementation/xps_fifo_cam_data_wrapper.ngc \
 implementation/xps_central_dma_0_wrapper.ngc \
 implementation/xps_epc_0_wrapper.ngc
 
