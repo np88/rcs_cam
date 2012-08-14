@@ -104,4 +104,4 @@ TFT:
 http://forums.xilinx.com/t5/EDK-and-Platform-Studio/TFT-Display-with-EDK-xps-tft-IP-Core/td-p/20412
 
 EPC:
-ATTENTION: Inverted logic, so ALL inputs except clock are inverted! 
+ATTENTION: Inverted logic! 

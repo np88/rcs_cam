@@ -38,9 +38,13 @@
  PORT gpio_camera_I1 = gpio_camera_GPIO_IO_I, DIR = I, VEC = [2:0]
  PORT gpio_FIFO_rd_wr_en_O = gpio_FIFO_GPIO2_IO_O, DIR = O, VEC = [1:0]
  PORT gpio_camera_I2 = gpio_camera_GPIO2_IO_I, DIR = I, VEC = [9:0]
- PORT xps_FIFO_data_I = xps_FIFO_data_I_GPIO_IO_I, DIR = I, VEC = [15:0]
+ PORT xps_FIFO_data_I = xps_FIFO_data_I_GPIO_IO_I, DIR = I, VEC = [31:0]
  PORT xps_FIFO_data_rd_cnt_I = xps_FIFO_data_GPIO2_IO_I, DIR = I, VEC = [9:0]
  PORT read_clk_fifo_O = clock_generator_0_CLKOUT3, DIR = O, SIGIS = CLK, CLK_FREQ = 100000000
+ PORT xps_epc_0_PRH_Data_I_pin = xps_epc_0_PRH_Data_I, DIR = I, VEC = [0:31]
+ PORT xps_epc_0_PRH_CS_n_pin = xps_epc_0_PRH_CS_n, DIR = O
+ PORT xps_epc_0_PRH_Rdy_pin = xps_epc_0_PRH_Rdy, DIR = I
+ PORT xps_epc_0_PRH_Rst_pin = xps_epc_0_PRH_Rst, DIR = I, SIGIS = RST, RST_POLARITY = 1
 
 
 BEGIN microblaze
@@ -300,14 +304,14 @@ BEGIN xps_intc
  PARAMETER C_BASEADDR = 0x81800000
  PARAMETER C_HIGHADDR = 0x8180ffff
  BUS_INTERFACE SPLB = mb_plb
- PORT Intr = gpio_camera_IP2INTC_Irpt & xps_timer_0_Interrupt & gpio_FIFO_IP2INTC_Irpt & Push_Buttons_5Bit_IP2INTC_Irpt
+ PORT Intr = gpio_camera_IP2INTC_Irpt & xps_timer_0_Interrupt & gpio_FIFO_IP2INTC_Irpt & Push_Buttons_5Bit_IP2INTC_Irpt & xps_central_dma_0_IP2INTC_Irpt
  PORT Irq = xps_intc_0_Irq
 END
 
 BEGIN xps_gpio
  PARAMETER INSTANCE = xps_FIFO_data
  PARAMETER HW_VER = 2.00.a
- PARAMETER C_GPIO_WIDTH = 16
+ PARAMETER C_GPIO_WIDTH = 32
  PARAMETER C_ALL_INPUTS = 1
  PARAMETER C_IS_DUAL = 1
  PARAMETER C_GPIO2_WIDTH = 10
@@ -317,5 +321,37 @@ BEGIN xps_gpio
  BUS_INTERFACE SPLB = mb_plb
  PORT GPIO_IO_I = xps_FIFO_data_I_GPIO_IO_I
  PORT GPIO2_IO_I = xps_FIFO_data_GPIO2_IO_I
+END
+
+BEGIN xps_central_dma
+ PARAMETER INSTANCE = xps_central_dma_0
+ PARAMETER HW_VER = 2.03.a
+ PARAMETER C_FIFO_DEPTH = 16
+ PARAMETER C_RD_BURST_SIZE = 16
+ PARAMETER C_WR_BURST_SIZE = 16
+ PARAMETER C_BASEADDR = 0x80200000
+ PARAMETER C_HIGHADDR = 0x8020ffff
+ BUS_INTERFACE MPLB = mb_plb
+ BUS_INTERFACE SPLB = mb_plb
+ PORT IP2INTC_Irpt = xps_central_dma_0_IP2INTC_Irpt
+END
+
+BEGIN xps_epc
+ PARAMETER INSTANCE = xps_epc_0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_PRH0_DWIDTH = 32
+ PARAMETER C_PRH0_RDY_TOUT = 858000
+ PARAMETER C_PRH0_RDY_WIDTH = 1144000
+ PARAMETER C_PRH_MAX_DWIDTH = 32
+ PARAMETER C_PRH0_AWIDTH = 3
+ PARAMETER C_PRH_MAX_AWIDTH = 3
+ PARAMETER C_PRH0_BASEADDR = 0x80800000
+ PARAMETER C_PRH0_HIGHADDR = 0x8080ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT PRH_Clk = CLK_S
+ PORT PRH_Data_I = xps_epc_0_PRH_Data_I
+ PORT PRH_CS_n = xps_epc_0_PRH_CS_n
+ PORT PRH_Rdy = xps_epc_0_PRH_Rdy
+ PORT PRH_Rst = xps_epc_0_PRH_Rst
 END
 

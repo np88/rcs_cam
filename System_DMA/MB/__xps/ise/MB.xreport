@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-08-09T17:05:05</DateModified>
+  <DateModified>2012-08-14T09:49:29</DateModified>
   <ModuleName>MB</ModuleName>
-  <SummaryTimeStamp>2012-08-09T17:05:05</SummaryTimeStamp>
-  <SavedFilePath>/DIST/home/peters/cam_repo/System_V1/MB/__xps/ise/MB.xreport</SavedFilePath>
+  <SummaryTimeStamp>2012-08-14T09:49:29</SummaryTimeStamp>
+  <SavedFilePath>/DIST/home/peters/cam_repo/System_DMA/MB/__xps/ise/MB.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
-  <SavedFilterFilePath>/DIST/home/peters/cam_repo/System_V1/MB/__xps/ise</SavedFilterFilePath>
+  <SavedFilterFilePath>/DIST/home/peters/cam_repo/System_DMA/MB/__xps/ise</SavedFilterFilePath>
   <DateInitialized>2012-08-05T13:44:27</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
