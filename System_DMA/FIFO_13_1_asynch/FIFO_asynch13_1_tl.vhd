@@ -85,7 +85,7 @@ begin
 			 wr_clk => wr_clk_i,
 			 rd_clk => rd_clk_i,
 			 din => din_i,
-			 wr_en => wr_en,
+			 wr_en => wr_en_i,
 			 rd_en => read_enable_edge,
 			 dout => dout_o,
 			 full => full_o,
