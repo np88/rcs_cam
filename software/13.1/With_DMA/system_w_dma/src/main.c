@@ -172,7 +172,7 @@ void init(){
 	XGpio_InterruptGlobalEnable(&gpio_button);
 	XGpio_InterruptEnable(&gpio_button, XGPIO_IR_CH1_MASK);
 
-	XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_GPIO_FIFO_IP2INTC_IRPT_INTR, (XInterruptHandler) gpio_fifo_empty_isr, (void*)0 );
+	//XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_GPIO_FIFO_IP2INTC_IRPT_INTR, (XInterruptHandler) gpio_fifo_empty_isr, (void*)0 );
 	XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_PUSH_BUTTONS_5BIT_IP2INTC_IRPT_INTR , (XInterruptHandler) gpio_button_pressed_isr, (void*)0 );
 	XIntc_RegisterHandler(XPAR_XPS_INTC_0_BASEADDR, XPAR_XPS_INTC_0_GPIO_CAMERA_IP2INTC_IRPT_INTR , (XInterruptHandler) gpio_camera_isr, (void*)0 );
 
@@ -180,7 +180,7 @@ void init(){
 
 	XIntc_Start(&intc, XIN_REAL_MODE);
 
-	XIntc_Enable(&intc, XPAR_XPS_INTC_0_GPIO_FIFO_IP2INTC_IRPT_INTR);
+	//XIntc_Enable(&intc, XPAR_XPS_INTC_0_GPIO_FIFO_IP2INTC_IRPT_INTR);
 	XIntc_Enable(&intc, XPAR_XPS_INTC_0_PUSH_BUTTONS_5BIT_IP2INTC_IRPT_INTR);
 	XIntc_Enable(&intc, XPAR_XPS_INTC_0_GPIO_CAMERA_IP2INTC_IRPT_INTR);
 
@@ -238,6 +238,8 @@ int main()
     		num = XGpio_DiscreteRead(&gpio_fifo_data, 2);
     		if (num > 0){
     			num_bytes[index2++] = num;
+    			//XDmaCentral_Transfer(&dma, (u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR, &buf + index3, num);
+    			//index3+=num;
     			for (i = 0; i < num; i++)
     				buf[index1++] = *((u32 *)XPAR_XPS_EPC_0_PRH0_BASEADDR);
     		}

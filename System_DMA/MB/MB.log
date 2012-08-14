@@ -4190,3 +4190,188 @@ Xilinx EDK 13.1 Build EDK_O.40d
 
 Xilinx EDK 13.1 Build EDK_O.40d
 
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Tue Aug 14 11:49:01 2012
+ make -f MB.make clean started...
+rm -f implementation/MB.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+touch __xps/ise/MB.xpssyn
+rm -f implementation/MB.bmm
+rm -f implementation/MB.bit
+rm -f implementation/MB.ncd
+rm -f implementation/MB_bd.bmm 
+rm -f implementation/MB_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/MB_routed
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp MB.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+touch __xps/ise/MB.xpssim
+rm -f _impact.cmd
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/cam_repo/System_DMA/MB/etc/MB.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/cam_repo/System_DMA/MB/etc/MB.gui
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.1 Build EDK_O.40d
+
+Xilinx EDK 13.1 Build EDK_O.40d
+

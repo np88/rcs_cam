@@ -202,7 +202,7 @@ begin
 
 
 	fifo_data_in <= cam_Y & cam_uv;
-	gpio_camera_I1 <= fifo_empty & cam_vsyn & cam_href;
+	gpio_camera_I1 <= fifo_empty & cam_vsyn & '0';
 	--gpio_camera_IO <='0'&'0'&cam_sda&cam_fodd&cam_scl&cam_href&cam_vsyn&cam_pclk&cam_exclk&cam_vto;
 	cam_pwdn <= '0';
 	cam_rst <= '0';
