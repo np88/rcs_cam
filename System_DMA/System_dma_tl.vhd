@@ -193,8 +193,8 @@ begin
 	
 	--wr_en_i <= Push_Buttons_5Bit_GPIO_IO_I_pin(4) and gpio_camera_IO(7);
 	LEDs_Positions_GPIO_IO_O_pin(0) <= fifo_empty; --center
-	fifo_rd_en_i <= gpio_FIFO_rd_wr_en_O(1) and NOT xps_epc_0_PRH_CS_n_pin;
-	fifo_wr_en_i <= cam_pclk and gpio_FIFO_rd_wr_en_O(0) and cam_href;
+	fifo_rd_en_i <= NOT xps_epc_0_PRH_CS_n_pin;
+	fifo_wr_en_i <= cam_pclk and cam_href;
 	LEDs_Positions_GPIO_IO_O_pin(2) <= fifo_full; -- south
 	LEDs_Positions_GPIO_IO_O_pin(3) <= fifo_rd_en_i; -- east
 	LEDs_Positions_GPIO_IO_O_pin(4) <= fifo_wr_en_i; --north
