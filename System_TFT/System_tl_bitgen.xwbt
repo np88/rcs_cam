@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/DIST/home/peters/cam_repo/System_TFT/System_tl.ncd
+OUTFILE=/DIST/home/peters/cam_repo/System_TFT/System_tl.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=/DIST/home/peters/cam_repo/System_TFT
+LICENSE=ISE
+USER_INFO=206284492_210292096_210294313_801
