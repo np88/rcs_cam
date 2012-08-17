@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.40d on Tue Aug 14 18:57:37 2012
+// Written by: Map O.40d on Wed Aug 15 12:33:45 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -51,7 +51,6 @@ COMP "LEDs_8Bit_GPIO_IO_O_pin<6>" LOCATE = SITE "L18" LEVEL 1;
 COMP "LEDs_8Bit_GPIO_IO_O_pin<7>" LOCATE = SITE "H18" LEVEL 1;
 COMP "fpga_0_DDR2_SDRAM_DDR2_CE_pin<0>" LOCATE = SITE "T28" LEVEL 1;
 COMP "fpga_0_DDR2_SDRAM_DDR2_CE_pin<1>" LOCATE = SITE "U30" LEVEL 1;
-COMP "cam_clock_i" LOCATE = SITE "AH17" LEVEL 1;
 COMP "fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>" LOCATE = SITE "AA30" LEVEL 1;
 COMP "fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>" LOCATE = SITE "AK27" LEVEL 1;
 COMP "fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>" LOCATE = SITE "AJ27" LEVEL 1;
@@ -91,6 +90,8 @@ COMP "fpga_0_DDR2_SDRAM_DDR2_DQ_pin<9>" LOCATE = SITE "AF28" LEVEL 1;
 COMP "cam_fodd" LOCATE = SITE "N34" LEVEL 1;
 COMP "cam_href" LOCATE = SITE "AD32" LEVEL 1;
 COMP "cam_pclk" LOCATE = SITE "AH34" LEVEL 1;
+PIN cam_pclk_pin<0> = BEL "cam_pclk" PINNAME PAD;
+PIN "cam_pclk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "cam_pwdn" LOCATE = SITE "L33" LEVEL 1;
 COMP "cam_vsyn" LOCATE = SITE "Y32" LEVEL 1;
 COMP "fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>" LOCATE = SITE "AA29" LEVEL 1;
@@ -638,8 +639,6 @@ TIMEGRP sys_clk_pin = BEL "Inst_FIFO_Asynch/rd_en_edge_detector/edge_o" BEL
         "Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_13"
         BEL
         "Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.grdc1.rdc/rd_dc_i_14"
-        BEL
-        "Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grhf.rhf/ram_valid_d1"
         BEL
         "Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
         BEL

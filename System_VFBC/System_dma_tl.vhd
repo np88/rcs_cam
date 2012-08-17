@@ -25,7 +25,7 @@ use WORK.FIFO_CONST.ALL;
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -95,7 +95,7 @@ architecture Behavioral of System_tl is
 		);
 	END COMPONENT;
 	
-	COMPONENT MB
+COMPONENT MB
 	PORT(
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
 		fpga_0_rst_1_sys_rst_pin : IN std_logic;
@@ -116,8 +116,8 @@ architecture Behavioral of System_tl is
 		DDR2_SDRAM_VFBC2_Wd_Write_pin : IN std_logic;
 		DDR2_SDRAM_VFBC2_Wd_End_Burst_pin : IN std_logic;
 		DDR2_SDRAM_VFBC2_Wd_Flush_pin : IN std_logic;
-		DDR2_SDRAM_VFBC2_Wd_Data_pin : IN std_logic_vector(31 downto 0);
-		DDR2_SDRAM_VFBC2_Wd_Data_BE_pin : IN std_logic_vector(3 downto 0);
+		DDR2_SDRAM_VFBC2_Wd_Data_pin : IN std_logic_vector(15 downto 0);
+		DDR2_SDRAM_VFBC2_Wd_Data_BE_pin : IN std_logic_vector(1 downto 0);
 		DDR2_SDRAM_VFBC2_Rd_Clk_pin : IN std_logic;
 		DDR2_SDRAM_VFBC2_Rd_Reset_pin : IN std_logic;
 		DDR2_SDRAM_VFBC2_Rd_Read_pin : IN std_logic;
@@ -145,7 +145,7 @@ architecture Behavioral of System_tl is
 		DDR2_SDRAM_VFBC2_Cmd_Idle_pin : OUT std_logic;
 		DDR2_SDRAM_VFBC2_Wd_Full_pin : OUT std_logic;
 		DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin : OUT std_logic;
-		DDR2_SDRAM_VFBC2_Rd_Data_pin : OUT std_logic_vector(31 downto 0);
+		DDR2_SDRAM_VFBC2_Rd_Data_pin : OUT std_logic_vector(15 downto 0);
 		DDR2_SDRAM_VFBC2_Rd_Empty_pin : OUT std_logic;
 		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : OUT std_logic
 		);
@@ -166,7 +166,7 @@ architecture Behavioral of System_tl is
 	signal DDR2_SDRAM_VFBC2_Wd_End_Burst_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Wd_Flush_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Wd_Data_pin : std_logic_vector(31 downto 0);
-	signal DDR2_SDRAM_VFBC2_Wd_Data_BE_pin : std_logic_vector(3 downto 0);
+	signal DDR2_SDRAM_VFBC2_Wd_Data_BE_pin : std_logic_vector(1 downto 0);
 	signal DDR2_SDRAM_VFBC2_Cmd_Full_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Cmd_Almost_Full_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Cmd_Idle_pin : std_logic;
@@ -183,6 +183,7 @@ architecture Behavioral of System_tl is
 	signal gpio_FIFO_rd_wr_en_O : std_logic_vector(1 downto 0); 
 	signal epc_data_o, epc_data_i: std_logic_vector(31 downto 0); 
 	signal fifo_rd_in_gpio: std_logic_vector(19 downto 0); 
+	signal rd_cnt : std_logic_vector(31 downto 0); 
 
 begin
 
@@ -237,7 +238,7 @@ begin
 		gpio_FIFO_rd_wr_en_O => gpio_FIFO_rd_wr_en_O,
 		xps_FIFO_data_rd_cnt_I => fifo_rd_in_gpio,
 		read_clk_fifo_O => fifo_read_clk,
-		xps_epc_0_PRH_Data_I_pin => epc_data_i,
+		xps_epc_0_PRH_Data_I_pin => rd_cnt,
 		xps_epc_0_PRH_CS_n_pin => xps_epc_0_PRH_CS_n_pin, -- inverted logic
 		xps_epc_0_PRH_Rdy_pin => fifo_ready, -- fifo is ready when it is not empty
 		xps_epc_0_PRH_Rst_pin => NOT fpga_0_rst_1_sys_rst_pin, -- inverted logic
@@ -254,11 +255,11 @@ begin
 		DDR2_SDRAM_VFBC2_Wd_Write_pin => DDR2_SDRAM_VFBC2_Wd_Write_pin,
 		DDR2_SDRAM_VFBC2_Wd_End_Burst_pin => '0',
 		DDR2_SDRAM_VFBC2_Wd_Flush_pin => '0',
-		DDR2_SDRAM_VFBC2_Wd_Data_pin => "00000000111111110011001100000000", --DDR2_SDRAM_VFBC2_Wd_Data_pin,
+		DDR2_SDRAM_VFBC2_Wd_Data_pin => "1110111010011001", --DDR2_SDRAM_VFBC2_Wd_Data_pin,
 		DDR2_SDRAM_VFBC2_Wd_Data_BE_pin => DDR2_SDRAM_VFBC2_Wd_Data_BE_pin,
 		DDR2_SDRAM_VFBC2_Wd_Full_pin => DDR2_SDRAM_VFBC2_Wd_Full_pin,
 		DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin =>DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin,
-		DDR2_SDRAM_VFBC2_Rd_Clk_pin => fpga_0_clk_1_sys_clk_pin,
+		DDR2_SDRAM_VFBC2_Rd_Clk_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_Reset_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_Read_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_End_Burst_pin => '0',
@@ -267,6 +268,23 @@ begin
 		DDR2_SDRAM_VFBC2_Rd_Empty_pin => open,
 		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => open 
 	);
+	
+	
+	-- debug process to count clock cycles
+	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
+	begin
+		if (fpga_0_rst_1_sys_rst_pin = '0') then
+			rd_cnt <= (others => '0');
+		else
+			if (fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1') then
+				if (DDR2_SDRAM_VFBC2_Wd_Write_pin = '1') then
+					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
+				end if;
+			end if;
+		end if;
+			
+	end process dubug;
+	
 	
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_vsyn and cam_pclk_edge and write_enable;
 	

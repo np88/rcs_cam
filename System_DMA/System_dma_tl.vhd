@@ -34,7 +34,6 @@ use WORK.FIFO_CONST.ALL;
 
 entity System_tl is port (
 		fpga_0_clk_1_sys_clk_pin : IN std_logic;
-		cam_clock_i : IN std_logic;
 		cam_Y: IN std_logic_vector(7 downto 0);
 		cam_UV: IN std_logic_vector(7 downto 0);
 		cam_pwdn: OUT std_logic;
@@ -170,7 +169,7 @@ begin
 
 	Inst_FIFO_Asynch: FIFO_asynch13_1_tl PORT MAP (
 		 rst_i => Push_Buttons_5Bit_GPIO_IO_I_pin(0), --(center button)
-		 wr_clk_i => cam_clock_i,
+		 wr_clk_i => cam_pclk,
 		 rd_clk_i => fpga_0_clk_1_sys_clk_pin,
 		 din_i => fifo_data_in,
 		 wr_en_i => cam_href, 
@@ -179,7 +178,7 @@ begin
 		 full_o => fifo_full,
 		 almost_full_o => fifo_almost_full,
 		 empty_o => fifo_empty, --center
-		 valid_o => LEDs_Positions_GPIO_IO_O_pin(1), -- west
+		 valid_o => open, -- west
 		 rd_data_count_o => fifo_rd_data_count,
 		 wr_data_count_o => fifo_wr_data_count
 	);
@@ -192,6 +191,7 @@ begin
 	LEDs_Positions_GPIO_IO_O_pin(3) <= fifo_rd_en_i; -- east
 	LEDs_Positions_GPIO_IO_O_pin(4) <= cam_href; --north
 	LEDs_8Bit_GPIO_IO_O_pin <= fifo_data_out(7 downto 0);
+	LEDs_Positions_GPIO_IO_O_pin(1) <= cam_pclk;
 
 
 	fifo_data_in <= cam_Y & cam_uv;

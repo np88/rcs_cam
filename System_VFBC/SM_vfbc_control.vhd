@@ -54,8 +54,16 @@ architecture Behavioral of SM_vfbc_control is
 	END COMPONENT;
 
 	type STATE_WRITE_TRANS is (
-		WT_Init,
-		WT_Reset_VFBC,
+		WT_INIT,
+		WT_RESET_VFBC,
+		WT_RESET_SECOND_CYCLE,
+		-- dirty quick fix to wait 6 cycles
+		WT_WAIT1,
+		WT_WAIT2,
+		WT_WAIT3,
+		WT_WAIT4,
+		WT_WAIT5,
+		WT_WAIT6,
 		WT_WRITE_Word_1,
 		WT_WRITE_Word_2,
 		WT_WRITE_Word_3,
@@ -88,7 +96,7 @@ begin
 		end if;	
 	end process VFBC_Store;
 	
-	VFBC_Control: process (clk_i, rst_i)
+	VFBC_Control: process (rst_i, start_transaction_i, vsync_i_clock_edge, current_state)
 	begin
 		-- default instruction
 		if (rst_i = '1') then
@@ -99,10 +107,24 @@ begin
 			case current_state is
 				when WT_Init =>
 					if (start_transaction_i = '1') then
-						next_state <= WT_Reset_VFBC;
+						next_state <= WT_RESET_VFBC;
 					end if;
-				when WT_Reset_VFBC =>
-					next_state <= WT_WRITE_Word_1;
+				when WT_RESET_VFBC =>
+					next_state <= WT_RESET_SECOND_CYCLE;
+				when WT_RESET_SECOND_CYCLE =>
+					next_state <= WT_WAIT1;
+				when WT_WAIT1 =>
+					next_state <= WT_WAIT2;
+				when WT_WAIT2 =>
+					next_state <= WT_WAIT3;				
+				when WT_WAIT3 =>
+					next_state <= WT_WAIT4;
+				when WT_WAIT4 =>
+					next_state <= WT_WAIT5;
+				when WT_WAIT5 =>
+					next_state <= WT_WAIT6;
+				when WT_WAIT6 =>
+					next_state <= WT_WRITE_Word_1;			
 				when WT_WRITE_Word_1 =>
 					next_state <= WT_WRITE_Word_2;
 				when WT_WRITE_Word_2 =>
@@ -129,7 +151,7 @@ begin
 		end if;
 	end process VFBC_Control;
 	
-	VFBC_Output: process (clk_i)
+	VFBC_Output: process (current_state)
 	begin
 	
 		DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '0';
@@ -141,22 +163,39 @@ begin
 		
 		case current_state is		
 			when WT_Init =>
-			when WT_Reset_VFBC =>
+			when WT_RESET_VFBC =>
 				DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '1';
 				DDR2_SDRAM_VFBC2_Wd_Reset_pin_o <= '1';
+			when WT_RESET_SECOND_CYCLE =>
+				DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '1';
+				DDR2_SDRAM_VFBC2_Wd_Reset_pin_o <= '1';
+			when WT_WAIT1 =>
+			when WT_WAIT2 =>
+			when WT_WAIT3 =>
+			when WT_WAIT4 =>
+			when WT_WAIT5 =>
+			when WT_WAIT6 =>
 			when WT_WRITE_Word_1 =>
-				-- write x size
+				-- write x size in bytes
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000001010000000";
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (32, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_2 =>
 				-- bit 31: 1 means write command; 30-0: start address 
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(31 downto 30) <= "11";
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(31 downto 26) <= "110000";
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_3 =>
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (479, 32) );
+				-- write number of lines
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (479, 32) );
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000000111100000";
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (511, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_4 =>
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (641, 32) );
+				-- write stride
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (768, 32) );
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000010100000000";
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (32, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WAIT_FOR_VSYNC =>
 			when WT_WRITE_ENABLE =>

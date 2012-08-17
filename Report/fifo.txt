@@ -39,3 +39,16 @@ Write clock is connected to 100 MHz User Clock,
 read clok is connected to 33 MHz clock generator. 
 (details in data sheet, p. 19/20)
 
+
+FIFO alternative: Video Frame Buffer Controller (writes data directly on external memory)
+data sheet mpmc, p 177 ff.
+
+VFBC PIM I/O Signals with more information found p. 37 ff.
+1. The VFBC Reset and Flush inputs must be held high for at least two MPMC_Clk0 cycles. Because these inputs could be controlled from a different
+clock domain than the MPMC_Clk0, the relative frequency of the reset/flush clock domain must be taken into account when determining the number
+of clock cycles to assert the reset or flush and to wait after reset or flush. The following equation is used to determine the number of clock cycles to
+hold the reset or flush input high: 2*(VFBC_Clk_Freq/MPMC_Clk0_Freq)
+2. After reset, there should not be any accesses to the VFBC interfaces for 6 MPMC_Clk cycles.
+3. After flush, there should not be any accesses to the VFBC interfaces for 6 MPMC_Clk cycles.
+
+

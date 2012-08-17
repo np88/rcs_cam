@@ -4,15 +4,15 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Reading design: System_tl.prj
@@ -114,8 +114,6 @@ Cores Search Directories           : {"FIFO_13_1_asynch" "FIFO_13_1_asynch/ipcor
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/MB is now defined in a different file.  It was defined in "/DIST/home/peters/cam_repo/System_DMA/MB/__xps/MB.vhd", and is now defined in "/DIST/home/peters/cam_repo/System_DMA/MB/hdl/MB.vhd".
-WARNING:HDLParsers:3607 - Unit work/MB/STRUCTURE is now defined in a different file.  It was defined in "/DIST/home/peters/cam_repo/System_DMA/MB/__xps/MB.vhd", and is now defined in "/DIST/home/peters/cam_repo/System_DMA/MB/hdl/MB.vhd".
 Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd" in Library work.
 Architecture fifo_13_1_asynch_a of Entity fifo_13_1_asynch is up to date.
 Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/edge_detector.vhd" in Library work.
@@ -123,12 +121,12 @@ Architecture behavioral of Entity edge_detector is up to date.
 Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_CONST.vhd" in Library work.
 Architecture fifo_const of Entity fifo_const is up to date.
 Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/MB/hdl/MB.vhd" in Library work.
-Entity <mb> compiled.
-Entity <mb> (Architecture <structure>) compiled.
+Architecture structure of Entity mb is up to date.
 Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd" in Library work.
 Architecture behavioral of Entity fifo_asynch13_1_tl is up to date.
 Compiling vhdl file "/DIST/home/peters/cam_repo/System_DMA/System_dma_tl.vhd" in Library work.
-Architecture behavioral of Entity system_tl is up to date.
+Entity <system_tl> compiled.
+Entity <system_tl> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -144,6 +142,7 @@ Analyzing hierarchy for entity <edge_detector> in library <work> (architecture <
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <System_tl> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/DIST/home/peters/cam_repo/System_DMA/System_dma_tl.vhd" line 170: Unconnected output port 'valid_o' of component 'FIFO_asynch13_1_tl'.
 Entity <System_tl> analyzed. Unit <System_tl> generated.
 
 Analyzing Entity <FIFO_asynch13_1_tl> in library <work> (Architecture <behavioral>).
@@ -183,7 +182,6 @@ WARNING:Xst:2565 - Inout <cam_scl> is never assigned.
 WARNING:Xst:647 - Input <switches_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cam_fodd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2565 - Inout <cam_exclk> is never assigned.
-WARNING:Xst:647 - Input <cam_pclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <pos_leds> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <gpio_camera_I2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <gpio_camera_I1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -351,7 +349,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 171
+# IOs                              : 170
 
 Cell Usage :
 # BELS                             : 8316
@@ -405,10 +403,10 @@ Cell Usage :
 #      SRLC16E                     : 123
 #      SRLC32E                     : 49
 # Clock Buffers                    : 10
-#      BUFG                        : 8
-#      BUFGP                       : 2
-# IO Buffers                       : 145
-#      IBUF                        : 24
+#      BUFG                        : 9
+#      BUFGP                       : 1
+# IO Buffers                       : 146
+#      IBUF                        : 25
 #      IOBUF                       : 64
 #      IOBUFDS                     : 8
 #      OBUF                        : 47
@@ -445,7 +443,7 @@ Slice Logic Distribution:
    Number of unique control sets:       825
 
 IO Utilization: 
- Number of IOs:                         171
+ Number of IOs:                         170
  Number of bonded IOBs:                 157  out of    640    24%  
 
 Specific Feature Utilization:
@@ -492,7 +490,7 @@ Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io
 Inst_MB/N0                                                                                                                                                                                                                                              | NONE(Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0)                                                            | 2     |
 Inst_MB/xps_timer_0/Interrupt                                                                                                                                                                                                                           | NONE(Inst_MB/xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync_3)                                                                           | 1     |
 fpga_0_clk_1_sys_clk_pin                                                                                                                                                                                                                                | BUFGP                                                                                                                                 | 134   |
-cam_clock_i                                                                                                                                                                                                                                             | BUFGP                                                                                                                                 | 158   |
+cam_pclk                                                                                                                                                                                                                                                | IBUF+BUFG                                                                                                                             | 158   |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------+
 (*) These 8 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -707,15 +705,15 @@ Delay:               2.899ns (Levels of Logic = 3)
                                        (26.0% logic, 74.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cam_clock_i'
+Timing constraint: Default period analysis for Clock 'cam_pclk'
   Clock period: 2.822ns (frequency: 354.359MHz)
   Total number of paths / destination ports: 1521 / 739
 -------------------------------------------------------------------------
 Delay:               2.822ns (Levels of Logic = 10)
   Source:            Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1 (FF)
   Destination:       Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i (FF)
-  Source Clock:      cam_clock_i rising
-  Destination Clock: cam_clock_i rising
+  Source Clock:      cam_pclk rising
+  Destination Clock: cam_pclk rising
 
   Data Path: Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1 to Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
                                 Gate     Net
@@ -977,13 +975,13 @@ Offset:              1.788ns (Levels of Logic = 2)
                                        (79.1% logic, 20.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cam_clock_i'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cam_pclk'
   Total number of paths / destination ports: 292 / 292
 -------------------------------------------------------------------------
 Offset:              2.700ns (Levels of Logic = 3)
   Source:            cam_href (PAD)
   Destination:       Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
-  Destination Clock: cam_clock_i rising
+  Destination Clock: cam_pclk rising
 
   Data Path: cam_href to Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[14].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
                                 Gate     Net
@@ -1041,7 +1039,7 @@ Offset:              3.395ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 22 / 10
+  Total number of paths / destination ports: 21 / 9
 -------------------------------------------------------------------------
 Offset:              6.310ns (Levels of Logic = 4)
   Source:            Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[13].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
@@ -1084,13 +1082,13 @@ Offset:              3.843ns (Levels of Logic = 3)
                                        (82.3% logic, 17.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cam_clock_i'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cam_pclk'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.259ns (Levels of Logic = 2)
   Source:            Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
   Destination:       LEDs_Positions_GPIO_IO_O_pin<2> (PAD)
-  Source Clock:      cam_clock_i rising
+  Source Clock:      cam_pclk rising
 
   Data Path: Inst_FIFO_Asynch/fifo_asynch/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i to LEDs_Positions_GPIO_IO_O_pin<2>
                                 Gate     Net
@@ -1322,7 +1320,7 @@ Offset:              6.391ns (Levels of Logic = 11)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 204 / 204
+  Total number of paths / destination ports: 205 / 205
 -------------------------------------------------------------------------
 Delay:               3.666ns (Levels of Logic = 2)
   Source:            cam_href (PAD)
@@ -1341,15 +1339,15 @@ Delay:               3.666ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 92.00 secs
-Total CPU time to Xst completion: 89.75 secs
+Total REAL time to Xst completion: 90.00 secs
+Total CPU time to Xst completion: 88.30 secs
  
 --> 
 
 
-Total memory usage is 613244 kilobytes
+Total memory usage is 613216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
 Number of infos    :   41 (   0 filtered)
 

@@ -8,7 +8,25 @@
 <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_CONST.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/FIFO_asynch13_1_tl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/edge_detector.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/System_dma_tl.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/fifo_resetter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/DIST/home/peters/cam_repo/System_DMA/test.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

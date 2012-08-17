@@ -1,1 +1,0 @@
-vhdtdtfi -prj System_VFBC -o /DIST/home/peters/cam_repo/System_VFBC/SM_vfbc_control.vhi -module SM_vfbc_control -template /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work SM_vfbc_control.vhd 

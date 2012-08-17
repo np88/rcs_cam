@@ -68,10 +68,10 @@
 <msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">mpmc</arg>, INSTANCE:<arg fmt="%s" index="2">DDR2_SDRAM</arg> - <arg fmt="%s" index="3">tcl</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_MEM_PART_CAS_B</arg> value to <arg fmt="%s" index="6">4</arg> - <arg fmt="%s" index="7">/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_03_a/data/mpmc_v2_1_0.mpd line 281</arg> 
 </msg>
 
-<msg type="info" file="EDK" num="740" delta="new" >Cannot determine the input clock associated with port : <arg fmt="%s" index="1">ilmb_cntlr</arg>:<arg fmt="%s" index="2">BRAM_Clk_A</arg>. Clock DRCs will not be performed on this core and cores connected to it. 
+<msg type="info" file="EDK" num="740" delta="old" >Cannot determine the input clock associated with port : <arg fmt="%s" index="1">ilmb_cntlr</arg>:<arg fmt="%s" index="2">BRAM_Clk_A</arg>. Clock DRCs will not be performed on this core and cores connected to it. 
 </msg>
 
-<msg type="info" file="EDK" num="740" delta="new" >Cannot determine the input clock associated with port : <arg fmt="%s" index="1">dlmb_cntlr</arg>:<arg fmt="%s" index="2">BRAM_Clk_A</arg>. Clock DRCs will not be performed on this core and cores connected to it. 
+<msg type="info" file="EDK" num="740" delta="old" >Cannot determine the input clock associated with port : <arg fmt="%s" index="1">dlmb_cntlr</arg>:<arg fmt="%s" index="2">BRAM_Clk_A</arg>. Clock DRCs will not be performed on this core and cores connected to it. 
 </msg>
 
 <msg type="info" file="EDK" num="0" delta="new" >IPNAME: <arg fmt="%s" index="1">mpmc</arg>, INSTANCE:<arg fmt="%s" index="2">DDR2_SDRAM</arg> - <arg fmt="%s" index="3">tool</arg> is overriding <arg fmt="%s" index="4">PARAMETER</arg> <arg fmt="%s" index="5">C_SPLB0_P2P</arg> value to <arg fmt="%s" index="6">0</arg> - <arg fmt="%s" index="7">/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_03_a/data/mpmc_v2_1_0.mpd line 357</arg> 

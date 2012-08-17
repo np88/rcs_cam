@@ -13,6 +13,7 @@ Vsync period is 525* 2*858 * CLK
 
 Infos VGA:
 http://lslwww.epfl.ch/pages/teaching/cours_lsl/ca_es/VGA.pdf
+
 * The screen refresh process begins in the top left corner and paints 1 pixel at a time from left to right. At the end of the first
 row, the row increments and the column address is reset to the first column. Once the entire screen has been painted, the refresh process begins again
 * The video signal must redraw the entire screen 60 times per second to provide for motion in the image and to reduce flicker: this period is called the refresh rate. Refresh rates higher than 60 Hz are used in PC monitors
@@ -21,5 +22,11 @@ row, the row increments and the column address is reset to the first column. Onc
 * After 480 rows of pixels are refreshed with 480 horizontal sync signals, a vertical sync signal resets the monitor to the upper left corner and the process continues
 * During the time when pixel data is not being displayed and the beam is returning to the left column to start another horizontal scan, the RGB signals should all be set to black color (all zero)
 * In a PC graphics card, a dedicated memory location is used to store the color value of every pixel in the display. This memory is read out as the beam scanns across the screen to produce the RGB signals
+
+TFT:
+http://forums.xilinx.com/t5/EDK-and-Platform-Studio/TFT-Display-with-EDK-xps-tft-IP-Core/td-p/20412
+http://forums.xilinx.com/xlnx/attachments/xlnx/EDK/14683/1/Technote%20Xilinx-XPS-11.5-003-%20How%20to%20create%20a%20TFT%20display%20controller%20using%20the%20XPS%20TFT%20v2.01.a%20IP%20Core%20and%20the%20Chrontel%20CH7301C-TF%20DVI%20controller%20chip.pdf
+
+* built microblaze with tft controller and configured it so that example from website would run properly
 
 

@@ -8,7 +8,7 @@
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
--- Description: 
+-- Description: HW to run TFT monitor with base address of DDR2 of TFT mem address
 --
 -- Dependencies: 
 --

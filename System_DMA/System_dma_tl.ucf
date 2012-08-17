@@ -45,8 +45,6 @@ NET "switches_i[5]" LOC = AE26 | IOSTANDARD=SSTL18_II;
 NET "switches_i[6]" LOC = AC25 | IOSTANDARD=SSTL18_II;
 NET "switches_i[7]" LOC = AC24 | IOSTANDARD=SSTL18_II;
 
-NET "cam_clock_i" LOC = AH17 | IOSTANDARD=LVCMOS33; # 33 MHz
-
 NET "fpga_0_clk_1_sys_clk_pin" LOC = AH15 | IOSTANDARD=LVCMOS33;
 
 #camera
@@ -86,7 +84,7 @@ NET "cam_href" LOC = AD32;
 #VSYNC
 NET "cam_vsyn" LOC = Y32;
 #PCLK
-NET "cam_pclk" LOC = AH34;
+NET "cam_pclk" LOC = AH34 | CLOCK_DEDICATED_ROUTE = FALSE;
 #EXCLK
 NET "cam_exclk" LOC = AE32;
 #VTO
