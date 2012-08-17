@@ -1,0 +1,1 @@
+vhdtdtfi -prj System_VFBC -o /DIST/home/peters/cam_repo/System_VFBC/edge_detector.vhi -module edge_detector -template /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work FIFO_13_1_asynch/edge_detector.vhd 
