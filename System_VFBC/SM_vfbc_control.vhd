@@ -183,19 +183,20 @@ begin
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_2 =>
 				-- bit 31: 1 means write command; 30-0: start address 
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(31 downto 26) <= "110000";
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(31) <= '1';
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(30 downto 0) <= (others => '0');
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_3 =>
 				-- write number of lines
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (479, 32) );
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (479, 32) );
 				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000000111100000";
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (511, 32) );
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (511, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_4 =>
 				-- write stride
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (768, 32) );
 				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000010100000000";
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (32, 32) );
+				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WAIT_FOR_VSYNC =>
 			when WT_WRITE_ENABLE =>
