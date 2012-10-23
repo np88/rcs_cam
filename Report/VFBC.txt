@@ -45,3 +45,5 @@ Reading out from vfbc worked for following code:
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WAIT_FOR_VSYNC =>
 
+
+Helpful exaples regarding set up are in mpmc data sheet p. 180 ff.
