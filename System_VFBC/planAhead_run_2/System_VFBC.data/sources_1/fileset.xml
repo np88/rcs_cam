@@ -32,6 +32,8 @@
 		</File>
 		<File Path="$PPRDIR/../mdm_0_wrapper.ngc">
 		</File>
+		<File Path="$PPRDIR/../xps_tft_0_wrapper.ngc">
+		</File>
 		<File Path="$PPRDIR/../MB.ngc">
 		</File>
 		<File Path="$PPRDIR/../ilmb_wrapper.ngc">

@@ -177,13 +177,14 @@ begin
 			when WT_WAIT6 =>
 			when WT_WRITE_Word_1 =>
 				-- write x size in bytes
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (1280, 32) );
 				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000001010000000";
 				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (32, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_2 =>
 				-- bit 31: 1 means write command; 30-0: start address 
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(31) <= '1';
+				-- DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(0) <= '0';
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o(30 downto 0) <= (others => '0');
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_3 =>

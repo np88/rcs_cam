@@ -25,7 +25,7 @@ PORT (
 	xps_FIFO_cam_data_I : IN STD_LOGIC;
 	xps_FIFO_data_rd_cnt_I : IN STD_LOGIC_VECTOR(0 TO 19);
 	read_clk_fifo_O : OUT STD_LOGIC;
-	xps_epc_0_PRH_Data_I_pin : IN STD_LOGIC_VECTOR(0 TO 31);
+	xps_epc_0_PRH_Data_I_pin : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 	xps_epc_0_PRH_CS_n_pin : OUT STD_LOGIC;
 	xps_epc_0_PRH_Rdy_pin : IN STD_LOGIC;
 	xps_epc_0_PRH_Rst_pin : IN STD_LOGIC;
@@ -53,7 +53,17 @@ PORT (
 	DDR2_SDRAM_VFBC2_Rd_Flush_pin : IN STD_LOGIC;
 	DDR2_SDRAM_VFBC2_Rd_Data_pin : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	DDR2_SDRAM_VFBC2_Rd_Empty_pin : OUT STD_LOGIC;
-	DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : OUT STD_LOGIC
+	DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_HSYNC_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_VSYNC_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_DE_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_DPS_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_VGA_CLK_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_DVI_CLK_P_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_DVI_CLK_N_pin : OUT STD_LOGIC;
+	xps_tft_0_TFT_DVI_DATA_pin : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+	xps_tft_0_TFT_IIC_SCL_pin : INOUT STD_LOGIC;
+	xps_tft_0_TFT_IIC_SDA_pin : INOUT STD_LOGIC
 	);
 END MB;
 

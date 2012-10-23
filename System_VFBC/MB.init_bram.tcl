@@ -1,4 +1,4 @@
-cd /DIST/home/peters/cam_repo/System_VFBC/MB
+cd /DIST/home/peters/nadja_cam_repo/System_VFBC/MB
 if { [ catch { xload xmp MB.xmp } result ] } {
   exit 10
 }

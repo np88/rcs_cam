@@ -6,6 +6,8 @@
 		</File>
 		<File Path="$PPRDIR/../MB.ncf">
 		</File>
+		<File Path="$PPRDIR/../xps_tft_0_wrapper.ncf">
+		</File>
 		<File Path="$PPRDIR/../dlmb_wrapper.ncf">
 		</File>
 		<File Path="$PPRDIR/../microblaze_0_wrapper.ncf">

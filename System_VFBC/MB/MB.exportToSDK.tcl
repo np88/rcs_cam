@@ -1,5 +1,5 @@
 proc exportToSDK {} {
-  cd /DIST/home/peters/cam_repo/System_VFBC/MB
+  cd /DIST/home/peters/nadja_cam_repo/System_VFBC/MB
   if { [ catch { xload xmp MB.xmp } result ] } {
     exit 10
   }
@@ -14,13 +14,13 @@ if { [catch {exportToSDK} result] } {
 }
 
 set sExportDir [ xget sdk_export_dir ]
-set sExportDir [ file join "/DIST/home/peters/cam_repo/System_VFBC/MB" "$sExportDir" "hw" ] 
-if { [ file exists /DIST/home/peters/cam_repo/System_VFBC/edkBmmFile_bd.bmm ] } {
-   puts "Copying placed bmm file /DIST/home/peters/cam_repo/System_VFBC/edkBmmFile_bd.bmm to $sExportDir" 
-   file copy -force "/DIST/home/peters/cam_repo/System_VFBC/edkBmmFile_bd.bmm" $sExportDir
+set sExportDir [ file join "/DIST/home/peters/nadja_cam_repo/System_VFBC/MB" "$sExportDir" "hw" ] 
+if { [ file exists /DIST/home/peters/nadja_cam_repo/System_VFBC/edkBmmFile_bd.bmm ] } {
+   puts "Copying placed bmm file /DIST/home/peters/nadja_cam_repo/System_VFBC/edkBmmFile_bd.bmm to $sExportDir" 
+   file copy -force "/DIST/home/peters/nadja_cam_repo/System_VFBC/edkBmmFile_bd.bmm" $sExportDir
 }
-if { [ file exists /DIST/home/peters/cam_repo/System_VFBC/System_tl.bit ] } {
-   puts "Copying bit file /DIST/home/peters/cam_repo/System_VFBC/System_tl.bit to $sExportDir" 
-   file copy -force "/DIST/home/peters/cam_repo/System_VFBC/System_tl.bit" $sExportDir
+if { [ file exists /DIST/home/peters/nadja_cam_repo/System_VFBC/System_tl.bit ] } {
+   puts "Copying bit file /DIST/home/peters/nadja_cam_repo/System_VFBC/System_tl.bit to $sExportDir" 
+   file copy -force "/DIST/home/peters/nadja_cam_repo/System_VFBC/System_tl.bit" $sExportDir
 }
 exit $result

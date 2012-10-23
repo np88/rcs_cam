@@ -1,4 +1,4 @@
-// File: /DIST/home/peters/cam_repo/System_VFBC/MB/implementation/MB.bmm
+// File: /DIST/home/peters/nadja_cam_repo/System_VFBC/MB/implementation/MB.bmm
 
 ADDRESS_MAP microblaze_0 MICROBLAZE 100
 	ADDRESS_SPACE lmb_bram_combined COMBINED [0x00000000:0x0000ffff]
@@ -23,7 +23,7 @@ ADDRESS_MAP microblaze_0 MICROBLAZE 100
 		END_BUS_BLOCK;
 		END_ADDRESS_RANGE;
 	END_ADDRESS_SPACE;
-	ADDRESS_SPACE xps_bram_if_cntlr_0_block_combined COMBINED [0x8a208000:0x8a209fff]
+	ADDRESS_SPACE xps_bram_if_cntlr_0_block_combined COMBINED [0x8b708000:0x8b709fff]
 		ADDRESS_RANGE RAMB32
 		BUS_BLOCK
 			Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0 [31:16] INPUT = xps_bram_if_cntlr_0_block_combined_0.mem ;

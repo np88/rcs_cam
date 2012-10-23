@@ -64,7 +64,20 @@ entity System_tl is port (
 		fpga_0_DDR2_SDRAM_DDR2_Addr_pin : OUT std_logic_vector(12 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0);
 		LEDs_Positions_GPIO_IO_O_pin : OUT std_logic_vector(4 downto 0);
-		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0)
+		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0);
+		
+		-- TFT
+		xps_tft_0_reset_pin : OUT std_logic;
+		xps_tft_0_TFT_HSYNC_pin : OUT std_logic;
+		xps_tft_0_TFT_VSYNC_pin : OUT std_logic;
+		xps_tft_0_TFT_DE_pin : OUT std_logic;
+		xps_tft_0_TFT_DPS_pin : OUT std_logic;
+		xps_tft_0_TFT_VGA_CLK_pin : OUT std_logic;
+		xps_tft_0_TFT_DVI_CLK_P_pin : OUT std_logic;
+		xps_tft_0_TFT_DVI_CLK_N_pin : OUT std_logic;
+		xps_tft_0_TFT_DVI_DATA_pin : OUT std_logic_vector(11 downto 0);
+		xps_tft_0_TFT_IIC_SCL_pin : INOUT std_logic;
+		xps_tft_0_TFT_IIC_SDA_pin : INOUT std_logic
   );
 end System_tl;
 
@@ -103,7 +116,7 @@ COMPONENT MB
 		Push_Buttons_5Bit_GPIO_IO_I_pin : IN std_logic_vector(4 downto 0);
 		xps_FIFO_cam_data_I : IN std_logic;
 		xps_FIFO_data_rd_cnt_I : IN std_logic_vector(0 to 19);
-		xps_epc_0_PRH_Data_I_pin : IN std_logic_vector(0 to 31);
+		xps_epc_0_PRH_Data_I_pin : IN std_logic_vector(31 downto 0);
 		xps_epc_0_PRH_Rdy_pin : IN std_logic;
 		xps_epc_0_PRH_Rst_pin : IN std_logic;
 		DDR2_SDRAM_VFBC2_Cmd_Clk_pin : IN std_logic;
@@ -125,7 +138,9 @@ COMPONENT MB
 		DDR2_SDRAM_VFBC2_Rd_Flush_pin : IN std_logic;    
 		fpga_0_DDR2_SDRAM_DDR2_DQ_pin : INOUT std_logic_vector(63 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_DQS_pin : INOUT std_logic_vector(7 downto 0);
-		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);      
+		fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin : INOUT std_logic_vector(7 downto 0);
+		xps_tft_0_TFT_IIC_SCL_pin : INOUT std_logic;
+		xps_tft_0_TFT_IIC_SDA_pin : INOUT std_logic;      
 		fpga_0_DDR2_SDRAM_DDR2_Clk_pin : OUT std_logic_vector(1 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin : OUT std_logic_vector(1 downto 0);
 		fpga_0_DDR2_SDRAM_DDR2_CE_pin : OUT std_logic_vector(1 downto 0);
@@ -147,7 +162,15 @@ COMPONENT MB
 		DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin : OUT std_logic;
 		DDR2_SDRAM_VFBC2_Rd_Data_pin : OUT std_logic_vector(15 downto 0);
 		DDR2_SDRAM_VFBC2_Rd_Empty_pin : OUT std_logic;
-		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : OUT std_logic
+		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : OUT std_logic;
+		xps_tft_0_TFT_HSYNC_pin : OUT std_logic;
+		xps_tft_0_TFT_VSYNC_pin : OUT std_logic;
+		xps_tft_0_TFT_DE_pin : OUT std_logic;
+		xps_tft_0_TFT_DPS_pin : OUT std_logic;
+		xps_tft_0_TFT_VGA_CLK_pin : OUT std_logic;
+		xps_tft_0_TFT_DVI_CLK_P_pin : OUT std_logic;
+		xps_tft_0_TFT_DVI_CLK_N_pin : OUT std_logic;
+		xps_tft_0_TFT_DVI_DATA_pin : OUT std_logic_vector(11 downto 0)
 		);
 	END COMPONENT;
 
@@ -165,14 +188,14 @@ COMPONENT MB
 	signal DDR2_SDRAM_VFBC2_Wd_Write_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Wd_End_Burst_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Wd_Flush_pin : std_logic;
-	signal DDR2_SDRAM_VFBC2_Wd_Data_pin : std_logic_vector(31 downto 0);
+	--signal DDR2_SDRAM_VFBC2_Wd_Data_pin : std_logic_vector(31 downto 0);
 	signal DDR2_SDRAM_VFBC2_Wd_Data_BE_pin : std_logic_vector(1 downto 0);
 	signal DDR2_SDRAM_VFBC2_Cmd_Full_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Cmd_Almost_Full_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Cmd_Idle_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Wd_Full_pin : std_logic;
 	signal DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin : std_logic;
-	signal fifo_data_in : std_logic_vector(15 downto 0); 
+	signal fifo_data_in, DDR2_SDRAM_VFBC2_Wd_Data_pin : std_logic_vector(15 downto 0); 
 	signal pos_leds: std_logic_vector(4 downto 0); 
 	signal fifo_almost_full, fifo_full, fifo_empty, fifo_rd_en_i, fifo_valid, fifo_wr_en_i, fifo_read_clk, xps_epc_0_PRH_CS_n_pin : std_logic;
 	signal fifo_data_out: std_logic_vector(C_fifo_input_width downto 0);
@@ -255,7 +278,7 @@ begin
 		DDR2_SDRAM_VFBC2_Wd_Write_pin => DDR2_SDRAM_VFBC2_Wd_Write_pin,
 		DDR2_SDRAM_VFBC2_Wd_End_Burst_pin => '0',
 		DDR2_SDRAM_VFBC2_Wd_Flush_pin => '0',
-		DDR2_SDRAM_VFBC2_Wd_Data_pin => "1110111010011001", --DDR2_SDRAM_VFBC2_Wd_Data_pin,
+		DDR2_SDRAM_VFBC2_Wd_Data_pin => DDR2_SDRAM_VFBC2_Wd_Data_pin,
 		DDR2_SDRAM_VFBC2_Wd_Data_BE_pin => DDR2_SDRAM_VFBC2_Wd_Data_BE_pin,
 		DDR2_SDRAM_VFBC2_Wd_Full_pin => DDR2_SDRAM_VFBC2_Wd_Full_pin,
 		DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin =>DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin,
@@ -266,14 +289,25 @@ begin
 		DDR2_SDRAM_VFBC2_Rd_Flush_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_Data_pin => open,
 		DDR2_SDRAM_VFBC2_Rd_Empty_pin => open,
-		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => open 
+		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => open, 
+		-- TFT
+		xps_tft_0_TFT_HSYNC_pin => xps_tft_0_TFT_HSYNC_pin,
+		xps_tft_0_TFT_VSYNC_pin => xps_tft_0_TFT_VSYNC_pin,
+		xps_tft_0_TFT_DE_pin => xps_tft_0_TFT_DE_pin,
+		xps_tft_0_TFT_DPS_pin => xps_tft_0_TFT_DPS_pin,
+		xps_tft_0_TFT_VGA_CLK_pin => xps_tft_0_TFT_VGA_CLK_pin,
+		xps_tft_0_TFT_DVI_CLK_P_pin => xps_tft_0_TFT_DVI_CLK_P_pin,
+		xps_tft_0_TFT_DVI_CLK_N_pin => xps_tft_0_TFT_DVI_CLK_N_pin,
+		xps_tft_0_TFT_DVI_DATA_pin => xps_tft_0_TFT_DVI_DATA_pin,
+		xps_tft_0_TFT_IIC_SCL_pin => xps_tft_0_TFT_IIC_SCL_pin,
+		xps_tft_0_TFT_IIC_SDA_pin => xps_tft_0_TFT_IIC_SDA_pin
 	);
 	
 	
 	-- debug process to count clock cycles
 	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
 	begin
-		if (fpga_0_rst_1_sys_rst_pin = '0') then
+		if (Push_Buttons_5Bit_GPIO_IO_I_pin(2) = '1') then
 			rd_cnt <= (others => '0');
 		else
 			if (fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1') then
@@ -286,17 +320,18 @@ begin
 	end process dubug;
 	
 	
-	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_vsyn and cam_pclk_edge and write_enable;
+	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and cam_pclk_edge and write_enable;
+	DDR2_SDRAM_VFBC2_Wd_Data_pin <= switches_i & "11111111";
 	
 	fifo_rd_in_gpio(14 downto 0) <= fifo_rd_data_count;
 	--wr_en_i <= Push_Buttons_5Bit_GPIO_IO_I_pin(4) and gpio_camera_IO(7);
 	LEDs_Positions_GPIO_IO_O_pin(0) <= DDR2_SDRAM_VFBC2_Wd_Full_pin; --center
 	fifo_rd_en_i <= NOT xps_epc_0_PRH_CS_n_pin;
-	LEDs_Positions_GPIO_IO_O_pin(2) <= DDR2_SDRAM_VFBC2_Cmd_Full_pin; -- south
+	--LEDs_Positions_GPIO_IO_O_pin(2) <= DDR2_SDRAM_VFBC2_Cmd_Full_pin; -- south
+	LEDs_Positions_GPIO_IO_O_pin(2) <= write_enable; -- south
 	LEDs_Positions_GPIO_IO_O_pin(3) <= DDR2_SDRAM_VFBC2_Cmd_Idle_pin; -- east
 	LEDs_Positions_GPIO_IO_O_pin(4) <= DDR2_SDRAM_VFBC2_Wd_Write_pin; --north
 	LEDs_8Bit_GPIO_IO_O_pin <= fifo_data_out(7 downto 0);
-	--LEDs_Positions_GPIO_IO_O_pin(1) <= cam_pclk;
 
 
 	fifo_data_in <= cam_Y & cam_uv;
@@ -306,6 +341,8 @@ begin
 	cam_rst <= '0';
 	epc_data_i <= fifo_data_out & fifo_data_out;
 	fifo_ready <= NOT fifo_empty;
+	
+	xps_tft_0_reset_pin <= '1'; -- Chrontel Video Converter has active low 
 	
 end Behavioral;
 
