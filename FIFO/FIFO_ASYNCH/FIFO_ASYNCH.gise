@@ -67,6 +67,7 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
@@ -82,11 +83,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1344263529" xil_pn:in_ck="2198095982214160409" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3563852800121523072" xil_pn:start_ts="1344263529">
+    <transform xil_pn:end_ts="1351261068" xil_pn:in_ck="2198095982214160409" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3563852800121523072" xil_pn:start_ts="1351261067">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ipcore_dir/fifo_two_clock_domains.ngc"/>
       <outfile xil_pn:name="ipcore_dir/fifo_two_clock_domains.vhd"/>
     </transform>
@@ -101,18 +100,15 @@
     <transform xil_pn:end_ts="1344263529" xil_pn:in_ck="-1249808881770906200" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8458126479482839362" xil_pn:start_ts="1344263529">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1344263529" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7175312092270240822" xil_pn:start_ts="1344263529">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1344263549" xil_pn:in_ck="-8394732614713709371" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="6308503769350856872" xil_pn:start_ts="1344263529">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FIFO_asynch_tl.lso"/>
@@ -130,12 +126,10 @@
     <transform xil_pn:end_ts="1344263549" xil_pn:in_ck="-4115783510095582572" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1110997432205872992" xil_pn:start_ts="1344263549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1344263555" xil_pn:in_ck="864787696022784681" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3384433181092835891" xil_pn:start_ts="1344263549">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FIFO_asynch_tl.bld"/>
       <outfile xil_pn:name="FIFO_asynch_tl.ngd"/>
       <outfile xil_pn:name="FIFO_asynch_tl_ngdbuild.xrpt"/>
@@ -145,7 +139,6 @@
     <transform xil_pn:end_ts="1344263611" xil_pn:in_ck="605012187456865699" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1344263555">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FIFO_asynch_tl.pcf"/>
@@ -161,7 +154,6 @@
     <transform xil_pn:end_ts="1344263770" xil_pn:in_ck="8089187068934315388" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1344263611">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FIFO_asynch_tl.ncd"/>
       <outfile xil_pn:name="FIFO_asynch_tl.pad"/>
       <outfile xil_pn:name="FIFO_asynch_tl.par"/>
@@ -173,30 +165,25 @@
       <outfile xil_pn:name="FIFO_asynch_tl_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1344263807" xil_pn:in_ck="-4115783510095590197" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="-8922232317050563653" xil_pn:start_ts="1344263770">
+    <transform xil_pn:end_ts="1351261106" xil_pn:in_ck="-4115783510095590197" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="1555517831305455702" xil_pn:start_ts="1351261068">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="FIFO_asynch_tl.bgn"/>
       <outfile xil_pn:name="FIFO_asynch_tl.bit"/>
       <outfile xil_pn:name="FIFO_asynch_tl.drc"/>
       <outfile xil_pn:name="FIFO_asynch_tl.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1344263821" xil_pn:in_ck="-4115783510095603051" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1344263819">
+    <transform xil_pn:end_ts="1351261127" xil_pn:in_ck="-4115783510095603051" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1351261126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1344263770" xil_pn:in_ck="5017697685751811103" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1344263756">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FIFO_asynch_tl.twr"/>
       <outfile xil_pn:name="FIFO_asynch_tl.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

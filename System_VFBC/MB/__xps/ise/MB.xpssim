@@ -2,7 +2,7 @@
 
 <Simulation_deps>
 
-  <Version XPSPNVER="1.0" EDKVER="13.1" />
+  <Version XPSPNVER="1.0" EDKVER="13.4" />
   <FPGA family="virtex5" device="xc5vlx110t" package="ff1136" speedgrade="-1" />
   <File Type="MHS" URL="../../MB.mhs" />
 

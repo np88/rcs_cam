@@ -489,7 +489,7 @@
     					<xsl:choose>
 							<!-- CR#590473 This was setting wrong choices filled up-->
     						<!--xsl:when test="(($b_type_ = 'SLAVE') and (@IS_CROSSBAR) and $iBifRef/@PROTOCOL)">
-   								<xsl:for-each select="key('G_MAP_MST_BIFS',$busName_)[(@PROTOCOL = $b_protocol_)]">
+   								<xsl:for-each select="key('G_MAP_MST_BIFS',$busName_)[(not(@PROTOCOL) or (@PROTOCOL = $b_protocol_) or (@PROTOCOL = 'GENERIC'))]">
    									<xsl:variable name="bifName_" select="@NAME"/>	
    									<xsl:variable name="insName_" select="../../@INSTANCE"/>	
    									<xsl:variable name="xb_slave_busName_" select="concat($busName_,':',$insName_,'.',$bifName_)"/>
@@ -527,7 +527,7 @@
 					</xsl:variable>
 					<xsl:choose>
 						<xsl:when test="$iBifRef/@PROTOCOL">
-							<xsl:for-each select="key('G_MAP_P2P_BIFS',$use_bstd_)[(@TYPE = 'INITIATOR') and (@PROTOCOL = $b_protocol_)]">
+							<xsl:for-each select="key('G_MAP_P2P_BIFS',$use_bstd_)[(@TYPE = 'INITIATOR') and (not(@PROTOCOL) or (@PROTOCOL = $b_protocol_) or (@PROTOCOL = 'GENERIC'))]">
 			   					<xsl:variable name="busName_" select="@BUSNAME"/>
 			   					<xsl:choose>
 			   						<xsl:when test="($busName_ = '__NOC__')">

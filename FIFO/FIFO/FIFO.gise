@@ -165,6 +165,8 @@
     <transform xil_pn:end_ts="1343827309" xil_pn:in_ck="161242574044428262" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="1555517831305455702" xil_pn:start_ts="1343827269">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="fifo_tl.bgn"/>
       <outfile xil_pn:name="fifo_tl.bit"/>
@@ -174,7 +176,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1343895057" xil_pn:in_ck="161242574044415408" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1343895054">
+    <transform xil_pn:end_ts="1351518577" xil_pn:in_ck="161242574044415408" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-2379753801292018389" xil_pn:start_ts="1351518577">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1351261234" xil_pn:in_ck="161242574044415408" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1351261233">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

@@ -195,7 +195,7 @@ begin
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_4 =>
 				-- write stride
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (768, 32) );
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (1280, 32) );
 				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000010100000000";
 				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';

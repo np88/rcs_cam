@@ -29,4 +29,12 @@ http://forums.xilinx.com/xlnx/attachments/xlnx/EDK/14683/1/Technote%20Xilinx-XPS
 
 * built microblaze with tft controller and configured it so that example from website would run properly
 
+Standard Mode:
+640 x 480
+OV7620 system clock is 27 MHz
+
+
+
+
+
 

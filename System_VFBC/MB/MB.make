@@ -78,6 +78,8 @@ hwclean: netlistclean bitsclean
 	rm -rf implementation synthesis xst hdl
 	rm -rf xst.srp $(SYSTEM).srp
 	rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+	rm -rf SDK
+	rm -rf __xps/ps7_instance.mhs
 
 netlistclean:
 	rm -f $(POSTSYN_NETLIST)
@@ -85,6 +87,7 @@ netlistclean:
 	rm -f __xps/ise/_xmsgs/platgen.xmsgs
 	touch __xps/ise/$(SYSTEM).xpssyn
 	rm -f $(BMM_FILE)
+	rm -rf implementation/cache
 
 bitsclean:
 	rm -f $(SYSTEM_BIT)
@@ -92,7 +95,7 @@ bitsclean:
 	rm -f implementation/$(SYSTEM)_bd.bmm 
 	rm -f implementation/$(SYSTEM)_map.ncd 
 	rm -f implementation/download.bit 
-	rm -f __xps/$(SYSTEM)_routed
+	rm -f __xps/$(SYSTEM)_bits
 
 simclean: 
 	rm -rf simulation/behavioral
@@ -149,7 +152,7 @@ $(SYSTEM_ACE):
 
 $(SYSTEM_HW_HANDOFF): $(MHSFILE) __xps/platgen.opt
 	@mkdir -p $(SDK_EXPORT_DIR)
-	psf2Edward -inp $(SYSTEM).xmp -exit_on_error -edwver 1.2 -xml $(SDK_EXPORT_DIR)/$(SYSTEM).xml $(GLOBAL_SEARCHPATHOPT)
+	psf2Edward -inp $(SYSTEM).xmp -exit_on_error -dont_add_loginfo -edwver 1.2 -xml $(SDK_EXPORT_DIR)/$(SYSTEM).xml $(GLOBAL_SEARCHPATHOPT)
 	xdsgen -inp $(SYSTEM).xmp -report $(SDK_EXPORT_DIR)/$(SYSTEM).html $(GLOBAL_SEARCHPATHOPT) -make_docs_local
 
 #################################################################

@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=/DIST/home/peters/cam_repo/FIFO/FIFO/impact.xsl
-OUTFILE=/DIST/home/peters/cam_repo/FIFO/FIFO/impact.xsl
+INFILE=/DIST/home/peters/nadja_cam_repo/FIFO/FIFO/impact.xsl
+OUTFILE=/DIST/home/peters/nadja_cam_repo/FIFO/FIFO/impact.xsl
 FAMILY=Multiple
 PART=Multiple
-WORKINGDIR=/DIST/home/peters/cam_repo/FIFO/FIFO
+WORKINGDIR=/DIST/home/peters/nadja_cam_repo/FIFO/FIFO
 LICENSE=iMPACT
 USER_INFO=iMPACT

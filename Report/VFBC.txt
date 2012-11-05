@@ -47,3 +47,11 @@ Reading out from vfbc worked for following code:
 
 
 Helpful exaples regarding set up are in mpmc data sheet p. 180 ff.
+
+Problem: 
+Not even half of the ram is filled with data.
+Solution?
+DDR2_SDRAM_VFBC2_Wd_Write_pin signal is 'bad' 
+--> check signal itself
+--> check edge detection
+If signal is not bad, a write flag that appears every 4 clock cycles might be too fast. 

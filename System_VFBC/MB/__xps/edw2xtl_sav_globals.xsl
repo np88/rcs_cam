@@ -122,7 +122,7 @@
 <xsl:variable name="G_GROUPS" 	select="$G_GRPS_DOC/BLOCKS"/>
 
 <xsl:variable name="G_NUM_OF_PROCS" 		select="count($G_SYS/MODULES/MODULE[(@MODCLASS = 'PROCESSOR')])"/>
-<xsl:variable name="G_NUM_OF_PROCS_W_ADDRS" select="count($G_SYS/MODULES/MODULE[(@MODCLASS = 'PROCESSOR') and MEMORYMAP/MEMRANGE[(not(@IS_VALID) or (@IS_VALID = 'TRUE'))]])"/>
+<xsl:variable name="G_NUM_OF_PROCS_W_ADDRS" select="count($G_SYS/MODULES/MODULE[(@MODCLASS = 'PROCESSOR') and MEMORYMAP/MEMRANGE[((not(@IS_VALID) or (@IS_VALID = 'TRUE')) and ACCESSROUTE) ]])"/>
 
 <xsl:variable name="G_FOCUSED_SCOPE">
     <xsl:choose>

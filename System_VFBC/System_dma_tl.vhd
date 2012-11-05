@@ -78,6 +78,9 @@ entity System_tl is port (
 		xps_tft_0_TFT_DVI_DATA_pin : OUT std_logic_vector(11 downto 0);
 		xps_tft_0_TFT_IIC_SCL_pin : INOUT std_logic;
 		xps_tft_0_TFT_IIC_SDA_pin : INOUT std_logic
+		
+		-- test output for signals
+		-- test_o: OUT std_logic
   );
 end System_tl;
 
@@ -290,6 +293,7 @@ begin
 		DDR2_SDRAM_VFBC2_Rd_Data_pin => open,
 		DDR2_SDRAM_VFBC2_Rd_Empty_pin => open,
 		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => open, 
+		
 		-- TFT
 		xps_tft_0_TFT_HSYNC_pin => xps_tft_0_TFT_HSYNC_pin,
 		xps_tft_0_TFT_VSYNC_pin => xps_tft_0_TFT_VSYNC_pin,
@@ -304,20 +308,20 @@ begin
 	);
 	
 	
-	-- debug process to count clock cycles
-	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
-	begin
-		if (Push_Buttons_5Bit_GPIO_IO_I_pin(2) = '1') then
-			rd_cnt <= (others => '0');
-		else
-			if (fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1') then
-				if (DDR2_SDRAM_VFBC2_Wd_Write_pin = '1') then
-					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
-				end if;
-			end if;
-		end if;
-			
-	end process dubug;
+--	-- debug process to count clock cycles
+--	dubug: process (fpga_0_clk_1_sys_clk_pin, Push_Buttons_5Bit_GPIO_IO_I_pin(2))
+--	begin
+--		if (Push_Buttons_5Bit_GPIO_IO_I_pin(2) = '1') then
+--			rd_cnt <= (others => '0');
+--		else
+--			if (fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1') then
+--				if (DDR2_SDRAM_VFBC2_Wd_Write_pin = '1') then
+--					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
+--				end if;
+--			end if;
+--		end if;
+--			
+--	end process dubug;
 	
 	
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and cam_pclk_edge and write_enable;
@@ -343,6 +347,9 @@ begin
 	fifo_ready <= NOT fifo_empty;
 	
 	xps_tft_0_reset_pin <= '1'; -- Chrontel Video Converter has active low 
+	
+	-- test signal
+	-- test_o <= cam_href and cam_pclk_edge and write_enable;
 	
 end Behavioral;
 

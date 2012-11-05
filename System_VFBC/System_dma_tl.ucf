@@ -45,7 +45,9 @@ NET "switches_i[5]" LOC = AE26 | IOSTANDARD=SSTL18_II;
 NET "switches_i[6]" LOC = AC25 | IOSTANDARD=SSTL18_II;
 NET "switches_i[7]" LOC = AC24 | IOSTANDARD=SSTL18_II;
 
-NET "fpga_0_clk_1_sys_clk_pin" LOC = AH15 | IOSTANDARD=LVCMOS33;
+
+#test signal
+#NET "test_o" LOC = AN34;
 
 #camera
 

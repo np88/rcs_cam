@@ -7,7 +7,7 @@
 # file manually, will be lost when make is invoked next. 
 #################################################################
 
-XILINX_EDK_DIR = /DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK
+XILINX_EDK_DIR = /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK
 
 SYSTEM = MB
 
@@ -17,6 +17,8 @@ FPGA_ARCH = virtex5
 
 DEVICE = xc5vlx110tff1136-1
 
+INTSTYLE = ise
+
 LANGUAGE = vhdl
 GLOBAL_SEARCHPATHOPT = 
 PROJECT_SEARCHPATHOPT = 
@@ -25,7 +27,7 @@ SEARCHPATHOPT = $(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)
 
 SUBMODULE_OPT =  -toplevel no -ti MB_i
 
-PLATGEN_OPTIONS = -p $(DEVICE) -lang $(LANGUAGE) $(SEARCHPATHOPT) $(SUBMODULE_OPT) -msg __xps/ise/xmsgprops.lst
+PLATGEN_OPTIONS = -p $(DEVICE) -lang $(LANGUAGE) -intstyle $(INTSTYLE) $(SEARCHPATHOPT) $(SUBMODULE_OPT) -msg __xps/ise/xmsgprops.lst
 
 OBSERVE_PAR_OPTIONS = -error yes
 
@@ -53,9 +55,7 @@ TIMING_SIM_SCRIPT = simulation/timing/$(SYSTEM)_setup.tcl
 
 DEFAULT_SIM_SCRIPT = $(BEHAVIORAL_SIM_SCRIPT)
 
-MIX_LANG_SIM_OPT = -mixed yes
-
-SIMGEN_OPTIONS = -p $(DEVICE) -lang $(LANGUAGE) $(SEARCHPATHOPT) $(BRAMINIT_ELF_SIM_FILE_ARGS) $(MIX_LANG_SIM_OPT) -msg __xps/ise/xmsgprops.lst -s isim
+SIMGEN_OPTIONS = -p $(DEVICE) -lang $(LANGUAGE) -intstyle $(INTSTYLE) $(SEARCHPATHOPT) $(BRAMINIT_ELF_SIM_FILE_ARGS) -msg __xps/ise/xmsgprops.lst -s isim
 
 
 CORE_STATE_DEVELOPMENT_FILES = 

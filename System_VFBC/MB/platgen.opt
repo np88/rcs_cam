@@ -2,6 +2,8 @@
 xc5vlx110tff1136-1
 -lang
 vhdl
+-intstyle
+ise
 -toplevel
 no
 -ti
