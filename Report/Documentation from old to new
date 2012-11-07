@@ -1,0 +1,30 @@
+Detailed documentation to prevent weird errors:
+Every step in changing the design of VFCB_old will be documented.
+
+1) removing FIFO from design
+
+2) Folgende Zeilen auskommentiert
+	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
+	begin
+		if (fpga_0_rst_1_sys_rst_pin = '0') then
+			rd_cnt <= (others => '0');
+		else
+			if (fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1') then
+				if (DDR2_SDRAM_VFBC2_Wd_Write_pin = '1') then
+					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
+				end if;
+			end if;
+		end if;
+			
+	end process dubug;
+
+3) 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_vsync and cam_pclk_edge and write_enable;
+	becomes
+	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and cam_pclk_edge and write_enable;
+
+4) replace SM_vfbc_control with new version from project System_VFBC
+
+5) added test signal in top entity and added test <= cam_href and cam_pclk_edge; added NET "test" LOC = AN34; to UCF file
+
+6) added "DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;" and changed 
+		"DDR2_SDRAM_VFBC2_Wd_Data_pin => DDR2_SDRAM_VFBC2_Wd_Data_pin," line

@@ -1,0 +1,27 @@
+Brainstorming on solving the too slow reading from FIFo problem:
+
+* larger FIFO
+FIFO size is 32 kByte(Words) now
+
+* DMA (seems not to be supported for epc modules)
+quota from datasheet:
+
+Unsupported Features
+Many peripheral devices have the device specific input/output ports such as status, remote reset,
+remote wakeup, interrupts etc. The XPS EPC IP Core does not have any provision to support these
+device specific input/output ports. Therefore, if the external device has any such device specific ports, then these input/output ports may be connected directly to system general purpose input output controller or to the system interrupt controller. If the external device has interrupt capability, then the interrupt outputs of the external device should be connected directly to the system interrupt controller.
+Many peripheral devices support DMA capability. However, the XPS EPC IP Core is a PLB slave device and therefore does not support DMA operations from the external peripheral devices.
+Current version of the XPS EPC IP Core does not support burst transactions to/from the PLB. So the parameter C_PRH_BURST_SUPPORT must be always assigned to ’0’.
+
+* make CPU as fast as possible (means to remove all unnecessary components and interrupts)
+not sure if this is a good idea, because this helps increasing speed but other applications should run on the CPU as well,
+anyways, fifo empty and full signals keep toggling
+
+* build dedicated hardware
+might be the best idea actually 
+
+
+* remove most gpio from system
+
+*increase system clock frequency
+
