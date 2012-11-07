@@ -1,0 +1,8 @@
+-p
+xc5vlx110tff1136-1
+-pe
+microblaze_0
+/DIST/it/sw/amd64/xilinx/13.1/ISE_DS/EDK/sw/lib/microblaze/mb_bootloop.elf
+-od
+/DIST/home/peters/cam_repo/System_VFBC
+/DIST/home/peters/cam_repo/System_VFBC/MB/MB.mhs

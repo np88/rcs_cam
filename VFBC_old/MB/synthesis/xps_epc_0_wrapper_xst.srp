@@ -1,0 +1,2102 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "xps_epc_0_wrapper_xst.prj"
+Verilog Include Directory          : {"/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc5vlx110tff1136-1
+Output File Name                   : "../implementation/xps_epc_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : xps_epc_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" in Library proc_common_v3_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" in Library proc_common_v3_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" in Library proc_common_v3_00_a.
+Entity <inferred_lut4> compiled.
+Entity <inferred_lut4> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" in Library proc_common_v3_00_a.
+Entity <muxf_struct> compiled.
+Entity <muxf_struct> (Architecture <imp>) compiled.
+Entity <muxf_struct_f> compiled.
+Entity <muxf_struct_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" in Library proc_common_v3_00_a.
+Entity <pf_counter_bit> compiled.
+Entity <pf_counter_bit> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" in Library proc_common_v3_00_a.
+Entity <cntr_incr_decr_addn_f> compiled.
+Entity <cntr_incr_decr_addn_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" in Library proc_common_v3_00_a.
+Entity <dynshreg_f> compiled.
+Entity <dynshreg_f> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" in Library proc_common_v3_00_a.
+Entity <pf_adder_bit> compiled.
+Entity <pf_adder_bit> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" in Library proc_common_v3_00_a.
+Entity <pf_counter> compiled.
+Entity <pf_counter> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" in Library proc_common_v3_00_a.
+Entity <pf_occ_counter> compiled.
+Entity <pf_occ_counter> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" in Library proc_common_v3_00_a.
+Entity <counter_bit> compiled.
+Entity <counter_bit> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy_f> compiled.
+Entity <or_muxcy_f> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" in Library proc_common_v3_00_a.
+Entity <srl_fifo_rbu_f> compiled.
+Entity <srl_fifo_rbu_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" in Library proc_common_v3_00_a.
+Package <family> compiled.
+Package body <family> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" in Library proc_common_v3_00_a.
+Entity <pf_occ_counter_top> compiled.
+Entity <pf_occ_counter_top> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" in Library proc_common_v3_00_a.
+Entity <pf_counter_top> compiled.
+Entity <pf_counter_top> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" in Library proc_common_v3_00_a.
+Entity <pf_adder> compiled.
+Entity <pf_adder> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" in Library proc_common_v3_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" in Library proc_common_v3_00_a.
+Entity <Counter> compiled.
+Entity <Counter> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" in Library proc_common_v3_00_a.
+Package <coregen_comp_defs> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" in Library proc_common_v3_00_a.
+Package <Common_Types> compiled.
+Package body <Common_Types> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" in Library proc_common_v3_00_a.
+Package <conv_funs_pkg> compiled.
+Package body <conv_funs_pkg> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" in Library proc_common_v3_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" in Library proc_common_v3_00_a.
+Entity <async_fifo_fg> compiled.
+Entity <async_fifo_fg> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" in Library proc_common_v3_00_a.
+Entity <sync_fifo_fg> compiled.
+Entity <sync_fifo_fg> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" in Library proc_common_v3_00_a.
+Entity <basic_sfifo_fg> compiled.
+Entity <basic_sfifo_fg> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" in Library proc_common_v3_00_a.
+Entity <blk_mem_gen_wrapper> compiled.
+Entity <blk_mem_gen_wrapper> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" in Library proc_common_v3_00_a.
+Entity <addsub> compiled.
+Entity <addsub> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" in Library proc_common_v3_00_a.
+Entity <direct_path_cntr> compiled.
+Entity <direct_path_cntr> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" in Library proc_common_v3_00_a.
+Entity <direct_path_cntr_ai> compiled.
+Entity <direct_path_cntr_ai> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" in Library proc_common_v3_00_a.
+Entity <down_counter> compiled.
+Entity <down_counter> (Architecture <simulation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" in Library proc_common_v3_00_a.
+Entity <eval_timer> compiled.
+Entity <eval_timer> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" in Library proc_common_v3_00_a.
+Entity <IPIF_Steer> compiled.
+Entity <IPIF_Steer> (Architecture <IMP>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" in Library proc_common_v3_00_a.
+Entity <ipif_steer128> compiled.
+Entity <ipif_steer128> (Architecture <IMP>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" in Library proc_common_v3_00_a.
+Entity <ipif_mirror128> compiled.
+Entity <ipif_mirror128> (Architecture <IMP>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" in Library proc_common_v3_00_a.
+Entity <ld_arith_reg2> compiled.
+Entity <ld_arith_reg2> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" in Library proc_common_v3_00_a.
+Entity <mux_onehot> compiled.
+Entity <mux_onehot> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" in Library proc_common_v3_00_a.
+Entity <or_bits> compiled.
+Entity <or_bits> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate> compiled.
+Entity <or_gate> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" in Library proc_common_v3_00_a.
+Entity <pf_dpram_select> compiled.
+Entity <pf_dpram_select> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" in Library proc_common_v3_00_a.
+Entity <pselect> compiled.
+Entity <pselect> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_mask> compiled.
+Entity <pselect_mask> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" in Library proc_common_v3_00_a.
+Entity <srl16_fifo> compiled.
+Entity <srl16_fifo> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" in Library proc_common_v3_00_a.
+Entity <SRL_FIFO> compiled.
+Entity <SRL_FIFO> (Architecture <IMP>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" in Library proc_common_v3_00_a.
+Entity <srl_fifo2> compiled.
+Entity <srl_fifo2> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" in Library proc_common_v3_00_a.
+Entity <srl_fifo3> compiled.
+Entity <srl_fifo3> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" in Library proc_common_v3_00_a.
+Entity <srl_fifo_rbu> compiled.
+Entity <srl_fifo_rbu> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" in Library proc_common_v3_00_a.
+Entity <valid_be> compiled.
+Entity <valid_be> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" in Library proc_common_v3_00_a.
+Entity <or_with_enable_f> compiled.
+Entity <or_with_enable_f> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" in Library proc_common_v3_00_a.
+Entity <dynshreg_i_f> compiled.
+Entity <dynshreg_i_f> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" in Library proc_common_v3_00_a.
+Entity <mux_onehot_f> compiled.
+Entity <mux_onehot_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" in Library proc_common_v3_00_a.
+Entity <srl_fifo_f> compiled.
+Entity <srl_fifo_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" in Library proc_common_v3_00_a.
+Entity <compare_vectors_f> compiled.
+Entity <compare_vectors_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" in Library proc_common_v3_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" in Library proc_common_v3_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" in Library proc_common_v3_00_a.
+Entity <or_gate_f> compiled.
+Entity <or_gate_f> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" in Library proc_common_v3_00_a.
+Entity <soft_reset> compiled.
+Entity <soft_reset> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" in Library proc_common_v3_00_a.
+Entity <ld_arith_reg> compiled.
+Entity <ld_arith_reg> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/async_statemachine.vhd" in Library xps_epc_v1_02_a.
+Entity <async_statemachine> compiled.
+Entity <async_statemachine> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/async_counters.vhd" in Library xps_epc_v1_02_a.
+Entity <async_counters> compiled.
+Entity <async_counters> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" in Library plbv46_slave_single_v1_01_a.
+Entity <plb_address_decoder> compiled.
+Entity <plb_address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/ipic_if_decode.vhd" in Library xps_epc_v1_02_a.
+Entity <ipic_if_decode> compiled.
+Entity <ipic_if_decode> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/sync_cntl.vhd" in Library xps_epc_v1_02_a.
+Entity <sync_cntl> compiled.
+Entity <sync_cntl> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/async_cntl.vhd" in Library xps_epc_v1_02_a.
+Entity <async_cntl> compiled.
+Entity <async_cntl> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/address_gen.vhd" in Library xps_epc_v1_02_a.
+Entity <address_gen> compiled.
+Entity <address_gen> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/data_steer.vhd" in Library xps_epc_v1_02_a.
+Entity <data_steer> compiled.
+Entity <data_steer> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/access_mux.vhd" in Library xps_epc_v1_02_a.
+Entity <access_mux> compiled.
+Entity <access_mux> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" in Library plbv46_slave_single_v1_01_a.
+Entity <plb_slave_attachment> compiled.
+Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" in Library plbv46_slave_single_v1_01_a.
+Entity <plbv46_slave_single> compiled.
+Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/epc_core.vhd" in Library xps_epc_v1_02_a.
+Entity <epc_core> compiled.
+Entity <epc_core> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/xps_epc.vhd" in Library xps_epc_v1_02_a.
+Entity <xps_epc> compiled.
+Entity <xps_epc> (Architecture <imp>) compiled.
+Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/xps_epc_0_wrapper.vhd" in Library work.
+Entity <xps_epc_0_wrapper> compiled.
+Entity <xps_epc_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <xps_epc_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <xps_epc> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	C_FAMILY = "virtex5"
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_AWIDTH = 3
+	C_PRH0_BASEADDR = "10000000100000000000000000000000"
+	C_PRH0_BUS_MULTIPLEX = 0
+	C_PRH0_CSN_TH = 0
+	C_PRH0_CSN_TSU = 0
+	C_PRH0_DATA_TH = 0
+	C_PRH0_DATA_TINV = 0
+	C_PRH0_DATA_TOUT = 0
+	C_PRH0_DATA_TSU = 0
+	C_PRH0_DWIDTH = 32
+	C_PRH0_DWIDTH_MATCH = 0
+	C_PRH0_FIFO_ACCESS = 0
+	C_PRH0_FIFO_OFFSET = 0
+	C_PRH0_HIGHADDR = "10000000100000001111111111111111"
+	C_PRH0_RDN_WIDTH = 0
+	C_PRH0_RDY_TOUT = 858000
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH0_RD_CYCLE = 0
+	C_PRH0_SYNC = 1
+	C_PRH0_WRN_WIDTH = 0
+	C_PRH0_WR_CYCLE = 0
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_AWIDTH = 32
+	C_PRH1_BASEADDR = "11111111111111111111111111111111"
+	C_PRH1_BUS_MULTIPLEX = 0
+	C_PRH1_CSN_TH = 0
+	C_PRH1_CSN_TSU = 0
+	C_PRH1_DATA_TH = 0
+	C_PRH1_DATA_TINV = 0
+	C_PRH1_DATA_TOUT = 0
+	C_PRH1_DATA_TSU = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH1_DWIDTH_MATCH = 0
+	C_PRH1_FIFO_ACCESS = 0
+	C_PRH1_FIFO_OFFSET = 0
+	C_PRH1_HIGHADDR = "00000000000000000000000000000000"
+	C_PRH1_RDN_WIDTH = 0
+	C_PRH1_RDY_TOUT = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH1_RD_CYCLE = 0
+	C_PRH1_SYNC = 1
+	C_PRH1_WRN_WIDTH = 0
+	C_PRH1_WR_CYCLE = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_AWIDTH = 32
+	C_PRH2_BASEADDR = "11111111111111111111111111111111"
+	C_PRH2_BUS_MULTIPLEX = 0
+	C_PRH2_CSN_TH = 0
+	C_PRH2_CSN_TSU = 0
+	C_PRH2_DATA_TH = 0
+	C_PRH2_DATA_TINV = 0
+	C_PRH2_DATA_TOUT = 0
+	C_PRH2_DATA_TSU = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH2_DWIDTH_MATCH = 0
+	C_PRH2_FIFO_ACCESS = 0
+	C_PRH2_FIFO_OFFSET = 0
+	C_PRH2_HIGHADDR = "00000000000000000000000000000000"
+	C_PRH2_RDN_WIDTH = 0
+	C_PRH2_RDY_TOUT = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH2_RD_CYCLE = 0
+	C_PRH2_SYNC = 1
+	C_PRH2_WRN_WIDTH = 0
+	C_PRH2_WR_CYCLE = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_AWIDTH = 32
+	C_PRH3_BASEADDR = "11111111111111111111111111111111"
+	C_PRH3_BUS_MULTIPLEX = 0
+	C_PRH3_CSN_TH = 0
+	C_PRH3_CSN_TSU = 0
+	C_PRH3_DATA_TH = 0
+	C_PRH3_DATA_TINV = 0
+	C_PRH3_DATA_TOUT = 0
+	C_PRH3_DATA_TSU = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH3_DWIDTH_MATCH = 0
+	C_PRH3_FIFO_ACCESS = 0
+	C_PRH3_FIFO_OFFSET = 0
+	C_PRH3_HIGHADDR = "00000000000000000000000000000000"
+	C_PRH3_RDN_WIDTH = 0
+	C_PRH3_RDY_TOUT = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH3_RD_CYCLE = 0
+	C_PRH3_SYNC = 1
+	C_PRH3_WRN_WIDTH = 0
+	C_PRH3_WR_CYCLE = 0
+	C_PRH_BURST_SUPPORT = 0
+	C_PRH_CLK_PERIOD_PS = 10000
+	C_PRH_CLK_SUPPORT = 0
+	C_PRH_MAX_ADWIDTH = 32
+	C_PRH_MAX_AWIDTH = 3
+	C_PRH_MAX_DWIDTH = 32
+	C_SPLB_AWIDTH = 32
+	C_SPLB_CLK_PERIOD_PS = 10000
+	C_SPLB_DWIDTH = 64
+	C_SPLB_MID_WIDTH = 2
+	C_SPLB_NATIVE_DWIDTH = 32
+	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_P2P = 0
+	C_SPLB_SUPPORT_BURSTS = 0
+
+Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000000100000000000000000000000",
+	                          "0000000000000000000000000000000010000000100000001111111111111111")
+	C_ARD_NUM_CE_ARRAY = (1)
+	C_BUS2CORE_CLK_RATIO = 1
+	C_FAMILY = "virtex5"
+	C_INCLUDE_DPHASE_TIMER = 1
+	C_SIPIF_DWIDTH = 32
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 64
+	C_SPLB_MID_WIDTH = 2
+	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_P2P = 0
+
+Analyzing hierarchy for entity <epc_core> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	C_FAMILY = "virtex5"
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_AWIDTH = 3
+	C_PRH0_BUS_MULTIPLEX = 0
+	C_PRH0_CSN_TH = 0
+	C_PRH0_CSN_TSU = 0
+	C_PRH0_DATA_TH = 0
+	C_PRH0_DATA_TINV = 0
+	C_PRH0_DATA_TOUT = 0
+	C_PRH0_DATA_TSU = 0
+	C_PRH0_DWIDTH = 32
+	C_PRH0_DWIDTH_MATCH = 0
+	C_PRH0_FIFO_ACCESS = 0
+	C_PRH0_RDN_WIDTH = 0
+	C_PRH0_RDY_TOUT = 858000
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH0_RD_CYCLE = 0
+	C_PRH0_SYNC = 1
+	C_PRH0_WRN_WIDTH = 0
+	C_PRH0_WR_CYCLE = 0
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_AWIDTH = 32
+	C_PRH1_BUS_MULTIPLEX = 0
+	C_PRH1_CSN_TH = 0
+	C_PRH1_CSN_TSU = 0
+	C_PRH1_DATA_TH = 0
+	C_PRH1_DATA_TINV = 0
+	C_PRH1_DATA_TOUT = 0
+	C_PRH1_DATA_TSU = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH1_DWIDTH_MATCH = 0
+	C_PRH1_FIFO_ACCESS = 0
+	C_PRH1_RDN_WIDTH = 0
+	C_PRH1_RDY_TOUT = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH1_RD_CYCLE = 0
+	C_PRH1_SYNC = 1
+	C_PRH1_WRN_WIDTH = 0
+	C_PRH1_WR_CYCLE = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_AWIDTH = 32
+	C_PRH2_BUS_MULTIPLEX = 0
+	C_PRH2_CSN_TH = 0
+	C_PRH2_CSN_TSU = 0
+	C_PRH2_DATA_TH = 0
+	C_PRH2_DATA_TINV = 0
+	C_PRH2_DATA_TOUT = 0
+	C_PRH2_DATA_TSU = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH2_DWIDTH_MATCH = 0
+	C_PRH2_FIFO_ACCESS = 0
+	C_PRH2_RDN_WIDTH = 0
+	C_PRH2_RDY_TOUT = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH2_RD_CYCLE = 0
+	C_PRH2_SYNC = 1
+	C_PRH2_WRN_WIDTH = 0
+	C_PRH2_WR_CYCLE = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_AWIDTH = 32
+	C_PRH3_BUS_MULTIPLEX = 0
+	C_PRH3_CSN_TH = 0
+	C_PRH3_CSN_TSU = 0
+	C_PRH3_DATA_TH = 0
+	C_PRH3_DATA_TINV = 0
+	C_PRH3_DATA_TOUT = 0
+	C_PRH3_DATA_TSU = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH3_DWIDTH_MATCH = 0
+	C_PRH3_FIFO_ACCESS = 0
+	C_PRH3_RDN_WIDTH = 0
+	C_PRH3_RDY_TOUT = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH3_RD_CYCLE = 0
+	C_PRH3_SYNC = 1
+	C_PRH3_WRN_WIDTH = 0
+	C_PRH3_WR_CYCLE = 0
+	C_PRH_BURST_SUPPORT = 0
+	C_PRH_CLK_SUPPORT = 0
+	C_PRH_MAX_ADWIDTH = 32
+	C_PRH_MAX_AWIDTH = 3
+	C_PRH_MAX_DWIDTH = 32
+	C_SPLB_AWIDTH = 32
+	C_SPLB_CLK_PERIOD_PS = 10000
+	C_SPLB_DWIDTH = 64
+	C_SPLB_NATIVE_DWIDTH = 32
+	LOCAL_CLK_PERIOD_PS = 10000
+	MAX_PERIPHERALS = 4
+	PRH0_FIFO_ADDRESS = "10000000100000000000000000000000"
+	PRH1_FIFO_ADDRESS = "11111111111111111111111111111111"
+	PRH2_FIFO_ADDRESS = "11111111111111111111111111111111"
+	PRH3_FIFO_ADDRESS = "11111111111111111111111111111111"
+
+Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000000100000000000000000000000",
+	                          "0000000000000000000000000000000010000000100000001111111111111111")
+	C_ARD_NUM_CE_ARRAY = (1)
+	C_BUS2CORE_CLK_RATIO = 1
+	C_DPHASE_TIMEOUT = 128
+	C_FAMILY = "virtex5"
+	C_INCLUDE_DPHASE_TIMER = 1
+	C_IPIF_ABUS_WIDTH = 32
+	C_IPIF_DBUS_WIDTH = 32
+	C_PLB_MID_WIDTH = 2
+	C_PLB_NUM_MASTERS = 3
+	C_SPLB_P2P = 0
+
+Analyzing hierarchy for entity <ipic_if_decode> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_DWIDTH = 32
+	C_PRH0_DWIDTH_MATCH = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH1_DWIDTH_MATCH = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH2_DWIDTH_MATCH = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH3_DWIDTH_MATCH = 0
+	C_PRH_CLK_SUPPORT = 0
+	C_SPLB_DWIDTH = 64
+	MAX_PERIPHERALS = 4
+	NO_PRH_ASYNC = 1
+	NO_PRH_BUS_MULTIPLEX = 1
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+	PRH_BUS_MULTIPLEX = "0000"
+	PRH_DWIDTH_MATCH = "0000"
+	PRH_SYNC = "1111"
+
+Analyzing hierarchy for entity <sync_cntl> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	ADDRCNT_WIDTH = 2
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH_CLK_SUPPORT = 0
+	C_SPLB_NATIVE_DWIDTH = 32
+	LOCAL_CLK_PERIOD_PS = 10000
+	MAX_PERIPHERALS = 4
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+	PRH_SYNC = "1111"
+
+Analyzing hierarchy for entity <async_cntl> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	C_BUS_CLOCK_PERIOD_PS = 10000
+	C_MAX_PERIPHERALS = 4
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_CSN_TH = 0
+	C_PRH0_CSN_TSU = 0
+	C_PRH0_DATA_TH = 0
+	C_PRH0_DATA_TINV = 0
+	C_PRH0_DATA_TOUT = 0
+	C_PRH0_DATA_TSU = 0
+	C_PRH0_RDN_WIDTH = 0
+	C_PRH0_RDY_TOUT = 858000
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH0_RD_CYCLE = 0
+	C_PRH0_WRN_WIDTH = 0
+	C_PRH0_WR_CYCLE = 0
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_CSN_TH = 0
+	C_PRH1_CSN_TSU = 0
+	C_PRH1_DATA_TH = 0
+	C_PRH1_DATA_TINV = 0
+	C_PRH1_DATA_TOUT = 0
+	C_PRH1_DATA_TSU = 0
+	C_PRH1_RDN_WIDTH = 0
+	C_PRH1_RDY_TOUT = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH1_RD_CYCLE = 0
+	C_PRH1_WRN_WIDTH = 0
+	C_PRH1_WR_CYCLE = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_CSN_TH = 0
+	C_PRH2_CSN_TSU = 0
+	C_PRH2_DATA_TH = 0
+	C_PRH2_DATA_TINV = 0
+	C_PRH2_DATA_TOUT = 0
+	C_PRH2_DATA_TSU = 0
+	C_PRH2_RDN_WIDTH = 0
+	C_PRH2_RDY_TOUT = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH2_RD_CYCLE = 0
+	C_PRH2_WRN_WIDTH = 0
+	C_PRH2_WR_CYCLE = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_CSN_TH = 0
+	C_PRH3_CSN_TSU = 0
+	C_PRH3_DATA_TH = 0
+	C_PRH3_DATA_TINV = 0
+	C_PRH3_DATA_TOUT = 0
+	C_PRH3_DATA_TSU = 0
+	C_PRH3_RDN_WIDTH = 0
+	C_PRH3_RDY_TOUT = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH3_RD_CYCLE = 0
+	C_PRH3_WRN_WIDTH = 0
+	C_PRH3_WR_CYCLE = 0
+	C_SPLB_NATIVE_DWIDTH = 32
+	NO_PRH_ASYNC = 1
+	PRH_SYNC = "1111"
+
+Analyzing hierarchy for entity <address_gen> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	ADDRCNT_WIDTH = 2
+	C_PRH_MAX_AWIDTH = 3
+	NO_PRH_ASYNC = 1
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+
+Analyzing hierarchy for entity <data_steer> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	ADDRCNT_WIDTH = 2
+	ALL_PRH_DWIDTH_MATCH = 0
+	C_PRH_MAX_DWIDTH = 32
+	C_SPLB_NATIVE_DWIDTH = 32
+	NO_PRH_ASYNC = 1
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+
+Analyzing hierarchy for entity <access_mux> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_AWIDTH = 3
+	C_PRH0_BUS_MULTIPLEX = 0
+	C_PRH0_DWIDTH = 32
+	C_PRH1_AWIDTH = 32
+	C_PRH1_BUS_MULTIPLEX = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH2_AWIDTH = 32
+	C_PRH2_BUS_MULTIPLEX = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH3_AWIDTH = 32
+	C_PRH3_BUS_MULTIPLEX = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH_MAX_ADWIDTH = 32
+	C_PRH_MAX_AWIDTH = 3
+	C_PRH_MAX_DWIDTH = 32
+	MAX_PERIPHERALS = 4
+	NO_PRH_ASYNC = 1
+	NO_PRH_BUS_MULTIPLEX = 1
+	NO_PRH_SYNC = 0
+
+Analyzing hierarchy for entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (architecture <IMP>) with generics.
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000000100000000000000000000000",
+	                          "0000000000000000000000000000000010000000100000001111111111111111")
+	C_ARD_NUM_CE_ARRAY = (1)
+	C_BUS_AWIDTH = 32
+	C_FAMILY = "nofamily"
+	C_SPLB_P2P = 0
+
+Analyzing hierarchy for entity <counter_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
+	C_FAMILY = "nofamily"
+	C_NUM_BITS = 8
+
+Analyzing hierarchy for entity <ld_arith_reg> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
+	C_ADD_SUB_NOT = false
+	C_AD_OFFSET = 0
+	C_AD_WIDTH = 1
+	C_LD_OFFSET = 0
+	C_LD_WIDTH = 1
+	C_REG_WIDTH = 1
+	C_RESET_VALUE = "0"
+
+Analyzing hierarchy for entity <ld_arith_reg> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
+	C_ADD_SUB_NOT = false
+	C_AD_OFFSET = 0
+	C_AD_WIDTH = 1
+	C_LD_OFFSET = 0
+	C_LD_WIDTH = 7
+	C_REG_WIDTH = 7
+	C_RESET_VALUE = "0000000"
+
+Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
+	C_AB = 16
+	C_AW = 32
+	C_BAR = "10000000100000000000000000000000"
+	C_FAMILY = "nofamily"
+
+Analyzing hierarchy for entity <or_gate128> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 1
+	C_USE_LUT_OR = false
+
+Analyzing hierarchy for entity <or_muxcy> in library <proc_common_v3_00_a> (architecture <implementation>) with generics.
+	C_NUM_BITS = 1
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <xps_epc_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+    Set property "MAX_FANOUT = 10000" for signal <SPLB_Clk> in unit <xps_epc>.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = 10000" for signal <SPLB_Rst> in unit <xps_epc>.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = 10000" for signal <PRH_Clk> in unit <xps_epc>.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = 10000" for signal <PRH_Rst> in unit <xps_epc>.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+Entity <xps_epc_0_wrapper> analyzed. Unit <xps_epc_0_wrapper> generated.
+
+Analyzing generic Entity <xps_epc> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	C_FAMILY = "virtex5"
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_AWIDTH = 3
+	C_PRH0_BASEADDR = "10000000100000000000000000000000"
+	C_PRH0_BUS_MULTIPLEX = 0
+	C_PRH0_CSN_TH = 0
+	C_PRH0_CSN_TSU = 0
+	C_PRH0_DATA_TH = 0
+	C_PRH0_DATA_TINV = 0
+	C_PRH0_DATA_TOUT = 0
+	C_PRH0_DATA_TSU = 0
+	C_PRH0_DWIDTH = 32
+	C_PRH0_DWIDTH_MATCH = 0
+	C_PRH0_FIFO_ACCESS = 0
+	C_PRH0_FIFO_OFFSET = 0
+	C_PRH0_HIGHADDR = "10000000100000001111111111111111"
+	C_PRH0_RDN_WIDTH = 0
+	C_PRH0_RDY_TOUT = 858000
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH0_RD_CYCLE = 0
+	C_PRH0_SYNC = 1
+	C_PRH0_WRN_WIDTH = 0
+	C_PRH0_WR_CYCLE = 0
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_AWIDTH = 32
+	C_PRH1_BASEADDR = "11111111111111111111111111111111"
+	C_PRH1_BUS_MULTIPLEX = 0
+	C_PRH1_CSN_TH = 0
+	C_PRH1_CSN_TSU = 0
+	C_PRH1_DATA_TH = 0
+	C_PRH1_DATA_TINV = 0
+	C_PRH1_DATA_TOUT = 0
+	C_PRH1_DATA_TSU = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH1_DWIDTH_MATCH = 0
+	C_PRH1_FIFO_ACCESS = 0
+	C_PRH1_FIFO_OFFSET = 0
+	C_PRH1_HIGHADDR = "00000000000000000000000000000000"
+	C_PRH1_RDN_WIDTH = 0
+	C_PRH1_RDY_TOUT = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH1_RD_CYCLE = 0
+	C_PRH1_SYNC = 1
+	C_PRH1_WRN_WIDTH = 0
+	C_PRH1_WR_CYCLE = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_AWIDTH = 32
+	C_PRH2_BASEADDR = "11111111111111111111111111111111"
+	C_PRH2_BUS_MULTIPLEX = 0
+	C_PRH2_CSN_TH = 0
+	C_PRH2_CSN_TSU = 0
+	C_PRH2_DATA_TH = 0
+	C_PRH2_DATA_TINV = 0
+	C_PRH2_DATA_TOUT = 0
+	C_PRH2_DATA_TSU = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH2_DWIDTH_MATCH = 0
+	C_PRH2_FIFO_ACCESS = 0
+	C_PRH2_FIFO_OFFSET = 0
+	C_PRH2_HIGHADDR = "00000000000000000000000000000000"
+	C_PRH2_RDN_WIDTH = 0
+	C_PRH2_RDY_TOUT = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH2_RD_CYCLE = 0
+	C_PRH2_SYNC = 1
+	C_PRH2_WRN_WIDTH = 0
+	C_PRH2_WR_CYCLE = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_AWIDTH = 32
+	C_PRH3_BASEADDR = "11111111111111111111111111111111"
+	C_PRH3_BUS_MULTIPLEX = 0
+	C_PRH3_CSN_TH = 0
+	C_PRH3_CSN_TSU = 0
+	C_PRH3_DATA_TH = 0
+	C_PRH3_DATA_TINV = 0
+	C_PRH3_DATA_TOUT = 0
+	C_PRH3_DATA_TSU = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH3_DWIDTH_MATCH = 0
+	C_PRH3_FIFO_ACCESS = 0
+	C_PRH3_FIFO_OFFSET = 0
+	C_PRH3_HIGHADDR = "00000000000000000000000000000000"
+	C_PRH3_RDN_WIDTH = 0
+	C_PRH3_RDY_TOUT = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH3_RD_CYCLE = 0
+	C_PRH3_SYNC = 1
+	C_PRH3_WRN_WIDTH = 0
+	C_PRH3_WR_CYCLE = 0
+	C_PRH_BURST_SUPPORT = 0
+	C_PRH_CLK_PERIOD_PS = 10000
+	C_PRH_CLK_SUPPORT = 0
+	C_PRH_MAX_ADWIDTH = 32
+	C_PRH_MAX_AWIDTH = 3
+	C_PRH_MAX_DWIDTH = 32
+	C_SPLB_AWIDTH = 32
+	C_SPLB_CLK_PERIOD_PS = 10000
+	C_SPLB_DWIDTH = 64
+	C_SPLB_MID_WIDTH = 2
+	C_SPLB_NATIVE_DWIDTH = 32
+	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_P2P = 0
+	C_SPLB_SUPPORT_BURSTS = 0
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
+Entity <xps_epc> analyzed. Unit <xps_epc> generated.
+
+Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000000100000000000000000000000",
+	                          "0000000000000000000000000000000010000000100000001111111111111111")
+	C_ARD_NUM_CE_ARRAY = (1)
+	C_BUS2CORE_CLK_RATIO = 1
+	C_FAMILY = "virtex5"
+	C_INCLUDE_DPHASE_TIMER = 1
+	C_SIPIF_DWIDTH = 32
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 64
+	C_SPLB_MID_WIDTH = 2
+	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_P2P = 0
+Entity <plbv46_slave_single> analyzed. Unit <plbv46_slave_single> generated.
+
+Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000000100000000000000000000000",
+	                          "0000000000000000000000000000000010000000100000001111111111111111")
+	C_ARD_NUM_CE_ARRAY = (1)
+	C_BUS2CORE_CLK_RATIO = 1
+	C_DPHASE_TIMEOUT = 128
+	C_FAMILY = "virtex5"
+	C_INCLUDE_DPHASE_TIMER = 1
+	C_IPIF_ABUS_WIDTH = 32
+	C_IPIF_DBUS_WIDTH = 32
+	C_PLB_MID_WIDTH = 2
+	C_PLB_NUM_MASTERS = 3
+	C_SPLB_P2P = 0
+WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" line 1201: Unconnected output port 'Count_Out' of component 'counter_f'.
+Entity <plb_slave_attachment> analyzed. Unit <plb_slave_attachment> generated.
+
+Analyzing generic Entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (Architecture <IMP>).
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000000100000000000000000000000",
+	                          "0000000000000000000000000000000010000000100000001111111111111111")
+	C_ARD_NUM_CE_ARRAY = (1)
+	C_BUS_AWIDTH = 32
+	C_FAMILY = "nofamily"
+	C_SPLB_P2P = 0
+Entity <plb_address_decoder> analyzed. Unit <plb_address_decoder> generated.
+
+Analyzing generic Entity <pselect_f> in library <proc_common_v3_00_a> (Architecture <imp>).
+	C_AB = 16
+	C_AW = 32
+	C_BAR = "10000000100000000000000000000000"
+	C_FAMILY = "nofamily"
+Entity <pselect_f> analyzed. Unit <pselect_f> generated.
+
+Analyzing generic Entity <or_gate128> in library <proc_common_v3_00_a> (Architecture <imp>).
+	C_BUS_WIDTH = 1
+	C_OR_WIDTH = 1
+	C_USE_LUT_OR = false
+Entity <or_gate128> analyzed. Unit <or_gate128> generated.
+
+Analyzing generic Entity <or_muxcy> in library <proc_common_v3_00_a> (Architecture <implementation>).
+	C_NUM_BITS = 1
+Entity <or_muxcy> analyzed. Unit <or_muxcy> generated.
+
+Analyzing generic Entity <counter_f> in library <proc_common_v3_00_a> (Architecture <imp>).
+	C_FAMILY = "nofamily"
+	C_NUM_BITS = 8
+Entity <counter_f> analyzed. Unit <counter_f> generated.
+
+Analyzing generic Entity <epc_core> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	C_FAMILY = "virtex5"
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_AWIDTH = 3
+	C_PRH0_BUS_MULTIPLEX = 0
+	C_PRH0_CSN_TH = 0
+	C_PRH0_CSN_TSU = 0
+	C_PRH0_DATA_TH = 0
+	C_PRH0_DATA_TINV = 0
+	C_PRH0_DATA_TOUT = 0
+	C_PRH0_DATA_TSU = 0
+	C_PRH0_DWIDTH = 32
+	C_PRH0_DWIDTH_MATCH = 0
+	C_PRH0_FIFO_ACCESS = 0
+	C_PRH0_RDN_WIDTH = 0
+	C_PRH0_RDY_TOUT = 858000
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH0_RD_CYCLE = 0
+	C_PRH0_SYNC = 1
+	C_PRH0_WRN_WIDTH = 0
+	C_PRH0_WR_CYCLE = 0
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_AWIDTH = 32
+	C_PRH1_BUS_MULTIPLEX = 0
+	C_PRH1_CSN_TH = 0
+	C_PRH1_CSN_TSU = 0
+	C_PRH1_DATA_TH = 0
+	C_PRH1_DATA_TINV = 0
+	C_PRH1_DATA_TOUT = 0
+	C_PRH1_DATA_TSU = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH1_DWIDTH_MATCH = 0
+	C_PRH1_FIFO_ACCESS = 0
+	C_PRH1_RDN_WIDTH = 0
+	C_PRH1_RDY_TOUT = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH1_RD_CYCLE = 0
+	C_PRH1_SYNC = 1
+	C_PRH1_WRN_WIDTH = 0
+	C_PRH1_WR_CYCLE = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_AWIDTH = 32
+	C_PRH2_BUS_MULTIPLEX = 0
+	C_PRH2_CSN_TH = 0
+	C_PRH2_CSN_TSU = 0
+	C_PRH2_DATA_TH = 0
+	C_PRH2_DATA_TINV = 0
+	C_PRH2_DATA_TOUT = 0
+	C_PRH2_DATA_TSU = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH2_DWIDTH_MATCH = 0
+	C_PRH2_FIFO_ACCESS = 0
+	C_PRH2_RDN_WIDTH = 0
+	C_PRH2_RDY_TOUT = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH2_RD_CYCLE = 0
+	C_PRH2_SYNC = 1
+	C_PRH2_WRN_WIDTH = 0
+	C_PRH2_WR_CYCLE = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_AWIDTH = 32
+	C_PRH3_BUS_MULTIPLEX = 0
+	C_PRH3_CSN_TH = 0
+	C_PRH3_CSN_TSU = 0
+	C_PRH3_DATA_TH = 0
+	C_PRH3_DATA_TINV = 0
+	C_PRH3_DATA_TOUT = 0
+	C_PRH3_DATA_TSU = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH3_DWIDTH_MATCH = 0
+	C_PRH3_FIFO_ACCESS = 0
+	C_PRH3_RDN_WIDTH = 0
+	C_PRH3_RDY_TOUT = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH3_RD_CYCLE = 0
+	C_PRH3_SYNC = 1
+	C_PRH3_WRN_WIDTH = 0
+	C_PRH3_WR_CYCLE = 0
+	C_PRH_BURST_SUPPORT = 0
+	C_PRH_CLK_SUPPORT = 0
+	C_PRH_MAX_ADWIDTH = 32
+	C_PRH_MAX_AWIDTH = 3
+	C_PRH_MAX_DWIDTH = 32
+	C_SPLB_AWIDTH = 32
+	C_SPLB_CLK_PERIOD_PS = 10000
+	C_SPLB_DWIDTH = 64
+	C_SPLB_NATIVE_DWIDTH = 32
+	LOCAL_CLK_PERIOD_PS = 10000
+	MAX_PERIPHERALS = 4
+	PRH0_FIFO_ADDRESS = "10000000100000000000000000000000"
+	PRH1_FIFO_ADDRESS = "11111111111111111111111111111111"
+	PRH2_FIFO_ADDRESS = "11111111111111111111111111111111"
+	PRH3_FIFO_ADDRESS = "11111111111111111111111111111111"
+Entity <epc_core> analyzed. Unit <epc_core> generated.
+
+Analyzing generic Entity <ipic_if_decode> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_DWIDTH = 32
+	C_PRH0_DWIDTH_MATCH = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH1_DWIDTH_MATCH = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH2_DWIDTH_MATCH = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH3_DWIDTH_MATCH = 0
+	C_PRH_CLK_SUPPORT = 0
+	C_SPLB_DWIDTH = 64
+	MAX_PERIPHERALS = 4
+	NO_PRH_ASYNC = 1
+	NO_PRH_BUS_MULTIPLEX = 1
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+	PRH_BUS_MULTIPLEX = "0000"
+	PRH_DWIDTH_MATCH = "0000"
+	PRH_SYNC = "1111"
+Entity <ipic_if_decode> analyzed. Unit <ipic_if_decode> generated.
+
+Analyzing generic Entity <sync_cntl> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	ADDRCNT_WIDTH = 2
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH_CLK_SUPPORT = 0
+	C_SPLB_NATIVE_DWIDTH = 32
+	LOCAL_CLK_PERIOD_PS = 10000
+	MAX_PERIPHERALS = 4
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+	PRH_SYNC = "1111"
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT> in unit <sync_cntl>.
+INFO:Xst:2679 - Register <Sync_Burst> in unit <sync_cntl> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <sync_cntl> analyzed. Unit <sync_cntl> generated.
+
+Analyzing generic Entity <ld_arith_reg.1> in library <proc_common_v3_00_a> (Architecture <imp>).
+	C_ADD_SUB_NOT = false
+	C_AD_OFFSET = 0
+	C_AD_WIDTH = 1
+	C_LD_OFFSET = 0
+	C_LD_WIDTH = 1
+	C_REG_WIDTH = 1
+	C_RESET_VALUE = "0"
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+Entity <ld_arith_reg.1> analyzed. Unit <ld_arith_reg.1> generated.
+
+Analyzing generic Entity <ld_arith_reg.2> in library <proc_common_v3_00_a> (Architecture <imp>).
+	C_ADD_SUB_NOT = false
+	C_AD_OFFSET = 0
+	C_AD_WIDTH = 1
+	C_LD_OFFSET = 0
+	C_LD_WIDTH = 7
+	C_REG_WIDTH = 7
+	C_RESET_VALUE = "0000000"
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 284: Instantiating black box module <MULT_AND>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 294: Instantiating black box module <MUXCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 305: Instantiating black box module <XORCY>.
+WARNING:Xst:2211 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" line 321: Instantiating black box module <FDRE>.
+Entity <ld_arith_reg.2> analyzed. Unit <ld_arith_reg.2> generated.
+
+Analyzing generic Entity <async_cntl> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	C_BUS_CLOCK_PERIOD_PS = 10000
+	C_MAX_PERIPHERALS = 4
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_ADDR_TH = 0
+	C_PRH0_ADDR_TSU = 0
+	C_PRH0_ADS_WIDTH = 0
+	C_PRH0_CSN_TH = 0
+	C_PRH0_CSN_TSU = 0
+	C_PRH0_DATA_TH = 0
+	C_PRH0_DATA_TINV = 0
+	C_PRH0_DATA_TOUT = 0
+	C_PRH0_DATA_TSU = 0
+	C_PRH0_RDN_WIDTH = 0
+	C_PRH0_RDY_TOUT = 858000
+	C_PRH0_RDY_WIDTH = 1144000
+	C_PRH0_RD_CYCLE = 0
+	C_PRH0_WRN_WIDTH = 0
+	C_PRH0_WR_CYCLE = 0
+	C_PRH1_ADDR_TH = 0
+	C_PRH1_ADDR_TSU = 0
+	C_PRH1_ADS_WIDTH = 0
+	C_PRH1_CSN_TH = 0
+	C_PRH1_CSN_TSU = 0
+	C_PRH1_DATA_TH = 0
+	C_PRH1_DATA_TINV = 0
+	C_PRH1_DATA_TOUT = 0
+	C_PRH1_DATA_TSU = 0
+	C_PRH1_RDN_WIDTH = 0
+	C_PRH1_RDY_TOUT = 0
+	C_PRH1_RDY_WIDTH = 0
+	C_PRH1_RD_CYCLE = 0
+	C_PRH1_WRN_WIDTH = 0
+	C_PRH1_WR_CYCLE = 0
+	C_PRH2_ADDR_TH = 0
+	C_PRH2_ADDR_TSU = 0
+	C_PRH2_ADS_WIDTH = 0
+	C_PRH2_CSN_TH = 0
+	C_PRH2_CSN_TSU = 0
+	C_PRH2_DATA_TH = 0
+	C_PRH2_DATA_TINV = 0
+	C_PRH2_DATA_TOUT = 0
+	C_PRH2_DATA_TSU = 0
+	C_PRH2_RDN_WIDTH = 0
+	C_PRH2_RDY_TOUT = 0
+	C_PRH2_RDY_WIDTH = 0
+	C_PRH2_RD_CYCLE = 0
+	C_PRH2_WRN_WIDTH = 0
+	C_PRH2_WR_CYCLE = 0
+	C_PRH3_ADDR_TH = 0
+	C_PRH3_ADDR_TSU = 0
+	C_PRH3_ADS_WIDTH = 0
+	C_PRH3_CSN_TH = 0
+	C_PRH3_CSN_TSU = 0
+	C_PRH3_DATA_TH = 0
+	C_PRH3_DATA_TINV = 0
+	C_PRH3_DATA_TOUT = 0
+	C_PRH3_DATA_TSU = 0
+	C_PRH3_RDN_WIDTH = 0
+	C_PRH3_RDY_TOUT = 0
+	C_PRH3_RDY_WIDTH = 0
+	C_PRH3_RD_CYCLE = 0
+	C_PRH3_WRN_WIDTH = 0
+	C_PRH3_WR_CYCLE = 0
+	C_SPLB_NATIVE_DWIDTH = 32
+	NO_PRH_ASYNC = 1
+	PRH_SYNC = "1111"
+Entity <async_cntl> analyzed. Unit <async_cntl> generated.
+
+Analyzing generic Entity <address_gen> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	ADDRCNT_WIDTH = 2
+	C_PRH_MAX_AWIDTH = 3
+	NO_PRH_ASYNC = 1
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+Entity <address_gen> analyzed. Unit <address_gen> generated.
+
+Analyzing generic Entity <data_steer> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	ADDRCNT_WIDTH = 2
+	ALL_PRH_DWIDTH_MATCH = 0
+	C_PRH_MAX_DWIDTH = 32
+	C_SPLB_NATIVE_DWIDTH = 32
+	NO_PRH_ASYNC = 1
+	NO_PRH_DWIDTH_MATCH = 1
+	NO_PRH_SYNC = 0
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+    Set user-defined property "INIT =  0" for instance <NO_DEV_DWIDTH_MATCH_GEN.SOME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT> in unit <data_steer>.
+Entity <data_steer> analyzed. Unit <data_steer> generated.
+
+Analyzing generic Entity <access_mux> in library <xps_epc_v1_02_a> (Architecture <imp>).
+	C_NUM_PERIPHERALS = 1
+	C_PRH0_AWIDTH = 3
+	C_PRH0_BUS_MULTIPLEX = 0
+	C_PRH0_DWIDTH = 32
+	C_PRH1_AWIDTH = 32
+	C_PRH1_BUS_MULTIPLEX = 0
+	C_PRH1_DWIDTH = 32
+	C_PRH2_AWIDTH = 32
+	C_PRH2_BUS_MULTIPLEX = 0
+	C_PRH2_DWIDTH = 32
+	C_PRH3_AWIDTH = 32
+	C_PRH3_BUS_MULTIPLEX = 0
+	C_PRH3_DWIDTH = 32
+	C_PRH_MAX_ADWIDTH = 32
+	C_PRH_MAX_AWIDTH = 3
+	C_PRH_MAX_DWIDTH = 32
+	MAX_PERIPHERALS = 4
+	NO_PRH_ASYNC = 1
+	NO_PRH_BUS_MULTIPLEX = 1
+	NO_PRH_SYNC = 0
+INFO:Xst:2679 - Register <PRH_Rd_n> in unit <access_mux> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PRH_Wr_n> in unit <access_mux> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <access_mux> analyzed. Unit <access_mux> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <counter_f>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd".
+    Found 9-bit register for signal <icount_out>.
+    Found 9-bit subtractor for signal <icount_out$sub0000> created at line 297.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <counter_f> synthesized.
+
+
+Synthesizing Unit <pselect_f>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+WARNING:Xst:647 - Input <A<16:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <pselect_f> synthesized.
+
+
+Synthesizing Unit <or_muxcy>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd".
+Unit <or_muxcy> synthesized.
+
+
+Synthesizing Unit <ipic_if_decode>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/ipic_if_decode.vhd".
+WARNING:Xst:647 - Input <Local_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Local_Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IP_sync_req_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <temp_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_req_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_req_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_req_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_req_d3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_req_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_req_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_async_req> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Wrack_d4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Wrack_d3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Wrack_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Wrack_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Rdack_d4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Rdack_d3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Rdack_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ip_async_Rdack_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dev_dwidth_match_int> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dev_dwidth_match_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dev_bus_multiplex_int> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dev_bus_multiplex_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dev_burst_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_req> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_access_on> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <Dev_fifo_access>.
+    Found 1-bit register for signal <Dev_rnw>.
+    Found 1-bit register for signal <Dev_id<0>>.
+    Found 3-bit register for signal <dev_dbus_width_i>.
+    Found 1-bit register for signal <dev_in_access_int_d1>.
+    Found 1-bit register for signal <dev_sync_i>.
+    Found 1-bit register for signal <ip_sync_Rdack_d1>.
+    Found 1-bit register for signal <ip_sync_Rdack_d2>.
+    Found 1-bit register for signal <ip_sync_Rdack_d3>.
+    Found 1-bit register for signal <ip_sync_Rdack_d4>.
+    Found 1-bit register for signal <ip_sync_Wrack_d1>.
+    Found 1-bit register for signal <ip_sync_Wrack_d2>.
+    Found 1-bit register for signal <ip_sync_Wrack_d3>.
+    Found 1-bit register for signal <ip_sync_Wrack_d4>.
+    Found 1-bit register for signal <local_sync_req>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <ipic_if_decode> synthesized.
+
+
+Synthesizing Unit <async_cntl>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/async_cntl.vhd".
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Asynch_prh_rdy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_RdCE<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_WrCE<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_FIFO_access> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_dwidth_match> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Asynch_ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IPIC_Asynch_req> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_bus_multiplexed> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_CS<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_in_access> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <twr_recovery_non_muxed_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <twr_recovery_muxed_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <twr_recovery_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <twr_non_muxed_recovery_load_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <twr_non_muxed_rec_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <twr_muxed_recovery_load_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <twr_muxed_rec_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_recovery_non_muxed_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_recovery_muxed_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_recovery_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_non_muxed_recovery_load_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_non_muxed_rec_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_muxed_recovery_load_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <trd_muxed_rec_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdevrdy_width_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdevrdy_wdth_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdev_valid_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdev_valid_ld_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdev_valid_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdev_valid_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdev_rdy_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdev_rdy_ld_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdata_hold_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tdata_hold_ld_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tcontrol_width_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tcontrol_wdth_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tcontrol_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tcontrol_ld_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tads_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tads_ld_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tads_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tads_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <taddr_hold_ld_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <taddr_hold_ld_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <taddr_hold_data_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <taddr_hold_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <taddr_data_cs_hold_count_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <taddr_data_cs_hold_cnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_wr_req_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_start_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_rd_req_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_prh_rdy_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_prh_rdy_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_prh_rdy_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <asynch_cycle_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_cycle_bit_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_cycle_bit> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <async_cntl> synthesized.
+
+
+Synthesizing Unit <address_gen>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/address_gen.vhd".
+WARNING:Xst:647 - Input <Sync_addr_cnt_ld> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Local_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_addr_cnt_ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Local_Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_fifo_access> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_addr_cnt_ld> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_dwidth_match> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_sync> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sync_addr_cnt_ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_dbus_width> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sync_addr_suffix> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_addr_ld_cnt_val> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_addr_cnt_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_addr_suffix> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_addr_ld_cnt_val> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_addr_cnt_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <addr_suffix_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <address_gen> synthesized.
+
+
+Synthesizing Unit <access_mux>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/access_mux.vhd".
+WARNING:Xst:647 - Input <Async_CS_n<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_addr_ph> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_data_oe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Sync_addr_ph> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_Rd_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_ADS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_Wr_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sync_async_data_oe_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <prh_cs_n_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_data_oe_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addr_ph> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <addr_out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Register <sync_data_oe_i<10>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<11>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<12>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<13>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<14>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<15>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<16>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<17>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<18>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<19>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<1>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<20>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<21>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<22>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<23>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<24>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<25>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<26>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<27>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<28>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<29>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<2>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<30>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<31>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<3>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<4>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<5>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<6>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<7>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<8>> equivalent to <sync_data_oe_i<0>> has been removed
+    Register <sync_data_oe_i<9>> equivalent to <sync_data_oe_i<0>> has been removed
+    Found 1-bit register for signal <PRH_RNW>.
+    Found 1-bit register for signal <PRH_Burst>.
+    Found 1-bit register for signal <PRH_CS_n<0>>.
+    Found 3-bit register for signal <PRH_Addr>.
+    Found 1-bit register for signal <PRH_ADS>.
+    Found 32-bit register for signal <PRH_Data_O>.
+    Found 1-bit register for signal <sync_data_oe_i<0>>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+Unit <access_mux> synthesized.
+
+
+Synthesizing Unit <or_gate128>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd".
+WARNING:Xst:1780 - Signal <test> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <or_gate128> synthesized.
+
+
+Synthesizing Unit <data_steer>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/data_steer.vhd".
+WARNING:Xst:647 - Input <Addr_suffix> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_bus_multiplex> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_rnw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Async_en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_dwidth_match> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_sync> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sync_rd_ce_int> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_rd_ce_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_rd_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <steer_sync_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <steer_index_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <steer_data_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <steer_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <steer_be> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <steer_async_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <no_steer_data_in> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <no_steer_async_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data_in> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <data_Int_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_rd_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <async_ip2bus_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <async_ce_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit register for signal <PRH_BE>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <data_steer> synthesized.
+
+
+Synthesizing Unit <ld_arith_reg_1>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd".
+WARNING:Xst:646 - Signal <cry<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <q_i_ns_0$xor0000>.
+Unit <ld_arith_reg_1> synthesized.
+
+
+Synthesizing Unit <ld_arith_reg_2>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd".
+WARNING:Xst:646 - Signal <cry<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <ld_arith_reg_2> synthesized.
+
+
+Synthesizing Unit <plb_address_decoder>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd".
+WARNING:Xst:647 - Input <Bus_RNW_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Address_In_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Address_Valid_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <cs_s_h_clr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cs_ce_clr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addr_out_s_h> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addr_match_clr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <cs_out_i<0>>.
+    Found 1-bit register for signal <cs_out_s_h<0>>.
+    Found 1-bit register for signal <decode_hit_reg>.
+    Found 1-bit register for signal <rdce_out_i<0>>.
+    Found 1-bit register for signal <rnw_s_h>.
+    Found 1-bit register for signal <wrce_out_i<0>>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <plb_address_decoder> synthesized.
+
+
+Synthesizing Unit <sync_cntl>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/sync_cntl.vhd".
+WARNING:Xst:647 - Input <Sync_ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <IPIC_sync_ack_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_fifo_access> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Steer_index> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_dwidth_match> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Dev_dbus_width> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <temp_1_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sync_start> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_errack> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_cycle_en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_cycle_bit_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_cycle_bit> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_burst_en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sync_ack> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sig2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sig1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_errack_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_errack_d3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_errack_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_errack_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_errack> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_ack_rst> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_ack_d3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_ack_d2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_ack_d1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <local_sync_ack> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State ads_turn_around is never reached in FSM <state_cs>.
+    Found finite state machine <FSM_0> for signal <state_cs>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 19                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 9                                              |
+    | Clock              | Local_Clk                 (rising_edge)        |
+    | Reset              | Local_Rst                 (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <Sync_ADS>.
+    Found 1-bit register for signal <Sync_addr_ph>.
+    Found 1-bit register for signal <Sync_RNW>.
+    Found 1-bit register for signal <Sync_data_oe>.
+    Found 1-bit register for signal <IP_sync_errack>.
+    Found 1-bit register for signal <Sync_CS_n<0>>.
+    Found 1-bit register for signal <ip_sync_ack_i>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   7 D-type flip-flop(s).
+Unit <sync_cntl> synthesized.
+
+
+Synthesizing Unit <epc_core>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/epc_core.vhd".
+Unit <epc_core> synthesized.
+
+
+Synthesizing Unit <plb_slave_attachment>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd".
+WARNING:Xst:647 - Input <PLB_UABus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <valid_plb_type> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <valid_plb_size> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <start_data_phase> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sl_wrdack_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sl_wrcomp_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sl_wait_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sl_rddack_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sl_rdcomp_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sl_data_ack> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <set_sl_busy_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <rd_ce_ld_enable> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clear_sl_rd_busy_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clear_sl_rd_busy> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clear_sl_busy_ns> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clear_rd_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Register <sl_rdcomp_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <sl_rddack_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <sl_addrack_i> equivalent to <set_sl_busy> has been removed
+    Register <sl_wrdack_i> equivalent to <sl_wrcomp_i> has been removed
+    Register <wr_clear_sl_busy> equivalent to <sl_wrcomp_i> has been removed
+    Found 1-bit register for signal <addr_cntl_cs<0>>.
+    Found 1-bit register for signal <addr_cycle_flush>.
+    Found 32-bit register for signal <bus2ip_addr_i>.
+    Found 4-bit register for signal <bus2ip_be_i>.
+    Found 1-bit register for signal <bus2ip_rnw_i>.
+    Found 1-bit register for signal <data_timeout>.
+    Found 2-bit register for signal <master_id>.
+    Found 32-bit register for signal <plb_abus_reg>.
+    Found 4-bit register for signal <plb_be_reg>.
+    Found 2-bit register for signal <plb_masterid_reg>.
+    Found 1-bit register for signal <plb_pavalid_reg>.
+    Found 1-bit register for signal <plb_rnw_reg>.
+    Found 4-bit register for signal <plb_size_reg>.
+    Found 3-bit register for signal <plb_type_reg>.
+    Found 32-bit register for signal <plb_wrdbus_reg>.
+    Found 1-bit register for signal <rd_clear_sl_busy>.
+    Found 1-bit register for signal <set_sl_busy>.
+    Found 1-bit register for signal <sl_busy>.
+    Found 3-bit register for signal <sl_mbusy_i>.
+    Found 3-bit register for signal <sl_mrderr_i>.
+    Found 3-bit register for signal <sl_mwrerr_i>.
+    Found 32-bit register for signal <sl_rddbus_i>.
+    Found 1-bit register for signal <sl_rearbitrate_i>.
+    Found 1-bit register for signal <sl_wrcomp_i>.
+    Summary:
+	inferred 167 D-type flip-flop(s).
+Unit <plb_slave_attachment> synthesized.
+
+
+Synthesizing Unit <plbv46_slave_single>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd".
+WARNING:Xst:647 - Input <PLB_wrPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_MSize> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_SAValid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_busLock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrDBus<32:63>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_lockErr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_TAttribute> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_abort> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <plbv46_slave_single> synthesized.
+
+
+Synthesizing Unit <xps_epc>.
+    Related source file is "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/xps_epc.vhd".
+WARNING:Xst:647 - Input <PRH_Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PRH_Rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <bus2ip_addr<0:28>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <xps_epc> synthesized.
+
+
+Synthesizing Unit <xps_epc_0_wrapper>.
+    Related source file is "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/xps_epc_0_wrapper.vhd".
+Unit <xps_epc_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 67
+ 1-bit register                                        : 52
+ 2-bit register                                        : 2
+ 3-bit register                                        : 3
+ 32-bit register                                       : 5
+ 4-bit register                                        : 4
+ 9-bit register                                        : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs/FSM> on signal <state_cs[1:10]> with one-hot encoding.
+----------------------------------
+ State              | Encoding
+----------------------------------
+ idle               | 0000000001
+ ads_assert         | 0000000010
+ ads_deassert       | 0000001000
+ ads_pre_data_phase | 0000010000
+ ads_data_phase     | 0000100000
+ ads_turn_around    | unreached
+ pre_data_phase     | 0000000100
+ data_phase         | 0100000000
+ ack_gen            | 0010000000
+ errack_gen         | 0001000000
+ turn_around        | 1000000000
+----------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 291
+ Flip-Flops                                            : 291
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <dev_dbus_width_i_2> has a constant value of 0 in block <ipic_if_decode>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dev_dbus_width_i_1> has a constant value of 0 in block <ipic_if_decode>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dev_fifo_access> (without init value) has a constant value of 0 in block <ipic_if_decode>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <dev_dbus_width_i_0> in Unit <ipic_if_decode> is equivalent to the following 2 FFs/Latches, which will be removed : <dev_sync_i> <Dev_id_0> 
+INFO:Xst:2261 - The FF/Latch <addr_cntl_cs_0> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
+INFO:Xst:2261 - The FF/Latch <ip_sync_ack_i> in Unit <sync_cntl> is equivalent to the following FF/Latch, which will be removed : <state_cs_FSM_FFd1> 
+
+Optimizing unit <xps_epc_0_wrapper> ...
+
+Optimizing unit <counter_f> ...
+
+Optimizing unit <ipic_if_decode> ...
+
+Optimizing unit <access_mux> ...
+
+Optimizing unit <data_steer> ...
+
+Optimizing unit <ld_arith_reg_2> ...
+
+Optimizing unit <plb_address_decoder> ...
+
+Optimizing unit <sync_cntl> ...
+INFO:Xst:2261 - The FF/Latch <state_cs_FSM_FFd9> in Unit <sync_cntl> is equivalent to the following FF/Latch, which will be removed : <Sync_ADS> 
+INFO:Xst:2261 - The FF/Latch <state_cs_FSM_FFd9> in Unit <sync_cntl> is equivalent to the following FF/Latch, which will be removed : <Sync_ADS> 
+
+Optimizing unit <plb_slave_attachment> ...
+WARNING:Xst:1710 - FF/Latch <xps_epc_0/EPC_CORE_I/ACCESS_MUX_I/PRH_Burst> (without init value) has a constant value of 0 in block <xps_epc_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/Sync_addr_ph> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_s_h> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_26> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_27> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:2677 - Node <xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_abus_reg_28> of sequential type is unconnected in block <xps_epc_0_wrapper>.
+WARNING:Xst:1293 - FF/Latch <xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd9> has a constant value of 0 in block <xps_epc_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd7> has a constant value of 0 in block <xps_epc_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd6> has a constant value of 0 in block <xps_epc_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd5> has a constant value of 0 in block <xps_epc_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xps_epc_0/EPC_CORE_I/ACCESS_MUX_I/PRH_ADS> (without init value) has a constant value of 0 in block <xps_epc_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 241
+ Flip-Flops                                            : 241
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/xps_epc_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 386
+
+Cell Usage :
+# BELS                             : 143
+#      GND                         : 1
+#      LUT1                        : 1
+#      LUT2                        : 21
+#      LUT3                        : 21
+#      LUT4                        : 46
+#      LUT5                        : 5
+#      LUT6                        : 20
+#      MULT_AND                    : 9
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 9
+# FlipFlops/Latches                : 241
+#      FD                          : 82
+#      FDR                         : 87
+#      FDRE                        : 58
+#      FDRS                        : 4
+#      FDS                         : 9
+#      FDSE                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             241  out of  69120     0%  
+ Number of Slice LUTs:                  114  out of  69120     0%  
+    Number used as Logic:               114  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    273
+   Number with an unused Flip Flop:      32  out of    273    11%  
+   Number with an unused LUT:           159  out of    273    58%  
+   Number of fully used LUT-FF pairs:    82  out of    273    30%  
+   Number of unique control sets:        22
+
+IO Utilization: 
+ Number of IOs:                         386
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                    | Load  |
+-----------------------------------+----------------------------------------------------------+-------+
+SPLB_Clk                           | NONE(xps_epc_0/EPC_CORE_I/IPIC_DECODE_I/ip_sync_Wrack_d4)| 241   |
+-----------------------------------+----------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.651ns (Maximum Frequency: 377.216MHz)
+   Minimum input arrival time before clock: 1.945ns
+   Maximum output required time after clock: 0.471ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SPLB_Clk'
+  Clock period: 2.651ns (frequency: 377.216MHz)
+  Total number of paths / destination ports: 992 / 232
+-------------------------------------------------------------------------
+Delay:               2.651ns (Levels of Logic = 10)
+  Source:            xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd2 (FF)
+  Destination:       xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT/PERBIT_GEN[0].FF_RST0_GEN.FDRE_i1 (FF)
+  Source Clock:      SPLB_Clk rising
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd2 to xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT/PERBIT_GEN[0].FF_RST0_GEN.FDRE_i1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             7   0.471   0.609  xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd2 (xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd2)
+     LUT3:I1->O            9   0.094   0.524  xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt_ce1 (xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt_ce)
+     begin scope: 'xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT'
+     LUT3:I2->O            1   0.094   0.000  q_i_ns_6_mux00001 (q_i_ns<6>)
+     MUXCY:S->O            1   0.372   0.000  PERBIT_GEN[6].MUXCY_i1 (cry<6>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[5].MUXCY_i1 (cry<5>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[4].MUXCY_i1 (cry<4>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[3].MUXCY_i1 (cry<3>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[2].MUXCY_i1 (cry<2>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[1].MUXCY_i1 (cry<1>)
+     XORCY:CI->O           1   0.357   0.000  PERBIT_GEN[0].XORCY_i1 (xorcy_out<0>)
+     FDRE:D                   -0.018          PERBIT_GEN[0].FF_RST0_GEN.FDRE_i1
+    ----------------------------------------
+    Total                      2.651ns (1.518ns logic, 1.133ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 397 / 340
+-------------------------------------------------------------------------
+Offset:              1.945ns (Levels of Logic = 10)
+  Source:            PRH_Rdy<0> (PAD)
+  Destination:       xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT/PERBIT_GEN[0].FF_RST0_GEN.FDRE_i1 (FF)
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: PRH_Rdy<0> to xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT/PERBIT_GEN[0].FF_RST0_GEN.FDRE_i1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I0->O            9   0.094   0.524  xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt_ce1 (xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt_ce)
+     begin scope: 'xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/SOME_DEV_SYNC_GEN.I_SYNC_DEV_RDY_CNT'
+     LUT3:I2->O            1   0.094   0.000  q_i_ns_6_mux00001 (q_i_ns<6>)
+     MUXCY:S->O            1   0.372   0.000  PERBIT_GEN[6].MUXCY_i1 (cry<6>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[5].MUXCY_i1 (cry<5>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[4].MUXCY_i1 (cry<4>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[3].MUXCY_i1 (cry<3>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[2].MUXCY_i1 (cry<2>)
+     MUXCY:CI->O           1   0.026   0.000  PERBIT_GEN[1].MUXCY_i1 (cry<1>)
+     XORCY:CI->O           1   0.357   0.000  PERBIT_GEN[0].XORCY_i1 (xorcy_out<0>)
+     FDRE:D                   -0.018          PERBIT_GEN[0].FF_RST0_GEN.FDRE_i1
+    ----------------------------------------
+    Total                      1.945ns (1.421ns logic, 0.524ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 152 / 152
+-------------------------------------------------------------------------
+Offset:              0.471ns (Levels of Logic = 0)
+  Source:            xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i (FF)
+  Destination:       Sl_rearbitrate (PAD)
+  Source Clock:      SPLB_Clk rising
+
+  Data Path: xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i to Sl_rearbitrate
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              0   0.471   0.000  xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i (xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i)
+    ----------------------------------------
+    Total                      0.471ns (0.471ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 16.99 secs
+ 
+--> 
+
+
+Total memory usage is 690312 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  315 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

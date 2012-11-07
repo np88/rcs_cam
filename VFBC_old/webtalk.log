@@ -1,0 +1,16 @@
+Release 13.4 - WebTalk (O.87xd)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=5A46D6EF46D3C04E31DDF3A5C27B00A2
+ProjectIteration=39
+
+WebTalk Summary
+----------------
+INFO:WebTalk:2 - WebTalk is enabled.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:5 - /DIST/home/peters/nadja_cam_repo/VFBC_old/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/reports/webtalk_introduction.html

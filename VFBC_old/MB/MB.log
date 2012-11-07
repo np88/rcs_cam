@@ -1,0 +1,427 @@
+Saved contents of this file to MB_log.13.3 during revup to EDK 13.4.
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+WARNING:EDK - IPNAME: microblaze, INSTANCE: microblaze_0 - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 71 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 92 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 99 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 106 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 115 
+WARNING:EDK - IPNAME: mpmc, INSTANCE: DDR2_SDRAM - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 145 
+WARNING:EDK - IPNAME: clock_generator, INSTANCE: clock_generator_0 - Superseded
+   core for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 240 
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+WARNING:EDK - IPNAME: microblaze, INSTANCE: microblaze_0 - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 71 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 92 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 99 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 106 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 115 
+WARNING:EDK - IPNAME: mpmc, INSTANCE: DDR2_SDRAM - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 145 
+WARNING:EDK - IPNAME: clock_generator, INSTANCE: clock_generator_0 - Superseded
+   core for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 240 
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+WARNING:EDK - IPNAME: microblaze, INSTANCE: microblaze_0 - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 71 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 92 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 99 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 106 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 115 
+WARNING:EDK - IPNAME: mpmc, INSTANCE: DDR2_SDRAM - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 145 
+WARNING:EDK - IPNAME: clock_generator, INSTANCE: clock_generator_0 - Superseded
+   core for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 240 
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+WARNING:EDK - IPNAME: microblaze, INSTANCE: microblaze_0 - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 71 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 92 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 99 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 106 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 115 
+WARNING:EDK - IPNAME: mpmc, INSTANCE: DDR2_SDRAM - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 145 
+WARNING:EDK - IPNAME: clock_generator, INSTANCE: clock_generator_0 - Superseded
+   core for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 240 
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+WARNING:EDK - IPNAME: microblaze, INSTANCE: microblaze_0 - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 71 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 92 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 99 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 106 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 115 
+WARNING:EDK - IPNAME: mpmc, INSTANCE: DDR2_SDRAM - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 145 
+WARNING:EDK - IPNAME: clock_generator, INSTANCE: clock_generator_0 - Superseded
+   core for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 240 
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+WARNING:EDK - IPNAME: microblaze, INSTANCE: microblaze_0 - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 71 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: ilmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 92 
+WARNING:EDK - IPNAME: lmb_v10, INSTANCE: dlmb - Superseded core for architecture
+   'virtex5lx' - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 99 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: dlmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 106 
+WARNING:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE: ilmb_cntlr - Superseded core
+   for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 115 
+WARNING:EDK - IPNAME: mpmc, INSTANCE: DDR2_SDRAM - Superseded core for
+   architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 145 
+WARNING:EDK - IPNAME: clock_generator, INSTANCE: clock_generator_0 - Superseded
+   core for architecture 'virtex5lx' -
+   /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 240 
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Wed Nov  7 14:24:51 2012
+ make -f MB.make clean started...
+rm -f implementation/MB.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+touch __xps/ise/MB.xpssyn
+rm -f implementation/MB.bmm
+rm -rf implementation/cache
+rm -f implementation/MB.bit
+rm -f implementation/MB.ncd
+rm -f implementation/MB_bd.bmm 
+rm -f implementation/MB_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/MB_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp MB.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf SDK
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+touch __xps/ise/MB.xpssim
+rm -f _impact.cmd
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/etc/MB.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/etc/MB.gui
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+xterm -e xmd -opt etc/xmd_microblaze_0.opt&
+xterm -e xmd -opt etc/xmd_microblaze_0.opt&
+Writing filter settings....
+Done writing filter settings to:
+	/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/etc/MB.filters
+Done writing Tab View settings to:
+	/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/etc/MB.gui
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+=====================
+Opened log file
+=====================
+=====================
+Opened log file
+=====================
+Xilinx Platform Studio (XPS)
+Xilinx EDK 13.4 Build EDK_O.87xd
+
+Xilinx EDK 13.4 Build EDK_O.87xd
+

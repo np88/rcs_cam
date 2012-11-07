@@ -1,0 +1,13 @@
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc5vlx110tff1136-1
+-top xps_timer_0_wrapper
+-ifmt MIXED
+-ifn xps_timer_0_wrapper_xst.prj
+-ofn ../implementation/xps_timer_0_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/pcores/" "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
