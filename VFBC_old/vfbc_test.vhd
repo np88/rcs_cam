@@ -107,7 +107,7 @@ BEGIN
 		rst_i <= '0';
 		start_transaction_i <= '1';
       wait for clk_i_period*15;
-		start_transaction_i <= '0';
+		--start_transaction_i <= '0';
 		vsync_i <= '1';
       wait for clk_i_period*25;
 		vsync_i <= '0';

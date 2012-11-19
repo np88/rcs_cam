@@ -2,11 +2,11 @@
 xc5vlx110tff1136-1
 -lang
 vhdl
+-intstyle
+ise
 -pe
 microblaze_0
 bootloops/microblaze_0.elf
--mixed
-yes
 -msg
 __xps/ise/xmsgprops.lst
 -s

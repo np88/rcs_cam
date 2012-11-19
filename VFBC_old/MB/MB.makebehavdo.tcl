@@ -1,5 +1,5 @@
 proc pnsimmodel {} {
-  if { [ catch { xload xmp /DIST/home/peters/cam_repo/System_VFBC/MB/MB.xmp } result ] } {
+  if { [ catch { xload xmp /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.xmp } result ] } {
     exit 10
   }
   set simulator_bak [xget simulator]

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -rangecheck -lib "secureip" -o "/DIST/home/peters/cam_repo/System_VFBC/vfbc_test_isim_par.exe" -prj "/DIST/home/peters/cam_repo/System_VFBC/vfbc_test_par.prj" "vfbc_test" 
+-intstyle "ise" -incremental -rangecheck -lib "secureip" -o "/DIST/home/peters/nadja_cam_repo/VFBC_old/vfbc_test_isim_beh.exe" -prj "/DIST/home/peters/nadja_cam_repo/VFBC_old/vfbc_test_beh.prj" "work.vfbc_test" 

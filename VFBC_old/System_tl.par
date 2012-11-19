@@ -1,7 +1,7 @@
 Release 13.4 par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-weekino::  Fri Nov 16 13:54:18 2012
+weekino::  Mon Nov 19 10:54:56 2012
 
 par -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter
 -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
@@ -90,7 +90,7 @@ WARNING:Par:288 - The signal Inst_MB/dlmb_LMB_ABus<31> has no load.  PAR will no
 Starting Router
 
 
-Phase  1  : 52031 unrouted;      REAL time: 28 secs 
+Phase  1  : 52031 unrouted;      REAL time: 29 secs 
 INFO:Route:538 - One or more MIG cores have been detected in your design and have been successfully
    placed and routed. These MIG core(s) have critical skew and delay requirements 
    that are independent of the user (UCF) timing constraints. These MIG-related timing 
@@ -102,17 +102,17 @@ Phase  2  : 42504 unrouted;      REAL time: 32 secs
 
 Phase  3  : 14132 unrouted;      REAL time: 53 secs 
 
-Phase  4  : 14127 unrouted; (Setup:0, Hold:18498, Component Switching Limit:0)     REAL time: 1 mins 2 secs 
+Phase  4  : 14127 unrouted; (Setup:0, Hold:18498, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
 
 Updating file: System_tl.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 19 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 19 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 19 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:18492, Component Switching Limit:0)     REAL time: 1 mins 19 secs 
 WARNING:Route:522 - Unusually high hold time violation detected among 8 connections.The router will continue and try to
    fix it 
 	Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>:AQ ->
@@ -137,15 +137,15 @@ Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/wrfifo_reset_d
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/DmaCmdPortIn_MReset_n:A5 -2092
 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:13259, Component Switching Limit:0)     REAL time: 1 mins 19 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:13259, Component Switching Limit:0)     REAL time: 1 mins 20 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:13259, Component Switching Limit:0)     REAL time: 1 mins 23 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:13259, Component Switching Limit:0)     REAL time: 1 mins 24 secs 
 WARNING:Route:452 - 
     Not all timing constraints have been achieved.  Please consult the `Post-Place & Route Static Timing Report' to
    determine the actual timing results.  For suggestions on how to work around this problem go to
    http://support.xilinx.com and `Search Answers Database' using the text of this message.
 
-Total REAL time to Router completion: 1 mins 23 secs 
+Total REAL time to Router completion: 1 mins 24 secs 
 Total CPU time to Router completion: 1 mins 27 secs 
 
 Partition Implementation Status

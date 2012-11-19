@@ -273,20 +273,24 @@ begin
 	);
 	
 	
-	-- debug process to count clock cycles
---	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
---	begin
---		if (fpga_0_rst_1_sys_rst_pin = '0') then
---			rd_cnt <= (others => '0');
---		else
---			if (fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1') then
---				if (DDR2_SDRAM_VFBC2_Wd_Write_pin = '1') then
---					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
---				end if;
---			end if;
---		end if;
---			
---	end process dubug;
+	-- debug process to count href
+	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
+		signal counted, stop_counting: std_logic := '0';
+	begin
+		if (fpga_0_rst_1_sys_rst_pin = '0') then
+			rd_cnt <= (others => '0');
+			counted <= '0';
+			stop_counting <= '0';
+		else
+			if (stop_counting <= '0' and cam_href = '1' and write_enable = '1') then
+				counted <= '1';
+				rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
+			elsif (counted = '1' and write_enable = '0') then
+				stop_counting <= '1';
+			end if;
+		end if;
+			
+	end process dubug;
 	
 	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;

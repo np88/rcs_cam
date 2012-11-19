@@ -85,7 +85,6 @@ begin
 		edge_o => vsync_i_clock_edge
 	);
 
-
 	VFBC_Store: process (clk_i, rst_i)
 	begin
 		if (rst_i = '1') then
