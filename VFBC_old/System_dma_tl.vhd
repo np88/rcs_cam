@@ -291,8 +291,8 @@ begin
 		DDR2_SDRAM_VFBC2_Wd_Data_BE_pin => DDR2_SDRAM_VFBC2_Wd_Data_BE_pin,
 		DDR2_SDRAM_VFBC2_Wd_Full_pin => DDR2_SDRAM_VFBC2_Wd_Full_pin,
 		DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin =>DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin,
-		DDR2_SDRAM_VFBC2_Rd_Clk_pin => '0',
-		DDR2_SDRAM_VFBC2_Rd_Reset_pin => '0',
+		DDR2_SDRAM_VFBC2_Rd_Clk_pin => fpga_0_clk_1_sys_clk_pin,
+		DDR2_SDRAM_VFBC2_Rd_Reset_pin => fpga_0_rst_1_sys_rst_pin,
 		DDR2_SDRAM_VFBC2_Rd_Read_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_End_Burst_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_Flush_pin => '0',
@@ -323,9 +323,12 @@ begin
 	begin
 		if (fpga_0_rst_1_sys_rst_pin = '0') then
 			rd_cnt_reg <= (others => '0');
+			fifo_ready <= '0';
 		elsif fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then 
+			fifo_ready <= '0';
 			if (write_enable_edge_f = '1') then
 				rd_cnt_reg <= rd_cnt;
+				fifo_ready <= '1';
 			end if;
 		end if;			
 	end process store_rd_cnt;
@@ -355,7 +358,7 @@ begin
 	cam_pwdn <= '0';
 	cam_rst <= '0';
 	epc_data_i <= fifo_data_out & fifo_data_out;
-	fifo_ready <= NOT fifo_empty;
+	--fifo_ready <= NOT fifo_empty;
 	
 end Behavioral;
 

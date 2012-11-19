@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Mon Nov 19 15:37:43 2012">
+  <application stringID="NgdBuild" timeStamp="Mon Nov 19 16:07:07 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -53,7 +53,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="AMD Athlon(tm) II X2 260 Processor"/>
-          <item stringID="speed" value="3200.000 MHz"/>
+          <item stringID="speed" value="1900.000 MHz"/>
         </row>
       </table>
     </section>
@@ -84,7 +84,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_DSP48E" value="3"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="1779"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="22"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="103"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="104"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCPE" value="24"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCPE_1" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC_1" value="5"/>
@@ -146,7 +146,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_DSP48E" value="3"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="1779"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="22"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="103"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="104"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCPE" value="24"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDCPE_1" value="8"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDC_1" value="5"/>

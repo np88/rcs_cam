@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Mon Nov 19 15:41:33 2012
+// Written by: Map O.87xd on Mon Nov 19 16:10:57 2012
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -273,17 +273,17 @@ PIN
         = BEL
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem"
         PINNAME CLKAU;
-TIMEGRP sys_clk_pin = BEL "rd_cnt_reg_0" BEL "rd_cnt_reg_1" BEL "rd_cnt_reg_2"
-        BEL "rd_cnt_reg_3" BEL "rd_cnt_reg_4" BEL "rd_cnt_reg_5" BEL
-        "rd_cnt_reg_6" BEL "rd_cnt_reg_7" BEL "rd_cnt_reg_8" BEL
-        "rd_cnt_reg_9" BEL "rd_cnt_reg_10" BEL "rd_cnt_reg_11" BEL
-        "rd_cnt_reg_12" BEL "rd_cnt_reg_13" BEL "rd_cnt_reg_14" BEL
-        "rd_cnt_reg_15" BEL "rd_cnt_reg_16" BEL "rd_cnt_reg_17" BEL
-        "rd_cnt_reg_18" BEL "rd_cnt_reg_19" BEL "rd_cnt_reg_20" BEL
-        "rd_cnt_reg_21" BEL "rd_cnt_reg_22" BEL "rd_cnt_reg_23" BEL
-        "rd_cnt_reg_24" BEL "rd_cnt_reg_25" BEL "rd_cnt_reg_26" BEL
-        "rd_cnt_reg_27" BEL "rd_cnt_reg_28" BEL "rd_cnt_reg_29" BEL
-        "rd_cnt_reg_30" BEL "rd_cnt_reg_31" BEL
+TIMEGRP sys_clk_pin = BEL "fifo_ready" BEL "rd_cnt_reg_0" BEL "rd_cnt_reg_1"
+        BEL "rd_cnt_reg_2" BEL "rd_cnt_reg_3" BEL "rd_cnt_reg_4" BEL
+        "rd_cnt_reg_5" BEL "rd_cnt_reg_6" BEL "rd_cnt_reg_7" BEL
+        "rd_cnt_reg_8" BEL "rd_cnt_reg_9" BEL "rd_cnt_reg_10" BEL
+        "rd_cnt_reg_11" BEL "rd_cnt_reg_12" BEL "rd_cnt_reg_13" BEL
+        "rd_cnt_reg_14" BEL "rd_cnt_reg_15" BEL "rd_cnt_reg_16" BEL
+        "rd_cnt_reg_17" BEL "rd_cnt_reg_18" BEL "rd_cnt_reg_19" BEL
+        "rd_cnt_reg_20" BEL "rd_cnt_reg_21" BEL "rd_cnt_reg_22" BEL
+        "rd_cnt_reg_23" BEL "rd_cnt_reg_24" BEL "rd_cnt_reg_25" BEL
+        "rd_cnt_reg_26" BEL "rd_cnt_reg_27" BEL "rd_cnt_reg_28" BEL
+        "rd_cnt_reg_29" BEL "rd_cnt_reg_30" BEL "rd_cnt_reg_31" BEL
         "Inst_edge_detector_write_enable/signal_buffer" BEL
         "Inst_edge_detector_write_enable/edge_r" BEL
         "Inst_edge_detector_write_enable/edge_f" BEL
@@ -9784,12 +9784,12 @@ TIMEGRP Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "Inst_MB/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[9].ram32m_i_RAMD";
 PIN
-        Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<33>
+        Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<31>
         = BEL
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i"
         PINNAME CLKBL;
 PIN
-        Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<111>
+        Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<81>
         = BEL
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i"
         PINNAME REGCLKBL;
@@ -9837,12 +9837,12 @@ PIN
         Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i_pins<31>
         = BEL
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i"
-        PINNAME CLKBU;
+        PINNAME CLKBL;
 PIN
-        Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i_pins<109>
+        Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i_pins<81>
         = BEL
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i"
-        PINNAME REGCLKBU;
+        PINNAME REGCLKBL;
 PIN
         Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[6].GEN_VIRTEX4_RAM.ramb16_i_pins<31>
         = BEL
@@ -17439,9 +17439,9 @@ TIMEGRP Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 = BEL
         BEL
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC_BACKEND_CTRL/wrdata_fifo0/mem1/Mram_mem64/DP"
         PIN
-        "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<33>"
+        "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<31>"
         PIN
-        "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<111>"
+        "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i_pins<81>"
         PIN
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[1].GEN_VIRTEX4_RAM.ramb16_i_pins<31>"
         PIN
@@ -17461,7 +17461,7 @@ TIMEGRP Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 = BEL
         PIN
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i_pins<31>"
         PIN
-        "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i_pins<109>"
+        "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[5].GEN_VIRTEX4_RAM.ramb16_i_pins<81>"
         PIN
         "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[6].GEN_VIRTEX4_RAM.ramb16_i_pins<31>"
         PIN

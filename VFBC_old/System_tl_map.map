@@ -12,7 +12,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Mon Nov 19 15:37:49 2012
+Mapped Date    : Mon Nov 19 16:07:13 2012
 
 Mapping design into LUTs...
 WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
@@ -357,7 +357,7 @@ Total REAL time at the beginning of Placer: 46 secs
 Total CPU  time at the beginning of Placer: 45 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:df059c7) REAL time: 52 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f5141508) REAL time: 51 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:838 - An IO Bus with more than one IO standard is found.
@@ -391,19 +391,19 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
 INFO:Place:834 - Only a subset of IOs are locked. Out of 173 IOs, 172 are locked
    and 1 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:df059c7) REAL time: 52 secs 
+Phase 2.7  Design Feasibility Check (Checksum:f5141508) REAL time: 52 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:ab3d81df) REAL time: 52 secs 
+Phase 3.31  Local Placement Optimization (Checksum:531635c5) REAL time: 52 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:dd3b0b8c) REAL time: 52 secs 
+Phase 4.37  Local Placement Optimization (Checksum:49b493e0) REAL time: 52 secs 
 
 Phase 5.33  Local Placement Optimization
-Phase 5.33  Local Placement Optimization (Checksum:dd3b0b8c) REAL time: 1 mins 29 secs 
+Phase 5.33  Local Placement Optimization (Checksum:49b493e0) REAL time: 1 mins 29 secs 
 
 Phase 6.32  Local Placement Optimization
-Phase 6.32  Local Placement Optimization (Checksum:dd3b0b8c) REAL time: 1 mins 30 secs 
+Phase 6.32  Local Placement Optimization (Checksum:49b493e0) REAL time: 1 mins 30 secs 
 
 Phase 7.2  Initial Clock and IO Placement
 ....
@@ -659,56 +659,56 @@ WARNING:Place:644 - A clock IOB clock component is not placed at an optimal cloc
    was applied on COMP.PIN <cam_pclk.PAD> allowing your design to continue. This constraint disables all clock placer
    rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor
    timing results. It is recommended that this error condition be corrected in the design.
-Phase 7.2  Initial Clock and IO Placement (Checksum:16f33ea8) REAL time: 1 mins 33 secs 
+Phase 7.2  Initial Clock and IO Placement (Checksum:dd036f31) REAL time: 1 mins 33 secs 
 
 Phase 8.36  Local Placement Optimization
-Phase 8.36  Local Placement Optimization (Checksum:16f33ea8) REAL time: 1 mins 33 secs 
+Phase 8.36  Local Placement Optimization (Checksum:dd036f31) REAL time: 1 mins 33 secs 
 
 Phase 9.30  Global Clock Region Assignment
-Phase 9.30  Global Clock Region Assignment (Checksum:16f33ea8) REAL time: 1 mins 33 secs 
+Phase 9.30  Global Clock Region Assignment (Checksum:dd036f31) REAL time: 1 mins 33 secs 
 
 Phase 10.3  Local Placement Optimization
 ....
-Phase 10.3  Local Placement Optimization (Checksum:1b26905b) REAL time: 1 mins 33 secs 
+Phase 10.3  Local Placement Optimization (Checksum:e138d8b8) REAL time: 1 mins 34 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:7e9c5c38) REAL time: 1 mins 34 secs 
+Phase 11.5  Local Placement Optimization (Checksum:f7045481) REAL time: 1 mins 34 secs 
 
 Phase 12.8  Global Placement
-..................................................................................................................
-............
-...............................................................................................................................................................
-.......................
-.......................
+.................................................................................................................................
+..........
+........................................................................................................................................................................
 ................
-Phase 12.8  Global Placement (Checksum:bdf1f85f) REAL time: 2 mins 29 secs 
+................
+................
+Phase 12.8  Global Placement (Checksum:5d2fbf8c) REAL time: 2 mins 32 secs 
 
 Phase 13.29  Local Placement Optimization
-Phase 13.29  Local Placement Optimization (Checksum:bdf1f85f) REAL time: 2 mins 29 secs 
+Phase 13.29  Local Placement Optimization (Checksum:5d2fbf8c) REAL time: 2 mins 32 secs 
 
 Phase 14.5  Local Placement Optimization
-Phase 14.5  Local Placement Optimization (Checksum:bdf1f85f) REAL time: 2 mins 30 secs 
+Phase 14.5  Local Placement Optimization (Checksum:5d2fbf8c) REAL time: 2 mins 33 secs 
 
 Phase 15.18  Placement Optimization
-Phase 15.18  Placement Optimization (Checksum:7d954e55) REAL time: 3 mins 35 secs 
+Phase 15.18  Placement Optimization (Checksum:46088e) REAL time: 3 mins 36 secs 
 
 Phase 16.5  Local Placement Optimization
-Phase 16.5  Local Placement Optimization (Checksum:7d954e55) REAL time: 3 mins 36 secs 
+Phase 16.5  Local Placement Optimization (Checksum:46088e) REAL time: 3 mins 37 secs 
 
 Phase 17.34  Placement Validation
-Phase 17.34  Placement Validation (Checksum:7d954e55) REAL time: 3 mins 37 secs 
+Phase 17.34  Placement Validation (Checksum:46088e) REAL time: 3 mins 37 secs 
 
 Total REAL time to Placer completion: 3 mins 38 secs 
-Total CPU  time to Placer completion: 3 mins 35 secs 
+Total CPU  time to Placer completion: 3 mins 33 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal does
    not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is incomplete. The signal does not drive any load
-   pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is incomplete. The signal does not drive any load
+   pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is incomplete. The signal does not drive any load
    pins in the design.
 
 Design Summary
@@ -718,12 +718,12 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   88
 Slice Logic Utilization:
-  Number of Slice Registers:                 8,192 out of  69,120   11%
-    Number used as Flip Flops:               8,175
+  Number of Slice Registers:                 8,193 out of  69,120   11%
+    Number used as Flip Flops:               8,176
     Number used as Latch-thrus:                 17
-  Number of Slice LUTs:                      7,432 out of  69,120   10%
-    Number used as logic:                    6,949 out of  69,120   10%
-      Number using O6 output only:           6,446
+  Number of Slice LUTs:                      7,440 out of  69,120   10%
+    Number used as logic:                    6,955 out of  69,120   10%
+      Number using O6 output only:           6,452
       Number using O5 output only:             109
       Number using O5 and O6:                  394
     Number used as Memory:                     455 out of  17,920    2%
@@ -734,21 +734,21 @@ Slice Logic Utilization:
       Number used as Shift Register:           273
         Number using O6 output only:           272
         Number using O5 output only:             1
-    Number used as exclusive route-thru:        28
-  Number of route-thrus:                       155
-    Number using O6 output only:               134
-    Number using O5 output only:                18
+    Number used as exclusive route-thru:        30
+  Number of route-thrus:                       148
+    Number using O6 output only:               136
+    Number using O5 output only:                 9
     Number using O5 and O6:                      3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,108 out of  17,280   23%
-  Number of LUT Flip Flop pairs used:       10,909
-    Number with an unused Flip Flop:         2,717 out of  10,909   24%
-    Number with an unused LUT:               3,477 out of  10,909   31%
-    Number of fully used LUT-FF pairs:       4,715 out of  10,909   43%
+  Number of occupied Slices:                 4,303 out of  17,280   24%
+  Number of LUT Flip Flop pairs used:       11,123
+    Number with an unused Flip Flop:         2,930 out of  11,123   26%
+    Number with an unused LUT:               3,683 out of  11,123   33%
+    Number of fully used LUT-FF pairs:       4,510 out of  11,123   40%
     Number of unique control sets:           1,032
     Number of slice register sites lost
-      to control set restrictions:           2,310 out of  69,120    3%
+      to control set restrictions:           2,313 out of  69,120    3%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -764,8 +764,8 @@ IO Utilization:
     IOB Flip Flops:                            268
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      42 out of     148   28%
-    Number using BlockRAM only:                 42
+  Number of BlockRAM/FIFO:                      43 out of     148   29%
+    Number using BlockRAM only:                 43
     Total primitives used:
       Number of 36k BlockRAM used:              36
       Number of 18k BlockRAM used:               8
@@ -780,9 +780,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.67
 
-Peak Memory Usage:  1177 MB
-Total REAL time to MAP completion:  3 mins 49 secs 
-Total CPU time to MAP completion:   3 mins 46 secs 
+Peak Memory Usage:  1176 MB
+Total REAL time to MAP completion:  3 mins 50 secs 
+Total CPU time to MAP completion:   3 mins 44 secs 
 
 Mapping completed.
 See MAP report file "System_tl_map.mrp" for details.
