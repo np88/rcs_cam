@@ -89,7 +89,7 @@ begin
 
 	VFBC_Store: process (clk_i, rst_i)
 	begin
-		if (rst_i = '1') then
+		if (rst_i = '0') then
 			-- no writing in process
 			current_state <= WT_Init;		
 		elsif (clk_i'event and clk_i = '1') then
@@ -100,10 +100,9 @@ begin
 	VFBC_Control: process (rst_i, start_transaction_i, vsync_i_clock_edge, current_state)
 	begin
 		-- default instruction
-		if (rst_i = '1') then
+		if (rst_i = '0') then
 			next_state <= WT_Init;
 		else
-
 			case current_state is
 				when WT_Init =>
 					if (start_transaction_i = '1') then

@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Nov 19 14:24:59 2012
+Mon Nov 19 15:43:16 2012
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -338,7 +338,7 @@ AJ18|||VCCO_6|||6|||||2.50||||
 AJ19||IOBM|IO_L15P_6|UNUSED||6|||||||||
 AJ20||IOBS|IO_L8N_CC_6|UNUSED||6|||||||||
 AJ21||IOBM|IO_L8P_CC_6|UNUSED||6|||||||||
-AJ22|switches_i<0>|IOB|IO_L2N_6|INPUT|LVCMOS25*|6||||NONE||UNLOCATED|NO|NONE|
+AJ22||IOBS|IO_L2N_6|UNUSED||6|||||||||
 AJ23|||GND||||||||||||
 AJ24||IOBS|IO_L0N_6|UNUSED||6|||||||||
 AJ25||IOBM|IO_L12P_VRN_21|UNUSED||21|||||||||
@@ -406,7 +406,7 @@ AL19||IOBM|IO_L13P_6|UNUSED||6|||||||||
 AL20||IOBS|IO_L13N_6|UNUSED||6|||||||||
 AL21||IOBM|IO_L11P_CC_6|UNUSED||6|||||||||
 AL22|||VCCO_25|||25|||||any******||||
-AL23||IOBS|IO_L4N_VREF_6|UNUSED||6|||||||||
+AL23|switches_i<0>|IOB|IO_L4N_VREF_6|INPUT|LVCMOS25*|6||||NONE||UNLOCATED|NO|NONE|
 AL24||IOBS|IO_L11N_CC_25|UNUSED||25|||||||||
 AL25||IOBM|IO_L11P_CC_25|UNUSED||25|||||||||
 AL26||IOBS|IO_L9N_CC_25|UNUSED||25|||||||||

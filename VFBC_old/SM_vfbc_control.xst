@@ -1,0 +1,5 @@
+set -tmpdir "/DIST/home/peters/nadja_cam_repo/VFBC_old/xst/projnav.tmp"
+set -xsthdpdir "/DIST/home/peters/nadja_cam_repo/VFBC_old/xst"
+elaborate
+-ifn SM_vfbc_control.prj
+-ifmt mixed

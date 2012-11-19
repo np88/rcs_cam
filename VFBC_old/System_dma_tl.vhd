@@ -189,14 +189,14 @@ COMPONENT MB
 	signal fifo_rd_in_gpio: std_logic_vector(19 downto 0); 
 	signal rd_cnt, rd_cnt_reg : std_logic_vector(31 downto 0); 
 	signal counted, stop_counting, cam_href_edge, write_enable_edge_r, write_enable_edge_f, cam_vsyn_edge: std_logic := '0';
-
+	signal rd_cnt_reg_reverse : std_logic_vector(0 to 31);
 
 begin
 
 	-- edge detector to get positive edges from camera pixel clock signal
 	Inst_edge_detector: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
-		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
 		signal_i => cam_pclk,
 		edge_r => cam_pclk_edge,
 		edge_f => open
@@ -204,7 +204,7 @@ begin
 	
 	Inst_edge_detector_Button: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
-		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
 		signal_i => Push_Buttons_5Bit_GPIO_IO_I_pin(0),
 		edge_r => button_edge,
 		edge_f => open
@@ -212,7 +212,7 @@ begin
 	
 	Inst_edge_detector_HRef: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
-		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
 		signal_i => cam_href,
 		edge_r => cam_href_edge,
 		edge_f => open
@@ -220,7 +220,7 @@ begin
 	
 	Inst_edge_detector_VSync: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
-		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
 		signal_i => cam_vsyn,
 		edge_r => cam_vsyn_edge,
 		edge_f => open
@@ -228,7 +228,7 @@ begin
 	
 	Inst_edge_detector_write_enable: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
-		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
 		signal_i => write_enable,
 		edge_r => write_enable_edge_r,
 		edge_f => write_enable_edge_f
@@ -236,7 +236,7 @@ begin
 	
 	Inst_SM_vfbc_control: SM_vfbc_control PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
-		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		rst_i =>  fpga_0_rst_1_sys_rst_pin,
 		vsync_i => cam_vsyn,
 		start_transaction_i => button_edge, --center button
 		DDR2_SDRAM_VFBC2_Wd_Reset_pin_o => DDR2_SDRAM_VFBC2_Wd_Reset_pin,
@@ -270,7 +270,7 @@ begin
 		gpio_FIFO_rd_wr_en_O => gpio_FIFO_rd_wr_en_O,
 		xps_FIFO_data_rd_cnt_I => fifo_rd_in_gpio,
 		read_clk_fifo_O => fifo_read_clk,
-		xps_epc_0_PRH_Data_I_pin => rd_cnt_reg,
+		xps_epc_0_PRH_Data_I_pin => rd_cnt_reg_reverse,
 		xps_epc_0_PRH_CS_n_pin => xps_epc_0_PRH_CS_n_pin, -- inverted logic
 		xps_epc_0_PRH_Rdy_pin => fifo_ready, -- fifo is ready when it is not empty
 		xps_epc_0_PRH_Rst_pin => NOT fpga_0_rst_1_sys_rst_pin, -- inverted logic
@@ -329,6 +329,8 @@ begin
 			end if;
 		end if;			
 	end process store_rd_cnt;
+	
+	rd_cnt_reg_reverse(0 to 31) <= rd_cnt_reg(31 downto 0);
 	
 	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;

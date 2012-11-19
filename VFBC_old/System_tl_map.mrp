@@ -10,7 +10,7 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Mon Nov 19 14:19:31 2012
+Mapped Date    : Mon Nov 19 15:37:49 2012
 
 Design Summary
 --------------
@@ -20,11 +20,11 @@ Slice Logic Utilization:
   Number of Slice Registers:                 8,192 out of  69,120   11%
     Number used as Flip Flops:               8,175
     Number used as Latch-thrus:                 17
-  Number of Slice LUTs:                      7,436 out of  69,120   10%
-    Number used as logic:                    6,955 out of  69,120   10%
-      Number using O6 output only:           6,453
+  Number of Slice LUTs:                      7,432 out of  69,120   10%
+    Number used as logic:                    6,949 out of  69,120   10%
+      Number using O6 output only:           6,446
       Number using O5 output only:             109
-      Number using O5 and O6:                  393
+      Number using O5 and O6:                  394
     Number used as Memory:                     455 out of  17,920    2%
       Number used as Dual Port RAM:            182
         Number using O6 output only:             6
@@ -33,18 +33,18 @@ Slice Logic Utilization:
       Number used as Shift Register:           273
         Number using O6 output only:           272
         Number using O5 output only:             1
-    Number used as exclusive route-thru:        26
-  Number of route-thrus:                       150
-    Number using O6 output only:               132
-    Number using O5 output only:                15
+    Number used as exclusive route-thru:        28
+  Number of route-thrus:                       155
+    Number using O6 output only:               134
+    Number using O5 output only:                18
     Number using O5 and O6:                      3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,535 out of  17,280   26%
-  Number of LUT Flip Flop pairs used:       11,159
-    Number with an unused Flip Flop:         2,967 out of  11,159   26%
-    Number with an unused LUT:               3,723 out of  11,159   33%
-    Number of fully used LUT-FF pairs:       4,469 out of  11,159   40%
+  Number of occupied Slices:                 4,108 out of  17,280   23%
+  Number of LUT Flip Flop pairs used:       10,909
+    Number with an unused Flip Flop:         2,717 out of  10,909   24%
+    Number with an unused LUT:               3,477 out of  10,909   31%
+    Number of fully used LUT-FF pairs:       4,715 out of  10,909   43%
     Number of unique control sets:           1,032
     Number of slice register sites lost
       to control set restrictions:           2,310 out of  69,120    3%
@@ -63,8 +63,8 @@ IO Utilization:
     IOB Flip Flops:                            268
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      41 out of     148   27%
-    Number using BlockRAM only:                 41
+  Number of BlockRAM/FIFO:                      42 out of     148   28%
+    Number using BlockRAM only:                 42
     Total primitives used:
       Number of 36k BlockRAM used:              36
       Number of 18k BlockRAM used:               8
@@ -79,9 +79,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.67
 
-Peak Memory Usage:  1175 MB
-Total REAL time to MAP completion:  3 mins 48 secs 
-Total CPU time to MAP completion:   3 mins 44 secs 
+Peak Memory Usage:  1177 MB
+Total REAL time to MAP completion:  3 mins 49 secs 
+Total CPU time to MAP completion:   3 mins 46 secs 
 
 Table of Contents
 -----------------
@@ -470,9 +470,9 @@ WARNING:Place:644 - A clock IOB clock component is not placed at an optimal cloc
    was applied on COMP.PIN <cam_pclk.PAD> allowing your design to continue. This constraint disables all clock placer
    rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor
    timing results. It is recommended that this error condition be corrected in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal does
-   not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is incomplete. The signal does not drive any load
    pins in the design.

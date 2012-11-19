@@ -43,7 +43,7 @@ begin
 
 	detect: process (rst_i, clk_i)
 	begin
-		if (rst_i = '1') then
+		if (rst_i = '0') then
 			edge_r <= '0';
 			edge_f <= '0';
 			signal_buffer <= '0';

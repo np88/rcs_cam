@@ -1,0 +1,28 @@
+Command line:
+   vfbc_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50224
+
+Mon Nov 19 10:41:56 2012
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 189.809 Meg
+
+ Total Signals          : 28
+ Total Nets             : 45
+ Total Signal Drivers   : 14
+ Total Blocks           : 5
+ Total Primitive Blocks : 3
+ Total Processes        : 6
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 529
+
+ Total Simulation Time: 0.07 sec
+
+ Current Memory Usage: 197.157 Meg
+
+Mon Nov 19 10:42:50 2012
+
