@@ -106,6 +106,12 @@
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="dlmb_wrapper.ncf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="dlmb_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="dlmb_wrapper.vhd"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="edge_detector.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="edge_detector.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="edge_detector.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="edge_detector_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="edge_detector_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="edge_detector_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="elaborate"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="gpio_FIFO_wave.tcl"/>
@@ -157,9 +163,7 @@
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="push_buttons_5bit_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="top_level_ports_wave.tcl"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vfbc_test_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="vfbc_test_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="vfbc_test_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
@@ -196,7 +200,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353318085" xil_pn:in_ck="-672042689123492406" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1353318085">
+    <transform xil_pn:end_ts="1353329374" xil_pn:in_ck="-672042689123492406" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1353329374">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -212,11 +216,11 @@
       <outfile xil_pn:name="fifo_resetter.vhd"/>
       <outfile xil_pn:name="vfbc_test.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1353317781" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1971688607339700726" xil_pn:start_ts="1353317781">
+    <transform xil_pn:end_ts="1353329374" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1255283796879953519" xil_pn:start_ts="1353329374">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353317781" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2524089965343061092" xil_pn:start_ts="1353317781">
+    <transform xil_pn:end_ts="1353329374" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8400709465093191487" xil_pn:start_ts="1353329374">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -224,7 +228,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353318085" xil_pn:in_ck="-672042689123492406" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1353318085">
+    <transform xil_pn:end_ts="1353329374" xil_pn:in_ck="-672042689123492406" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1353329374">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -241,8 +245,9 @@
       <outfile xil_pn:name="fifo_resetter.vhd"/>
       <outfile xil_pn:name="vfbc_test.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1353318111" xil_pn:in_ck="-3679516079436020236" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5935615492501836375" xil_pn:start_ts="1353318085">
+    <transform xil_pn:end_ts="1353329430" xil_pn:in_ck="-3679516079436020236" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3604490696231219058" xil_pn:start_ts="1353329374">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
@@ -264,6 +269,8 @@
       <outfile xil_pn:name="dlmb_cntlr_wrapper.vhd"/>
       <outfile xil_pn:name="dlmb_wave.tcl"/>
       <outfile xil_pn:name="dlmb_wrapper.vhd"/>
+      <outfile xil_pn:name="edge_detector_beh.prj"/>
+      <outfile xil_pn:name="edge_detector_isim_beh.exe"/>
       <outfile xil_pn:name="elaborate"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="gpio_FIFO_wave.tcl"/>
@@ -302,8 +309,6 @@
       <outfile xil_pn:name="proc_sys_reset_0_wrapper.vhd"/>
       <outfile xil_pn:name="push_buttons_5bit_wrapper.vhd"/>
       <outfile xil_pn:name="top_level_ports_wave.tcl"/>
-      <outfile xil_pn:name="vfbc_test_beh.prj"/>
-      <outfile xil_pn:name="vfbc_test_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
       <outfile xil_pn:name="xilinxsim_edk.ini"/>
       <outfile xil_pn:name="xps_FIFO_cam_data_wave.tcl"/>
@@ -323,16 +328,16 @@
       <outfile xil_pn:name="xps_timer_0_wave.tcl"/>
       <outfile xil_pn:name="xps_timer_0_wrapper.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1353318111" xil_pn:in_ck="-5213187832851920625" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="9207158898423498657" xil_pn:start_ts="1353318111">
+    <transform xil_pn:end_ts="1353329431" xil_pn:in_ck="-1534372488520509044" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="550264644635458090" xil_pn:start_ts="1353329430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="edge_detector_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="vfbc_test_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1352294597" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1352294597">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -388,7 +393,7 @@
       <outfile xil_pn:name="xps_intc_0_wrapper.ngc"/>
       <outfile xil_pn:name="xps_timer_0_wrapper.ngc"/>
     </transform>
-    <transform xil_pn:end_ts="1353324450" xil_pn:in_ck="-2548786237412265462" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-2632313822235235444" xil_pn:start_ts="1353324261">
+    <transform xil_pn:end_ts="1353331083" xil_pn:in_ck="-2548786237412265462" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-2632313822235235444" xil_pn:start_ts="1353330890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -411,7 +416,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353324534" xil_pn:in_ck="7778768381263046206" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="562122541292661679" xil_pn:start_ts="1353324450">
+    <transform xil_pn:end_ts="1353331166" xil_pn:in_ck="7778768381263046206" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="562122541292661679" xil_pn:start_ts="1353331083">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -422,10 +427,12 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1353324769" xil_pn:in_ck="2607527803202725932" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1353324534">
+    <transform xil_pn:end_ts="1353331401" xil_pn:in_ck="2607527803202725932" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1353331166">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="System_tl.pcf"/>
       <outfile xil_pn:name="System_tl_map.map"/>
       <outfile xil_pn:name="System_tl_map.mrp"/>
@@ -436,7 +443,7 @@
       <outfile xil_pn:name="System_tl_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1353324901" xil_pn:in_ck="2037107766048288069" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1353324769">
+    <transform xil_pn:end_ts="1353331538" xil_pn:in_ck="2037107766048288069" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1353331401">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -451,7 +458,7 @@
       <outfile xil_pn:name="System_tl_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1353325003" xil_pn:in_ck="-2841865824881932921" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="-4008143788065839743" xil_pn:start_ts="1353324901">
+    <transform xil_pn:end_ts="1353331640" xil_pn:in_ck="-2841865824881932921" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="-4008143788065839743" xil_pn:start_ts="1353331538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -464,7 +471,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1353325011" xil_pn:in_ck="7130501177761801108" xil_pn:name="TRAN_exportToSDK" xil_pn:prop_ck="4296800" xil_pn:start_ts="1353325003">
+    <transform xil_pn:end_ts="1353332093" xil_pn:in_ck="7130501177761801108" xil_pn:name="TRAN_exportToSDK" xil_pn:prop_ck="4296800" xil_pn:start_ts="1353332085">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -474,7 +481,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1353324901" xil_pn:in_ck="2607527803202725800" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1353324868">
+    <transform xil_pn:end_ts="1353331538" xil_pn:in_ck="2607527803202725800" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1353331504">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="System_tl.twr"/>

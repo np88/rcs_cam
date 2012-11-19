@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Nov 19 12:34:24 2012
+Mon Nov 19 14:24:59 2012
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -338,7 +338,7 @@ AJ18|||VCCO_6|||6|||||2.50||||
 AJ19||IOBM|IO_L15P_6|UNUSED||6|||||||||
 AJ20||IOBS|IO_L8N_CC_6|UNUSED||6|||||||||
 AJ21||IOBM|IO_L8P_CC_6|UNUSED||6|||||||||
-AJ22||IOBS|IO_L2N_6|UNUSED||6|||||||||
+AJ22|switches_i<0>|IOB|IO_L2N_6|INPUT|LVCMOS25*|6||||NONE||UNLOCATED|NO|NONE|
 AJ23|||GND||||||||||||
 AJ24||IOBS|IO_L0N_6|UNUSED||6|||||||||
 AJ25||IOBM|IO_L12P_VRN_21|UNUSED||21|||||||||
@@ -371,7 +371,7 @@ AK18||IOBM|IO_L14P_6|UNUSED||6|||||||||
 AK19||IOBS|IO_L15N_6|UNUSED||6|||||||||
 AK20|||GND||||||||||||
 AK21||IOBS|IO_L11N_CC_6|UNUSED||6|||||||||
-AK22|switches_i<0>|IOB|IO_L6N_6|INPUT|LVCMOS25*|6||||NONE||UNLOCATED|NO|NONE|
+AK22||IOBS|IO_L6N_6|UNUSED||6|||||||||
 AK23||IOBM|IO_L6P_6|UNUSED||6|||||||||
 AK24||IOBM|IO_L4P_6|UNUSED||6|||||||||
 AK25|||VCCO_25|||25|||||any******||||

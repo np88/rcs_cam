@@ -33,7 +33,8 @@ entity edge_detector is
     Port ( clk_i : in  STD_LOGIC;
 			  rst_i : in  STD_LOGIC;
            signal_i : in  STD_LOGIC;
-           edge_o : out  STD_LOGIC);
+           edge_r : out  STD_LOGIC;
+			  edge_f : out  STD_LOGIC);
 end edge_detector;
 
 architecture Behavioral of edge_detector is
@@ -43,15 +44,22 @@ begin
 	detect: process (rst_i, clk_i)
 	begin
 		if (rst_i = '1') then
-			edge_o <= '0';
+			edge_r <= '0';
+			edge_f <= '0';
 			signal_buffer <= '0';
 		else
 			if (clk_i'event and clk_i = '1') then
-				if (signal_buffer = '0' and signal_i = '1') then 
-					edge_o <= '1';
+				if (signal_buffer = '0' and signal_i = '1') then
+					edge_r <= '1';
 				else
-					edge_o <= '0';
+					edge_r <= '0';
 				end if;
+				if (signal_buffer = '1' and signal_i = '0') then
+					edge_f <= '1';
+				else
+					edge_f <= '0';
+				end if;
+
 				signal_buffer <= signal_i;	
 			end if;
 		end if;

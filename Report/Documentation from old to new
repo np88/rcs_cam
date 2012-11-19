@@ -44,3 +44,6 @@ Every step in changing the design of VFCB_old will be documented.
 11) recompile
 
 12) added process to count href signal from camera and added software accordingly
+
+13) changed process to count href signal such that the last counted value is stored
+	changed edge detector so that is emits falling and rising edges

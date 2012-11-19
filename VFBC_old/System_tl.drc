@@ -1,22 +1,19 @@
 Release 13.4 Drc O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Nov 19 12:35:14 2012
+Mon Nov 19 14:25:50 2012
 
 drc -z System_tl.ncd System_tl.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net stop_counting_and0000 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
    <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is
-   incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is
    incomplete. The signal does not drive any load pins in the design.
-DRC detected 0 errors and 5 warnings.  Please see the previously displayed
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is
+   incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 4 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

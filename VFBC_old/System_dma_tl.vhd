@@ -78,7 +78,8 @@ architecture Behavioral of System_tl is
 		clk_i : IN std_logic;
 		rst_i : IN std_logic;
 		signal_i : IN std_logic;          
-		edge_o : OUT std_logic
+		edge_f : OUT std_logic;
+		edge_r : OUT std_logic
 		);
 	END COMPONENT;
 	
@@ -186,8 +187,8 @@ COMPONENT MB
 	signal gpio_FIFO_rd_wr_en_O : std_logic_vector(1 downto 0); 
 	signal epc_data_o, epc_data_i: std_logic_vector(31 downto 0); 
 	signal fifo_rd_in_gpio: std_logic_vector(19 downto 0); 
-	signal rd_cnt : std_logic_vector(31 downto 0); 
-	signal counted, stop_counting: std_logic := '0';
+	signal rd_cnt, rd_cnt_reg : std_logic_vector(31 downto 0); 
+	signal counted, stop_counting, cam_href_edge, write_enable_edge_r, write_enable_edge_f, cam_vsyn_edge: std_logic := '0';
 
 
 begin
@@ -197,15 +198,41 @@ begin
 		clk_i => fpga_0_clk_1_sys_clk_pin,
 		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
 		signal_i => cam_pclk,
-		edge_o => cam_pclk_edge
+		edge_r => cam_pclk_edge,
+		edge_f => open
 	);
 	
 	Inst_edge_detector_Button: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
 		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
 		signal_i => Push_Buttons_5Bit_GPIO_IO_I_pin(0),
-		edge_o => button_edge
+		edge_r => button_edge,
+		edge_f => open
 	);
+	
+	Inst_edge_detector_HRef: edge_detector PORT MAP(
+		clk_i => fpga_0_clk_1_sys_clk_pin,
+		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		signal_i => cam_href,
+		edge_r => cam_href_edge,
+		edge_f => open
+	);
+	
+	Inst_edge_detector_VSync: edge_detector PORT MAP(
+		clk_i => fpga_0_clk_1_sys_clk_pin,
+		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		signal_i => cam_vsyn,
+		edge_r => cam_vsyn_edge,
+		edge_f => open
+	);	
+	
+	Inst_edge_detector_write_enable: edge_detector PORT MAP(
+		clk_i => fpga_0_clk_1_sys_clk_pin,
+		rst_i => NOT fpga_0_rst_1_sys_rst_pin,
+		signal_i => write_enable,
+		edge_r => write_enable_edge_r,
+		edge_f => write_enable_edge_f
+	);	
 	
 	Inst_SM_vfbc_control: SM_vfbc_control PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
@@ -243,7 +270,7 @@ begin
 		gpio_FIFO_rd_wr_en_O => gpio_FIFO_rd_wr_en_O,
 		xps_FIFO_data_rd_cnt_I => fifo_rd_in_gpio,
 		read_clk_fifo_O => fifo_read_clk,
-		xps_epc_0_PRH_Data_I_pin => rd_cnt,
+		xps_epc_0_PRH_Data_I_pin => rd_cnt_reg,
 		xps_epc_0_PRH_CS_n_pin => xps_epc_0_PRH_CS_n_pin, -- inverted logic
 		xps_epc_0_PRH_Rdy_pin => fifo_ready, -- fifo is ready when it is not empty
 		xps_epc_0_PRH_Rst_pin => NOT fpga_0_rst_1_sys_rst_pin, -- inverted logic
@@ -280,18 +307,28 @@ begin
 	begin
 		if (fpga_0_rst_1_sys_rst_pin = '0') then
 			rd_cnt <= (others => '0');
-			counted <= '0';
-			stop_counting <= '0';
 		else
-			if (stop_counting <= '0' and cam_href = '1' and write_enable = '1') then
-				counted <= '1';
-				rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
-			elsif (counted = '1' and write_enable = '0') then
-				stop_counting <= '1';
+			if fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then
+				if (write_enable_edge_r = '1') then
+					rd_cnt <= (others => '0');
+				elsif (cam_href_edge = '1' and write_enable = '1') then
+					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
+				end if;
 			end if;
 		end if;
-			
 	end process dubug;
+		
+	-- debug process to store current count
+	store_rd_cnt: process (fpga_0_clk_1_sys_clk_pin, write_enable_edge_f)
+	begin
+		if (fpga_0_rst_1_sys_rst_pin = '0') then
+			rd_cnt_reg <= (others => '0');
+		elsif fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then 
+			if (write_enable_edge_f = '1') then
+				rd_cnt_reg <= rd_cnt;
+			end if;
+		end if;			
+	end process store_rd_cnt;
 	
 	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;
@@ -305,7 +342,7 @@ begin
 	fifo_rd_en_i <= NOT xps_epc_0_PRH_CS_n_pin;
 	LEDs_Positions_GPIO_IO_O_pin(2) <= DDR2_SDRAM_VFBC2_Cmd_Full_pin; -- south
 	LEDs_Positions_GPIO_IO_O_pin(3) <= DDR2_SDRAM_VFBC2_Cmd_Idle_pin; -- east
-	LEDs_Positions_GPIO_IO_O_pin(4) <= DDR2_SDRAM_VFBC2_Wd_Write_pin; --north
+	LEDs_Positions_GPIO_IO_O_pin(4) <= fpga_0_rst_1_sys_rst_pin; --north
 	LEDs_8Bit_GPIO_IO_O_pin <= fifo_data_out(7 downto 0);
 	--LEDs_Positions_GPIO_IO_O_pin(1) <= cam_pclk;
 

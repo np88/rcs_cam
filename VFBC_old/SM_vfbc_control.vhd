@@ -49,7 +49,8 @@ architecture Behavioral of SM_vfbc_control is
 		clk_i : IN std_logic;
 		rst_i : IN std_logic;
 		signal_i : IN std_logic;          
-		edge_o : OUT std_logic
+		edge_r : OUT std_logic;
+		edge_f : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -82,7 +83,8 @@ begin
 		clk_i => clk_i,
 		rst_i => rst_i,
 		signal_i => vsync_i,
-		edge_o => vsync_i_clock_edge
+		edge_r => vsync_i_clock_edge,
+		edge_f => open
 	);
 
 	VFBC_Store: process (clk_i, rst_i)
