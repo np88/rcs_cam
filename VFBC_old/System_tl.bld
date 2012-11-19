@@ -597,7 +597,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 192
 
-Total memory usage is 596668 kilobytes
+Total memory usage is 598424 kilobytes
 
 Writing NGD file "System_tl.ngd" ...
 Total REAL time to NGDBUILD completion: 1 min  18 sec

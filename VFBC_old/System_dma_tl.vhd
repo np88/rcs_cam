@@ -65,7 +65,9 @@ entity System_tl is port (
 		fpga_0_DDR2_SDRAM_DDR2_DM_pin : OUT std_logic_vector(7 downto 0);
 		LEDs_Positions_GPIO_IO_O_pin : OUT std_logic_vector(4 downto 0);
 		LEDs_8Bit_GPIO_IO_O_pin : OUT std_logic_vector(7 downto 0);
-		test : OUT STD_LOGIC
+		test1 : OUT STD_LOGIC;
+		test2 : OUT STD_LOGIC;
+		test3 : OUT STD_LOGIC
   );
 end System_tl;
 
@@ -251,7 +253,7 @@ begin
 		DDR2_SDRAM_VFBC2_Cmd_Full_pin => DDR2_SDRAM_VFBC2_Cmd_Full_pin,
 		DDR2_SDRAM_VFBC2_Cmd_Almost_Full_pin => open,
 		DDR2_SDRAM_VFBC2_Cmd_Idle_pin => DDR2_SDRAM_VFBC2_Cmd_Idle_pin,
-		DDR2_SDRAM_VFBC2_Wd_Clk_pin => fpga_0_clk_1_sys_clk_pin,
+		DDR2_SDRAM_VFBC2_Wd_Clk_pin => cam_pclk,
 		DDR2_SDRAM_VFBC2_Wd_Reset_pin => DDR2_SDRAM_VFBC2_Wd_Reset_pin,
 		DDR2_SDRAM_VFBC2_Wd_Write_pin => DDR2_SDRAM_VFBC2_Wd_Write_pin,
 		DDR2_SDRAM_VFBC2_Wd_End_Burst_pin => '0',
@@ -287,8 +289,10 @@ begin
 --	end process dubug;
 	
 	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
-	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and cam_pclk_edge and write_enable;
-	test <= cam_href and cam_pclk_edge;
+	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;
+	test1 <= cam_href and cam_pclk_edge;
+	test2 <= cam_href and cam_pclk;
+	test3 <= write_enable;
 	
 	fifo_rd_in_gpio(14 downto 0) <= fifo_rd_data_count;
 	--wr_en_i <= Push_Buttons_5Bit_GPIO_IO_I_pin(4) and gpio_camera_IO(7);

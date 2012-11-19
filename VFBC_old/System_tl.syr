@@ -4,15 +4,15 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Reading design: System_tl.prj
@@ -142,10 +142,10 @@ Analyzing hierarchy for entity <edge_detector> in library <work> (architecture <
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <System_tl> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 219: Unconnected output port 'DDR2_SDRAM_VFBC2_Cmd_Almost_Full_pin' of component 'MB'.
-WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 219: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Data_pin' of component 'MB'.
-WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 219: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Empty_pin' of component 'MB'.
-WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 219: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin' of component 'MB'.
+WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 221: Unconnected output port 'DDR2_SDRAM_VFBC2_Cmd_Almost_Full_pin' of component 'MB'.
+WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 221: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Data_pin' of component 'MB'.
+WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 221: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Empty_pin' of component 'MB'.
+WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 221: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin' of component 'MB'.
 Entity <System_tl> analyzed. Unit <System_tl> generated.
 
 Analyzing Entity <edge_detector> in library <work> (Architecture <behavioral>).
@@ -433,16 +433,16 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 171
+# IOs                              : 173
 
 Cell Usage :
-# BELS                             : 9578
+# BELS                             : 9579
 #      BUF                         : 43
 #      GND                         : 23
 #      INV                         : 203
 #      LUT1                        : 121
-#      LUT2                        : 957
-#      LUT3                        : 1357
+#      LUT2                        : 959
+#      LUT3                        : 1356
 #      LUT4                        : 1057
 #      LUT5                        : 1579
 #      LUT6                        : 2241
@@ -488,14 +488,14 @@ Cell Usage :
 #      SRL16E                      : 32
 #      SRLC16E                     : 256
 #      SRLC32E                     : 49
-# Clock Buffers                    : 9
-#      BUFG                        : 8
+# Clock Buffers                    : 10
+#      BUFG                        : 9
 #      BUFGP                       : 1
-# IO Buffers                       : 139
+# IO Buffers                       : 141
 #      IBUF                        : 17
 #      IOBUF                       : 64
 #      IOBUFDS                     : 8
-#      OBUF                        : 48
+#      OBUF                        : 50
 #      OBUFDS                      : 2
 # DSPs                             : 3
 #      DSP48E                      : 3
@@ -515,8 +515,8 @@ Selected Device : 5vlx110tff1136-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:            9870  out of  69120    14%  
- Number of Slice LUTs:                 8230  out of  69120    11%  
-    Number used as Logic:              7594  out of  69120    10%  
+ Number of Slice LUTs:                 8231  out of  69120    11%  
+    Number used as Logic:              7595  out of  69120    10%  
     Number used as Memory:              636  out of  17920     3%  
        Number used as RAM:              270
        Number used as SRL:              366
@@ -524,18 +524,18 @@ Slice Logic Utilization:
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:  13878
    Number with an unused Flip Flop:    4008  out of  13878    28%  
-   Number with an unused LUT:          5648  out of  13878    40%  
-   Number of fully used LUT-FF pairs:  4222  out of  13878    30%  
+   Number with an unused LUT:          5647  out of  13878    40%  
+   Number of fully used LUT-FF pairs:  4223  out of  13878    30%  
    Number of unique control sets:      1142
 
 IO Utilization: 
- Number of IOs:                         171
- Number of bonded IOBs:                 150  out of    640    23%  
+ Number of IOs:                         173
+ Number of bonded IOBs:                 152  out of    640    23%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               40  out of    148    27%  
     Number using Block RAM only:         40
- Number of BUFG/BUFGCTRLs:                9  out of     32    28%  
+ Number of BUFG/BUFGCTRLs:               10  out of     32    31%  
  Number of DSP48Es:                       3  out of     64     4%  
  Number of PLL_ADVs:                      1  out of      6    16%  
 
@@ -573,7 +573,8 @@ Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/dqs_ibuf(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce)| 1     |
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/dqs_ibuf(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)| 1     |
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/dqs_ibuf(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)| 1     |
-fpga_0_clk_1_sys_clk_pin                                                                                                                                                                                                                                | BUFGP                                                                                                                                 | 127   |
+fpga_0_clk_1_sys_clk_pin                                                                                                                                                                                                                                | BUFGP                                                                                                                                 | 59    |
+cam_pclk                                                                                                                                                                                                                                                | IBUF+BUFG                                                                                                                             | 68    |
 LEDs_8Bit_GPIO_IO_O_pin_0_OBUF                                                                                                                                                                                                                          | NONE(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/npi_init_done_rd_dly_0)                                              | 68    |
 Inst_MB/N0                                                                                                                                                                                                                                              | NONE(Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0)                                                            | 2     |
 Inst_MB/xps_timer_0/Interrupt                                                                                                                                                                                                                           | NONE(Inst_MB/xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync_3)                                                                           | 1     |
@@ -619,9 +620,9 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 7.244ns (Maximum Frequency: 138.052MHz)
-   Minimum input arrival time before clock: 4.518ns
+   Minimum input arrival time before clock: 4.390ns
    Maximum output required time after clock: 8.043ns
-   Maximum combinational path delay: 4.426ns
+   Maximum combinational path delay: 4.298ns
 
 Timing Detail:
 --------------
@@ -764,14 +765,38 @@ Delay:               1.381ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
+  Clock period: 4.256ns (frequency: 234.962MHz)
+  Total number of paths / destination ports: 432 / 105
+-------------------------------------------------------------------------
+Delay:               4.256ns (Levels of Logic = 3)
+  Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_0 (FF)
+  Destination:       Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/prod_a_int_0 (FF)
+  Source Clock:      fpga_0_clk_1_sys_clk_pin rising
+  Destination Clock: fpga_0_clk_1_sys_clk_pin rising
+
+  Data Path: Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_0 to Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/prod_a_int_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.471   0.794  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_0 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<0>)
+     LUT4:I0->O            3   0.094   0.721  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/enable_SW0 (N259)
+     LUT5:I2->O            2   0.094   1.074  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/enable (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/Prod_Enable)
+     LUT6:I0->O            2   0.094   0.341  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/prod_a_int_or00001 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/prod_a_int_or0000)
+     FDRE:R                    0.573          DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/prod_a_int_0
+    ----------------------------------------
+    Total                      4.256ns (1.326ns logic, 2.930ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cam_pclk'
   Clock period: 4.530ns (frequency: 220.751MHz)
-  Total number of paths / destination ports: 2203 / 351
+  Total number of paths / destination ports: 1635 / 246
 -------------------------------------------------------------------------
 Delay:               4.530ns (Levels of Logic = 4)
   Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 (FF)
   Destination:       Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0 (FF)
-  Source Clock:      fpga_0_clk_1_sys_clk_pin rising
-  Destination Clock: fpga_0_clk_1_sys_clk_pin rising
+  Source Clock:      cam_pclk rising
+  Destination Clock: cam_pclk rising
 
   Data Path: Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 to Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0
                                 Gate     Net
@@ -1031,20 +1056,20 @@ Offset:              0.341ns (Levels of Logic = 0)
                                        (0.0% logic, 100.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 82 / 82
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cam_pclk'
+  Total number of paths / destination ports: 76 / 76
 -------------------------------------------------------------------------
-Offset:              4.518ns (Levels of Logic = 6)
+Offset:              4.390ns (Levels of Logic = 6)
   Source:            cam_href (PAD)
   Destination:       Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0 (FF)
-  Destination Clock: fpga_0_clk_1_sys_clk_pin rising
+  Destination Clock: cam_pclk rising
 
   Data Path: cam_href to Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.818   0.715  cam_href_IBUF (cam_href_IBUF)
-     LUT3:I0->O            3   0.094   0.491  DDR2_SDRAM_VFBC2_Wd_Write_pin1 (LEDs_Positions_GPIO_IO_O_pin_4_OBUF)
+     IBUF:I->O             3   0.818   0.587  cam_href_IBUF (cam_href_IBUF)
+     LUT2:I0->O            3   0.094   0.491  DDR2_SDRAM_VFBC2_Wd_Write_pin1 (LEDs_Positions_GPIO_IO_O_pin_4_OBUF)
      begin scope: 'Inst_MB'
      begin scope: 'DDR2_SDRAM'
      LUT4:I3->O            1   0.094   0.576  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/Prod_M<2>_SW0 (N261)
@@ -1052,8 +1077,8 @@ Offset:              4.518ns (Levels of Logic = 6)
      LUT2:I1->O            6   0.094   0.363  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_or00001 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_or0000)
      FDRE:R                    0.573          DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0
     ----------------------------------------
-    Total                      4.518ns (1.767ns logic, 2.751ns route)
-                                       (39.1% logic, 60.9% route)
+    Total                      4.390ns (1.767ns logic, 2.623ns route)
+                                       (40.3% logic, 59.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_MB/mdm_0/bscan_update1'
@@ -1075,6 +1100,26 @@ Offset:              1.788ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      1.788ns (1.414ns logic, 0.374ns route)
                                        (79.1% logic, 20.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_0_clk_1_sys_clk_pin'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              1.403ns (Levels of Logic = 2)
+  Source:            Push_Buttons_5Bit_GPIO_IO_I_pin<0> (PAD)
+  Destination:       Inst_edge_detector_Button/edge_o (FF)
+  Destination Clock: fpga_0_clk_1_sys_clk_pin rising
+
+  Data Path: Push_Buttons_5Bit_GPIO_IO_I_pin<0> to Inst_edge_detector_Button/edge_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.818   0.491  Push_Buttons_5Bit_GPIO_IO_I_pin_0_IBUF (Push_Buttons_5Bit_GPIO_IO_I_pin_0_IBUF)
+     LUT2:I1->O            1   0.094   0.000  Inst_edge_detector_Button/edge_o_and00001 (Inst_edge_detector_Button/edge_o_and0000)
+     FDC:D                    -0.018          Inst_edge_detector_Button/edge_o
+    ----------------------------------------
+    Total                      1.403ns (0.912ns logic, 0.491ns route)
+                                       (65.0% logic, 35.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_MB/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT2'
@@ -1099,27 +1144,26 @@ Offset:              3.395ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 31 / 6
+  Total number of paths / destination ports: 14 / 6
 -------------------------------------------------------------------------
-Offset:              5.682ns (Levels of Logic = 5)
-  Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 (FF)
-  Destination:       LEDs_Positions_GPIO_IO_O_pin<0> (PAD)
+Offset:              5.041ns (Levels of Logic = 4)
+  Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_0 (FF)
+  Destination:       LEDs_Positions_GPIO_IO_O_pin<2> (PAD)
   Source Clock:      fpga_0_clk_1_sys_clk_pin rising
 
-  Data Path: Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 to LEDs_Positions_GPIO_IO_O_pin<0>
+  Data Path: Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_0 to LEDs_Positions_GPIO_IO_O_pin<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.471   1.074  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<4>)
-     LUT6:I0->O            1   0.094   0.576  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/enable52 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/enable52)
-     LUT6:I4->O            3   0.094   0.491  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/enable148 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/Prod_Enable)
-     LUT2:I1->O            1   0.094   0.336  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/wd0_full1 (VFBC2_Wd_Full)
+     FDRE:C->Q             2   0.471   0.794  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_0 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<0>)
+     LUT4:I0->O            3   0.094   0.800  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ObjFifo_prod_ctl_comp/enable_SW0 (N259)
+     LUT6:I2->O            1   0.094   0.336  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/cmd0_full1 (VFBC2_Cmd_Full)
      end scope: 'DDR2_SDRAM'
      end scope: 'Inst_MB'
-     OBUF:I->O                 2.452          LEDs_Positions_GPIO_IO_O_pin_0_OBUF (LEDs_Positions_GPIO_IO_O_pin<0>)
+     OBUF:I->O                 2.452          LEDs_Positions_GPIO_IO_O_pin_2_OBUF (LEDs_Positions_GPIO_IO_O_pin<2>)
     ----------------------------------------
-    Total                      5.682ns (3.205ns logic, 2.477ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                      5.041ns (3.111ns logic, 1.930ns route)
+                                       (61.7% logic, 38.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_MB/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT1'
@@ -1141,6 +1185,30 @@ Offset:              3.395ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      3.395ns (3.059ns logic, 0.336ns route)
                                        (90.1% logic, 9.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cam_pclk'
+  Total number of paths / destination ports: 17 / 1
+-------------------------------------------------------------------------
+Offset:              5.682ns (Levels of Logic = 5)
+  Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 (FF)
+  Destination:       LEDs_Positions_GPIO_IO_O_pin<0> (PAD)
+  Source Clock:      cam_pclk rising
+
+  Data Path: Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 to LEDs_Positions_GPIO_IO_O_pin<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.471   1.074  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/GrayObjPtr_4 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<4>)
+     LUT6:I0->O            1   0.094   0.576  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/enable52 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/enable52)
+     LUT6:I4->O            3   0.094   0.491  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ObjFifo_prod_ctl_comp/enable148 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/Prod_Enable)
+     LUT2:I1->O            1   0.094   0.336  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/wd0_full1 (VFBC2_Wd_Full)
+     end scope: 'DDR2_SDRAM'
+     end scope: 'Inst_MB'
+     OBUF:I->O                 2.452          LEDs_Positions_GPIO_IO_O_pin_0_OBUF (LEDs_Positions_GPIO_IO_O_pin<0>)
+    ----------------------------------------
+    Total                      5.682ns (3.205ns logic, 2.477ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_MB/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0'
@@ -1380,9 +1448,9 @@ Offset:              6.391ns (Levels of Logic = 11)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 205 / 205
+  Total number of paths / destination ports: 207 / 206
 -------------------------------------------------------------------------
-Delay:               4.426ns (Levels of Logic = 3)
+Delay:               4.298ns (Levels of Logic = 3)
   Source:            cam_href (PAD)
   Destination:       LEDs_Positions_GPIO_IO_O_pin<4> (PAD)
 
@@ -1390,23 +1458,23 @@ Delay:               4.426ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.818   0.715  cam_href_IBUF (cam_href_IBUF)
-     LUT3:I0->O            3   0.094   0.347  DDR2_SDRAM_VFBC2_Wd_Write_pin1 (LEDs_Positions_GPIO_IO_O_pin_4_OBUF)
+     IBUF:I->O             3   0.818   0.587  cam_href_IBUF (cam_href_IBUF)
+     LUT2:I0->O            3   0.094   0.347  DDR2_SDRAM_VFBC2_Wd_Write_pin1 (LEDs_Positions_GPIO_IO_O_pin_4_OBUF)
      OBUF:I->O                 2.452          LEDs_Positions_GPIO_IO_O_pin_4_OBUF (LEDs_Positions_GPIO_IO_O_pin<4>)
     ----------------------------------------
-    Total                      4.426ns (3.364ns logic, 1.062ns route)
-                                       (76.0% logic, 24.0% route)
+    Total                      4.298ns (3.364ns logic, 0.934ns route)
+                                       (78.3% logic, 21.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 182.00 secs
-Total CPU time to Xst completion: 179.14 secs
+Total REAL time to Xst completion: 178.00 secs
+Total CPU time to Xst completion: 174.37 secs
  
 --> 
 
 
-Total memory usage is 853464 kilobytes
+Total memory usage is 853560 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   36 (   0 filtered)

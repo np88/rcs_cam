@@ -102,12 +102,13 @@ begin
 		if (rst_i = '1') then
 			next_state <= WT_Init;
 		else
-			next_state <= current_state;
-		
+
 			case current_state is
 				when WT_Init =>
 					if (start_transaction_i = '1') then
 						next_state <= WT_RESET_VFBC;
+					else
+						next_state <= WT_Init;
 					end if;
 				when WT_RESET_VFBC =>
 					next_state <= WT_RESET_SECOND_CYCLE;
@@ -136,14 +137,20 @@ begin
 				when WT_WAIT_FOR_VSYNC =>
 					if (vsync_i_clock_edge = '1') then 
 						next_state <= WT_WRITE_ENABLE;
+					else
+						next_state <= WT_WAIT_FOR_VSYNC;
 					end if;
 				when WT_WRITE_ENABLE =>
 					if (vsync_i_clock_edge = '1') then 
 						next_state <= WT_WRITE_DISBALE;
+					else
+						next_state <= WT_WRITE_ENABLE;
 					end if;		
 				when WT_WRITE_DISBALE =>
 					if (start_transaction_i = '1') then
 						next_state <= WT_Init;
+					else 
+						next_state <= WT_WRITE_DISBALE;
 					end if;
 				when others =>
 					next_state <= WT_Init;

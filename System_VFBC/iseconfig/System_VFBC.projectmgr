@@ -11,13 +11,13 @@
          <ClosedNode>/fifo_resetter - Behavioral |DIST|home|peters|cam_repo|System_VFBC|fifo_resetter.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>System_tl - Behavioral (/DIST/home/peters/nadja_cam_repo/System_VFBC/System_dma_tl.vhd)</SelectedItem>
+         <SelectedItem>Inst_MB - MB (/DIST/home/peters/nadja_cam_repo/System_VFBC/MB/MB.xmp)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000249000000020000000000000000000000000200000064ffffffff000000810000000300000002000002490000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>System_tl - Behavioral (/DIST/home/peters/nadja_cam_repo/System_VFBC/System_dma_tl.vhd)</CurrentItem>
+      <CurrentItem>Inst_MB - MB (/DIST/home/peters/nadja_cam_repo/System_VFBC/MB/MB.xmp)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -31,13 +31,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Design Summary/Reports</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000028c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000028c0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Design Summary/Reports</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>

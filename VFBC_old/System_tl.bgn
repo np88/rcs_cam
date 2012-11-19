@@ -6,7 +6,7 @@ Loading device for application Rf_Device from file '5vlx110t.nph' in environment
 -1
 Opened constraints file System_tl.pcf.
 
-Wed Nov  7 17:49:55 2012
+Fri Nov 16 13:56:39 2012
 
 /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -filter iseconfig/filter.filter -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:2 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g DonePin:PullUp -g InitPin:Pullup -g CsPin:Pullup -g DinPin:Pullup -g BusyPin:Pullup -g RdWrPin:Pullup -g HswapenPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ConfigFallback:Enable -g SelectMAPAbort:Enable -g BPI_page_size:1 -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_SysMon:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Match_cycle:Auto -g Security:None -g DonePipe:No -g DriveDone:No -g Encrypt:No System_tl.ncd 
 
@@ -128,16 +128,16 @@ There were 0 CONFIG constraint(s) processed from System_tl.pcf.
 
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_0' at 'RAMB36_X2Y7' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_0' at 'RAMB36_X3Y7' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_1' at 'RAMB36_X2Y8' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_1' at 'RAMB36_X2Y7' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_2' at 'RAMB36_X2Y6' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_2' at 'RAMB36_X3Y11' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_3' at 'RAMB36_X2Y9' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_3' at 'RAMB36_X3Y9' location successfully updated with design data.
 
 
 INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_4' at 'RAMB36_X2Y11' location successfully updated with design data.
@@ -146,51 +146,51 @@ INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_4' at 'RAMB36_X2Y11' lo
 INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_5' at 'RAMB36_X2Y12' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_6' at 'RAMB36_X3Y12' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_6' at 'RAMB36_X2Y15' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_7' at 'RAMB36_X3Y16' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_7' at 'RAMB36_X2Y14' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_8' at 'RAMB36_X3Y7' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_8' at 'RAMB36_X2Y8' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_9' at 'RAMB36_X3Y6' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_9' at 'RAMB36_X2Y9' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_10' at 'RAMB36_X3Y4' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_10' at 'RAMB36_X2Y10' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_11' at 'RAMB36_X3Y5' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_11' at 'RAMB36_X3Y10' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_12' at 'RAMB36_X3Y10' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_12' at 'RAMB36_X2Y13' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_13' at 'RAMB36_X3Y14' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_13' at 'RAMB36_X2Y19' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_14' at 'RAMB36_X3Y11' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_14' at 'RAMB36_X2Y17' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_15' at 'RAMB36_X3Y8' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/lmb_bram/lmb_bram/ramb36_15' at 'RAMB36_X2Y16' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0' at 'RAMB36_X1Y6' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0' at 'RAMB36_X1Y9' location successfully updated with design data.
 
 
-INFO:(null):100 - BRAM 'Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_1' at 'RAMB36_X1Y8' location successfully updated with design data.
+INFO:(null):100 - BRAM 'Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_1' at 'RAMB36_X1Y10' location successfully updated with design data.
 
 Running DRC.
 WARNING:PhysDesignRules:367 - The signal
-   <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is
-   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is
    incomplete. The signal does not drive any load pins in the design.
 DRC detected 0 errors and 4 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

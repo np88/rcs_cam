@@ -28,3 +28,15 @@ Every step in changing the design of VFCB_old will be documented.
 
 6) added "DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;" and changed 
 		"DDR2_SDRAM_VFBC2_Wd_Data_pin => DDR2_SDRAM_VFBC2_Wd_Data_pin," line
+
+7) added another test signal test2 and renamed test. now test is test1, output pin of test2 is Y34 (edited UCF file)
+
+8) change write clock of vfbc to pixel clock:
+	DDR2_SDRAM_VFBC2_Wd_Clk_pin => cam_pclk,
+   change write enable signal accordingly
+	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;
+
+9) change state machine:
+	removed next_state <= current_state and added else paths
+
+10) add extra test signal for write enable to pin 34 (changes in entity and ucf file)
