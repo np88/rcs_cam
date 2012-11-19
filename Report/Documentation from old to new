@@ -40,3 +40,7 @@ Every step in changing the design of VFCB_old will be documented.
 	removed next_state <= current_state and added else paths
 
 10) add extra test signal for write enable to pin 34 (changes in entity and ucf file)
+
+11) recompile
+
+12) added process to count href signal from camera and added software accordingly

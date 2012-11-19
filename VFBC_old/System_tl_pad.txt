@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Nov 19 10:56:29 2012
+Mon Nov 19 12:34:24 2012
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -308,7 +308,7 @@ Pinout by Pin Number:
 |AH21      |                                      |         |VCCO_2                  |             |              |2             |          |         |           |         |3.30     |          |           |                |
 |AH22      |                                      |IOBS     |IO_L0N_GC_D14_4         |UNUSED       |              |4             |          |         |           |         |         |          |           |                |
 |AH23      |                                      |IOBM     |IO_L2P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AH24      |switches_i<0>                         |IOB      |IO_L0P_6                |INPUT        |LVCMOS25*     |6             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|AH24      |                                      |IOBM     |IO_L0P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AH25      |                                      |IOBS     |IO_L12N_VRP_21          |UNUSED       |              |21            |          |         |           |         |         |          |           |                |
 |AH26      |                                      |         |GND                     |             |              |              |          |         |           |         |         |          |           |                |
 |AH27      |fpga_0_DDR2_SDRAM_DDR2_DQ_pin<8>      |IOB      |IO_L11P_CC_21           |BIDIR        |SSTL18_II     |21            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
@@ -372,7 +372,7 @@ Pinout by Pin Number:
 |AK19      |                                      |IOBS     |IO_L15N_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK20      |                                      |         |GND                     |             |              |              |          |         |           |         |         |          |           |                |
 |AK21      |                                      |IOBS     |IO_L11N_CC_6            |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AK22      |                                      |IOBS     |IO_L6N_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
+|AK22      |switches_i<0>                         |IOB      |IO_L6N_6                |INPUT        |LVCMOS25*     |6             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |AK23      |                                      |IOBM     |IO_L6P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK24      |                                      |IOBM     |IO_L4P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK25      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |any******|          |           |                |

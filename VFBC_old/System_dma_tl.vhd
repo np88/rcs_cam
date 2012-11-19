@@ -187,6 +187,8 @@ COMPONENT MB
 	signal epc_data_o, epc_data_i: std_logic_vector(31 downto 0); 
 	signal fifo_rd_in_gpio: std_logic_vector(19 downto 0); 
 	signal rd_cnt : std_logic_vector(31 downto 0); 
+	signal counted, stop_counting: std_logic := '0';
+
 
 begin
 
@@ -275,7 +277,6 @@ begin
 	
 	-- debug process to count href
 	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
-		signal counted, stop_counting: std_logic := '0';
 	begin
 		if (fpga_0_rst_1_sys_rst_pin = '0') then
 			rd_cnt <= (others => '0');
