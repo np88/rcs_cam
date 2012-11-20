@@ -10,21 +10,21 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 20 16:59:00 2012
+Mapped Date    : Tue Nov 20 17:29:26 2012
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   88
 Slice Logic Utilization:
-  Number of Slice Registers:                 8,096 out of  69,120   11%
-    Number used as Flip Flops:               8,079
+  Number of Slice Registers:                 8,195 out of  69,120   11%
+    Number used as Flip Flops:               8,178
     Number used as Latch-thrus:                 17
-  Number of Slice LUTs:                      7,378 out of  69,120   10%
-    Number used as logic:                    6,897 out of  69,120    9%
-      Number using O6 output only:           6,426
+  Number of Slice LUTs:                      7,441 out of  69,120   10%
+    Number used as logic:                    6,957 out of  69,120   10%
+      Number using O6 output only:           6,455
       Number using O5 output only:             109
-      Number using O5 and O6:                  362
+      Number using O5 and O6:                  393
     Number used as Memory:                     455 out of  17,920    2%
       Number used as Dual Port RAM:            182
         Number using O6 output only:             6
@@ -33,21 +33,21 @@ Slice Logic Utilization:
       Number used as Shift Register:           273
         Number using O6 output only:           272
         Number using O5 output only:             1
-    Number used as exclusive route-thru:        26
-  Number of route-thrus:                       143
-    Number using O6 output only:               132
-    Number using O5 output only:                 8
+    Number used as exclusive route-thru:        29
+  Number of route-thrus:                       153
+    Number using O6 output only:               135
+    Number using O5 output only:                15
     Number using O5 and O6:                      3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,185 out of  17,280   24%
-  Number of LUT Flip Flop pairs used:       11,019
-    Number with an unused Flip Flop:         2,923 out of  11,019   26%
-    Number with an unused LUT:               3,641 out of  11,019   33%
-    Number of fully used LUT-FF pairs:       4,455 out of  11,019   40%
-    Number of unique control sets:           1,029
+  Number of occupied Slices:                 4,314 out of  17,280   24%
+  Number of LUT Flip Flop pairs used:       11,107
+    Number with an unused Flip Flop:         2,912 out of  11,107   26%
+    Number with an unused LUT:               3,666 out of  11,107   33%
+    Number of fully used LUT-FF pairs:       4,529 out of  11,107   40%
+    Number of unique control sets:           1,031
     Number of slice register sites lost
-      to control set restrictions:           2,306 out of  69,120    3%
+      to control set restrictions:           2,307 out of  69,120    3%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -63,8 +63,8 @@ IO Utilization:
     IOB Flip Flops:                            269
 
 Specific Feature Utilization:
-  Number of BlockRAM/FIFO:                      43 out of     148   29%
-    Number using BlockRAM only:                 43
+  Number of BlockRAM/FIFO:                      42 out of     148   28%
+    Number using BlockRAM only:                 42
     Total primitives used:
       Number of 36k BlockRAM used:              36
       Number of 18k BlockRAM used:               8
@@ -79,9 +79,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.67
 
-Peak Memory Usage:  1175 MB
-Total REAL time to MAP completion:  3 mins 35 secs 
-Total CPU time to MAP completion:   3 mins 33 secs 
+Peak Memory Usage:  1177 MB
+Total REAL time to MAP completion:  3 mins 30 secs 
+Total CPU time to MAP completion:   3 mins 27 secs 
 
 Table of Contents
 -----------------
@@ -470,9 +470,9 @@ WARNING:Place:644 - A clock IOB clock component is not placed at an optimal cloc
    was applied on COMP.PIN <cam_pclk.PAD> allowing your design to continue. This constraint disables all clock placer
    rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor
    timing results. It is recommended that this error condition be corrected in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal does
-   not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is incomplete. The signal does not drive any load
    pins in the design.
@@ -537,8 +537,8 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
 2172 block(s) removed
- 338 block(s) optimized away
-2406 signal(s) removed
+ 291 block(s) optimized away
+2390 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -12843,54 +12843,6 @@ The signal "Inst_MB/proc_sys_reset_0/proc_sys_reset_0/SEQ/chip_Reset_Req_d1" is
 unused and has been removed.
 The signal "Inst_MB/proc_sys_reset_0/proc_sys_reset_0/SEQ/ris_edge_rstpot" is
 unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30_rst
-pot" is unused and has been removed.
-The signal
-"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31_rst
-pot" is unused and has been removed.
 Unused block
 "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FI
 FOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ib
@@ -13821,6 +13773,9 @@ FD
 		Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/wrfifo_flush
 _dly2_1
    optimized to 0
+INV
+		Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/WrDataPortIn<1>_MR
+eset_n1_INV_0
 LUT3
 		Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_ctrl_path_0/arbiter_0
 /arb_pattern_type_0/instantiate_arb_pattern_type_fifos[0].arb_pattern_type_fifo_
@@ -14142,70 +14097,6 @@ E_ATTACHMENT/plb_type_reg_2
    optimized to 0
 GND 		Inst_MB/xps_epc_0/XST_GND
 VCC 		Inst_MB/xps_epc_0/XST_VCC
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT
-   optimized to 0
-FDRE
-		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
-ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT
-   optimized to 0
 FDR
 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_size_reg_1
    optimized to 0
@@ -14220,102 +14111,6 @@ FDR
    optimized to 0
 FDR
 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/plb_type_reg_2
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30_rs
-tpot
-   optimized to 0
-FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
-   optimized to 0
-LUT4
-		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31_rs
-tpot
    optimized to 0
 GND 		Inst_MB/xps_intc_0/XST_GND
 VCC 		Inst_MB/xps_intc_0/XST_VCC

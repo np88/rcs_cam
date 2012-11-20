@@ -4,15 +4,15 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Reading design: System_tl.prj
@@ -123,7 +123,9 @@ Architecture behavioral of Entity sm_vfbc_control is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd" in Library work.
 Architecture structure of Entity mb is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" in Library work.
-Architecture behavioral of Entity system_tl is up to date.
+Entity <system_tl> compiled.
+WARNING:HDLParsers:1406 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" Line 367. No sensitivity list and no wait in the process
+Entity <system_tl> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -157,6 +159,8 @@ WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" 
    <fpga_0_rst_1_sys_rst_pin>
 WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 356: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <fpga_0_rst_1_sys_rst_pin>
+WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 367: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <rd_cnt_reg>
 Entity <System_tl> analyzed. Unit <System_tl> generated.
 
 Analyzing Entity <edge_detector> in library <work> (Architecture <behavioral>).
@@ -192,7 +196,7 @@ Synthesizing Unit <SM_vfbc_control>.
     | States             | 16                                             |
     | Transitions        | 20                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 30                                             |
+    | Outputs            | 29                                             |
     | Clock              | clk_i                     (rising_edge)        |
     | Reset              | rst_i                     (negative)           |
     | Reset type         | asynchronous                                   |
@@ -214,7 +218,6 @@ WARNING:Xst:2565 - Inout <cam_scl> is never assigned.
 WARNING:Xst:647 - Input <cam_fodd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2565 - Inout <cam_exclk> is never assigned.
 WARNING:Xst:1780 - Signal <stop_counting> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <rd_cnt_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <pos_leds> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <gpio_camera_I2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <gpio_camera_I1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -246,15 +249,14 @@ WARNING:Xst:1780 - Signal <DDR2_SDRAM_VFBC2_Cmd_Clk_pin> is never used or assign
 WARNING:Xst:1780 - Signal <DDR2_SDRAM_VFBC2_Cmd_Almost_Full_pin> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <fifo_ready>.
     Found 32-bit up counter for signal <rd_cnt>.
+    Found 32-bit register for signal <rd_cnt_reg>.
     Found 1-bit register for signal <wd_fifo_full_reg>.
     Summary:
 	inferred   1 Counter(s).
-	inferred   2 D-type flip-flop(s).
+	inferred  34 D-type flip-flop(s).
 Unit <System_tl> synthesized.
 
 WARNING:Xst:524 - All outputs of the instance <Inst_edge_detector> of the block <edge_detector> are unconnected in block <System_tl>.
-   This instance will be removed from the design along with all underlying logic
-WARNING:Xst:524 - All outputs of the instance <Inst_edge_detector_HRef> of the block <edge_detector> are unconnected in block <System_tl>.
    This instance will be removed from the design along with all underlying logic
 WARNING:Xst:524 - All outputs of the instance <Inst_edge_detector_VSync> of the block <edge_detector> are unconnected in block <System_tl>.
    This instance will be removed from the design along with all underlying logic
@@ -263,8 +265,11 @@ WARNING:Xst:524 - All outputs of the instance <Inst_edge_detector_VSync> of the 
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 17
- 1-bit register                                        : 17
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 21
+ 1-bit register                                        : 20
+ 32-bit register                                       : 1
 
 =========================================================================
 
@@ -342,15 +347,17 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 1
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 52
+ Flip-Flops                                            : 52
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2677 - Node <Inst_edge_detector_write_enable/edge_r> of sequential type is unconnected in block <System_tl>.
+WARNING:Xst:2677 - Node <Inst_edge_detector_HRef/edge_f> of sequential type is unconnected in block <System_tl>.
 WARNING:Xst:2677 - Node <Inst_edge_detector_Button_north/edge_f> of sequential type is unconnected in block <System_tl>.
 WARNING:Xst:2677 - Node <Inst_edge_detector_Button_south/edge_f> of sequential type is unconnected in block <System_tl>.
 WARNING:Xst:2677 - Node <Inst_edge_detector_Button_center/edge_f> of sequential type is unconnected in block <System_tl>.
@@ -360,7 +367,7 @@ Optimizing unit <System_tl> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block System_tl, actual ratio is 4.
+Found area constraint ratio of 100 (+ 5) on block System_tl, actual ratio is 5.
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1> 
 INFO:Xst:2260 - The FF/Latch <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_2> in Unit <mb_plb> is equivalent to the following FF/Latch : <mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_2_1> 
@@ -433,17 +440,17 @@ INFO:Xst:2260 - The FF/Latch <xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_
 Final Macro Processing ...
 
 Processing Unit <System_tl> :
-	Found 7-bit shift register for signal <Inst_SM_vfbc_control/current_state_FSM_FFd7>.
+	Found 8-bit shift register for signal <Inst_SM_vfbc_control/current_state_FSM_FFd7>.
 Unit <System_tl> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 21
- Flip-Flops                                            : 21
+# Registers                                            : 87
+ Flip-Flops                                            : 87
 # Shift Registers                                      : 1
- 7-bit shift register                                  : 1
+ 8-bit shift register                                  : 1
 
 =========================================================================
 
@@ -472,30 +479,30 @@ Design Statistics
 # IOs                              : 173
 
 Cell Usage :
-# BELS                             : 9581
+# BELS                             : 9678
 #      BUF                         : 43
 #      GND                         : 23
-#      INV                         : 203
+#      INV                         : 204
 #      LUT1                        : 121
-#      LUT2                        : 959
-#      LUT3                        : 1357
+#      LUT2                        : 960
+#      LUT3                        : 1389
 #      LUT4                        : 1058
 #      LUT5                        : 1579
 #      LUT6                        : 2241
 #      LUT6_2                      : 79
 #      MULT_AND                    : 139
-#      MUXCY                       : 464
+#      MUXCY                       : 495
 #      MUXCY_L                     : 387
 #      MUXF7                       : 266
 #      OR3                         : 2
 #      VCC                         : 18
-#      XORCY                       : 642
-# FlipFlops/Latches                : 9876
+#      XORCY                       : 674
+# FlipFlops/Latches                : 9943
 #      FD                          : 1779
 #      FD_1                        : 11
-#      FDC                         : 22
+#      FDC                         : 24
 #      FDC_1                       : 5
-#      FDCE                        : 40
+#      FDCE                        : 105
 #      FDCPE                       : 24
 #      FDCPE_1                     : 8
 #      FDE                         : 874
@@ -549,19 +556,19 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            9875  out of  69120    14%  
- Number of Slice LUTs:                 8233  out of  69120    11%  
-    Number used as Logic:              7597  out of  69120    10%  
+ Number of Slice Registers:            9942  out of  69120    14%  
+ Number of Slice LUTs:                 8267  out of  69120    11%  
+    Number used as Logic:              7631  out of  69120    11%  
     Number used as Memory:              636  out of  17920     3%  
        Number used as RAM:              270
        Number used as SRL:              366
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  13883
-   Number with an unused Flip Flop:    4008  out of  13883    28%  
-   Number with an unused LUT:          5650  out of  13883    40%  
-   Number of fully used LUT-FF pairs:  4225  out of  13883    30%  
-   Number of unique control sets:      1142
+ Number of LUT Flip Flop pairs used:  13950
+   Number with an unused Flip Flop:    4008  out of  13950    28%  
+   Number with an unused LUT:          5683  out of  13950    40%  
+   Number of fully used LUT-FF pairs:  4259  out of  13950    30%  
+   Number of unique control sets:      1144
 
 IO Utilization: 
  Number of IOs:                         173
@@ -609,7 +616,7 @@ Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/dqs_ibuf(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_iddr_dq_ce)| 1     |
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/dqs_ibuf(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_iddr_dq_ce)| 1     |
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/dqs_ibuf(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs:O)| IODELAY+BUFIO(*)(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_iddr_dq_ce)| 1     |
-fpga_0_clk_1_sys_clk_pin                                                                                                                                                                                                                                | BUFGP                                                                                                                                 | 133   |
+fpga_0_clk_1_sys_clk_pin                                                                                                                                                                                                                                | BUFGP                                                                                                                                 | 200   |
 cam_pclk                                                                                                                                                                                                                                                | BUFGP                                                                                                                                 | 68    |
 Inst_MB/N0                                                                                                                                                                                                                                              | NONE(Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0)                                                            | 2     |
 Inst_MB/xps_timer_0/Interrupt                                                                                                                                                                                                                           | NONE(Inst_MB/xps_intc_0/xps_intc_0/INTC_CORE_I/intr_sync_3)                                                                           | 1     |
@@ -625,8 +632,8 @@ Asynchronous Control Signals Information:
 Control Signal                                                                                                                                                                                                                                      | Buffer(FF name)                                                                                                                                                                                    | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Inst_MB/DDR2_SDRAM/SDMA_CTRL6_Sl_MBusy<0>(Inst_MB/DDR2_SDRAM/XST_GND:G)                                                                                                                                                                             | NONE(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIRTEX4_RAM.ramb16_i)| 159   |
+Inst_SM_vfbc_control/Inst_edge_detector/rst_i_inv(Inst_SM_vfbc_control/Inst_edge_detector/rst_i_inv1_INV_0:O)                                                                                                                                       | NONE(Inst_SM_vfbc_control/Inst_edge_detector/edge_r)                                                                                                                                               | 95    |
 Inst_MB/lmb_bram/lmb_bram/net_gnd0(Inst_MB/lmb_bram/lmb_bram/XST_GND:G)                                                                                                                                                                             | NONE(Inst_MB/lmb_bram/lmb_bram/ramb36_0)                                                                                                                                                           | 64    |
-Inst_SM_vfbc_control/Inst_edge_detector/rst_i_inv(Inst_SM_vfbc_control/Inst_edge_detector/rst_i_inv1_INV_0:O)                                                                                                                                       | NONE(Inst_SM_vfbc_control/Inst_edge_detector/edge_r)                                                                                                                                               | 28    |
 Inst_MB/mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv(Inst_MB/mdm_0/mdm_0/MDM_Core_I1/Config_Reg_Acst_inv1_INV_0:O)                                                                                                                                   | NONE(Inst_MB/mdm_0/mdm_0/MDM_Core_I1/Config_Reg_0)                                                                                                                                                 | 23    |
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i:Q)                                                          | NONE(Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_ctl_io/gen_cke[0].u_ff_cke)                                                                                     | 17    |
 Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/net_gnd0(Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/XST_GND:G)                                                                                                         | NONE(Inst_MB/xps_bram_if_cntlr_0_block/xps_bram_if_cntlr_0_block/ramb36_0)                                                                                                                         | 16    |
@@ -655,9 +662,9 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 7.244ns (Maximum Frequency: 138.052MHz)
-   Minimum input arrival time before clock: 4.379ns
+   Minimum input arrival time before clock: 4.390ns
    Maximum output required time after clock: 8.043ns
-   Maximum combinational path delay: 4.287ns
+   Maximum combinational path delay: 4.298ns
 
 Timing Detail:
 --------------
@@ -801,7 +808,7 @@ Delay:               1.381ns (Levels of Logic = 0)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
   Clock period: 4.530ns (frequency: 220.751MHz)
-  Total number of paths / destination ports: 1562 / 322
+  Total number of paths / destination ports: 2813 / 452
 -------------------------------------------------------------------------
 Delay:               4.530ns (Levels of Logic = 4)
   Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ObjFifo_cons_ctl_comp/GrayObjPtr_4 (FF)
@@ -1073,7 +1080,7 @@ Offset:              0.341ns (Levels of Logic = 0)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'cam_pclk'
   Total number of paths / destination ports: 76 / 76
 -------------------------------------------------------------------------
-Offset:              4.379ns (Levels of Logic = 6)
+Offset:              4.390ns (Levels of Logic = 6)
   Source:            cam_href (PAD)
   Destination:       Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0 (FF)
   Destination Clock: cam_pclk rising
@@ -1082,7 +1089,7 @@ Offset:              4.379ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.818   0.576  cam_href_IBUF (cam_href_IBUF)
+     IBUF:I->O             3   0.818   0.587  cam_href_IBUF (cam_href_IBUF)
      LUT2:I0->O            3   0.094   0.491  test21 (test2_OBUF)
      begin scope: 'Inst_MB'
      begin scope: 'DDR2_SDRAM'
@@ -1091,8 +1098,8 @@ Offset:              4.379ns (Levels of Logic = 6)
      LUT2:I1->O            6   0.094   0.363  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_or00001 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_or0000)
      FDRE:R                    0.573          DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/prod_a_int_0
     ----------------------------------------
-    Total                      4.379ns (1.767ns logic, 2.612ns route)
-                                       (40.4% logic, 59.6% route)
+    Total                      4.390ns (1.767ns logic, 2.623ns route)
+                                       (40.3% logic, 59.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_MB/mdm_0/bscan_update1'
@@ -1117,23 +1124,23 @@ Offset:              1.788ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
-Offset:              1.499ns (Levels of Logic = 2)
-  Source:            Push_Buttons_5Bit_GPIO_IO_I_pin<4> (PAD)
-  Destination:       Inst_edge_detector_Button_north/edge_r (FF)
+Offset:              1.403ns (Levels of Logic = 2)
+  Source:            cam_href (PAD)
+  Destination:       Inst_edge_detector_HRef/edge_r (FF)
   Destination Clock: fpga_0_clk_1_sys_clk_pin rising
 
-  Data Path: Push_Buttons_5Bit_GPIO_IO_I_pin<4> to Inst_edge_detector_Button_north/edge_r
+  Data Path: cam_href to Inst_edge_detector_HRef/edge_r
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.818   0.587  Push_Buttons_5Bit_GPIO_IO_I_pin_4_IBUF (Push_Buttons_5Bit_GPIO_IO_I_pin_4_IBUF)
-     LUT2:I0->O            1   0.094   0.000  Inst_edge_detector_Button_north/edge_r_and00001 (Inst_edge_detector_Button_north/edge_r_and0000)
-     FDC:D                    -0.018          Inst_edge_detector_Button_north/edge_r
+     IBUF:I->O             3   0.818   0.491  cam_href_IBUF (cam_href_IBUF)
+     LUT2:I1->O            1   0.094   0.000  Inst_edge_detector_HRef/edge_r_and00001 (Inst_edge_detector_HRef/edge_r_and0000)
+     FDC:D                    -0.018          Inst_edge_detector_HRef/edge_r
     ----------------------------------------
-    Total                      1.499ns (0.912ns logic, 0.587ns route)
-                                       (60.8% logic, 39.2% route)
+    Total                      1.403ns (0.912ns logic, 0.491ns route)
+                                       (65.0% logic, 35.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_MB/clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT2'
@@ -1464,7 +1471,7 @@ Offset:              6.391ns (Levels of Logic = 11)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 205 / 205
 -------------------------------------------------------------------------
-Delay:               4.287ns (Levels of Logic = 3)
+Delay:               4.298ns (Levels of Logic = 3)
   Source:            cam_href (PAD)
   Destination:       test2 (PAD)
 
@@ -1472,23 +1479,23 @@ Delay:               4.287ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.818   0.576  cam_href_IBUF (cam_href_IBUF)
+     IBUF:I->O             3   0.818   0.587  cam_href_IBUF (cam_href_IBUF)
      LUT2:I0->O            3   0.094   0.347  test21 (test2_OBUF)
      OBUF:I->O                 2.452          test2_OBUF (test2)
     ----------------------------------------
-    Total                      4.287ns (3.364ns logic, 0.923ns route)
-                                       (78.5% logic, 21.5% route)
+    Total                      4.298ns (3.364ns logic, 0.934ns route)
+                                       (78.3% logic, 21.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 219.00 secs
-Total CPU time to Xst completion: 215.30 secs
+Total REAL time to Xst completion: 180.00 secs
+Total CPU time to Xst completion: 176.24 secs
  
 --> 
 
 
-Total memory usage is 951816 kilobytes
+Total memory usage is 852996 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   59 (   0 filtered)

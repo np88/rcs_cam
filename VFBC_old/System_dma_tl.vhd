@@ -364,8 +364,15 @@ begin
 		end if;			
 	end process check_fifo_full;
 	
+	reverse_val: process 
+	begin
+		for i in 0 to 31 loop
+			rd_cnt_reg_reverse(31- i) <= rd_cnt_reg(i);
+		end loop;
+	end process;
+	
 	--rd_cnt_reg_reverse(0 to 31) <= rd_cnt_reg(31 downto 0);
-	rd_cnt_reg_reverse(0 to 31) <= "00000000000000001111111111111111";
+	--rd_cnt_reg_reverse(0 to 31) <= "00000000000000001111111111111111";
 	fifo_ready_tmp <= fifo_ready;
 	
 	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
