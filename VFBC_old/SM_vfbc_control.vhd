@@ -34,6 +34,7 @@ entity SM_vfbc_control is
            rst_i : in  STD_LOGIC;
            vsync_i : in  STD_LOGIC;
            start_transaction_i : in  STD_LOGIC;
+			  end_transaction_i: in  STD_LOGIC;
 			  DDR2_SDRAM_VFBC2_Wd_Reset_pin_o : out  STD_LOGIC;
            DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o : out  STD_LOGIC;
 			  DDR2_SDRAM_VFBC2_Cmd_Data_pin_o : out std_logic_vector(31 downto 0);
@@ -147,7 +148,7 @@ begin
 						next_state <= WT_WRITE_ENABLE;
 					end if;		
 				when WT_WRITE_DISBALE =>
-					if (start_transaction_i = '1') then
+					if (end_transaction_i = '1') then
 						next_state <= WT_Init;
 					else 
 						next_state <= WT_WRITE_DISBALE;
@@ -171,11 +172,11 @@ begin
 		case current_state is		
 			when WT_Init =>
 			when WT_RESET_VFBC =>
-				DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '1';
-				DDR2_SDRAM_VFBC2_Wd_Reset_pin_o <= '1';
+			--	DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '1';
+			--	DDR2_SDRAM_VFBC2_Wd_Reset_pin_o <= '1';
 			when WT_RESET_SECOND_CYCLE =>
-				DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '1';
-				DDR2_SDRAM_VFBC2_Wd_Reset_pin_o <= '1';
+			--	DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o <= '1';
+			--	DDR2_SDRAM_VFBC2_Wd_Reset_pin_o <= '1';
 			when WT_WAIT1 =>
 			when WT_WAIT2 =>
 			when WT_WAIT3 =>
@@ -185,8 +186,6 @@ begin
 			when WT_WRITE_Word_1 =>
 				-- write x size in bytes
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (1280, 32) );
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000001010000000";
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (32, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_2 =>
 				-- bit 31: 1 means write command; 30-0: start address 
@@ -197,14 +196,10 @@ begin
 			when WT_WRITE_Word_3 =>
 				-- write number of lines
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (479, 32) );
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000000111100000";
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (511, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_4 =>
 				-- write stride
 				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (1280, 32) );
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= "00000000000000000000010100000000";
-				--DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WAIT_FOR_VSYNC =>
 			when WT_WRITE_ENABLE =>

@@ -90,6 +90,7 @@ architecture Behavioral of System_tl is
 		rst_i : IN std_logic;
 		vsync_i : IN std_logic;
 		start_transaction_i : IN std_logic; 
+		end_transaction_i : IN std_logic; 
 		DDR2_SDRAM_VFBC2_Wd_Reset_pin_o : OUT std_logic;		
 		DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o : OUT std_logic;
 		DDR2_SDRAM_VFBC2_Cmd_Data_pin_o : OUT std_logic_vector(31 downto 0);
@@ -178,9 +179,9 @@ COMPONENT MB
 	signal DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin : std_logic;
 	signal fifo_data_in : std_logic_vector(15 downto 0); 
 	signal pos_leds: std_logic_vector(4 downto 0); 
-	signal fifo_almost_full, fifo_full, fifo_empty, fifo_rd_en_i, fifo_valid, fifo_wr_en_i, fifo_read_clk, xps_epc_0_PRH_CS_n_pin : std_logic;
+	signal btn_south_edge, btn_center_edge, fifo_empty, fifo_rd_en_i, fifo_valid, fifo_wr_en_i, fifo_read_clk, xps_epc_0_PRH_CS_n_pin : std_logic;
 	signal fifo_data_out: std_logic_vector(C_fifo_input_width downto 0);
-	signal fifo_ready, cam_pclk_edge, write_enable, button_edge: std_logic;
+	signal btn_north_edge, cmd_reset, fifo_almost_full, fifo_ready, cam_pclk_edge, write_enable, button_edge, fifo_ready_tmp: std_logic;
 	signal fifo_wr_data_count, fifo_rd_data_count: STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0);
 	signal gpio_camera_I2 : std_logic_vector(9 downto 0); 
 	signal gpio_camera_I1: std_logic_vector(2 downto 0); 
@@ -188,7 +189,7 @@ COMPONENT MB
 	signal epc_data_o, epc_data_i: std_logic_vector(31 downto 0); 
 	signal fifo_rd_in_gpio: std_logic_vector(19 downto 0); 
 	signal rd_cnt, rd_cnt_reg : std_logic_vector(31 downto 0); 
-	signal counted, stop_counting, cam_href_edge, write_enable_edge_r, write_enable_edge_f, cam_vsyn_edge: std_logic := '0';
+	signal wd_fifo_full_reg, counted, stop_counting, cam_href_edge, write_enable_edge_r, write_enable_edge_f, cam_vsyn_edge: std_logic := '0';
 	signal rd_cnt_reg_reverse : std_logic_vector(0 to 31);
 
 begin
@@ -202,11 +203,27 @@ begin
 		edge_f => open
 	);
 	
-	Inst_edge_detector_Button: edge_detector PORT MAP(
+	Inst_edge_detector_Button_center: edge_detector PORT MAP(
 		clk_i => fpga_0_clk_1_sys_clk_pin,
 		rst_i => fpga_0_rst_1_sys_rst_pin,
 		signal_i => Push_Buttons_5Bit_GPIO_IO_I_pin(0),
-		edge_r => button_edge,
+		edge_r => btn_center_edge,
+		edge_f => open
+	);
+	
+	Inst_edge_detector_Button_south: edge_detector PORT MAP(
+		clk_i => fpga_0_clk_1_sys_clk_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
+		signal_i => Push_Buttons_5Bit_GPIO_IO_I_pin(2),
+		edge_r => btn_south_edge,
+		edge_f => open
+	);
+	
+	Inst_edge_detector_Button_north: edge_detector PORT MAP(
+		clk_i => fpga_0_clk_1_sys_clk_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
+		signal_i => Push_Buttons_5Bit_GPIO_IO_I_pin(4),
+		edge_r => btn_north_edge,
 		edge_f => open
 	);
 	
@@ -238,9 +255,10 @@ begin
 		clk_i => fpga_0_clk_1_sys_clk_pin,
 		rst_i =>  fpga_0_rst_1_sys_rst_pin,
 		vsync_i => cam_vsyn,
-		start_transaction_i => button_edge, --center button
+		start_transaction_i => btn_center_edge, --center button
+		end_transaction_i => btn_south_edge, -- south button
 		DDR2_SDRAM_VFBC2_Wd_Reset_pin_o => DDR2_SDRAM_VFBC2_Wd_Reset_pin,
-		DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o => DDR2_SDRAM_VFBC2_Cmd_Reset_pin,
+		DDR2_SDRAM_VFBC2_Cmd_Reset_pin_o => cmd_reset,
 		DDR2_SDRAM_VFBC2_Cmd_Data_pin_o => DDR2_SDRAM_VFBC2_Cmd_Data_pin,
 		DDR2_SDRAM_VFBC2_Cmd_Write_pin_o => DDR2_SDRAM_VFBC2_Cmd_Write_pin,
 		write_enable_o => write_enable,
@@ -272,7 +290,7 @@ begin
 		read_clk_fifo_O => fifo_read_clk,
 		xps_epc_0_PRH_Data_I_pin => rd_cnt_reg_reverse,
 		xps_epc_0_PRH_CS_n_pin => xps_epc_0_PRH_CS_n_pin, -- inverted logic
-		xps_epc_0_PRH_Rdy_pin => fifo_ready, -- fifo is ready when it is not empty
+		xps_epc_0_PRH_Rdy_pin => fifo_ready_tmp, -- fifo is ready when it is not empty
 		xps_epc_0_PRH_Rst_pin => NOT fpga_0_rst_1_sys_rst_pin, -- inverted logic
 		DDR2_SDRAM_VFBC2_Cmd_Clk_pin => fpga_0_clk_1_sys_clk_pin,
 		DDR2_SDRAM_VFBC2_Cmd_Reset_pin => DDR2_SDRAM_VFBC2_Cmd_Reset_pin,
@@ -301,6 +319,7 @@ begin
 		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => open 
 	);
 	
+	DDR2_SDRAM_VFBC2_Cmd_Reset_pin <= cmd_reset or btn_north_edge;
 	
 	-- debug process to count href
 	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
@@ -333,12 +352,26 @@ begin
 		end if;			
 	end process store_rd_cnt;
 	
-	rd_cnt_reg_reverse(0 to 31) <= rd_cnt_reg(31 downto 0);
+	
+	check_fifo_full: process (fpga_0_clk_1_sys_clk_pin, write_enable_edge_f)
+	begin
+		if (fpga_0_rst_1_sys_rst_pin = '0') then
+			wd_fifo_full_reg <= '0';
+		elsif fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then 
+			if (DDR2_SDRAM_VFBC2_Wd_Full_pin = '1') then
+				wd_fifo_full_reg <= '1';
+			end if;
+		end if;			
+	end process check_fifo_full;
+	
+	--rd_cnt_reg_reverse(0 to 31) <= rd_cnt_reg(31 downto 0);
+	rd_cnt_reg_reverse(0 to 31) <= "00000000000000001111111111111111";
+	fifo_ready_tmp <= fifo_ready;
 	
 	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;
-	test1 <= cam_href and cam_pclk_edge;
-	test2 <= cam_href and cam_pclk;
+	test1 <= wd_fifo_full_reg;
+	test2 <= cam_href and write_enable;
 	test3 <= write_enable;
 	
 	fifo_rd_in_gpio(14 downto 0) <= fifo_rd_data_count;
