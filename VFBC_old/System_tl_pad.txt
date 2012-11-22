@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Tue Nov 20 17:34:33 2012
+Thu Nov 22 15:37:19 2012
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -335,13 +335,13 @@ Pinout by Pin Number:
 |AJ15      |                                      |IOBS     |IO_L9N_CC_6             |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AJ16      |                                      |IOBM     |IO_L9P_CC_6             |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AJ17      |                                      |IOBS     |IO_L12N_VRP_6           |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AJ18      |                                      |         |VCCO_6                  |             |              |6             |          |         |           |         |any******|          |           |                |
+|AJ18      |                                      |         |VCCO_6                  |             |              |6             |          |         |           |         |2.50     |          |           |                |
 |AJ19      |                                      |IOBM     |IO_L15P_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AJ20      |                                      |IOBS     |IO_L8N_CC_6             |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AJ21      |                                      |IOBM     |IO_L8P_CC_6             |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AJ22      |                                      |IOBS     |IO_L2N_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AJ23      |                                      |         |GND                     |             |              |              |          |         |           |         |         |          |           |                |
-|AJ24      |                                      |IOBS     |IO_L0N_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
+|AJ24      |switches_i<0>                         |IOB      |IO_L0N_6                |INPUT        |LVCMOS25*     |6             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |AJ25      |                                      |IOBM     |IO_L12P_VRN_21          |UNUSED       |              |21            |          |         |           |         |         |          |           |                |
 |AJ26      |fpga_0_DDR2_SDRAM_DDR2_DQ_pin<13>     |IOB      |IO_L11N_CC_21           |BIDIR        |SSTL18_II     |21            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AJ27      |fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>   |IOB      |IO_L8N_CC_21            |BIDIR        |DIFF_SSTL18_II|21            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
@@ -365,7 +365,7 @@ Pinout by Pin Number:
 |AK12      |                                      |IOBM     |IO_L1P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK13      |                                      |IOBS     |IO_L3N_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK14      |                                      |IOBS     |IO_L5N_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AK15      |                                      |         |VCCO_6                  |             |              |6             |          |         |           |         |any******|          |           |                |
+|AK15      |                                      |         |VCCO_6                  |             |              |6             |          |         |           |         |2.50     |          |           |                |
 |AK16      |                                      |IOBM     |IO_L10P_CC_6            |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK17      |                                      |IOBM     |IO_L12P_VRN_6           |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK18      |                                      |IOBM     |IO_L14P_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
@@ -375,7 +375,7 @@ Pinout by Pin Number:
 |AK22      |                                      |IOBS     |IO_L6N_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK23      |                                      |IOBM     |IO_L6P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AK24      |                                      |IOBM     |IO_L4P_6                |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AK25      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |2.50     |          |           |                |
+|AK25      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |any******|          |           |                |
 |AK26      |fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>     |IOB      |IO_L8P_CC_21            |BIDIR        |DIFF_SSTL18_II|21            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AK27      |fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>   |IOB      |IO_L10N_CC_21           |BIDIR        |DIFF_SSTL18_II|21            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AK28      |fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>     |IOB      |IO_L10P_CC_21           |BIDIR        |DIFF_SSTL18_II|21            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
@@ -406,7 +406,7 @@ Pinout by Pin Number:
 |AL19      |                                      |IOBM     |IO_L13P_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AL20      |                                      |IOBS     |IO_L13N_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AL21      |                                      |IOBM     |IO_L11P_CC_6            |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AL22      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |2.50     |          |           |                |
+|AL22      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |any******|          |           |                |
 |AL23      |                                      |IOBS     |IO_L4N_VREF_6           |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AL24      |                                      |IOBS     |IO_L11N_CC_25           |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AL25      |                                      |IOBM     |IO_L11P_CC_25           |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
@@ -468,17 +468,17 @@ Pinout by Pin Number:
 |AN13      |                                      |IOBM     |IO_L2P_22               |UNUSED       |              |22            |          |         |           |         |         |          |           |                |
 |AN14      |                                      |IOBM     |IO_L0P_22               |UNUSED       |              |22            |          |         |           |         |         |          |           |                |
 |AN15      |                                      |IOBM     |IO_L18P_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
-|AN16      |                                      |         |VCCO_6                  |             |              |6             |          |         |           |         |any******|          |           |                |
+|AN16      |                                      |         |VCCO_6                  |             |              |6             |          |         |           |         |2.50     |          |           |                |
 |AN17      |                                      |IOBS     |IO_L19N_6               |UNUSED       |              |6             |          |         |           |         |         |          |           |                |
 |AN18      |                                      |IOBM     |IO_L17P_25              |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN19      |                                      |IOBM     |IO_L19P_25              |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN20      |                                      |IOBM     |IO_L15P_25              |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN21      |                                      |         |GND                     |             |              |              |          |         |           |         |         |          |           |                |
 |AN22      |                                      |IOBM     |IO_L16P_25              |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
-|AN23      |switches_i<0>                         |IOB      |IO_L14P_25              |INPUT        |LVCMOS25*     |25            |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|AN23      |                                      |IOBM     |IO_L14P_25              |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN24      |                                      |IOBM     |IO_L12P_VRN_25          |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN25      |                                      |IOBM     |IO_L8P_CC_25            |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
-|AN26      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |2.50     |          |           |                |
+|AN26      |                                      |         |VCCO_25                 |             |              |25            |          |         |           |         |any******|          |           |                |
 |AN27      |                                      |IOBS     |IO_L6N_25               |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN28      |                                      |IOBM     |IO_L7P_25               |UNUSED       |              |25            |          |         |           |         |         |          |           |                |
 |AN29      |                                      |IOBS     |IO_L5N_25               |UNUSED       |              |25            |          |         |           |         |         |          |           |                |

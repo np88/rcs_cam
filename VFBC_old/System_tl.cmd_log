@@ -180,3 +180,30 @@ map -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" 
 par -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
 trce -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml System_tl.twx System_tl.ncd -o System_tl.twr System_tl.pcf -ucf System_dma_tl.ucf 
 bitgen -filter "iseconfig/filter.filter" -intstyle ise -f System_tl.ut System_tl.ncd 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -sd FIFO_13_1_asynch -sd FIFO_13_1_asynch/ipcore_dir -nt timestamp -uc System_dma_tl.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 System_tl.ngc System_tl.ngd  
+map -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o System_tl_map.ncd System_tl.ngd System_tl.pcf 
+par -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
+trce -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml System_tl.twx System_tl.ncd -o System_tl.twr System_tl.pcf -ucf System_dma_tl.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f System_tl.ut System_tl.ncd 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -sd FIFO_13_1_asynch -sd FIFO_13_1_asynch/ipcore_dir -nt timestamp -uc System_dma_tl.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 System_tl.ngc System_tl.ngd  
+map -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o System_tl_map.ncd System_tl.ngd System_tl.pcf 
+par -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
+trce -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml System_tl.twx System_tl.ncd -o System_tl.twr System_tl.pcf -ucf System_dma_tl.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f System_tl.ut System_tl.ncd 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -sd FIFO_13_1_asynch -sd FIFO_13_1_asynch/ipcore_dir -nt timestamp -uc System_dma_tl.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 System_tl.ngc System_tl.ngd  
+map -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o System_tl_map.ncd System_tl.ngd System_tl.pcf 
+par -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
+trce -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml System_tl.twx System_tl.ncd -o System_tl.twr System_tl.pcf -ucf System_dma_tl.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f System_tl.ut System_tl.ncd 
+xst -intstyle ise -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -ifn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.xst" -ofn "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -sd FIFO_13_1_asynch -sd FIFO_13_1_asynch/ipcore_dir -nt timestamp -uc System_dma_tl.ucf -bm edkBmmFile.bmm -p xc5vlx110t-ff1136-1 System_tl.ngc System_tl.ngd  
+map -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o System_tl_map.ncd System_tl.ngd System_tl.pcf 
+par -filter "/DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
+trce -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml System_tl.twx System_tl.ncd -o System_tl.twr System_tl.pcf -ucf System_dma_tl.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f System_tl.ut System_tl.ncd 

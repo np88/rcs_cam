@@ -310,7 +310,7 @@ begin
 		DDR2_SDRAM_VFBC2_Wd_Full_pin => DDR2_SDRAM_VFBC2_Wd_Full_pin,
 		DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin =>DDR2_SDRAM_VFBC2_Wd_Almost_Full_pin,
 		DDR2_SDRAM_VFBC2_Rd_Clk_pin => fpga_0_clk_1_sys_clk_pin,
-		DDR2_SDRAM_VFBC2_Rd_Reset_pin => fpga_0_rst_1_sys_rst_pin,
+		DDR2_SDRAM_VFBC2_Rd_Reset_pin => not fpga_0_rst_1_sys_rst_pin,
 		DDR2_SDRAM_VFBC2_Rd_Read_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_End_Burst_pin => '0',
 		DDR2_SDRAM_VFBC2_Rd_Flush_pin => '0',
@@ -319,19 +319,22 @@ begin
 		DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => open 
 	);
 	
-	DDR2_SDRAM_VFBC2_Cmd_Reset_pin <= cmd_reset or btn_north_edge;
+	DDR2_SDRAM_VFBC2_Cmd_Reset_pin <= cmd_reset or Push_Buttons_5Bit_GPIO_IO_I_pin(4);
 	
 	-- debug process to count href
 	dubug: process (fpga_0_clk_1_sys_clk_pin, button_edge)
 	begin
 		if (fpga_0_rst_1_sys_rst_pin = '0') then
 			rd_cnt <= (others => '0');
+			fifo_ready <= '0';
 		else
 			if fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then
-				if (write_enable_edge_r = '1') then
-					rd_cnt <= (others => '0');
-				elsif (cam_href_edge = '1' and write_enable = '1') then
+				fifo_ready <= '0';
+				if (cam_href_edge = '1' and write_enable = '1') then
 					rd_cnt <= STD_LOGIC_VECTOR(unsigned(rd_cnt) + 1);
+					fifo_ready <= '1';
+				elsif write_enable_edge_f = '1' then
+					rd_cnt <= (others => '0');
 				end if;
 			end if;
 		end if;
@@ -342,12 +345,12 @@ begin
 	begin
 		if (fpga_0_rst_1_sys_rst_pin = '0') then
 			rd_cnt_reg <= (others => '0');
-			fifo_ready <= '0';
+			--fifo_ready <= '0';
 		elsif fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then 
-			fifo_ready <= '0';
+			--fifo_ready <= '0';
 			if (write_enable_edge_f = '1') then
 				rd_cnt_reg <= rd_cnt;
-				fifo_ready <= '1';
+				--fifo_ready <= '1';
 			end if;
 		end if;			
 	end process store_rd_cnt;
@@ -364,10 +367,10 @@ begin
 		end if;			
 	end process check_fifo_full;
 	
-	reverse_val: process 
+	reverse_val: process (rd_cnt)
 	begin
 		for i in 0 to 31 loop
-			rd_cnt_reg_reverse(31- i) <= rd_cnt_reg(i);
+			rd_cnt_reg_reverse(i) <= rd_cnt(i);
 		end loop;
 	end process;
 	
@@ -385,7 +388,7 @@ begin
 	--wr_en_i <= Push_Buttons_5Bit_GPIO_IO_I_pin(4) and gpio_camera_IO(7);
 	LEDs_Positions_GPIO_IO_O_pin(0) <= DDR2_SDRAM_VFBC2_Wd_Full_pin; --center
 	fifo_rd_en_i <= NOT xps_epc_0_PRH_CS_n_pin;
-	LEDs_Positions_GPIO_IO_O_pin(2) <= DDR2_SDRAM_VFBC2_Cmd_Full_pin; -- south
+	LEDs_Positions_GPIO_IO_O_pin(2) <= fifo_ready; -- south
 	LEDs_Positions_GPIO_IO_O_pin(3) <= DDR2_SDRAM_VFBC2_Cmd_Idle_pin; -- east
 	LEDs_Positions_GPIO_IO_O_pin(4) <= fpga_0_rst_1_sys_rst_pin; --north
 	LEDs_8Bit_GPIO_IO_O_pin <= fifo_data_out(7 downto 0);

@@ -59,13 +59,19 @@ architecture Behavioral of SM_vfbc_control is
 		WT_INIT,
 		WT_RESET_VFBC,
 		WT_RESET_SECOND_CYCLE,
-		-- dirty quick fix to wait 6 cycles
+		-- dirty quick fix to wait 12 cycles
 		WT_WAIT1,
 		WT_WAIT2,
 		WT_WAIT3,
 		WT_WAIT4,
 		WT_WAIT5,
 		WT_WAIT6,
+		WT_WAIT7,
+		WT_WAIT8,
+		WT_WAIT9,
+		WT_WAIT10,
+		WT_WAIT11,
+		WT_WAIT12,
 		WT_WRITE_Word_1,
 		WT_WRITE_Word_2,
 		WT_WRITE_Word_3,
@@ -126,6 +132,18 @@ begin
 				when WT_WAIT5 =>
 					next_state <= WT_WAIT6;
 				when WT_WAIT6 =>
+					next_state <= WT_WAIT7;
+				when WT_WAIT7 =>
+					next_state <= WT_WAIT8;
+				when WT_WAIT8 =>
+					next_state <= WT_WAIT9;				
+				when WT_WAIT9 =>
+					next_state <= WT_WAIT10;
+				when WT_WAIT10 =>
+					next_state <= WT_WAIT11;
+				when WT_WAIT11 =>
+					next_state <= WT_WAIT12;
+				when WT_WAIT12 =>
 					next_state <= WT_WRITE_Word_1;			
 				when WT_WRITE_Word_1 =>
 					next_state <= WT_WRITE_Word_2;
