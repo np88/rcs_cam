@@ -203,7 +203,7 @@ begin
 			when WT_WAIT6 =>
 			when WT_WRITE_Word_1 =>
 				-- write x size in bytes
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (1280, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_2 =>
 				-- bit 31: 1 means write command; 30-0: start address 
@@ -217,7 +217,7 @@ begin
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WRITE_Word_4 =>
 				-- write stride
-				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (640, 32) );
+				DDR2_SDRAM_VFBC2_Cmd_Data_pin_o <= std_logic_vector( to_unsigned (1280, 32) );
 				DDR2_SDRAM_VFBC2_Cmd_Write_pin_o <= '1';
 			when WT_WAIT_FOR_VSYNC =>
 			when WT_WRITE_ENABLE =>

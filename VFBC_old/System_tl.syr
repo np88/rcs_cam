@@ -4,15 +4,15 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> 
 Reading design: System_tl.prj
@@ -119,12 +119,12 @@ Architecture behavioral of Entity edge_detector is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/FIFO_CONST.vhd" in Library work.
 Architecture fifo_const of Entity fifo_const is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/SM_vfbc_control.vhd" in Library work.
-Architecture behavioral of Entity sm_vfbc_control is up to date.
+Entity <sm_vfbc_control> compiled.
+Entity <sm_vfbc_control> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd" in Library work.
 Architecture structure of Entity mb is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" in Library work.
-Entity <system_tl> compiled.
-Entity <system_tl> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity system_tl is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -191,7 +191,7 @@ Synthesizing Unit <SM_vfbc_control>.
     | States             | 22                                             |
     | Transitions        | 26                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 30                                             |
+    | Outputs            | 29                                             |
     | Clock              | clk_i                     (rising_edge)        |
     | Reset              | rst_i                     (negative)           |
     | Reset type         | asynchronous                                   |
@@ -474,13 +474,13 @@ Design Statistics
 # IOs                              : 195
 
 Cell Usage :
-# BELS                             : 11055
+# BELS                             : 11054
 #      BUF                         : 43
 #      GND                         : 24
 #      INV                         : 226
 #      LUT1                        : 206
 #      LUT2                        : 1231
-#      LUT3                        : 1498
+#      LUT3                        : 1497
 #      LUT4                        : 1133
 #      LUT5                        : 1574
 #      LUT6                        : 2509
@@ -552,8 +552,8 @@ Selected Device : 5vlx110tff1136-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:           10662  out of  69120    15%  
- Number of Slice LUTs:                 9105  out of  69120    13%  
-    Number used as Logic:              8456  out of  69120    12%  
+ Number of Slice LUTs:                 9104  out of  69120    13%  
+    Number used as Logic:              8455  out of  69120    12%  
     Number used as Memory:              649  out of  17920     3%  
        Number used as RAM:              270
        Number used as SRL:              379
@@ -561,8 +561,8 @@ Slice Logic Utilization:
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:  15318
    Number with an unused Flip Flop:    4656  out of  15318    30%  
-   Number with an unused LUT:          6213  out of  15318    40%  
-   Number of fully used LUT-FF pairs:  4449  out of  15318    29%  
+   Number with an unused LUT:          6214  out of  15318    40%  
+   Number of fully used LUT-FF pairs:  4448  out of  15318    29%  
    Number of unique control sets:      1279
 
 IO Utilization: 
@@ -804,7 +804,7 @@ Delay:               1.381ns (Levels of Logic = 0)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
   Clock period: 4.530ns (frequency: 220.751MHz)
-  Total number of paths / destination ports: 1568 / 327
+  Total number of paths / destination ports: 1568 / 328
 -------------------------------------------------------------------------
 Delay:               4.530ns (Levels of Logic = 4)
   Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ObjFifo_cons_ctl_comp/GrayObjPtr_4 (FF)
@@ -1528,13 +1528,13 @@ Delay:               4.298ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 192.00 secs
-Total CPU time to Xst completion: 187.13 secs
+Total REAL time to Xst completion: 185.00 secs
+Total CPU time to Xst completion: 182.28 secs
  
 --> 
 
 
-Total memory usage is 873844 kilobytes
+Total memory usage is 873828 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   63 (   0 filtered)
