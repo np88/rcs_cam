@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> 
 Reading design: System_tl.prj
@@ -124,8 +124,7 @@ Entity <sm_vfbc_control> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd" in Library work.
 Architecture structure of Entity mb is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" in Library work.
-Entity <system_tl> compiled.
-Entity <system_tl> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity system_tl is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -155,9 +154,7 @@ WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" 
 WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 268: Unconnected output port 'DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin' of component 'MB'.
 WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 325: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <fpga_0_rst_1_sys_rst_pin>
-WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 344: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <fpga_0_rst_1_sys_rst_pin>
-WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 359: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" line 343: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <fpga_0_rst_1_sys_rst_pin>
 Entity <System_tl> analyzed. Unit <System_tl> generated.
 
@@ -194,7 +191,7 @@ Synthesizing Unit <SM_vfbc_control>.
     | States             | 22                                             |
     | Transitions        | 26                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 29                                             |
+    | Outputs            | 30                                             |
     | Clock              | clk_i                     (rising_edge)        |
     | Reset              | rst_i                     (negative)           |
     | Reset type         | asynchronous                                   |
@@ -217,7 +214,7 @@ WARNING:Xst:647 - Input <cam_fodd> is never used. This port will be preserved an
 WARNING:Xst:2565 - Inout <cam_exclk> is never assigned.
 WARNING:Xst:646 - Signal <write_enable_edge_r> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <stop_counting> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <rd_cnt_reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <rd_cnt_reg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <pos_leds> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <gpio_camera_I2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <gpio_camera_I1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -816,7 +813,7 @@ Delay:               1.381ns (Levels of Logic = 0)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
   Clock period: 4.530ns (frequency: 220.751MHz)
-  Total number of paths / destination ports: 3873 / 392
+  Total number of paths / destination ports: 3872 / 391
 -------------------------------------------------------------------------
 Delay:               4.530ns (Levels of Logic = 4)
   Source:            Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ObjFifo_cons_ctl_comp/GrayObjPtr_4 (FF)
@@ -1495,15 +1492,15 @@ Delay:               4.298ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 232.00 secs
-Total CPU time to Xst completion: 229.92 secs
+Total REAL time to Xst completion: 235.00 secs
+Total CPU time to Xst completion: 231.74 secs
  
 --> 
 
 
-Total memory usage is 953476 kilobytes
+Total memory usage is 953452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   62 (   0 filtered)
+Number of warnings :   61 (   0 filtered)
 Number of infos    :   63 (   0 filtered)
 

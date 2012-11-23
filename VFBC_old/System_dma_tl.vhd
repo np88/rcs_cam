@@ -340,22 +340,6 @@ begin
 		end if;
 	end process dubug;
 		
-	-- debug process to store current count
-	store_rd_cnt: process (fpga_0_clk_1_sys_clk_pin, write_enable_edge_f)
-	begin
-		if (fpga_0_rst_1_sys_rst_pin = '0') then
-			rd_cnt_reg <= (others => '0');
-			--fifo_ready <= '0';
-		elsif fpga_0_clk_1_sys_clk_pin'event and fpga_0_clk_1_sys_clk_pin = '1' then 
-			--fifo_ready <= '0';
-			if (write_enable_edge_f = '1') then
-				rd_cnt_reg <= rd_cnt;
-				--fifo_ready <= '1';
-			end if;
-		end if;			
-	end process store_rd_cnt;
-	
-	
 	check_fifo_full: process (fpga_0_clk_1_sys_clk_pin, write_enable_edge_f)
 	begin
 		if (fpga_0_rst_1_sys_rst_pin = '0') then
