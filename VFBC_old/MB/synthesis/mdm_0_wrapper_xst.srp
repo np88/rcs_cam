@@ -271,7 +271,7 @@ Analyzing hierarchy for entity <mdm> in library <mdm_v2_00_b> (architecture <IMP
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 1
 	C_S_AXI_ADDR_WIDTH = 32
@@ -287,7 +287,7 @@ Analyzing hierarchy for entity <MDM_Core> in library <mdm_v2_00_b> (architecture
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 1
 	C_UART_WIDTH = 8
@@ -327,7 +327,7 @@ Analyzing generic Entity <mdm> in library <mdm_v2_00_b> (Architecture <IMP>).
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 1
 	C_S_AXI_ADDR_WIDTH = 32
@@ -349,7 +349,7 @@ Analyzing generic Entity <MDM_Core> in library <mdm_v2_00_b> (Architecture <IMP>
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 1
 	C_UART_WIDTH = 8
@@ -666,7 +666,7 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 562
+# IOs                              : 566
 
 Cell Usage :
 # BELS                             : 128
@@ -725,7 +725,7 @@ Slice Logic Distribution:
    Number of unique control sets:        32
 
 IO Utilization: 
- Number of IOs:                         562
+ Number of IOs:                         566
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
@@ -806,13 +806,13 @@ Slack:                  194.464ns
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 19.61 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 18.95 secs
  
 --> 
 
 
-Total memory usage is 640232 kilobytes
+Total memory usage is 640236 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   94 (   0 filtered)

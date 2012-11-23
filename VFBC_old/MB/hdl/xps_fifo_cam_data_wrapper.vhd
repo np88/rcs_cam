@@ -50,10 +50,10 @@ entity xps_fifo_cam_data_wrapper is
     Sl_rdDAck : out std_logic;
     Sl_rdComp : out std_logic;
     Sl_rdBTerm : out std_logic;
-    Sl_MBusy : out std_logic_vector(0 to 2);
-    Sl_MWrErr : out std_logic_vector(0 to 2);
-    Sl_MRdErr : out std_logic_vector(0 to 2);
-    Sl_MIRQ : out std_logic_vector(0 to 2);
+    Sl_MBusy : out std_logic_vector(0 to 3);
+    Sl_MWrErr : out std_logic_vector(0 to 3);
+    Sl_MRdErr : out std_logic_vector(0 to 3);
+    Sl_MIRQ : out std_logic_vector(0 to 3);
     IP2INTC_Irpt : out std_logic;
     GPIO_IO_I : in std_logic_vector(0 to 0);
     GPIO_IO_O : out std_logic_vector(0 to 0);
@@ -150,13 +150,13 @@ begin
 
   xps_FIFO_cam_data : xps_gpio
     generic map (
-      C_BASEADDR => X"8730c000",
-      C_HIGHADDR => X"8730c3ff",
+      C_BASEADDR => X"8928c000",
+      C_HIGHADDR => X"8928c3ff",
       C_SPLB_AWIDTH => 32,
       C_SPLB_DWIDTH => 64,
       C_SPLB_P2P => 0,
       C_SPLB_MID_WIDTH => 2,
-      C_SPLB_NUM_MASTERS => 3,
+      C_SPLB_NUM_MASTERS => 4,
       C_SPLB_NATIVE_DWIDTH => 32,
       C_SPLB_SUPPORT_BURSTS => 0,
       C_FAMILY => "virtex5",

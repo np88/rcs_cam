@@ -267,28 +267,28 @@ Entity <xps_bram_if_cntlr_0_wrapper> (Architecture <STRUCTURE>) compiled.
 Analyzing hierarchy for entity <xps_bram_if_cntlr_0_wrapper> in library <work> (architecture <STRUCTURE>).
 
 Analyzing hierarchy for entity <xps_bram_if_cntlr> in library <xps_bram_if_cntlr_v1_00_b> (architecture <implementation>) with generics.
-	C_BASEADDR = "10001010001000001000000000000000"
+	C_BASEADDR = "10001011011100001000000000000000"
 	C_FAMILY = "virtex5"
-	C_HIGHADDR = "10001010001000001001111111111111"
+	C_HIGHADDR = "10001011011100001001111111111111"
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
 
 Analyzing hierarchy for entity <xbic_slave_attach_burst> in library <xps_bram_if_cntlr_v1_00_b> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001010001000001000000000000000",
-	                          "0000000000000000000000000000000010001010001000001001111111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001011011100001000000000000000",
+	                          "0000000000000000000000000000000010001011011100001001111111111111")
 	C_CACHLINE_ADDR_MODE = 0
 	C_FAMILY = "virtex5"
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 
@@ -298,8 +298,8 @@ Analyzing hierarchy for entity <xbic_addr_be_support> in library <xps_bram_if_cn
 	C_SPLB_NATIVE_DWIDTH = 32
 
 Analyzing hierarchy for entity <xbic_addr_decode> in library <xps_bram_if_cntlr_v1_00_b> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001010001000001000000000000000",
-	                          "0000000000000000000000000000000010001010001000001001111111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001011011100001000000000000000",
+	                          "0000000000000000000000000000000010001011011100001001111111111111")
 	C_FAMILY = "virtex5"
 	C_SPLB_AWIDTH = 32
 	C_SPLB_NATIVE_DWIDTH = 32
@@ -339,14 +339,14 @@ WARNING:Xst:37 - Detected unknown constraint/property "SPECIAL". This constraint
 Entity <xps_bram_if_cntlr_0_wrapper> analyzed. Unit <xps_bram_if_cntlr_0_wrapper> generated.
 
 Analyzing generic Entity <xps_bram_if_cntlr> in library <xps_bram_if_cntlr_v1_00_b> (Architecture <implementation>).
-	C_BASEADDR = "10001010001000001000000000000000"
+	C_BASEADDR = "10001011011100001000000000000000"
 	C_FAMILY = "virtex5"
-	C_HIGHADDR = "10001010001000001001111111111111"
+	C_HIGHADDR = "10001011011100001001111111111111"
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
@@ -355,15 +355,15 @@ WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/p
 Entity <xps_bram_if_cntlr> analyzed. Unit <xps_bram_if_cntlr> generated.
 
 Analyzing generic Entity <xbic_slave_attach_burst> in library <xps_bram_if_cntlr_v1_00_b> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001010001000001000000000000000",
-	                          "0000000000000000000000000000000010001010001000001001111111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001011011100001000000000000000",
+	                          "0000000000000000000000000000000010001011011100001001111111111111")
 	C_CACHLINE_ADDR_MODE = 0
 	C_FAMILY = "virtex5"
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
     Set user-defined property "INIT =  0" for instance <I_FLOP_REARB> in unit <xbic_slave_attach_burst>.
@@ -388,8 +388,8 @@ Analyzing generic Entity <xbic_addr_be_support> in library <xps_bram_if_cntlr_v1
 Entity <xbic_addr_be_support> analyzed. Unit <xbic_addr_be_support> generated.
 
 Analyzing generic Entity <xbic_addr_decode> in library <xps_bram_if_cntlr_v1_00_b> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001010001000001000000000000000",
-	                          "0000000000000000000000000000000010001010001000001001111111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001011011100001000000000000000",
+	                          "0000000000000000000000000000000010001011011100001001111111111111")
 	C_FAMILY = "virtex5"
 	C_SPLB_AWIDTH = 32
 	C_SPLB_NATIVE_DWIDTH = 32
@@ -561,10 +561,10 @@ WARNING:Xst:1780 - Signal <bus2ip_rnw_i> is never used or assigned. This unconne
     Found 6-bit register for signal <sig_steer_addr_reg>.
     Found 32-bit register for signal <sig_wr_dreg>.
     Found 1-bit register for signal <sig_wr_req_reg>.
-    Found 3-bit register for signal <sl_mbusy_i>.
+    Found 4-bit register for signal <sl_mbusy_i>.
     Found 3-bit register for signal <sl_rdwdaddr_i<1:3>>.
     Summary:
-	inferred 118 D-type flip-flop(s).
+	inferred 119 D-type flip-flop(s).
 Unit <xbic_slave_attach_burst> synthesized.
 
 
@@ -609,8 +609,8 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  32-bit adder                                          : 1
  5-bit adder                                           : 1
-# Registers                                            : 35
- 1-bit register                                        : 26
+# Registers                                            : 36
+ 1-bit register                                        : 27
  2-bit register                                        : 1
  32-bit register                                       : 2
  4-bit register                                        : 2
@@ -642,8 +642,8 @@ Macro Statistics
  5-bit adder                                           : 1
 # Accumulators                                         : 1
  32-bit up loadable accumulator                        : 1
-# Registers                                            : 163
- Flip-Flops                                            : 163
+# Registers                                            : 164
+ Flip-Flops                                            : 164
 # Comparators                                          : 1
  4-bit comparator equal                                : 1
 
@@ -713,8 +713,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 156
- Flip-Flops                                            : 156
+# Registers                                            : 157
+ Flip-Flops                                            : 157
 
 =========================================================================
 
@@ -739,28 +739,28 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 377
+# IOs                              : 381
 
 Cell Usage :
-# BELS                             : 238
+# BELS                             : 239
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 4
 #      LUT2                        : 7
-#      LUT3                        : 21
-#      LUT4                        : 29
-#      LUT5                        : 51
-#      LUT6                        : 47
+#      LUT3                        : 22
+#      LUT4                        : 30
+#      LUT5                        : 48
+#      LUT6                        : 49
 #      MUXCY                       : 31
 #      MUXCY_L                     : 6
 #      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 37
-# FlipFlops/Latches                : 156
+# FlipFlops/Latches                : 157
 #      FD                          : 4
 #      FDR                         : 36
 #      FDRE                        : 112
-#      FDRSE                       : 4
+#      FDRSE                       : 5
 =========================================================================
 
 Device utilization summary:
@@ -770,19 +770,19 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             156  out of  69120     0%  
- Number of Slice LUTs:                  161  out of  69120     0%  
-    Number used as Logic:               161  out of  69120     0%  
+ Number of Slice Registers:             157  out of  69120     0%  
+ Number of Slice LUTs:                  162  out of  69120     0%  
+    Number used as Logic:               162  out of  69120     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    213
-   Number with an unused Flip Flop:      57  out of    213    26%  
-   Number with an unused LUT:            52  out of    213    24%  
-   Number of fully used LUT-FF pairs:   104  out of    213    48%  
-   Number of unique control sets:        30
+ Number of LUT Flip Flop pairs used:    215
+   Number with an unused Flip Flop:      58  out of    215    26%  
+   Number with an unused LUT:            53  out of    215    24%  
+   Number of fully used LUT-FF pairs:   104  out of    215    48%  
+   Number of unique control sets:        31
 
 IO Utilization: 
- Number of IOs:                         377
+ Number of IOs:                         381
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
@@ -808,7 +808,7 @@ Clock Information:
 -----------------------------------+-----------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                               | Load  |
 -----------------------------------+-----------------------------------------------------------------------------------------------------+-------+
-BRAM_Clk                           | NONE(xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_DBEAT_CONTROL/mult_cnt_sreg_1)| 156   |
+BRAM_Clk                           | NONE(xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_DBEAT_CONTROL/mult_cnt_sreg_1)| 157   |
 -----------------------------------+-----------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -821,7 +821,7 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 3.567ns (Maximum Frequency: 280.312MHz)
-   Minimum input arrival time before clock: 4.424ns
+   Minimum input arrival time before clock: 4.232ns
    Maximum output required time after clock: 1.770ns
    Maximum combinational path delay: 0.000ns
 
@@ -832,7 +832,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'BRAM_Clk'
   Clock period: 3.567ns (frequency: 280.312MHz)
-  Total number of paths / destination ports: 4802 / 280
+  Total number of paths / destination ports: 4806 / 283
 -------------------------------------------------------------------------
 Delay:               3.567ns (Levels of Logic = 32)
   Source:            xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_sl_busy (FF)
@@ -884,30 +884,30 @@ Delay:               3.567ns (Levels of Logic = 32)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'BRAM_Clk'
-  Total number of paths / destination ports: 2883 / 349
+  Total number of paths / destination ports: 2992 / 350
 -------------------------------------------------------------------------
-Offset:              4.424ns (Levels of Logic = 5)
-  Source:            PLB_ABus<14> (PAD)
+Offset:              4.232ns (Levels of Logic = 5)
+  Source:            PLB_ABus<4> (PAD)
   Destination:       xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK (FF)
   Destination Clock: BRAM_Clk rising
 
-  Data Path: PLB_ABus<14> to xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK
+  Data Path: PLB_ABus<4> to xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT5:I0->O            1   0.094   0.576  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request109 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request109)
-     LUT5:I3->O            1   0.094   1.069  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request125 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request125)
-     LUT6:I0->O            5   0.094   1.091  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request233 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request)
+     LUT5:I0->O            1   0.094   0.973  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request82 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request82)
+     LUT6:I1->O            1   0.094   0.480  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request217_SW0 (N22)
+     LUT6:I5->O            5   0.094   1.091  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request217 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_good_request)
      LUT6:I0->O            2   0.094   0.581  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/rearb_condition1 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/rearb_condition)
      LUT3:I1->O            2   0.094   0.000  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_wr_req1 (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_wr_req)
      FDRE:D                   -0.018          xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_WRACK_2BUS
     ----------------------------------------
-    Total                      4.424ns (1.107ns logic, 3.317ns route)
-                                       (25.0% logic, 75.0% route)
+    Total                      4.232ns (1.107ns logic, 3.125ns route)
+                                       (26.2% logic, 73.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'BRAM_Clk'
-  Total number of paths / destination ports: 178 / 147
+  Total number of paths / destination ports: 179 / 148
 -------------------------------------------------------------------------
 Offset:              1.770ns (Levels of Logic = 1)
   Source:            xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY (FF)
@@ -918,7 +918,7 @@ Offset:              1.770ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            77   0.471   1.205  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_set_sl_busy)
+     FDRE:C->Q            78   0.471   1.205  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY (xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sig_set_sl_busy)
      LUT6:I0->O            0   0.094   0.000  xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/sl_wrbterm_i1 (Sl_wrBTerm)
     ----------------------------------------
     Total                      1.770ns (0.565ns logic, 1.205ns route)
@@ -942,13 +942,13 @@ Delay:               0.000ns (Levels of Logic = 0)
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 16.42 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 16.46 secs
  
 --> 
 
 
-Total memory usage is 645372 kilobytes
+Total memory usage is 645344 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   95 (   0 filtered)

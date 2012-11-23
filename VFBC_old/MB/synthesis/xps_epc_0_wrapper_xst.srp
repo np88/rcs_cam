@@ -388,7 +388,7 @@ Analyzing hierarchy for entity <xps_epc> in library <xps_epc_v1_02_a> (architect
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 0
 
@@ -403,7 +403,7 @@ Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_si
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <epc_core> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
@@ -520,7 +520,7 @@ Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_s
 	C_IPIF_ABUS_WIDTH = 32
 	C_IPIF_DBUS_WIDTH = 32
 	C_PLB_MID_WIDTH = 2
-	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <ipic_if_decode> in library <xps_epc_v1_02_a> (architecture <imp>) with generics.
@@ -846,7 +846,7 @@ Analyzing generic Entity <xps_epc> in library <xps_epc_v1_02_a> (Architecture <i
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 0
 WARNING:Xst:37 - Detected unknown constraint/property "SIGIS". This constraint/property is not supported by the current software release and will be ignored.
@@ -866,7 +866,7 @@ Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 Entity <plbv46_slave_single> analyzed. Unit <plbv46_slave_single> generated.
 
@@ -881,7 +881,7 @@ Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_
 	C_IPIF_ABUS_WIDTH = 32
 	C_IPIF_DBUS_WIDTH = 32
 	C_PLB_MID_WIDTH = 2
-	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" line 1201: Unconnected output port 'Count_Out' of component 'counter_f'.
 Entity <plb_slave_attachment> analyzed. Unit <plb_slave_attachment> generated.
@@ -1702,14 +1702,14 @@ WARNING:Xst:1780 - Signal <clear_rd_ce> is never used or assigned. This unconnec
     Found 1-bit register for signal <rd_clear_sl_busy>.
     Found 1-bit register for signal <set_sl_busy>.
     Found 1-bit register for signal <sl_busy>.
-    Found 3-bit register for signal <sl_mbusy_i>.
-    Found 3-bit register for signal <sl_mrderr_i>.
-    Found 3-bit register for signal <sl_mwrerr_i>.
+    Found 4-bit register for signal <sl_mbusy_i>.
+    Found 4-bit register for signal <sl_mrderr_i>.
+    Found 4-bit register for signal <sl_mwrerr_i>.
     Found 32-bit register for signal <sl_rddbus_i>.
     Found 1-bit register for signal <sl_rearbitrate_i>.
     Found 1-bit register for signal <sl_wrcomp_i>.
     Summary:
-	inferred 167 D-type flip-flop(s).
+	inferred 170 D-type flip-flop(s).
 Unit <plb_slave_attachment> synthesized.
 
 
@@ -1753,8 +1753,8 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 67
- 1-bit register                                        : 52
+# Registers                                            : 70
+ 1-bit register                                        : 55
  2-bit register                                        : 2
  3-bit register                                        : 3
  32-bit register                                       : 5
@@ -1794,8 +1794,8 @@ Macro Statistics
 # FSMs                                                 : 1
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 291
- Flip-Flops                                            : 291
+# Registers                                            : 294
+ Flip-Flops                                            : 294
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -1892,8 +1892,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 241
- Flip-Flops                                            : 241
+# Registers                                            : 244
+ Flip-Flops                                            : 244
 
 =========================================================================
 
@@ -1918,25 +1918,25 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 386
+# IOs                              : 390
 
 Cell Usage :
-# BELS                             : 143
+# BELS                             : 148
 #      GND                         : 1
 #      LUT1                        : 1
-#      LUT2                        : 21
-#      LUT3                        : 21
+#      LUT2                        : 23
+#      LUT3                        : 22
 #      LUT4                        : 46
 #      LUT5                        : 5
-#      LUT6                        : 20
+#      LUT6                        : 22
 #      MULT_AND                    : 9
 #      MUXCY                       : 9
 #      VCC                         : 1
 #      XORCY                       : 9
-# FlipFlops/Latches                : 241
-#      FD                          : 82
+# FlipFlops/Latches                : 244
+#      FD                          : 84
 #      FDR                         : 87
-#      FDRE                        : 58
+#      FDRE                        : 59
 #      FDRS                        : 4
 #      FDS                         : 9
 #      FDSE                        : 1
@@ -1949,19 +1949,19 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             241  out of  69120     0%  
- Number of Slice LUTs:                  114  out of  69120     0%  
-    Number used as Logic:               114  out of  69120     0%  
+ Number of Slice Registers:             244  out of  69120     0%  
+ Number of Slice LUTs:                  119  out of  69120     0%  
+    Number used as Logic:               119  out of  69120     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    273
-   Number with an unused Flip Flop:      32  out of    273    11%  
-   Number with an unused LUT:           159  out of    273    58%  
-   Number of fully used LUT-FF pairs:    82  out of    273    30%  
-   Number of unique control sets:        22
+ Number of LUT Flip Flop pairs used:    279
+   Number with an unused Flip Flop:      35  out of    279    12%  
+   Number with an unused LUT:           160  out of    279    57%  
+   Number of fully used LUT-FF pairs:    84  out of    279    30%  
+   Number of unique control sets:        23
 
 IO Utilization: 
- Number of IOs:                         386
+ Number of IOs:                         390
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
@@ -1987,7 +1987,7 @@ Clock Information:
 -----------------------------------+----------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                    | Load  |
 -----------------------------------+----------------------------------------------------------+-------+
-SPLB_Clk                           | NONE(xps_epc_0/EPC_CORE_I/IPIC_DECODE_I/ip_sync_Wrack_d4)| 241   |
+SPLB_Clk                           | NONE(xps_epc_0/EPC_CORE_I/IPIC_DECODE_I/ip_sync_Wrack_d4)| 244   |
 -----------------------------------+----------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -2011,7 +2011,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
   Clock period: 2.651ns (frequency: 377.216MHz)
-  Total number of paths / destination ports: 992 / 232
+  Total number of paths / destination ports: 1015 / 236
 -------------------------------------------------------------------------
 Delay:               2.651ns (Levels of Logic = 10)
   Source:            xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd2 (FF)
@@ -2041,7 +2041,7 @@ Delay:               2.651ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 397 / 340
+  Total number of paths / destination ports: 400 / 343
 -------------------------------------------------------------------------
 Offset:              1.945ns (Levels of Logic = 10)
   Source:            PRH_Rdy<0> (PAD)
@@ -2069,7 +2069,7 @@ Offset:              1.945ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 152 / 152
+  Total number of paths / destination ports: 155 / 155
 -------------------------------------------------------------------------
 Offset:              0.471ns (Levels of Logic = 0)
   Source:            xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i (FF)
@@ -2089,12 +2089,12 @@ Offset:              0.471ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 16.99 secs
+Total CPU time to Xst completion: 17.25 secs
  
 --> 
 
 
-Total memory usage is 690312 kilobytes
+Total memory usage is 690336 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  315 (   0 filtered)

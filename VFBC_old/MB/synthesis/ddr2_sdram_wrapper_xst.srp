@@ -1374,7 +1374,7 @@ Analyzing hierarchy for module <mpmc> in library <mpmc_v6_05_a> with parameters.
 	C_SPLB0_DWIDTH = 64
 	C_SPLB0_MID_WIDTH = 2
 	C_SPLB0_NATIVE_DWIDTH = 64
-	C_SPLB0_NUM_MASTERS = 3
+	C_SPLB0_NUM_MASTERS = 4
 	C_SPLB0_P2P = "00000000000000000000000000000000"
 	C_SPLB0_SMALLEST_MASTER = 32
 	C_SPLB0_SUPPORT_BURSTS = "00000000000000000000000000000001"
@@ -2541,7 +2541,7 @@ Analyzing hierarchy for entity <plbv46_pim_wrapper> in library <mpmc_v6_05_a> (a
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
@@ -3065,7 +3065,7 @@ Analyzing hierarchy for entity <plbv46_pim> in library <mpmc_v6_05_a> (architect
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_PIPE_STAGES = 1
 	C_SPLB_SMALLEST_MASTER = 32
@@ -3702,7 +3702,7 @@ Analyzing hierarchy for entity <plbv46_address_decoder> in library <mpmc_v6_05_a
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
@@ -3715,7 +3715,7 @@ Analyzing hierarchy for entity <plbv46_write_module> in library <mpmc_v6_05_a> (
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
 WARNING:Xst:795 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_05_a/hdl/vhdl/plbv46_write_module.vhd" line 79: Size of operands are different : result is <false>.
@@ -3731,7 +3731,7 @@ Analyzing hierarchy for entity <plbv46_rd_support> in library <mpmc_v6_05_a> (ar
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
 
@@ -5077,7 +5077,7 @@ Analyzing module <mpmc> in library <mpmc_v6_05_a>.
 	C_SPLB0_DWIDTH = 64
 	C_SPLB0_MID_WIDTH = 2
 	C_SPLB0_NATIVE_DWIDTH = 64
-	C_SPLB0_NUM_MASTERS = 3
+	C_SPLB0_NUM_MASTERS = 4
 	C_SPLB0_P2P = 32'sb00000000000000000000000000000000
 	C_SPLB0_SMALLEST_MASTER = 32
 	C_SPLB0_SUPPORT_BURSTS = 32'sb00000000000000000000000000000001
@@ -9674,7 +9674,7 @@ Analyzing generic Entity <plbv46_pim_wrapper> in library <mpmc_v6_05_a> (Archite
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
@@ -9698,7 +9698,7 @@ Analyzing generic Entity <plbv46_pim> in library <mpmc_v6_05_a> (Architecture <r
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_PIPE_STAGES = 1
 	C_SPLB_SMALLEST_MASTER = 32
@@ -9723,7 +9723,7 @@ Analyzing generic Entity <plbv46_address_decoder> in library <mpmc_v6_05_a> (Arc
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
@@ -9749,7 +9749,7 @@ Analyzing generic Entity <plbv46_write_module> in library <mpmc_v6_05_a> (Archit
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
 WARNING:Xst:795 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_v6_05_a/hdl/vhdl/plbv46_write_module.vhd" line 1594: Size of operands are different : result is <false>.
@@ -9766,7 +9766,7 @@ Analyzing generic Entity <plbv46_rd_support> in library <mpmc_v6_05_a> (Architec
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 64
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_SMALLEST_MASTER = 32
 	C_SPLB_SUPPORT_BURSTS = 1
     Set user-defined property "KEEP =  TRUE" for signal <sig_sl_rdack>.
@@ -13297,7 +13297,7 @@ WARNING:Xst:646 - Signal <Pi2ad_AddrAck_reg> is assigned but never used. This un
     Found 1-bit register for signal <single_reg>.
     Found 1-bit register for signal <sl_addrack_reg>.
     Found 1-bit register for signal <sl_addrack_reg2>.
-    Found 3-bit register for signal <sl_mbusy_i>.
+    Found 4-bit register for signal <sl_mbusy_i>.
     Found 1-bit register for signal <sl_rearb_reg>.
     Found 1-bit register for signal <sm_ack>.
     Found 1-bit register for signal <sm_ack_reg>.
@@ -13311,7 +13311,7 @@ WARNING:Xst:646 - Signal <Pi2ad_AddrAck_reg> is assigned but never used. This un
 	inferred   1 Finite State Machine(s).
 	inferred   1 ROM(s).
 	inferred   3 Counter(s).
-	inferred 254 D-type flip-flop(s).
+	inferred 255 D-type flip-flop(s).
 	inferred   4 Adder/Subtractor(s).
 	inferred  11 Comparator(s).
 Unit <plbv46_address_decoder> synthesized.
@@ -16314,8 +16314,8 @@ Macro Statistics
 # Accumulators                                         : 7
  11-bit up accumulator                                 : 6
  2-bit up accumulator                                  : 1
-# Registers                                            : 1545
- 1-bit register                                        : 1215
+# Registers                                            : 1546
+ 1-bit register                                        : 1216
  10-bit register                                       : 10
  11-bit register                                       : 12
  128-bit register                                      : 12
@@ -16999,8 +16999,8 @@ Macro Statistics
  11-bit up accumulator                                 : 6
  2-bit up accumulator                                  : 1
  9-bit updown loadable accumulator                     : 1
-# Registers                                            : 6567
- Flip-Flops                                            : 6567
+# Registers                                            : 6568
+ Flip-Flops                                            : 6568
 # Shift Registers                                      : 68
  16-bit dynamic shift register                         : 68
 # Comparators                                          : 140
@@ -18794,8 +18794,6 @@ INFO:Xst:2261 - The FF/Latch <DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/
 INFO:Xst:2260 - The FF/Latch <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[0].u_iob_dm/u_dm_ce> in Unit <ddr2_sdram_wrapper> is equivalent to the following 7 FFs/Latches : <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[1].u_iob_dm/u_dm_ce> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[2].u_iob_dm/u_dm_ce> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[3].u_iob_dm/u_dm_ce> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[4].u_iob_dm/u_dm_ce> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[5].u_iob_dm/u_dm_ce> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[6].u_iob_dm/u_dm_ce> <DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[7].u_iob_dm/u_dm_ce> 
 WARNING:Xst:2677 - Node <DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/rd_wr_module_addr_24> of sequential type is unconnected in block <ddr2_sdram_wrapper>.
 FlipFlop DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/CLOCK_TO_N_SAMPLE_CIRCUIT/plb_rst_pipe_1 has been replicated 13 time(s)
-FlipFlop DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_size_pipe_0 has been replicated 1 time(s)
-FlipFlop DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_size_pipe_1 has been replicated 1 time(s)
 FlipFlop DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.GEN_MULTI_PORT.UCmdFetch/bc_valid has been replicated 17 time(s)
 
 Final Macro Processing ...
@@ -18951,8 +18949,8 @@ Unit <ddr2_sdram_wrapper> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 5331
- Flip-Flops                                            : 5331
+# Registers                                            : 5330
+ Flip-Flops                                            : 5330
 # Shift Registers                                      : 143
  15-bit shift register                                 : 3
  16-bit shift register                                 : 1
@@ -18983,37 +18981,37 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 13554
+# IOs                              : 13558
 
 Cell Usage :
-# BELS                             : 4410
+# BELS                             : 4411
 #      BUF                         : 43
 #      GND                         : 1
-#      INV                         : 157
+#      INV                         : 155
 #      LUT1                        : 72
-#      LUT2                        : 596
-#      LUT3                        : 674
-#      LUT4                        : 556
-#      LUT5                        : 798
-#      LUT6                        : 917
+#      LUT2                        : 597
+#      LUT3                        : 675
+#      LUT4                        : 563
+#      LUT5                        : 790
+#      LUT6                        : 921
 #      MUXCY                       : 256
 #      MUXCY_L                     : 5
-#      MUXF7                       : 64
+#      MUXF7                       : 62
 #      OR3                         : 2
 #      VCC                         : 1
 #      XORCY                       : 268
-# FlipFlops/Latches                : 5688
-#      FD                          : 1511
+# FlipFlops/Latches                : 5687
+#      FD                          : 1520
 #      FD_1                        : 11
 #      FDCPE                       : 24
 #      FDCPE_1                     : 8
 #      FDE                         : 285
 #      FDP                         : 8
-#      FDR                         : 1188
+#      FDR                         : 1184
 #      FDR_1                       : 3
-#      FDRE                        : 1402
-#      FDRS                        : 111
-#      FDRSE                       : 385
+#      FDRE                        : 1396
+#      FDRS                        : 110
+#      FDRSE                       : 386
 #      FDRSE_1                     : 136
 #      FDS                         : 361
 #      FDS_1                       : 2
@@ -19046,22 +19044,22 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            5688  out of  69120     8%  
- Number of Slice LUTs:                 4231  out of  69120     6%  
-    Number used as Logic:              3770  out of  69120     5%  
+ Number of Slice Registers:            5687  out of  69120     8%  
+ Number of Slice LUTs:                 4234  out of  69120     6%  
+    Number used as Logic:              3773  out of  69120     5%  
     Number used as Memory:              461  out of  17920     2%  
        Number used as RAM:              206
        Number used as SRL:              255
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   7054
-   Number with an unused Flip Flop:    1366  out of   7054    19%  
-   Number with an unused LUT:          2823  out of   7054    40%  
-   Number of fully used LUT-FF pairs:  2865  out of   7054    40%  
-   Number of unique control sets:       675
+ Number of LUT Flip Flop pairs used:   7057
+   Number with an unused Flip Flop:    1370  out of   7057    19%  
+   Number with an unused LUT:          2823  out of   7057    40%  
+   Number of fully used LUT-FF pairs:  2864  out of   7057    40%  
+   Number of unique control sets:       674
 
 IO Utilization: 
- Number of IOs:                       13554
+ Number of IOs:                       13558
  Number of bonded IOBs:                  92  out of    640    14%  
 
 Specific Feature Utilization:
@@ -19103,7 +19101,7 @@ DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob
 VFBC2_Cmd_Clk                                                                                                                                                                                                     | NONE(DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/npi_init_done_cmd_dly_0)                                             | 35    |
 VFBC2_Wd_Clk                                                                                                                                                                                                      | NONE(DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/npi_init_done_wd_dly_0)                                              | 68    |
 VFBC2_Rd_Clk                                                                                                                                                                                                      | NONE(DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/npi_init_done_rd_dly_0)                                              | 68    |
-SPLB0_Clk                                                                                                                                                                                                         | NONE(DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_READ_MODULE/Sl_rdBTerm_to_plb) | 487   |
+SPLB0_Clk                                                                                                                                                                                                         | NONE(DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_READ_MODULE/Sl_rdBTerm_to_plb) | 486   |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+-------+
 (*) These 8 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -19115,7 +19113,7 @@ Asynchronous Control Signals Information:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                | Buffer(FF name)                                                                                        | Load  |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+-------+
-N1451                                                                                                                                                                                                         | NONE                                                                                                   | 159   |
+N1449                                                                                                                                                                                                         | NONE                                                                                                   | 159   |
 DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i(DDR2_SDRAM/mpmc_core_0/gen_normal_phy_mapping.gen_no_debug_reg.rst_phy_i:Q)                                                          | NONE(DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_ctl_io/gen_cke[0].u_ff_cke)            | 17    |
 DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)| NONE(DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_iddr_dq_ce)| 1     |
 DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/en_dqs_sync(DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iodelay_dq_ce:DATAOUT)| NONE(DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_iddr_dq_ce)| 1     |
@@ -19131,7 +19129,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 5.519ns (Maximum Frequency: 181.193MHz)
+   Minimum period: 5.509ns (Maximum Frequency: 181.522MHz)
    Minimum input arrival time before clock: 2.808ns
    Maximum output required time after clock: 3.395ns
    Maximum combinational path delay: 0.818ns
@@ -19157,9 +19155,9 @@ Delay:               5.046ns (Levels of Logic = 7)
     ----------------------------------------  ------------
      FDRE:C->Q             1   0.471   0.710  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/x_size_upper_plus_one_4 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/x_size_upper_plus_one_4)
      LUT3:I0->O            2   0.094   0.485  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/x_size_stage2_14_mux00001 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/x_size_stage2<14>)
-     LUT6:I5->O            1   0.094   0.000  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8_SW1_SW0_G (N1077)
+     LUT6:I5->O            1   0.094   0.000  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8_SW1_SW0_G (N1075)
      MUXF7:I1->O           1   0.254   0.480  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8_SW1_SW0 (N1020)
-     LUT5:I4->O            1   0.094   0.480  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8_SW1 (N918)
+     LUT5:I4->O            1   0.094   0.480  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8_SW1 (N914)
      LUT5:I4->O            5   0.094   0.502  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8_SW2 (N1018)
      LUT6:I5->O           14   0.094   0.551  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb8 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/last_transfer_comb)
      LUT6:I5->O            1   0.094   0.336  DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/command_done_not0001221 (DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_BURST_CUT.UBurstCtrl/command_done_not0001)
@@ -19205,7 +19203,7 @@ Delay:               4.745ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               1   0.471   1.069  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/cal2_rd_data_sel_r_2 (DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/cal2_rd_data_sel_r_2)
-     LUT6:I0->O            1   0.094   0.789  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyce_or190_SW0 (N910)
+     LUT6:I0->O            1   0.094   0.789  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyce_or190_SW0 (N908)
      LUT6:I2->O            9   0.094   0.524  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyce_or190 (DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/dlyce_or)
      LUT4:I3->O           33   0.094   0.607  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/idel_set_wait1 (DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/idel_set_wait)
      LUT4:I3->O            1   0.094   0.336  DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/cal4_ref_req_or00001 (DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/cal4_ref_req_or0000)
@@ -19290,10 +19288,10 @@ Delay:               4.530ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB0_Clk'
-  Clock period: 5.519ns (frequency: 181.193MHz)
-  Total number of paths / destination ports: 80346 / 965
+  Clock period: 5.509ns (frequency: 181.522MHz)
+  Total number of paths / destination ports: 80354 / 949
 -------------------------------------------------------------------------
-Delay:               5.519ns (Levels of Logic = 29)
+Delay:               5.509ns (Levels of Logic = 29)
   Source:            DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_be_pipe_6 (FF)
   Destination:       DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/addr_tb0_q_0 (FF)
   Source Clock:      SPLB0_Clk rising
@@ -19303,9 +19301,9 @@ Delay:               5.519ns (Levels of Logic = 29)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              6   0.471   0.816  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_be_pipe_6 (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_be_pipe_6)
-     LUT4:I0->O            4   0.094   0.805  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/valid_request_and000020 (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/valid_request_and000020)
-     LUT4:I0->O            2   0.094   0.485  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/valid_request_and0000131_SW0 (N824)
+     FDR:C->Q              5   0.471   0.811  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_be_pipe_6 (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/plb_be_pipe_6)
+     LUT4:I0->O            3   0.094   0.800  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/valid_request_and000020 (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/valid_request_and000020)
+     LUT4:I0->O            2   0.094   0.485  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/valid_request_and0000131_SW0 (N817)
      LUT6:I5->O           15   0.094   0.557  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/addr_cs_FSM_FFd11-In11_1 (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/addr_cs_FSM_FFd11-In11)
      LUT5:I4->O           68   0.094   0.614  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/tb0_en (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/tb0_en)
      LUT3:I2->O            1   0.094   0.000  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/Maddsub_addr_tb0_q_mux0004_lut<8> (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/Maddsub_addr_tb0_q_mux0004_lut<8>)
@@ -19335,8 +19333,8 @@ Delay:               5.519ns (Levels of Logic = 29)
      XORCY:CI->O           1   0.357   0.000  DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/Maddsub_addr_tb0_q_mux0004_xor<31> (DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/addr_tb0_q_mux0004<31>)
      FDRE:D                   -0.018          DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/addr_tb0_q_0
     ----------------------------------------
-    Total                      5.519ns (2.242ns logic, 3.277ns route)
-                                       (40.6% logic, 59.4% route)
+    Total                      5.509ns (2.242ns logic, 3.267ns route)
+                                       (40.7% logic, 59.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'MPMC_Clk0'
@@ -19611,7 +19609,7 @@ Offset:              2.792ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB0_Clk'
-  Total number of paths / destination ports: 1199 / 207
+  Total number of paths / destination ports: 1197 / 205
 -------------------------------------------------------------------------
 Offset:              2.336ns (Levels of Logic = 33)
   Source:            SPLB0_PLB_ABus<31> (PAD)
@@ -19703,7 +19701,7 @@ Offset:              2.253ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB0_Clk'
-  Total number of paths / destination ports: 79 / 79
+  Total number of paths / destination ports: 80 / 80
 -------------------------------------------------------------------------
 Offset:              0.471ns (Levels of Logic = 0)
   Source:            DDR2_SDRAM/PLB_0_INST.plbv46_pim_0/comp_plbv46_pim/GENERATE_PLB_PLBV46_PIM.PIM_ADDRESS_DECODER/sl_rearb_reg (FF)
@@ -19951,7 +19949,7 @@ Offset:              0.841ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 6066 / 5782
+  Total number of paths / destination ports: 6069 / 5785
 -------------------------------------------------------------------------
 Delay:               0.818ns (Levels of Logic = 1)
   Source:            DDR2_DQ<0> (PAD)
@@ -20513,13 +20511,13 @@ WARNING:Xst:616 - Invalid property "SYN_PRESERVE 1": Did not attach to DDR2_SDRA
 WARNING:Xst:616 - Invalid property "SYN_PRESERVE 1": Did not attach to DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dm_inst.gen_dm[7].u_iob_dm/u_dm_ce.
 
 
-Total REAL time to Xst completion: 333.00 secs
-Total CPU time to Xst completion: 309.56 secs
+Total REAL time to Xst completion: 319.00 secs
+Total CPU time to Xst completion: 308.34 secs
  
 --> 
 
 
-Total memory usage is 1085732 kilobytes
+Total memory usage is 1085972 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 4630 (   0 filtered)

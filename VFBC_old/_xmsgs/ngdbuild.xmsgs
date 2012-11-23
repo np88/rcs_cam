@@ -5,6 +5,15 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="ConstraintSystem" num="134" delta="old" >Constraint <arg fmt="%s" index="1">&lt;INST /System_tl/EXPANDED/System_tl/Inst_MB/xps_tft_0/xps_tft_0\/TFT_CTRL_I\/tft_rst_d1_or000011_INV_0 TNM = TNM_TFT_RST_xps_tft_0&gt;</arg>: No appropriate instances for the TNM constraint were found under block &quot;<arg fmt="%s" index="2">Inst_MB/xps_tft_0/xps_tft_0/TFT_CTRL_I/tft_rst_d1_or000011_INV_0</arg>&quot; (type=<arg fmt="%s" index="3">INV</arg>).
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="134" delta="old" >Constraint <arg fmt="%s" index="1">&lt;INST /System_tl/EXPANDED/System_tl/Inst_MB/xps_tft_0/xps_tft_0\/TFT_CTRL_I\/VSYNC_U3\/V_bp_cnt_tc_cmp_eq00001 TNM = TNM_TFT_CLOCK_xps_tft_0&gt;</arg>: No appropriate instances for the TNM constraint were found under block &quot;<arg fmt="%s" index="2">Inst_MB/xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_bp_cnt_tc_cmp_eq00001</arg>&quot; (type=<arg fmt="%s" index="3">LUT5</arg>).
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="134" delta="old" >Constraint <arg fmt="%s" index="1">&lt;INST /System_tl/EXPANDED/System_tl/Inst_MB/xps_tft_0/xps_tft_0\/TFT_CTRL_I\/VSYNC_U3\/V_p_cnt_tc_cmp_eq00001 TNM = TNM_TFT_CLOCK_xps_tft_0&gt;</arg>: No appropriate instances for the TNM constraint were found under block &quot;<arg fmt="%s" index="2">Inst_MB/xps_tft_0/xps_tft_0/TFT_CTRL_I/VSYNC_U3/V_p_cnt_tc_cmp_eq00001</arg>&quot; (type=<arg fmt="%s" index="3">LUT2</arg>).
+</msg>
+
 <msg type="warning" file="ConstraintSystem" num="119" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_clk_1_sys_clk_pin_BUFGP&quot; IOSTANDARD = &quot;LVCMOS33&quot;&gt;</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET: UniqueName: /System_tl/EXPANDED/fpga_0_clk_1_sys_clk_pin_BUFGP</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
 </msg>
 
@@ -13,6 +22,15 @@
 
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;fpga_0_clk_1_sys_clk_pin_BUFGP&quot; LOC = AH15&gt;&apos; could not be found and so the Locate constraint will be removed.
 </msg>
+
+<msg type="warning" file="ConstraintSystem" num="194" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">TNM_TFT_RST_xps_tft_0</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
+ </msg>
+
+<msg type="warning" file="ConstraintSystem" num="194" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">TNM_TFT_CLOCK_xps_tft_0</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
+ </msg>
+
+<msg type="warning" file="ConstraintSystem" num="194" delta="old" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">TNM_TFT_CLOCK_xps_tft_0</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMs and is not actively used by any referencing constraint.
+ </msg>
 
 <msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sys_clk_pin</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_sys_clk_pin</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
 <arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PERIOD &quot;Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0&quot; TS_sys_clk_pin HIGH 50%&gt;</arg>
@@ -26,52 +44,56 @@
 <arg fmt="%s" index="7">CLKOUT2</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 = PERIOD &quot;Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2&quot; TS_sys_clk_pin * 2 HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;7&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;7&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[7]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(16)]</arg>.
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sys_clk_pin</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_sys_clk_pin</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT4</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4 = PERIOD &quot;Inst_MB_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4&quot; TS_sys_clk_pin * 0.25 HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;6&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;6&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[6]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(15)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;7&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;7&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[7]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(16)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;5&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;5&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[5]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(14)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;6&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;6&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[6]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(15)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;4&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;4&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[4]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(13)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;5&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;5&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[5]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(14)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;3&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;3&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[3]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(12)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;4&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;4&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[4]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(13)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;2&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;2&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[2]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(11)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;3&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;3&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[3]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(12)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;1&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;1&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[1]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(10)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;2&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;2&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[2]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(11)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;0&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;0&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[0]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(9)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;1&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;1&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[1]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(10)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;7&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;7&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[7]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(8)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;0&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_pin&lt;0&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_pin[0]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(9)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;6&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;6&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[6]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(7)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;7&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;7&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[7]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(8)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;5&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;5&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[5]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(6)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;6&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;6&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[6]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(7)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;4&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;4&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[4]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(5)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;5&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;5&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[5]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(6)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;3&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;3&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[3]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(4)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;4&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;4&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[4]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(5)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;2&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;2&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[2]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(3)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;3&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;3&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[3]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(4)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;1&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;1&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[1]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(2)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;2&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;2&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[2]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(3)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;0&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;0&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[0]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(1)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;1&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;1&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[1]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(2)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;0&gt;&quot; IOSTANDARD = &quot;DIFF_SSTL18_II&quot;&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin&lt;0&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin[0]&quot; IOSTANDARD = DIFF_SSTL18_II;&gt; [System_dma_tl.ucf(1)]</arg>.
 </msg>
 
 <msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">Inst_MB/DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u_phy_calib_0/gen_rden[1].u_calib_rden_r</arg>&apos; has unconnected output pin
@@ -344,6 +366,18 @@
 <msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">Inst_MB/xps_bram_if_cntlr_0/xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_DBEAT_CONTROL/I_DBEAT_CNTR/STRUCTURAL_A_GEN.I_ADDSUB_GEN[4].FDRE_I</arg>&apos; has unconnected output pin
 </msg>
 
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">Inst_MB/xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_RDSOP_REG</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">Inst_MB/xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_WRERR_REG</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">Inst_MB/xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_RDERR_REG</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">Inst_MB/xps_tft_0/xps_tft_0/PLBV46_MASTER_BURST_I/I_RD_WR_CONTROL/I_FIFO_REN_WRACK_REG</arg>&apos; has unconnected output pin
+</msg>
+
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N100</arg>&apos; has no driver
 </msg>
 
@@ -524,10 +558,16 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N159</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N80</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N160</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N81</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N161</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N162</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N163</arg>&apos; has no driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N82</arg>&apos; has no driver
@@ -584,13 +624,13 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N99</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">cam_sda</arg>&apos; has no legal driver
+<msg type="warning" file="NgdBuild" num="470" delta="new" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">cam_sda</arg>&apos; has no legal driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">cam_scl</arg>&apos; has no legal driver
+<msg type="warning" file="NgdBuild" num="470" delta="new" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">cam_scl</arg>&apos; has no legal driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">cam_exclk</arg>&apos; has no legal driver
+<msg type="warning" file="NgdBuild" num="470" delta="new" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">cam_exclk</arg>&apos; has no legal driver
 </msg>
 
 </messages>

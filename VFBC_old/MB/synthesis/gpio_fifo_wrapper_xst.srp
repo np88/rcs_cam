@@ -260,20 +260,20 @@ Analyzing hierarchy for entity <gpio_fifo_wrapper> in library <work> (architectu
 Analyzing hierarchy for entity <xps_gpio> in library <xps_gpio_v2_00_a> (architecture <imp>) with generics.
 	C_ALL_INPUTS = 1
 	C_ALL_INPUTS_2 = 0
-	C_BASEADDR = "10001101000100000101000000000000"
+	C_BASEADDR = "10001101101110000101000000000000"
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "virtex5"
 	C_GPIO2_WIDTH = 2
 	C_GPIO_WIDTH = 1
-	C_HIGHADDR = "10001101000100000101001111111111"
+	C_HIGHADDR = "10001101101110000101001111111111"
 	C_INTERRUPT_PRESENT = 1
 	C_IS_DUAL = 1
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 0
 	C_TRI_DEFAULT = "11111111111111111111111111111111"
@@ -284,10 +284,10 @@ WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIP
 WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/xps_gpio.vhd" line 391: Loop body will iterate zero times
 
 Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101101110000101000000000000",
+	                          "0000000000000000000000000000000010001101101110000101000000001111",
+	                          "0000000000000000000000000000000010001101101110000101000100000000",
+	                          "0000000000000000000000000000000010001101101110000101000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_FAMILY = "virtex5"
@@ -296,7 +296,7 @@ Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_si
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <interrupt_control> in library <interrupt_control_v2_01_a> (architecture <implementation>) with generics.
@@ -322,10 +322,10 @@ Analyzing hierarchy for entity <GPIO_Core> in library <xps_gpio_v2_00_a> (archit
 	C_TRI_DEFAULT_2 = "11111111111111111111111111111111"
 
 Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101101110000101000000000000",
+	                          "0000000000000000000000000000000010001101101110000101000000001111",
+	                          "0000000000000000000000000000000010001101101110000101000100000000",
+	                          "0000000000000000000000000000000010001101101110000101000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_DPHASE_TIMEOUT = 128
@@ -334,14 +334,14 @@ Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_s
 	C_IPIF_ABUS_WIDTH = 32
 	C_IPIF_DBUS_WIDTH = 32
 	C_PLB_MID_WIDTH = 2
-	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (architecture <IMP>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101101110000101000000000000",
+	                          "0000000000000000000000000000000010001101101110000101000000001111",
+	                          "0000000000000000000000000000000010001101101110000101000100000000",
+	                          "0000000000000000000000000000000010001101101110000101000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS_AWIDTH = 32
 	C_FAMILY = "nofamily"
@@ -354,7 +354,7 @@ Analyzing hierarchy for entity <counter_f> in library <proc_common_v3_00_a> (arc
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
 	C_AB = 28
 	C_AW = 32
-	C_BAR = "10001101000100000101000000000000"
+	C_BAR = "10001101101110000101000000000000"
 	C_FAMILY = "nofamily"
 
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
@@ -390,7 +390,7 @@ Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (arc
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
 	C_AB = 24
 	C_AW = 32
-	C_BAR = "10001101000100000101000100000000"
+	C_BAR = "10001101101110000101000100000000"
 	C_FAMILY = "nofamily"
 
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
@@ -514,20 +514,20 @@ Entity <gpio_fifo_wrapper> analyzed. Unit <gpio_fifo_wrapper> generated.
 Analyzing generic Entity <xps_gpio> in library <xps_gpio_v2_00_a> (Architecture <imp>).
 	C_ALL_INPUTS = 1
 	C_ALL_INPUTS_2 = 0
-	C_BASEADDR = "10001101000100000101000000000000"
+	C_BASEADDR = "10001101101110000101000000000000"
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "virtex5"
 	C_GPIO2_WIDTH = 2
 	C_GPIO_WIDTH = 1
-	C_HIGHADDR = "10001101000100000101001111111111"
+	C_HIGHADDR = "10001101101110000101001111111111"
 	C_INTERRUPT_PRESENT = 1
 	C_IS_DUAL = 1
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 0
 	C_TRI_DEFAULT = "11111111111111111111111111111111"
@@ -542,10 +542,10 @@ WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIP
 Entity <xps_gpio> analyzed. Unit <xps_gpio> generated.
 
 Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101101110000101000000000000",
+	                          "0000000000000000000000000000000010001101101110000101000000001111",
+	                          "0000000000000000000000000000000010001101101110000101000100000000",
+	                          "0000000000000000000000000000000010001101101110000101000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_FAMILY = "virtex5"
@@ -554,15 +554,15 @@ Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 Entity <plbv46_slave_single> analyzed. Unit <plbv46_slave_single> generated.
 
 Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101101110000101000000000000",
+	                          "0000000000000000000000000000000010001101101110000101000000001111",
+	                          "0000000000000000000000000000000010001101101110000101000100000000",
+	                          "0000000000000000000000000000000010001101101110000101000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_DPHASE_TIMEOUT = 128
@@ -571,16 +571,16 @@ Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_
 	C_IPIF_ABUS_WIDTH = 32
 	C_IPIF_DBUS_WIDTH = 32
 	C_PLB_MID_WIDTH = 2
-	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" line 1201: Unconnected output port 'Count_Out' of component 'counter_f'.
 Entity <plb_slave_attachment> analyzed. Unit <plb_slave_attachment> generated.
 
 Analyzing generic Entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (Architecture <IMP>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101000100000101000000000000",
-	                          "0000000000000000000000000000000010001101000100000101000000001111",
-	                          "0000000000000000000000000000000010001101000100000101000100000000",
-	                          "0000000000000000000000000000000010001101000100000101000111111111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001101101110000101000000000000",
+	                          "0000000000000000000000000000000010001101101110000101000000001111",
+	                          "0000000000000000000000000000000010001101101110000101000100000000",
+	                          "0000000000000000000000000000000010001101101110000101000111111111")
 	C_ARD_NUM_CE_ARRAY = (5,16)
 	C_BUS_AWIDTH = 32
 	C_FAMILY = "nofamily"
@@ -590,7 +590,7 @@ Entity <plb_address_decoder> analyzed. Unit <plb_address_decoder> generated.
 Analyzing generic Entity <pselect_f.1> in library <proc_common_v3_00_a> (Architecture <imp>).
 	C_AB = 28
 	C_AW = 32
-	C_BAR = "10001101000100000101000000000000"
+	C_BAR = "10001101101110000101000000000000"
 	C_FAMILY = "nofamily"
 Entity <pselect_f.1> analyzed. Unit <pselect_f.1> generated.
 
@@ -632,7 +632,7 @@ Entity <pselect_f.6> analyzed. Unit <pselect_f.6> generated.
 Analyzing generic Entity <pselect_f.7> in library <proc_common_v3_00_a> (Architecture <imp>).
 	C_AB = 24
 	C_AW = 32
-	C_BAR = "10001101000100000101000100000000"
+	C_BAR = "10001101101110000101000100000000"
 	C_FAMILY = "nofamily"
 Entity <pselect_f.7> analyzed. Unit <pselect_f.7> generated.
 
@@ -1068,14 +1068,14 @@ WARNING:Xst:1780 - Signal <clear_rd_ce> is never used or assigned. This unconnec
     Found 1-bit register for signal <rd_clear_sl_busy>.
     Found 1-bit register for signal <set_sl_busy>.
     Found 1-bit register for signal <sl_busy>.
-    Found 3-bit register for signal <sl_mbusy_i>.
-    Found 3-bit register for signal <sl_mrderr_i>.
-    Found 3-bit register for signal <sl_mwrerr_i>.
+    Found 4-bit register for signal <sl_mbusy_i>.
+    Found 4-bit register for signal <sl_mrderr_i>.
+    Found 4-bit register for signal <sl_mwrerr_i>.
     Found 32-bit register for signal <sl_rddbus_i>.
     Found 1-bit register for signal <sl_rearbitrate_i>.
     Found 1-bit register for signal <sl_wrcomp_i>.
     Summary:
-	inferred 167 D-type flip-flop(s).
+	inferred 170 D-type flip-flop(s).
 Unit <plb_slave_attachment> synthesized.
 
 
@@ -1122,8 +1122,8 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 113
- 1-bit register                                        : 96
+# Registers                                            : 116
+ 1-bit register                                        : 99
  2-bit register                                        : 7
  3-bit register                                        : 1
  32-bit register                                       : 4
@@ -1149,8 +1149,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 266
- Flip-Flops                                            : 266
+# Registers                                            : 269
+ Flip-Flops                                            : 269
 # Xors                                                 : 4
  1-bit xor2                                            : 3
  2-bit xor2                                            : 1
@@ -1192,9 +1192,11 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_2> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_3> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27> (without init value) has a constant value of 0 in block <gpio_fifo_wrapper>. This FF/Latch will be trimmed during the optimization process.
@@ -1329,8 +1331,8 @@ Unit <gpio_fifo_wrapper> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 121
- Flip-Flops                                            : 121
+# Registers                                            : 122
+ Flip-Flops                                            : 122
 # Shift Registers                                      : 3
  2-bit shift register                                  : 3
 
@@ -1357,23 +1359,23 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 284
+# IOs                              : 288
 
 Cell Usage :
-# BELS                             : 86
+# BELS                             : 87
 #      GND                         : 1
 #      LUT2                        : 13
-#      LUT3                        : 11
-#      LUT4                        : 17
-#      LUT5                        : 21
-#      LUT6                        : 21
+#      LUT3                        : 12
+#      LUT4                        : 11
+#      LUT5                        : 23
+#      LUT6                        : 25
 #      MUXF7                       : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 124
+# FlipFlops/Latches                : 125
 #      FD                          : 6
 #      FDE                         : 3
 #      FDR                         : 66
-#      FDRE                        : 32
+#      FDRE                        : 33
 #      FDRS                        : 4
 #      FDS                         : 10
 #      FDSE                        : 3
@@ -1388,21 +1390,21 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             124  out of  69120     0%  
- Number of Slice LUTs:                   86  out of  69120     0%  
-    Number used as Logic:                83  out of  69120     0%  
+ Number of Slice Registers:             125  out of  69120     0%  
+ Number of Slice LUTs:                   87  out of  69120     0%  
+    Number used as Logic:                84  out of  69120     0%  
     Number used as Memory:                3  out of  17920     0%  
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    155
-   Number with an unused Flip Flop:      31  out of    155    20%  
-   Number with an unused LUT:            69  out of    155    44%  
-   Number of fully used LUT-FF pairs:    55  out of    155    35%  
-   Number of unique control sets:        28
+ Number of LUT Flip Flop pairs used:    156
+   Number with an unused Flip Flop:      31  out of    156    19%  
+   Number with an unused LUT:            69  out of    156    44%  
+   Number of fully used LUT-FF pairs:    56  out of    156    35%  
+   Number of unique control sets:        29
 
 IO Utilization: 
- Number of IOs:                         284
+ Number of IOs:                         288
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
@@ -1428,7 +1430,7 @@ Clock Information:
 -----------------------------------+--------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                        | Load  |
 -----------------------------------+--------------------------------------------------------------+-------+
-SPLB_Clk                           | NONE(gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 127   |
+SPLB_Clk                           | NONE(gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 128   |
 -----------------------------------+--------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -1440,7 +1442,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.145ns (Maximum Frequency: 317.965MHz)
+   Minimum period: 3.050ns (Maximum Frequency: 327.869MHz)
    Minimum input arrival time before clock: 1.747ns
    Maximum output required time after clock: 1.543ns
    Maximum combinational path delay: No path found
@@ -1451,31 +1453,31 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 3.145ns (frequency: 317.965MHz)
-  Total number of paths / destination ports: 796 / 150
+  Clock period: 3.050ns (frequency: 327.869MHz)
+  Total number of paths / destination ports: 801 / 152
 -------------------------------------------------------------------------
-Delay:               3.145ns (Levels of Logic = 3)
-  Source:            gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg (FF)
+Delay:               3.050ns (Levels of Logic = 3)
+  Source:            gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11 (FF)
   Destination:       gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg to gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0
+  Data Path: gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11 to gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              4   0.471   1.085  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg)
-     LUT6:I0->O            6   0.094   0.816  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS110 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS110)
-     LUT4:I0->O            3   0.094   0.491  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS1150 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/N01)
-     LUT6:I5->O            1   0.094   0.000  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_addrack_i_ns1 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy_mux0000_norst)
-     FDR:D                    -0.018          gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy
+     FDR:C->Q              1   0.471   1.069  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11)
+     LUT6:I0->O            6   0.094   0.737  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS133 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS133)
+     LUT6:I3->O            3   0.094   0.491  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS1129 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/N01)
+     LUT6:I5->O            1   0.094   0.000  gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns2 (gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns)
+     FDR:D                    -0.018          gpio_FIFO/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i
     ----------------------------------------
-    Total                      3.145ns (0.753ns logic, 2.392ns route)
-                                       (23.9% logic, 76.1% route)
+    Total                      3.050ns (0.753ns logic, 2.297ns route)
+                                       (24.7% logic, 75.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 160 / 155
+  Total number of paths / destination ports: 161 / 156
 -------------------------------------------------------------------------
 Offset:              1.747ns (Levels of Logic = 1)
   Source:            SPLB_Rst (PAD)
@@ -1494,7 +1496,7 @@ Offset:              1.747ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 26 / 22
+  Total number of paths / destination ports: 27 / 23
 -------------------------------------------------------------------------
 Offset:              1.543ns (Levels of Logic = 1)
   Source:            gpio_FIFO/INTR_CTRLR_GEN.INTERRUPT_CONTROL_I/ipif_glbl_irpt_enable_reg (FF)
@@ -1514,15 +1516,15 @@ Offset:              1.543ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 30.01 secs
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 29.98 secs
  
 --> 
 
 
-Total memory usage is 1302416 kilobytes
+Total memory usage is 1302600 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  231 (   0 filtered)
+Number of warnings :  233 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

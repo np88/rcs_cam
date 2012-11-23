@@ -97,3 +97,51 @@ NET "cam_vto" LOC = AN33;
 
 
 
+# TFT
+
+NET xps_tft_0_TFT_IIC_SCL_pin  LOC = U27; 
+NET xps_tft_0_TFT_IIC_SDA_pin  LOC = T29;
+NET xps_tft_0_TFT_IIC_SCL_pin  SLEW = SLOW;
+NET xps_tft_0_TFT_IIC_SCL_pin  DRIVE = 6;
+NET xps_tft_0_TFT_IIC_SCL_pin  TIG;
+NET xps_tft_0_TFT_IIC_SCL_pin  IOSTANDARD = LVCMOS18 ; #ff LVCMOS33;
+NET xps_tft_0_TFT_IIC_SDA_pin  SLEW = SLOW;
+NET xps_tft_0_TFT_IIC_SDA_pin  DRIVE = 6;
+NET xps_tft_0_TFT_IIC_SDA_pin  TIG;
+NET xps_tft_0_TFT_IIC_SDA_pin  IOSTANDARD = LVCMOS18 ; #ff LVCMOS33;
+
+#------------------------------------------------------------------------------
+# IO Pad Location Constraints / Properties for TFT tft LCD Controller
+#------------------------------------------------------------------------------
+
+NET xps_tft_0_TFT_DVI_DATA_pin<0>  LOC = AB8; 
+NET xps_tft_0_TFT_DVI_DATA_pin<1>  LOC = AC8; 
+NET xps_tft_0_TFT_DVI_DATA_pin<2>  LOC = AN12; 
+NET xps_tft_0_TFT_DVI_DATA_pin<3>  LOC = AP12; 
+NET xps_tft_0_TFT_DVI_DATA_pin<4>  LOC = AA9; 
+NET xps_tft_0_TFT_DVI_DATA_pin<5>  LOC = AA8; 
+NET xps_tft_0_TFT_DVI_DATA_pin<6>  LOC = AM13; 
+NET xps_tft_0_TFT_DVI_DATA_pin<7>  LOC = AN13; 
+NET xps_tft_0_TFT_DVI_DATA_pin<8>  LOC = AA10; 
+NET xps_tft_0_TFT_DVI_DATA_pin<9>  LOC = AB10; 
+NET xps_tft_0_TFT_DVI_DATA_pin<10> LOC = AP14; 
+NET xps_tft_0_TFT_DVI_DATA_pin<11> LOC = AN14; 
+NET xps_tft_0_TFT_DVI_DATA_pin<*> IOSTANDARD = LVDCI_33;
+
+NET xps_tft_0_TFT_DVI_CLK_P_pin LOC = AL11;
+NET xps_tft_0_TFT_DVI_CLK_P_pin IOSTANDARD = LVCMOS33 | DRIVE = 24 | SLEW = FAST;
+NET xps_tft_0_TFT_DVI_CLK_N_pin LOC = AL10;
+NET xps_tft_0_TFT_DVI_CLK_N_pin IOSTANDARD = LVCMOS33 | DRIVE = 24 | SLEW = FAST;
+
+NET xps_tft_0_TFT_HSYNC_pin LOC = AM12;
+NET xps_tft_0_TFT_HSYNC_pin IOSTANDARD = LVDCI_33;
+NET xps_tft_0_TFT_VSYNC_pin LOC = AM11;
+NET xps_tft_0_TFT_VSYNC_pin IOSTANDARD = LVDCI_33;
+NET xps_tft_0_TFT_DE_pin    LOC = AE8;
+NET xps_tft_0_TFT_DE_pin    IOSTANDARD = LVDCI_33;
+NET xps_tft_0_reset_pin LOC = AK6;
+NET xps_tft_0_reset_pin IOSTANDARD = LVCMOS33;
+
+
+
+

@@ -260,20 +260,20 @@ Analyzing hierarchy for entity <xps_fifo_cam_data_wrapper> in library <work> (ar
 Analyzing hierarchy for entity <xps_gpio> in library <xps_gpio_v2_00_a> (architecture <imp>) with generics.
 	C_ALL_INPUTS = 1
 	C_ALL_INPUTS_2 = 1
-	C_BASEADDR = "10000111001100001100000000000000"
+	C_BASEADDR = "10001001001010001100000000000000"
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "virtex5"
 	C_GPIO2_WIDTH = 20
 	C_GPIO_WIDTH = 1
-	C_HIGHADDR = "10000111001100001100001111111111"
+	C_HIGHADDR = "10001001001010001100001111111111"
 	C_INTERRUPT_PRESENT = 0
 	C_IS_DUAL = 1
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 0
 	C_TRI_DEFAULT = "11111111111111111111111111111111"
@@ -282,8 +282,8 @@ WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIP
 WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/xps_gpio.vhd" line 391: Loop body will iterate zero times
 
 Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000111001100001100000000000000",
-	                          "0000000000000000000000000000000010000111001100001100000000001111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001001001010001100000000000000",
+	                          "0000000000000000000000000000000010001001001010001100000000001111")
 	C_ARD_NUM_CE_ARRAY = (5)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_FAMILY = "virtex5"
@@ -292,7 +292,7 @@ Analyzing hierarchy for entity <plbv46_slave_single> in library <plbv46_slave_si
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <GPIO_Core> in library <xps_gpio_v2_00_a> (architecture <IMP>) with generics.
@@ -310,8 +310,8 @@ Analyzing hierarchy for entity <GPIO_Core> in library <xps_gpio_v2_00_a> (archit
 	C_TRI_DEFAULT_2 = "11111111111111111111111111111111"
 
 Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000111001100001100000000000000",
-	                          "0000000000000000000000000000000010000111001100001100000000001111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001001001010001100000000000000",
+	                          "0000000000000000000000000000000010001001001010001100000000001111")
 	C_ARD_NUM_CE_ARRAY = (5)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_DPHASE_TIMEOUT = 128
@@ -320,12 +320,12 @@ Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_s
 	C_IPIF_ABUS_WIDTH = 32
 	C_IPIF_DBUS_WIDTH = 32
 	C_PLB_MID_WIDTH = 2
-	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 
 Analyzing hierarchy for entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (architecture <IMP>) with generics.
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000111001100001100000000000000",
-	                          "0000000000000000000000000000000010000111001100001100000000001111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001001001010001100000000000000",
+	                          "0000000000000000000000000000000010001001001010001100000000001111")
 	C_ARD_NUM_CE_ARRAY = (5)
 	C_BUS_AWIDTH = 32
 	C_FAMILY = "nofamily"
@@ -338,7 +338,7 @@ Analyzing hierarchy for entity <counter_f> in library <proc_common_v3_00_a> (arc
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
 	C_AB = 28
 	C_AW = 32
-	C_BAR = "10000111001100001100000000000000"
+	C_BAR = "10001001001010001100000000000000"
 	C_FAMILY = "nofamily"
 
 Analyzing hierarchy for entity <pselect_f> in library <proc_common_v3_00_a> (architecture <imp>) with generics.
@@ -396,20 +396,20 @@ Entity <xps_fifo_cam_data_wrapper> analyzed. Unit <xps_fifo_cam_data_wrapper> ge
 Analyzing generic Entity <xps_gpio> in library <xps_gpio_v2_00_a> (Architecture <imp>).
 	C_ALL_INPUTS = 1
 	C_ALL_INPUTS_2 = 1
-	C_BASEADDR = "10000111001100001100000000000000"
+	C_BASEADDR = "10001001001010001100000000000000"
 	C_DOUT_DEFAULT = "00000000000000000000000000000000"
 	C_DOUT_DEFAULT_2 = "00000000000000000000000000000000"
 	C_FAMILY = "virtex5"
 	C_GPIO2_WIDTH = 20
 	C_GPIO_WIDTH = 1
-	C_HIGHADDR = "10000111001100001100001111111111"
+	C_HIGHADDR = "10001001001010001100001111111111"
 	C_INTERRUPT_PRESENT = 0
 	C_IS_DUAL = 1
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
 	C_SPLB_NATIVE_DWIDTH = 32
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 	C_SPLB_SUPPORT_BURSTS = 0
 	C_TRI_DEFAULT = "11111111111111111111111111111111"
@@ -421,8 +421,8 @@ WARNING:Xst:821 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIP
 Entity <xps_gpio> analyzed. Unit <xps_gpio> generated.
 
 Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000111001100001100000000000000",
-	                          "0000000000000000000000000000000010000111001100001100000000001111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001001001010001100000000000000",
+	                          "0000000000000000000000000000000010001001001010001100000000001111")
 	C_ARD_NUM_CE_ARRAY = (5)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_FAMILY = "virtex5"
@@ -431,13 +431,13 @@ Analyzing generic Entity <plbv46_slave_single> in library <plbv46_slave_single_v
 	C_SPLB_AWIDTH = 32
 	C_SPLB_DWIDTH = 64
 	C_SPLB_MID_WIDTH = 2
-	C_SPLB_NUM_MASTERS = 3
+	C_SPLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 Entity <plbv46_slave_single> analyzed. Unit <plbv46_slave_single> generated.
 
 Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (Architecture <implementation>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000111001100001100000000000000",
-	                          "0000000000000000000000000000000010000111001100001100000000001111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001001001010001100000000000000",
+	                          "0000000000000000000000000000000010001001001010001100000000001111")
 	C_ARD_NUM_CE_ARRAY = (5)
 	C_BUS2CORE_CLK_RATIO = 1
 	C_DPHASE_TIMEOUT = 128
@@ -446,14 +446,14 @@ Analyzing generic Entity <plb_slave_attachment> in library <plbv46_slave_single_
 	C_IPIF_ABUS_WIDTH = 32
 	C_IPIF_DBUS_WIDTH = 32
 	C_PLB_MID_WIDTH = 2
-	C_PLB_NUM_MASTERS = 3
+	C_PLB_NUM_MASTERS = 4
 	C_SPLB_P2P = 0
 WARNING:Xst:753 - "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" line 1201: Unconnected output port 'Count_Out' of component 'counter_f'.
 Entity <plb_slave_attachment> analyzed. Unit <plb_slave_attachment> generated.
 
 Analyzing generic Entity <plb_address_decoder> in library <plbv46_slave_single_v1_01_a> (Architecture <IMP>).
-	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000111001100001100000000000000",
-	                          "0000000000000000000000000000000010000111001100001100000000001111")
+	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010001001001010001100000000000000",
+	                          "0000000000000000000000000000000010001001001010001100000000001111")
 	C_ARD_NUM_CE_ARRAY = (5)
 	C_BUS_AWIDTH = 32
 	C_FAMILY = "nofamily"
@@ -463,7 +463,7 @@ Entity <plb_address_decoder> analyzed. Unit <plb_address_decoder> generated.
 Analyzing generic Entity <pselect_f.1> in library <proc_common_v3_00_a> (Architecture <imp>).
 	C_AB = 28
 	C_AW = 32
-	C_BAR = "10000111001100001100000000000000"
+	C_BAR = "10001001001010001100000000000000"
 	C_FAMILY = "nofamily"
 Entity <pselect_f.1> analyzed. Unit <pselect_f.1> generated.
 
@@ -689,14 +689,14 @@ WARNING:Xst:1780 - Signal <clear_rd_ce> is never used or assigned. This unconnec
     Found 1-bit register for signal <rd_clear_sl_busy>.
     Found 1-bit register for signal <set_sl_busy>.
     Found 1-bit register for signal <sl_busy>.
-    Found 3-bit register for signal <sl_mbusy_i>.
-    Found 3-bit register for signal <sl_mrderr_i>.
-    Found 3-bit register for signal <sl_mwrerr_i>.
+    Found 4-bit register for signal <sl_mbusy_i>.
+    Found 4-bit register for signal <sl_mrderr_i>.
+    Found 4-bit register for signal <sl_mwrerr_i>.
     Found 32-bit register for signal <sl_rddbus_i>.
     Found 1-bit register for signal <sl_rearbitrate_i>.
     Found 1-bit register for signal <sl_wrcomp_i>.
     Summary:
-	inferred 167 D-type flip-flop(s).
+	inferred 170 D-type flip-flop(s).
 Unit <plb_slave_attachment> synthesized.
 
 
@@ -744,8 +744,8 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 117
- 1-bit register                                        : 102
+# Registers                                            : 120
+ 1-bit register                                        : 105
  2-bit register                                        : 2
  20-bit register                                       : 3
  3-bit register                                        : 1
@@ -769,8 +769,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 321
- Flip-Flops                                            : 321
+# Registers                                            : 324
+ Flip-Flops                                            : 324
 
 =========================================================================
 
@@ -780,9 +780,11 @@ Macro Statistics
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mrderr_i_0> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mrderr_i_1> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mrderr_i_2> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sl_mrderr_i_3> (without init value) has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <addr_cntl_cs_0> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
 
 Optimizing unit <xps_fifo_cam_data_wrapper> ...
@@ -902,8 +904,8 @@ Unit <xps_fifo_cam_data_wrapper> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 179
- Flip-Flops                                            : 179
+# Registers                                            : 180
+ Flip-Flops                                            : 180
 # Shift Registers                                      : 21
  3-bit shift register                                  : 21
 
@@ -930,22 +932,22 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 338
+# IOs                              : 342
 
 Cell Usage :
-# BELS                             : 113
+# BELS                             : 114
 #      GND                         : 1
 #      LUT2                        : 10
-#      LUT3                        : 31
-#      LUT4                        : 8
-#      LUT5                        : 50
-#      LUT6                        : 12
+#      LUT3                        : 32
+#      LUT4                        : 7
+#      LUT5                        : 52
+#      LUT6                        : 11
 #      VCC                         : 1
-# FlipFlops/Latches                : 200
+# FlipFlops/Latches                : 201
 #      FD                          : 21
 #      FDE                         : 21
 #      FDR                         : 72
-#      FDRE                        : 56
+#      FDRE                        : 57
 #      FDRS                        : 2
 #      FDS                         : 7
 #      FDSE                        : 21
@@ -960,21 +962,21 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             200  out of  69120     0%  
- Number of Slice LUTs:                  132  out of  69120     0%  
-    Number used as Logic:               111  out of  69120     0%  
+ Number of Slice Registers:             201  out of  69120     0%  
+ Number of Slice LUTs:                  133  out of  69120     0%  
+    Number used as Logic:               112  out of  69120     0%  
     Number used as Memory:               21  out of  17920     0%  
        Number used as SRL:               21
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    221
-   Number with an unused Flip Flop:      21  out of    221     9%  
-   Number with an unused LUT:            89  out of    221    40%  
-   Number of fully used LUT-FF pairs:   111  out of    221    50%  
-   Number of unique control sets:        28
+ Number of LUT Flip Flop pairs used:    222
+   Number with an unused Flip Flop:      21  out of    222     9%  
+   Number with an unused LUT:            89  out of    222    40%  
+   Number of fully used LUT-FF pairs:   112  out of    222    50%  
+   Number of unique control sets:        29
 
 IO Utilization: 
- Number of IOs:                         338
+ Number of IOs:                         342
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
@@ -1000,7 +1002,7 @@ Clock Information:
 -----------------------------------+----------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                | Load  |
 -----------------------------------+----------------------------------------------------------------------+-------+
-SPLB_Clk                           | NONE(xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 221   |
+SPLB_Clk                           | NONE(xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31)| 222   |
 -----------------------------------+----------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -1012,8 +1014,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.113ns (Maximum Frequency: 321.234MHz)
-   Minimum input arrival time before clock: 1.455ns
+   Minimum period: 3.201ns (Maximum Frequency: 312.402MHz)
+   Minimum input arrival time before clock: 1.639ns
    Maximum output required time after clock: 0.471ns
    Maximum combinational path delay: No path found
 
@@ -1023,10 +1025,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 3.113ns (frequency: 321.234MHz)
-  Total number of paths / destination ports: 1050 / 255
+  Clock period: 3.201ns (frequency: 312.402MHz)
+  Total number of paths / destination ports: 1055 / 257
 -------------------------------------------------------------------------
-Delay:               3.113ns (Levels of Logic = 3)
+Delay:               3.201ns (Levels of Logic = 3)
   Source:            xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7 (FF)
   Destination:       xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0 (FF)
   Source Clock:      SPLB_Clk rising
@@ -1036,38 +1038,38 @@ Delay:               3.113ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.471   1.069  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7)
-     LUT6:I0->O            1   0.094   0.789  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS187_SW0 (N6)
-     LUT6:I2->O            5   0.094   0.502  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS187 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/address_match_early)
+     FDR:C->Q              1   0.471   0.973  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7)
+     LUT5:I0->O            1   0.094   0.973  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS195_SW0 (N6)
+     LUT6:I1->O            5   0.094   0.502  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/CS195 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/address_match_early)
      LUT6:I5->O            1   0.094   0.000  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_addrack_i_ns1 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy_mux0000_norst)
      FDR:D                    -0.018          xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/set_sl_busy
     ----------------------------------------
-    Total                      3.113ns (0.753ns logic, 2.360ns route)
-                                       (24.2% logic, 75.8% route)
+    Total                      3.201ns (0.753ns logic, 2.448ns route)
+                                       (23.5% logic, 76.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 240 / 234
+  Total number of paths / destination ports: 241 / 235
 -------------------------------------------------------------------------
-Offset:              1.455ns (Levels of Logic = 2)
+Offset:              1.639ns (Levels of Logic = 2)
   Source:            SPLB_Rst (PAD)
-  Destination:       xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30 (FF)
+  Destination:       xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31 (FF)
   Destination Clock: SPLB_Clk rising
 
-  Data Path: SPLB_Rst to xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30
+  Data Path: SPLB_Rst to xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT4:I0->O           20   0.094   0.814  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_or00001 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_or0000)
-     LUT5:I2->O            1   0.094   0.000  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30_rstpot (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30_rstpot)
-     FD:D                     -0.018          xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30
+     LUT4:I1->O           20   0.094   1.077  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_or00001 (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_or0000)
+     LUT6:I1->O            1   0.094   0.000  xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31_rstpot (xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31_rstpot)
+     FD:D                     -0.018          xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
     ----------------------------------------
-    Total                      1.455ns (0.641ns logic, 0.814ns route)
-                                       (44.1% logic, 55.9% route)
+    Total                      1.639ns (0.562ns logic, 1.077ns route)
+                                       (34.3% logic, 65.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 91 / 91
+  Total number of paths / destination ports: 92 / 92
 -------------------------------------------------------------------------
 Offset:              0.471ns (Levels of Logic = 0)
   Source:            xps_FIFO_cam_data/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i (FF)
@@ -1087,14 +1089,14 @@ Offset:              0.471ns (Levels of Logic = 0)
 
 
 Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.09 secs
  
 --> 
 
 
-Total memory usage is 818464 kilobytes
+Total memory usage is 818516 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  155 (   0 filtered)
+Number of warnings :  157 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

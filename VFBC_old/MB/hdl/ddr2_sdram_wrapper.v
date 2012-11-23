@@ -1840,10 +1840,10 @@ module ddr2_sdram_wrapper
   output SPLB0_Sl_rdDAck;
   output SPLB0_Sl_rdComp;
   output SPLB0_Sl_rdBTerm;
-  output [0:2] SPLB0_Sl_MBusy;
-  output [0:2] SPLB0_Sl_MRdErr;
-  output [0:2] SPLB0_Sl_MWrErr;
-  output [0:2] SPLB0_Sl_MIRQ;
+  output [0:3] SPLB0_Sl_MBusy;
+  output [0:3] SPLB0_Sl_MRdErr;
+  output [0:3] SPLB0_Sl_MWrErr;
+  output [0:3] SPLB0_Sl_MIRQ;
   input SDMA0_Clk;
   output SDMA0_Rx_IntOut;
   output SDMA0_Tx_IntOut;
@@ -3724,7 +3724,7 @@ module ddr2_sdram_wrapper
       .C_SPLB0_AWIDTH ( 32 ),
       .C_SPLB0_DWIDTH ( 64 ),
       .C_SPLB0_NATIVE_DWIDTH ( 64 ),
-      .C_SPLB0_NUM_MASTERS ( 3 ),
+      .C_SPLB0_NUM_MASTERS ( 4 ),
       .C_SPLB0_MID_WIDTH ( 2 ),
       .C_SPLB0_P2P ( 0 ),
       .C_SPLB0_SUPPORT_BURSTS ( 1 ),

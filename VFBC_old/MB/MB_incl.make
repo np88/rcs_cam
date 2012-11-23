@@ -79,7 +79,8 @@ implementation/gpio_fifo_wrapper.ngc \
 implementation/xps_intc_0_wrapper.ngc \
 implementation/xps_fifo_cam_data_wrapper.ngc \
 implementation/xps_central_dma_0_wrapper.ngc \
-implementation/xps_epc_0_wrapper.ngc
+implementation/xps_epc_0_wrapper.ngc \
+implementation/xps_tft_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

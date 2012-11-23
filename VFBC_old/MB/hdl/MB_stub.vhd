@@ -59,7 +59,17 @@ entity MB_stub is
     DDR2_SDRAM_VFBC2_Rd_Flush_pin : in std_logic;
     DDR2_SDRAM_VFBC2_Rd_Data_pin : out std_logic_vector(15 downto 0);
     DDR2_SDRAM_VFBC2_Rd_Empty_pin : out std_logic;
-    DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : out std_logic
+    DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : out std_logic;
+    xps_tft_0_TFT_HSYNC_pin : out std_logic;
+    xps_tft_0_TFT_VSYNC_pin : out std_logic;
+    xps_tft_0_TFT_DE_pin : out std_logic;
+    xps_tft_0_TFT_DPS_pin : out std_logic;
+    xps_tft_0_TFT_VGA_CLK_pin : out std_logic;
+    xps_tft_0_TFT_DVI_CLK_P_pin : out std_logic;
+    xps_tft_0_TFT_DVI_CLK_N_pin : out std_logic;
+    xps_tft_0_TFT_DVI_DATA_pin : out std_logic_vector(11 downto 0);
+    xps_tft_0_TFT_IIC_SCL_pin : inout std_logic;
+    xps_tft_0_TFT_IIC_SDA_pin : inout std_logic
   );
 end MB_stub;
 
@@ -117,7 +127,17 @@ architecture STRUCTURE of MB_stub is
       DDR2_SDRAM_VFBC2_Rd_Flush_pin : in std_logic;
       DDR2_SDRAM_VFBC2_Rd_Data_pin : out std_logic_vector(15 downto 0);
       DDR2_SDRAM_VFBC2_Rd_Empty_pin : out std_logic;
-      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : out std_logic
+      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : out std_logic;
+      xps_tft_0_TFT_HSYNC_pin : out std_logic;
+      xps_tft_0_TFT_VSYNC_pin : out std_logic;
+      xps_tft_0_TFT_DE_pin : out std_logic;
+      xps_tft_0_TFT_DPS_pin : out std_logic;
+      xps_tft_0_TFT_VGA_CLK_pin : out std_logic;
+      xps_tft_0_TFT_DVI_CLK_P_pin : out std_logic;
+      xps_tft_0_TFT_DVI_CLK_N_pin : out std_logic;
+      xps_tft_0_TFT_DVI_DATA_pin : out std_logic_vector(11 downto 0);
+      xps_tft_0_TFT_IIC_SCL_pin : inout std_logic;
+      xps_tft_0_TFT_IIC_SDA_pin : inout std_logic
     );
   end component;
 
@@ -178,7 +198,17 @@ begin
       DDR2_SDRAM_VFBC2_Rd_Flush_pin => DDR2_SDRAM_VFBC2_Rd_Flush_pin,
       DDR2_SDRAM_VFBC2_Rd_Data_pin => DDR2_SDRAM_VFBC2_Rd_Data_pin,
       DDR2_SDRAM_VFBC2_Rd_Empty_pin => DDR2_SDRAM_VFBC2_Rd_Empty_pin,
-      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin
+      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin,
+      xps_tft_0_TFT_HSYNC_pin => xps_tft_0_TFT_HSYNC_pin,
+      xps_tft_0_TFT_VSYNC_pin => xps_tft_0_TFT_VSYNC_pin,
+      xps_tft_0_TFT_DE_pin => xps_tft_0_TFT_DE_pin,
+      xps_tft_0_TFT_DPS_pin => xps_tft_0_TFT_DPS_pin,
+      xps_tft_0_TFT_VGA_CLK_pin => xps_tft_0_TFT_VGA_CLK_pin,
+      xps_tft_0_TFT_DVI_CLK_P_pin => xps_tft_0_TFT_DVI_CLK_P_pin,
+      xps_tft_0_TFT_DVI_CLK_N_pin => xps_tft_0_TFT_DVI_CLK_N_pin,
+      xps_tft_0_TFT_DVI_DATA_pin => xps_tft_0_TFT_DVI_DATA_pin,
+      xps_tft_0_TFT_IIC_SCL_pin => xps_tft_0_TFT_IIC_SCL_pin,
+      xps_tft_0_TFT_IIC_SDA_pin => xps_tft_0_TFT_IIC_SDA_pin
     );
 
 end architecture STRUCTURE;

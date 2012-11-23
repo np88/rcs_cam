@@ -113,7 +113,7 @@ Analyzing hierarchy for entity <pll_module> in library <clock_generator_v4_03_a>
 	C_CLKOUT3_PHASE = 0.000000
 	C_CLKOUT4_BUF = false
 	C_CLKOUT4_DESKEW_ADJUST = "PPC"
-	C_CLKOUT4_DIVIDE = 1
+	C_CLKOUT4_DIVIDE = 40
 	C_CLKOUT4_DUTY_CYCLE = 0.500000
 	C_CLKOUT4_PHASE = 0.000000
 	C_CLKOUT5_BUF = false
@@ -174,7 +174,7 @@ Analyzing generic Entity <pll_module> in library <clock_generator_v4_03_a> (Arch
 	C_CLKOUT3_PHASE = 0.000000
 	C_CLKOUT4_BUF = false
 	C_CLKOUT4_DESKEW_ADJUST = "PPC"
-	C_CLKOUT4_DIVIDE = 1
+	C_CLKOUT4_DIVIDE = 40
 	C_CLKOUT4_DUTY_CYCLE = 0.500000
 	C_CLKOUT4_PHASE = 0.000000
 	C_CLKOUT5_BUF = false
@@ -212,7 +212,7 @@ Analyzing generic Entity <pll_module> in library <clock_generator_v4_03_a> (Arch
     Set user-defined property "CLKOUT3_DUTY_CYCLE =  0.5000000000000000" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
     Set user-defined property "CLKOUT3_PHASE =  0.0000000000000000" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
     Set user-defined property "CLKOUT4_DESKEW_ADJUST =  PPC" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
-    Set user-defined property "CLKOUT4_DIVIDE =  1" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
+    Set user-defined property "CLKOUT4_DIVIDE =  40" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
     Set user-defined property "CLKOUT4_DUTY_CYCLE =  0.5000000000000000" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
     Set user-defined property "CLKOUT4_PHASE =  0.0000000000000000" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
     Set user-defined property "CLKOUT5_DESKEW_ADJUST =  PPC" for instance <Using_PLL_ADV.PLL_ADV_inst> in unit <pll_module>.
@@ -262,7 +262,6 @@ WARNING:Xst:646 - Signal <SIG_PLL0_CLKOUTDCM2> is assigned but never used. This 
 WARNING:Xst:646 - Signal <SIG_PLL0_CLKOUTDCM1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <SIG_PLL0_CLKOUTDCM0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <SIG_PLL0_CLKOUT5_BUF> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <SIG_PLL0_CLKOUT4_BUF> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <SIG_PLL0_CLKFBOUT_BUF> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <SIG_PLL0_CLKFBDCM> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <clock_generator> synthesized.
@@ -335,8 +334,8 @@ Cell Usage :
 #      GND                         : 1
 #      INV                         : 1
 #      VCC                         : 1
-# Clock Buffers                    : 5
-#      BUFG                        : 5
+# Clock Buffers                    : 6
+#      BUFG                        : 6
 # Others                           : 1
 #      PLL_ADV                     : 1
 =========================================================================
@@ -363,7 +362,7 @@ IO Utilization:
  Number of bonded IOBs:                   0  out of    640     0%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                5  out of     32    15%  
+ Number of BUFG/BUFGCTRLs:                6  out of     32    18%  
  Number of PLL_ADVs:                      1  out of      6    16%  
 
 ---------------------------
@@ -425,14 +424,14 @@ Delay:               0.238ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.24 secs
+Total CPU time to Xst completion: 12.66 secs
  
 --> 
 
 
-Total memory usage is 577808 kilobytes
+Total memory usage is 577840 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

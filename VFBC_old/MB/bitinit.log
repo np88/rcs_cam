@@ -109,10 +109,11 @@ Address Map for Processor microblaze_0
   (0x81800000-0x8180ffff) xps_intc_0	mb_plb
   (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
-  (0x85b8e000-0x85b8e3ff) Push_Buttons_5Bit	mb_plb
-  (0x8730c000-0x8730c3ff) xps_FIFO_cam_data	mb_plb
-  (0x8a208000-0x8a209fff) xps_bram_if_cntlr_0	mb_plb
-  (0x8d105000-0x8d1053ff) gpio_FIFO	mb_plb
+  (0x85908000-0x859083ff) Push_Buttons_5Bit	mb_plb
+  (0x86e00000-0x86e0ffff) xps_tft_0	mb_plb
+  (0x8928c000-0x8928c3ff) xps_FIFO_cam_data	mb_plb
+  (0x8b708000-0x8b709fff) xps_bram_if_cntlr_0	mb_plb
+  (0x8db85000-0x8db853ff) gpio_FIFO	mb_plb
   (0x90000000-0x9fffffff) DDR2_SDRAM	mb_plb
 INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tool is overriding PARAMETER
    C_SPLB0_P2P value to 0 -
@@ -127,11 +128,7 @@ INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tool is overriding
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/micro
    blaze_v8_20_b/data/microblaze_v2_1_0.mpd line 204 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_MASTERS value to 3 -
-   /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v
-   46_v1_05_a/data/plb_v46_v2_1_0.mpd line 78 
-INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 10 -
+   C_PLBV46_NUM_SLAVES value to 11 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plb_v
    46_v1_05_a/data/plb_v46_v2_1_0.mpd line 79 
 INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:ilmb - tool is overriding PARAMETER
@@ -155,11 +152,11 @@ INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:Push_Buttons_5Bit - tool is
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:Push_Buttons_5Bit - tool is
-   overriding PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 81 
 INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tool is overriding PARAMETER
-   C_SPLB0_NUM_MASTERS value to 3 -
+   C_SPLB0_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mpmc_
    v6_05_a/data/mpmc_v2_1_0.mpd line 364 
 INFO:EDK:4130 - IPNAME: mpmc, INSTANCE:DDR2_SDRAM - tool is overriding PARAMETER
@@ -175,7 +172,7 @@ INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_t
    imer_v1_02_a/data/xps_timer_v2_1_0.mpd line 86 
 INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
-   PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_t
    imer_v1_02_a/data/xps_timer_v2_1_0.mpd line 87 
 INFO:EDK:4130 - IPNAME: xps_bram_if_cntlr, INSTANCE:xps_bram_if_cntlr_0 - tool
@@ -183,7 +180,7 @@ INFO:EDK:4130 - IPNAME: xps_bram_if_cntlr, INSTANCE:xps_bram_if_cntlr_0 - tool
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_b
    ram_if_cntlr_v1_00_b/data/xps_bram_if_cntlr_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_bram_if_cntlr, INSTANCE:xps_bram_if_cntlr_0 - tool
-   is overriding PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   is overriding PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_b
    ram_if_cntlr_v1_00_b/data/xps_bram_if_cntlr_v2_1_0.mpd line 83 
 INFO:EDK:4130 - IPNAME: xps_bram_if_cntlr, INSTANCE:xps_bram_if_cntlr_0 - tool
@@ -203,7 +200,7 @@ INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v
    2_00_b/data/mdm_v2_1_0.mpd line 92 
 INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
-   C_SPLB_NUM_MASTERS value to 3 -
+   C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mdm_v
    2_00_b/data/mdm_v2_1_0.mpd line 93 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:gpio_FIFO - tool is overriding
@@ -215,7 +212,7 @@ INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:gpio_FIFO - tool is overriding
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:gpio_FIFO - tool is overriding
-   PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 81 
 INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding
@@ -223,7 +220,7 @@ INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
    ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding
-   PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_i
    ntc_v2_01_a/data/xps_intc_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tool is overriding
@@ -239,7 +236,7 @@ INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:xps_FIFO_cam_data - tool is
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:xps_FIFO_cam_data - tool is
-   overriding PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_g
    pio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 81 
 INFO:EDK:4130 - IPNAME: xps_central_dma, INSTANCE:xps_central_dma_0 - tool is
@@ -247,7 +244,7 @@ INFO:EDK:4130 - IPNAME: xps_central_dma, INSTANCE:xps_central_dma_0 - tool is
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_c
    entral_dma_v2_03_a/data/xps_central_dma_v2_1_0.mpd line 79 
 INFO:EDK:4130 - IPNAME: xps_central_dma, INSTANCE:xps_central_dma_0 - tool is
-   overriding PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_c
    entral_dma_v2_03_a/data/xps_central_dma_v2_1_0.mpd line 81 
 INFO:EDK:4130 - IPNAME: xps_central_dma, INSTANCE:xps_central_dma_0 - tool is
@@ -267,9 +264,21 @@ INFO:EDK:4130 - IPNAME: xps_epc, INSTANCE:xps_epc_0 - tool is overriding
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_e
    pc_v1_02_a/data/xps_epc_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: xps_epc, INSTANCE:xps_epc_0 - tool is overriding
-   PARAMETER C_SPLB_NUM_MASTERS value to 3 -
+   PARAMETER C_SPLB_NUM_MASTERS value to 4 -
    /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_e
    pc_v1_02_a/data/xps_epc_v2_1_0.mpd line 83 
+INFO:EDK:4130 - IPNAME: xps_tft, INSTANCE:xps_tft_0 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 64 -
+   /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_t
+   ft_v2_01_a/data/xps_tft_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: xps_tft, INSTANCE:xps_tft_0 - tool is overriding
+   PARAMETER C_SPLB_MID_WIDTH value to 2 -
+   /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_t
+   ft_v2_01_a/data/xps_tft_v2_1_0.mpd line 91 
+INFO:EDK:4130 - IPNAME: xps_tft, INSTANCE:xps_tft_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 4 -
+   /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_t
+   ft_v2_01_a/data/xps_tft_v2_1_0.mpd line 92 
 
 Checking platform address map ...
 
