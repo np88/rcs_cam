@@ -28,6 +28,7 @@
 #include "xtft.h"
 #include "xdmacentral.h"
 #include <inttypes.h>
+#include "simpleIPC/sipc_image.h"
 #define DISPLAY_COLUMNS  640
 #define DISPLAY_ROWS     480
 
@@ -37,57 +38,6 @@ static XDmaCentral dma;
 void print(char *str);
 
 volatile u32 rdcnt = 0;
-
-
-void yuy2_to_rgb(u8* src, u8* dest, u32 size){
-	uint32_t nPixels = size/4;
-	uint8_t *ptr = src;
-	double Yn;
-	double U;
-	double Ynp;
-	double V;
-	double Y;
-	double R;
-	double G;
-	double B;
-	uint32_t pixelCnt;
-	for(pixelCnt = 0; pixelCnt < nPixels; pixelCnt++){
-		Yn = *ptr++;
-		U = *ptr++;
-		Ynp = *ptr++;
-		V = *ptr++;
-		Y = (Yn + Ynp) / 255.0 - 1;
-		U = U/127.0 - 1;
-		V = V/127.0 - 1;
-		//printf("YUV: Y = %2f, U=%2f, V= %2f\n",Y,U,V);
-		//formulas see http://www.fourcc.org/fccyvrgb.php
-
-		B = (Y * U/0.493);
-		R = (Y + V/0.877);
-		G = (1.7*Y - 0.509*R - 0.194*B);
-		//printf("RGB: R = %2f, G=%2f, B= %2f\n",R,G,B);
-
-		R = (R + 1.0)*126.0;
-		G = (G + 1.0)*126.0;
-		B = (B + 1.0)*126.0;
-
-		if(R < 0) R = 0;
-		if(G < 0) G = 0;
-		if(B < 0) B = 0;
-
-		if(R > 255) R = 255;
-		if(G > 255) G = 255;
-		if(B > 255) B = 255;
-
-		*(dest + pixelCnt * 2*3) = R;
-		*(dest + pixelCnt * 2*3 + 1) = G;
-		*(dest + pixelCnt * 2*3 + 2) = B;
-		*(dest + pixelCnt * 2*3 + 3) = R;
-		*(dest + pixelCnt * 2*3 + 4) = G;
-		*(dest + pixelCnt * 2*3 + 5) = B;
-
-	}
-}
 
 
 int XTft_DrawSolidBox(XTft *Tft, int x1, int y1, int x2, int y2, unsigned int col)
@@ -172,6 +122,8 @@ int main()
     u32 * src = (u32 *)XPAR_DDR2_SDRAM_MPMC_BASEADDR;
     u32 i = 0, j = 0;
     u32 dma_status = 0;
+    u32 val;
+    u8 val1;
 
     XTft_SetColor(&TftInstance, 0, 0);
     XTft_ClearScreen(&TftInstance);
@@ -183,20 +135,15 @@ int main()
     XTft_DrawSolidBox(&TftInstance, 400, 0,479,479,0xAAAAAA); // grey
     XTft_DrawSolidBox(&TftInstance, 480, 0,559,479,0x777777); // not-so-grey
     XTft_DrawSolidBox(&TftInstance, 560, 0,639,479,0x333333); // lite grey
-    //uint8_t* rgb = malloc(240*320*3);
-		while(1){
-
-//    	yuy2_to_rgb(src,rgb,240*640*2);
-    	u32 val;
-    	u8 val1;
 //        xil_printf("done.\n");
-    	for(j = 0; j < 240; j++){
-			for (i = 0; i < 320; i++){
+    while(1){
+    	for(j = 0; j < 240; j = j + 1){
+			for (i = 0; i < 160; i = i + 1){
 				// j is row, i is col
+				val1 = *(src + j*160*2 + i*2);
 				//dest[4*(j * 1024)+i] = rgb[j * 640 + i];
-				val1 = *(src + i*320*2 + j*2);
-				val = val1<<24|val1<<16|val1<<8|val1;
-				XTft_SetPixel(&TftInstance,j,i,val);
+				val =  val1<<16|val1<<8|val1;
+				XTft_SetPixel(&TftInstance,i,j,val);
 			}
     	}
 //    	XDmaCentral_SetControl(&dma, XDMC_DMACR_DEST_INCR_MASK | XDMC_DMACR_SOURCE_INCR_MASK);

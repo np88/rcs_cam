@@ -1,0 +1,87 @@
+#include "sipc_image.h"
+
+
+ uint8_t sipc_image_get_pixel_R(sipc_image* image,uint32_t X, uint32_t Y){
+	return *(image->pixels  + Y*image->width*3 + X*3);
+ }
+
+ uint8_t sipc_image_get_pixel_G(sipc_image* image,uint32_t X, uint32_t Y){
+	return *(image->pixels  + Y*image->width*3 + X*3 + 1);
+ }
+
+ uint8_t sipc_image_get_pixel_B(sipc_image* image,uint32_t X, uint32_t Y){
+	return *(image->pixels  + Y*image->width*3 + X*3 + 2);
+ }
+
+
+void sipc_image_set_pixel_R(sipc_image* image,uint32_t X, uint32_t Y, uint8_t colour){
+	*(image->pixels  + Y*image->width*3 + X*3) = colour;
+ }
+
+void sipc_image_set_pixel_G(sipc_image* image,uint32_t X, uint32_t Y, uint8_t colour){
+	*(image->pixels  + Y*image->width*3 + X*3 + 1) = colour;
+ }
+
+void sipc_image_set_pixel_B(sipc_image* image,uint32_t X, uint32_t Y, uint8_t colour){
+	*(image->pixels  + Y*image->width*3 + X*3 + 2) = colour;
+ }
+
+
+void sipc_image_alloc(sipc_image** img, uint32_t width, uint32_t height){
+	*img = (uint8_t) 0x9004B000;
+	(*img)->pixels = 0x9004B000 + sizeof(struct _sipc_image) + 16;
+	(*img)->width = width;
+	(*img)->height = height;
+}
+//converts YUY2/YUYV to RGB. For YUY2, see http://www.fourcc.org/yuv.php#YUY2
+void sipc_image_create_from_yuy2(sipc_image* img, uint8_t* p, uint32_t size){
+	uint32_t nPixels = size/4;
+	uint8_t *ptr = p;
+	double Yn;
+	double U;
+	double Ynp;
+	double V;
+	double Y; 
+	double R;
+	double G;
+	double B;
+	uint32_t pixelCnt;
+	for(pixelCnt = 0; pixelCnt < nPixels; pixelCnt++){
+		Yn = *ptr++;
+		U = *ptr++;
+		Ynp = *ptr++;
+		V = *ptr++;
+		Y = (Yn + Ynp) / 255.0 - 1;
+		U = U/127.0 - 1;
+		V = V/127.0 - 1;
+		//printf("YUV: Y = %2f, U=%2f, V= %2f\n",Y,U,V);
+		//formulas see http://www.fourcc.org/fccyvrgb.php
+	
+		B = (Y * U/0.493);
+		R = (Y + V/0.877);
+		G = (1.7*Y - 0.509*R - 0.194*B);
+		//printf("RGB: R = %2f, G=%2f, B= %2f\n",R,G,B);
+
+		R = (R + 1.0)*126.0;
+		G = (G + 1.0)*126.0;
+		B = (B + 1.0)*126.0;
+
+		if(R < 0) R = 0;
+		if(G < 0) G = 0;
+		if(B < 0) B = 0;
+
+		if(R > 255) R = 255;
+		if(G > 255) G = 255;
+		if(B > 255) B = 255;
+
+		*(img->pixels + pixelCnt * 2*3) = R;
+		*(img->pixels + pixelCnt * 2*3 + 1) = G;
+		*(img->pixels + pixelCnt * 2*3 + 2) = B;
+		*(img->pixels + pixelCnt * 2*3 + 3) = R;
+		*(img->pixels + pixelCnt * 2*3 + 4) = G;
+		*(img->pixels + pixelCnt * 2*3 + 5) = B;
+
+	}
+}
+
+

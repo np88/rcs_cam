@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="/DIST/home/peters/nadja_cam_repo/software/13.4/VFBC_old/MB_hw_platform/system.bit" key="MB_hw_platform-bitFile"/>
+	<item value="bootloop" key="MB_hw_platform-microblaze_0-initElf"/>
+	<item value="/DIST/home/peters/nadja_cam_repo/software/13.4/VFBC_old/MB_hw_platform/system_bd.bmm" key="MB_hw_platform-bmmFile"/>
+</section>

@@ -14,7 +14,8 @@ src/helloworld.d src/helloworld.o: ../src/helloworld.c \
   ../../hello_world_bsp_0/microblaze_0/include/xdmacentral.h \
   ../../hello_world_bsp_0/microblaze_0/include/xil_cache.h \
   ../../hello_world_bsp_0/microblaze_0/include/xparameters.h \
-  ../../hello_world_bsp_0/microblaze_0/include/xdmacentral_l.h
+  ../../hello_world_bsp_0/microblaze_0/include/xdmacentral_l.h \
+  ../src/simpleIPC/sipc_image.h
 
 ../../hello_world_bsp_0/microblaze_0/include/xparameters.h:
 
@@ -49,3 +50,5 @@ src/helloworld.d src/helloworld.o: ../src/helloworld.c \
 ../../hello_world_bsp_0/microblaze_0/include/xparameters.h:
 
 ../../hello_world_bsp_0/microblaze_0/include/xdmacentral_l.h:
+
+../src/simpleIPC/sipc_image.h:

@@ -1,0 +1,159 @@
+/*
+ * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+/*
+ * helloworld.c: simple test application
+ */
+
+#include "xparameters.h"
+
+#include "xgpio.h"
+#include <stdio.h>
+#include "platform.h"
+#include "xtft.h"
+#include "xdmacentral.h"
+#include <inttypes.h>
+#include "simpleIPC/sipc_image.h"
+#define DISPLAY_COLUMNS  640
+#define DISPLAY_ROWS     480
+
+static XTft TftInstance;
+static XDmaCentral dma;
+
+void print(char *str);
+
+volatile u32 rdcnt = 0;
+
+
+int XTft_DrawSolidBox(XTft *Tft, int x1, int y1, int x2, int y2, unsigned int col)
+{
+   int xmin,xmax,ymin,ymax,i,j;
+
+   if (x1 >= 0 &&
+       x1 <= DISPLAY_COLUMNS-1 &&
+       x2 >= 0 &&
+       x2 <= DISPLAY_COLUMNS-1 &&
+       y1 >= 0 &&
+       y1 <= DISPLAY_ROWS-1 &&
+       y2 >= 0 &&
+       y2 <= DISPLAY_ROWS-1) {
+      if (x2 < x1) {
+         xmin = x2;
+         xmax = x1;
+      }
+      else {
+         xmin = x1;
+         xmax = x2;
+      }
+      if (y2 < y1) {
+         ymin = y2;
+         ymax = y1;
+      }
+      else {
+         ymin = y1;
+         ymax = y2;
+      }
+
+      for (i=xmin; i<=xmax; i++) {
+         for (j=ymin; j<=ymax; j++) {
+	   XTft_SetPixel(Tft, i, j, col);
+         }
+      }
+      return 0;
+   }
+   return 1;
+
+}
+
+
+void init (){
+	int Status;
+	XTft_Config *TftConfigPtr;
+
+
+	// TFT
+
+	/*
+	 * Get address of the XTft_Config structure for the given device id.
+	 */
+	TftConfigPtr = XTft_LookupConfig(XPAR_XPS_TFT_0_DEVICE_ID);
+	if (TftConfigPtr == (XTft_Config *)NULL) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Initialize all the TftInstance members and fills the screen with
+	 * default background color.
+	 */
+	Status = XTft_CfgInitialize(&TftInstance, TftConfigPtr,
+				 	TftConfigPtr->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// DMA
+
+	XDmaCentral_Initialize(&dma, XPAR_XPS_CENTRAL_DMA_0_DEVICE_ID);
+	// increment destination and src address register
+	XDmaCentral_SetControl(&dma, XDMC_DMACR_DEST_INCR_MASK | XDMC_DMACR_SOURCE_INCR_MASK);
+
+}
+
+int main()
+{
+    init_platform();
+    init();
+    u32 * dest = (u32 *)XPAR_XPS_TFT_0_DEFAULT_TFT_BASE_ADDR;
+    u32 * src = (u32 *)XPAR_DDR2_SDRAM_MPMC_BASEADDR;
+    u32 i = 0, j = 0;
+    u32 dma_status = 0;
+
+    XTft_SetColor(&TftInstance, 0, 0);
+    XTft_ClearScreen(&TftInstance);
+    XTft_DrawSolidBox(&TftInstance,   0, 0, 79,479,0xffffff); // white
+    XTft_DrawSolidBox(&TftInstance,  80, 0,159,479,0xff0000); // red
+    XTft_DrawSolidBox(&TftInstance, 160, 0,239,479,0x00ff00); // green
+    XTft_DrawSolidBox(&TftInstance, 240, 0,319,479,0x0000ff); // blue
+    XTft_DrawSolidBox(&TftInstance, 320, 0,399,479,0xffffff); // white
+    XTft_DrawSolidBox(&TftInstance, 400, 0,479,479,0xAAAAAA); // grey
+    XTft_DrawSolidBox(&TftInstance, 480, 0,559,479,0x777777); // not-so-grey
+    XTft_DrawSolidBox(&TftInstance, 560, 0,639,479,0x333333); // lite grey
+
+//        xil_printf("done.\n");
+    	for(j = 0; j < 240; j = j + 1){
+			for (i = 0; i < 160; i = i + 1){
+				// j is row, i is col
+				val1 = *(src + i*240*2 + j*2);
+				//dest[4*(j * 1024)+i] = rgb[j * 640 + i];
+				val =  val1<<16|val1<<8|val1;
+				XTft_SetPixel(&TftInstance,i/2,j,val);
+				XTft_SetPixel(&TftInstance,i/2 + 1,j,val);
+			}
+    	}
+//    	XDmaCentral_SetControl(&dma, XDMC_DMACR_DEST_INCR_MASK | XDMC_DMACR_SOURCE_INCR_MASK);
+//    	dma_status = XDmaCentral_GetStatus(&dma);
+    	//while ((dma_status = XDmaCentral_GetStatus(&dma)) != XDMC_IXR_DMA_DONE_MASK){}
+//    	XDmaCentral_Transfer(&dma, src, dest, 0x25800);
+//    	dma_status = XDmaCentral_GetStatus(&dma);
+    	XTft_SetPixel(&TftInstance, 639, 479, 0x00ffffff);
+    }
+
+    cleanup_platform();
+
+    return 0;
+}

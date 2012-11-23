@@ -1,0 +1,14 @@
+#Wed Nov 07 17:57:06 CET 2012
+com.xilinx.sdk.linkgen.prefs.default\:.sbss2=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.default\:.sbss=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.default\:.rodata=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.default\:Heap=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.data=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.default\:.sdata=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.default\:Stack=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:Heap-size=267386880
+com.xilinx.sdk.linkgen.prefs.default\:Stack-size=1048576
+com.xilinx.sdk.linkgen.prefs.default\:.text=ilmb_cntlr_dlmb_cntlr
+eclipse.preferences.version=1
+com.xilinx.sdk.linkgen.prefs.default\:.bss=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.default\:.sdata2=ilmb_cntlr_dlmb_cntlr
