@@ -362,7 +362,7 @@ begin
 	--rd_cnt_reg_reverse(0 to 31) <= "00000000000000001111111111111111";
 	fifo_ready_tmp <= fifo_ready;
 	
-	DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
+	--DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;
 	test1 <= wd_fifo_full_reg;
 	test2 <= cam_href and write_enable;
@@ -386,6 +386,7 @@ begin
 	cam_rst <= '0';
 	epc_data_i <= fifo_data_out & fifo_data_out;
 	--fifo_ready <= NOT fifo_empty;
+	DDR2_SDRAM_VFBC2_Wd_Data_pin <= cam_Y & cam_UV;
 	
 end Behavioral;
 

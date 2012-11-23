@@ -1,7 +1,7 @@
 #Release 13.4 - par O.87xd (lin64)
 #Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-#Thu Nov 22 16:21:44 2012
+#Fri Nov 23 10:55:33 2012
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -306,7 +306,7 @@ AH19,,IOBS,IO_L2N_GC_D10_4,UNUSED,,4,,,,,,,,,
 AH20,,IOBM,IO_L2P_GC_D11_4,UNUSED,,4,,,,,,,,,
 AH21,,,VCCO_2,,,2,,,,,3.30,,,,
 AH22,,IOBS,IO_L0N_GC_D14_4,UNUSED,,4,,,,,,,,,
-AH23,switches_i<0>,IOB,IO_L2P_6,INPUT,LVCMOS25*,6,,,,NONE,,UNLOCATED,NO,NONE,
+AH23,,IOBM,IO_L2P_6,UNUSED,,6,,,,,,,,,
 AH24,,IOBM,IO_L0P_6,UNUSED,,6,,,,,,,,,
 AH25,,IOBS,IO_L12N_VRP_21,UNUSED,,21,,,,,,,,,
 AH26,,,GND,,,,,,,,,,,,
@@ -334,7 +334,7 @@ AJ14,,IOBM,IO_L5P_6,UNUSED,,6,,,,,,,,,
 AJ15,,IOBS,IO_L9N_CC_6,UNUSED,,6,,,,,,,,,
 AJ16,,IOBM,IO_L9P_CC_6,UNUSED,,6,,,,,,,,,
 AJ17,,IOBS,IO_L12N_VRP_6,UNUSED,,6,,,,,,,,,
-AJ18,,,VCCO_6,,,6,,,,,2.50,,,,
+AJ18,,,VCCO_6,,,6,,,,,any******,,,,
 AJ19,,IOBM,IO_L15P_6,UNUSED,,6,,,,,,,,,
 AJ20,,IOBS,IO_L8N_CC_6,UNUSED,,6,,,,,,,,,
 AJ21,,IOBM,IO_L8P_CC_6,UNUSED,,6,,,,,,,,,
@@ -364,7 +364,7 @@ AK11,,IOBM,IO_L11P_CC_22,UNUSED,,22,,,,,,,,,
 AK12,,IOBM,IO_L1P_6,UNUSED,,6,,,,,,,,,
 AK13,,IOBS,IO_L3N_6,UNUSED,,6,,,,,,,,,
 AK14,,IOBS,IO_L5N_6,UNUSED,,6,,,,,,,,,
-AK15,,,VCCO_6,,,6,,,,,2.50,,,,
+AK15,,,VCCO_6,,,6,,,,,any******,,,,
 AK16,,IOBM,IO_L10P_CC_6,UNUSED,,6,,,,,,,,,
 AK17,,IOBM,IO_L12P_VRN_6,UNUSED,,6,,,,,,,,,
 AK18,,IOBM,IO_L14P_6,UNUSED,,6,,,,,,,,,
@@ -467,7 +467,7 @@ AN12,,IOBS,IO_L4N_VREF_22,UNUSED,,22,,,,,,,,,
 AN13,,IOBM,IO_L2P_22,UNUSED,,22,,,,,,,,,
 AN14,,IOBM,IO_L0P_22,UNUSED,,22,,,,,,,,,
 AN15,,IOBM,IO_L18P_6,UNUSED,,6,,,,,,,,,
-AN16,,,VCCO_6,,,6,,,,,2.50,,,,
+AN16,,,VCCO_6,,,6,,,,,any******,,,,
 AN17,,IOBS,IO_L19N_6,UNUSED,,6,,,,,,,,,
 AN18,,IOBM,IO_L17P_25,UNUSED,,25,,,,,,,,,
 AN19,,IOBM,IO_L19P_25,UNUSED,,25,,,,,,,,,

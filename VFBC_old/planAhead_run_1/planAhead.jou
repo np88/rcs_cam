@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 12:49:33 MST 2011
+# Start of session at: Fri Nov 23 11:08:47 2012
+# Process ID: 4518
+# Log file: /DIST/home/peters/nadja_cam_repo/VFBC_old/planAhead_run_1/planAhead.log
+# Journal file: /DIST/home/peters/nadja_cam_repo/VFBC_old/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /DIST/home/peters/nadja_cam_repo/VFBC_old/pa.fromNetlist.tcl
+exit
+stop_gui

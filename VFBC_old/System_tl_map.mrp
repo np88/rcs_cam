@@ -10,21 +10,21 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 22 16:16:23 2012
+Mapped Date    : Fri Nov 23 10:50:17 2012
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   88
+Number of warnings:   86
 Slice Logic Utilization:
   Number of Slice Registers:                 8,163 out of  69,120   11%
     Number used as Flip Flops:               8,146
     Number used as Latch-thrus:                 17
-  Number of Slice LUTs:                      7,438 out of  69,120   10%
-    Number used as logic:                    6,955 out of  69,120   10%
-      Number using O6 output only:           6,454
-      Number using O5 output only:             109
-      Number using O5 and O6:                  392
+  Number of Slice LUTs:                      7,437 out of  69,120   10%
+    Number used as logic:                    6,954 out of  69,120   10%
+      Number using O6 output only:           6,451
+      Number using O5 output only:             110
+      Number using O5 and O6:                  393
     Number used as Memory:                     455 out of  17,920    2%
       Number used as Dual Port RAM:            182
         Number using O6 output only:             6
@@ -34,17 +34,17 @@ Slice Logic Utilization:
         Number using O6 output only:           272
         Number using O5 output only:             1
     Number used as exclusive route-thru:        28
-  Number of route-thrus:                       162
+  Number of route-thrus:                       147
     Number using O6 output only:               134
-    Number using O5 output only:                25
+    Number using O5 output only:                10
     Number using O5 and O6:                      3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,193 out of  17,280   24%
-  Number of LUT Flip Flop pairs used:       11,034
-    Number with an unused Flip Flop:         2,871 out of  11,034   26%
-    Number with an unused LUT:               3,596 out of  11,034   32%
-    Number of fully used LUT-FF pairs:       4,567 out of  11,034   41%
+  Number of occupied Slices:                 4,379 out of  17,280   25%
+  Number of LUT Flip Flop pairs used:       11,134
+    Number with an unused Flip Flop:         2,971 out of  11,134   26%
+    Number with an unused LUT:               3,697 out of  11,134   33%
+    Number of fully used LUT-FF pairs:       4,466 out of  11,134   40%
     Number of unique control sets:           1,030
     Number of slice register sites lost
       to control set restrictions:           2,307 out of  69,120    3%
@@ -58,8 +58,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       173 out of     640   27%
-    Number of LOCed IOBs:                      172 out of     173   99%
+  Number of bonded IOBs:                       172 out of     640   26%
+    Number of LOCed IOBs:                      172 out of     172  100%
     IOB Flip Flops:                            269
 
 Specific Feature Utilization:
@@ -77,11 +77,11 @@ Specific Feature Utilization:
   Number of DSP48Es:                             3 out of      64    4%
   Number of PLL_ADVs:                            1 out of       6   16%
 
-Average Fanout of Non-Clock Nets:                3.68
+Average Fanout of Non-Clock Nets:                3.67
 
-Peak Memory Usage:  1177 MB
-Total REAL time to MAP completion:  3 mins 46 secs 
-Total CPU time to MAP completion:   3 mins 45 secs 
+Peak Memory Usage:  1179 MB
+Total REAL time to MAP completion:  3 mins 39 secs 
+Total CPU time to MAP completion:   3 mins 34 secs 
 
 Table of Contents
 -----------------
@@ -448,41 +448,25 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: LEDs_8Bit_GPIO_IO_O_pin<7>   IOSTANDARD = LVCMOS25
 
 
-WARNING:Place:837 - Partially locked IO Bus is found. 
-    Following components of the bus are not locked: 
-   	 Comp: switches_i<0>
-
-WARNING:Place:838 - An IO Bus with more than one IO standard is found.
-   Components associated with this bus are as follows: 
-   	 Comp: switches_i<0>   IOSTANDARD = LVCMOS25
-   	 Comp: switches_i<1>   IOSTANDARD = SSTL18_II
-   	 Comp: switches_i<2>   IOSTANDARD = SSTL18_II
-   	 Comp: switches_i<3>   IOSTANDARD = SSTL18_II
-   	 Comp: switches_i<4>   IOSTANDARD = SSTL18_II
-   	 Comp: switches_i<5>   IOSTANDARD = SSTL18_II
-   	 Comp: switches_i<6>   IOSTANDARD = SSTL18_II
-   	 Comp: switches_i<7>   IOSTANDARD = SSTL18_II
-
-
 WARNING:Place:644 - A clock IOB clock component is not placed at an optimal clock IOB site. The clock IOB component
    <cam_pclk> is placed at site <AH34>. The clock IO site can use the fast path between the IO and the Clock buffer/GCLK
    if the IOB is placed in the master Clock IOB Site. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint
    was applied on COMP.PIN <cam_pclk.PAD> allowing your design to continue. This constraint disables all clock placer
    rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor
    timing results. It is recommended that this error condition be corrected in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal does
-   not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<30>> is incomplete. The signal does
    not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is incomplete. The signal does not drive any load
-   pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>> is incomplete. The signal does
+   not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<31>> is incomplete. The signal does not drive any load
+   pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Inst_MB/dlmb_LMB_ABus<30>> is incomplete. The signal does not drive any load
    pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network N100 has no load.
-INFO:LIT:395 - The above info message is repeated 962 more times for the
+INFO:LIT:395 - The above info message is repeated 954 more times for the
    following (max. 5 shown):
    N101,
    N102,
@@ -529,9 +513,6 @@ INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
    Tools User Guide for information on generating a TSI report.
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 173 IOs, 172 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -14517,7 +14498,6 @@ Section 6 - IOB Properties
 | fpga_0_DDR2_SDRAM_DDR2_WE_n_pin    | IOB              | OUTPUT    | SSTL18_II            |       |          |      | OFF          |          |          |
 | fpga_0_clk_1_sys_clk_pin           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | fpga_0_rst_1_sys_rst_pin           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| switches_i<0>                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | switches_i<1>                      | IOB              | INPUT     | SSTL18_II            |       |          |      |              |          |          |
 | switches_i<2>                      | IOB              | INPUT     | SSTL18_II            |       |          |      |              |          |          |
 | switches_i<3>                      | IOB              | INPUT     | SSTL18_II            |       |          |      |              |          |          |

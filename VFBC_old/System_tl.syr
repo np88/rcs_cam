@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Reading design: System_tl.prj
@@ -119,8 +119,7 @@ Architecture behavioral of Entity edge_detector is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/FIFO_CONST.vhd" in Library work.
 Architecture fifo_const of Entity fifo_const is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/SM_vfbc_control.vhd" in Library work.
-Entity <sm_vfbc_control> compiled.
-Entity <sm_vfbc_control> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity sm_vfbc_control is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd" in Library work.
 Architecture structure of Entity mb is up to date.
 Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd" in Library work.
@@ -210,6 +209,7 @@ Synthesizing Unit <System_tl>.
 WARNING:Xst:647 - Input <cam_vto> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2565 - Inout <cam_sda> is never assigned.
 WARNING:Xst:2565 - Inout <cam_scl> is never assigned.
+WARNING:Xst:647 - Input <switches_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cam_fodd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2565 - Inout <cam_exclk> is never assigned.
 WARNING:Xst:646 - Signal <write_enable_edge_r> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -538,8 +538,8 @@ Cell Usage :
 # Clock Buffers                    : 10
 #      BUFG                        : 8
 #      BUFGP                       : 2
-# IO Buffers                       : 140
-#      IBUF                        : 16
+# IO Buffers                       : 148
+#      IBUF                        : 24
 #      IOBUF                       : 64
 #      IOBUFDS                     : 8
 #      OBUF                        : 50
@@ -577,7 +577,7 @@ Slice Logic Distribution:
 
 IO Utilization: 
  Number of IOs:                         173
- Number of bonded IOBs:                 152  out of    640    23%  
+ Number of bonded IOBs:                 160  out of    640    25%  
     IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
@@ -1084,7 +1084,7 @@ Offset:              0.341ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'cam_pclk'
-  Total number of paths / destination ports: 76 / 76
+  Total number of paths / destination ports: 84 / 84
 -------------------------------------------------------------------------
 Offset:              4.390ns (Levels of Logic = 6)
   Source:            cam_href (PAD)
@@ -1493,14 +1493,14 @@ Delay:               4.298ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 235.00 secs
-Total CPU time to Xst completion: 231.74 secs
+Total CPU time to Xst completion: 232.01 secs
  
 --> 
 
 
-Total memory usage is 953452 kilobytes
+Total memory usage is 953472 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   61 (   0 filtered)
+Number of warnings :   62 (   0 filtered)
 Number of infos    :   63 (   0 filtered)
 

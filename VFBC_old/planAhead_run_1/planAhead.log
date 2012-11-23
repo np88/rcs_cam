@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 12:49:33 MST 2011
+# Start of session at: Fri Nov 23 11:08:47 2012
+# Process ID: 4518
+# Log file: /DIST/home/peters/nadja_cam_repo/VFBC_old/planAhead_run_1/planAhead.log
+# Journal file: /DIST/home/peters/nadja_cam_repo/VFBC_old/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common-78] Attempting to get a license: PlanAhead
+INFO: [Common-82] Got a license: PlanAhead
+INFO: [Device-25] Loading parts and site information from /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/PlanAhead/parts/arch.xmlParsing RTL primitives file [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/PlanAhead/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /DIST/home/peters/nadja_cam_repo/VFBC_old/pa.fromNetlist.tcl
+# create_project -name System_VFBC -dir "/DIST/home/peters/nadja_cam_repo/VFBC_old/planAhead_run_1" -part xc5vlx110tff1136-1
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/DIST/home/peters/nadja_cam_repo/VFBC_old/System_tl.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/DIST/home/peters/nadja_cam_repo/VFBC_old} {FIFO_13_1_asynch} {FIFO_13_1_asynch/ipcore_dir} }
+# add_files [list {/DIST/home/peters/nadja_cam_repo/VFBC_old/ilmb_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {/DIST/home/peters/nadja_cam_repo/VFBC_old/MB.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {/DIST/home/peters/nadja_cam_repo/VFBC_old/dlmb_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {/DIST/home/peters/nadja_cam_repo/VFBC_old/microblaze_0_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {/DIST/home/peters/nadja_cam_repo/VFBC_old/ddr2_sdram_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "System_dma_tl.ucf" [current_fileset -constrset]
+Adding file '/DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.ucf' to fileset 'constrs_1'
+# add_files [list {System_dma_tl.ucf}] -fileset [get_property constrset [current_run]]
+# open_netlist_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to part: xc5vlx110tff1136-1
+Release 13.4 - ngc2edif O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.4 - ngc2edif O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design System_tl.ngc ...
+WARNING:NetListWriters:298 - No output is written to System_tl.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus DDR2_SDRAM_VFBC2_Cmd_Data_pin<9 : 7> on
+   block System_tl is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file System_tl.edif ...
+ngc2edif: Total memory usage is 102952 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/System_VFBC.data/cache/System_tl_ngc_d2d088cf.edif]
+Finished Parsing EDIF File [./planAhead_run_1/System_VFBC.data/cache/System_tl_ngc_d2d088cf.edif]
+Release 13.4 - ngc2edif O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Release 13.4 - ngc2edif O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Reading design MB.ngc ...
+WARNING:NetListWriters:298 - No output is written to MB.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file MB.edif ...
+ngc2edif: Total memory usage is 117416 kilobytes
+
+Reading core file '/DIST/home/peters/nadja_cam_repo/VFBC_old/MB.ngc' for (cell view 'MB', library 'System_tl_lib', file 'System_tl.ngc')
+Parsing EDIF File [./planAhead_run_1/System_VFBC.data/cache/MB_ngc_d2d088cf.edif]
+ERROR: [Common-52] User Interrupt
+exit
+stop_gui
+INFO: [PlanAhead-261] Exiting PlanAhead...
+INFO: [Common-83] Releasing license: PlanAhead
