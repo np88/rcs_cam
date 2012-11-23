@@ -211,7 +211,7 @@ architecture Behavioral of System_tl is
 	signal fifo_rd_in_gpio: std_logic_vector(19 downto 0); 
 	signal rd_cnt, rd_cnt_reg : std_logic_vector(31 downto 0); 
 	signal wd_fifo_full_reg, counted, stop_counting, cam_href_edge, write_enable_edge_r, write_enable_edge_f, cam_vsyn_edge: std_logic := '0';
-	signal rd_cnt_reg_reverse : std_logic_vector(0 to 31);
+	signal rd_cnt_reg_reverse : std_logic_vector(0 to 31) := (others => '0');
 
 begin
 
@@ -382,14 +382,14 @@ begin
 		end if;			
 	end process check_fifo_full;
 	
-	reverse_val: process (rd_cnt)
-	begin
-		for i in 0 to 31 loop
-			rd_cnt_reg_reverse(i) <= rd_cnt(i);
-		end loop;
-	end process;
+--	reverse_val: process (rd_cnt)
+--	begin
+--		for i in 0 to 31 loop
+--			rd_cnt_reg_reverse(i) <= rd_cnt(i);
+--		end loop;
+--	end process;
 	
-	--rd_cnt_reg_reverse(0 to 31) <= rd_cnt_reg(31 downto 0);
+	rd_cnt_reg_reverse(31) <= write_enable_edge_f;
 	--rd_cnt_reg_reverse(0 to 31) <= "00000000000000001111111111111111";
 	fifo_ready_tmp <= fifo_ready;
 	

@@ -10,21 +10,21 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 23 11:54:25 2012
+Mapped Date    : Fri Nov 23 12:29:23 2012
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   86
 Slice Logic Utilization:
-  Number of Slice Registers:                 9,003 out of  69,120   13%
-    Number used as Flip Flops:               8,986
+  Number of Slice Registers:                 8,909 out of  69,120   12%
+    Number used as Flip Flops:               8,892
     Number used as Latch-thrus:                 17
-  Number of Slice LUTs:                      8,241 out of  69,120   11%
-    Number used as logic:                    7,735 out of  69,120   11%
-      Number using O6 output only:           6,984
+  Number of Slice LUTs:                      8,159 out of  69,120   11%
+    Number used as logic:                    7,649 out of  69,120   11%
+      Number using O6 output only:           6,930
       Number using O5 output only:             188
-      Number using O5 and O6:                  563
+      Number using O5 and O6:                  531
     Number used as Memory:                     468 out of  17,920    2%
       Number used as Dual Port RAM:            182
         Number using O6 output only:             6
@@ -33,21 +33,21 @@ Slice Logic Utilization:
       Number used as Shift Register:           286
         Number using O6 output only:           285
         Number using O5 output only:             1
-    Number used as exclusive route-thru:        38
-  Number of route-thrus:                       239
-    Number using O6 output only:               223
-    Number using O5 output only:                13
-    Number using O5 and O6:                      3
+    Number used as exclusive route-thru:        42
+  Number of route-thrus:                       238
+    Number using O6 output only:               225
+    Number using O5 output only:                 8
+    Number using O5 and O6:                      5
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 4,476 out of  17,280   25%
-  Number of LUT Flip Flop pairs used:       12,066
-    Number with an unused Flip Flop:         3,063 out of  12,066   25%
-    Number with an unused LUT:               3,825 out of  12,066   31%
-    Number of fully used LUT-FF pairs:       5,178 out of  12,066   42%
-    Number of unique control sets:           1,141
+  Number of occupied Slices:                 4,551 out of  17,280   26%
+  Number of LUT Flip Flop pairs used:       12,093
+    Number with an unused Flip Flop:         3,184 out of  12,093   26%
+    Number with an unused LUT:               3,934 out of  12,093   32%
+    Number of fully used LUT-FF pairs:       4,975 out of  12,093   41%
+    Number of unique control sets:           1,140
     Number of slice register sites lost
-      to control set restrictions:           2,574 out of  69,120    3%
+      to control set restrictions:           2,576 out of  69,120    3%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -79,9 +79,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.69
 
-Peak Memory Usage:  1203 MB
-Total REAL time to MAP completion:  4 mins 2 secs 
-Total CPU time to MAP completion:   4 mins 
+Peak Memory Usage:  1201 MB
+Total REAL time to MAP completion:  4 mins 4 secs 
+Total CPU time to MAP completion:   4 mins 1 secs 
 
 Table of Contents
 -----------------
@@ -518,8 +518,8 @@ INFO:Pack:1650 - Map created a placed design.
 Section 4 - Removed Logic Summary
 ---------------------------------
 2355 block(s) removed
- 262 block(s) optimized away
-2548 signal(s) removed
+ 355 block(s) optimized away
+2579 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -13861,6 +13861,99 @@ The signal "Inst_MB/proc_sys_reset_0/proc_sys_reset_0/SEQ/chip_Reset_Req_d1" is
 unused and has been removed.
 The signal "Inst_MB/proc_sys_reset_0/proc_sys_reset_0/SEQ/ris_edge_rstpot" is
 unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_3_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_4_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_5_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_6_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_7_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9_rstp
+ot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_15_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29_rst
+pot" is unused and has been removed.
+The signal
+"Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30_rst
+pot" is unused and has been removed.
 Unused block
 "Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FI
 FOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ib
@@ -15069,6 +15162,316 @@ GND 		Inst_MB/xps_central_dma_0/XST_GND
 VCC 		Inst_MB/xps_central_dma_0/XST_VCC
 GND 		Inst_MB/xps_epc_0/XST_GND
 VCC 		Inst_MB/xps_epc_0/XST_VCC
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[0].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[1].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[2].SYNC_RDREG_BYTE_GEN[7].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[0].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[1].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[2].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[3].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[4].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[5].SYNC_RDREG_BIT
+   optimized to 0
+FDRE
+		Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/NO_DEV_DWIDTH_MATCH_GEN.SO
+ME_DEV_SYNC_GEN.SYNC_RDREG_GEN[3].SYNC_RDREG_BYTE_GEN[6].SYNC_RDREG_BIT
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_15
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_15_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19_rs
+tpot
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28_rs
+tpot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29_rs
+tpot
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_3
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30_rs
+tpot
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_3_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_4
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_4_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_5
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_5_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_6
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_6_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_7
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_7_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8_rst
+pot
+   optimized to 0
+FD 		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9
+   optimized to 0
+LUT4
+		Inst_MB/xps_epc_0/xps_epc_0/PLBv46_IPIF_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9_rst
+pot
+   optimized to 0
 GND 		Inst_MB/xps_intc_0/XST_GND
 VCC 		Inst_MB/xps_intc_0/XST_VCC
 GND 		Inst_MB/xps_tft_0/XST_GND

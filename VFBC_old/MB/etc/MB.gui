@@ -14,7 +14,6 @@
       <VARIABLE COL_INDEX="6" IS_VISIBLE="FALSE" VIEWDISP="Type" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="180,450,200" VERSION="0"/>
-    <SET ID="xps_tft_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
         <VARIABLE ID="SPLB" PARENT="xps_tft_0"/>
@@ -41,7 +40,7 @@
       <VARIABLE ID="xps_FIFO_cam_data" ROW_INDEX="16"/>
       <VARIABLE ID="xps_central_dma_0" ROW_INDEX="12"/>
       <VARIABLE ID="xps_epc_0" ROW_INDEX="13"/>
-      <VARIABLE ID="xps_tft_0" IS_EXPANDED="TRUE" ROW_INDEX="17"/>
+      <VARIABLE ID="xps_tft_0" ROW_INDEX="17"/>
     </SEQUENCES>
   </SET>
 
@@ -112,9 +111,7 @@
       <SET ID="tft_0" IS_EXPANDED="TRUE"/>
     </SET>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="xps_tft_0"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="FALSE">
       <VARIABLE ID="ExternalPorts" IS_EXPANDED="TRUE" ROW_INDEX="0"/>

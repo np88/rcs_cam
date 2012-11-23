@@ -1,7 +1,7 @@
 Release 13.4 par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-weekino::  Fri Nov 23 11:58:33 2012
+weekino::  Fri Nov 23 12:33:33 2012
 
 par -filter /DIST/home/peters/nadja_cam_repo/VFBC_old/iseconfig/filter.filter
 -w -intstyle ise -ol high -mt off System_tl_map.ncd System_tl.ncd System_tl.pcf 
@@ -42,14 +42,14 @@ Device Utilization Summary:
    Number of PLL_ADVs                        1 out of 6      16%
    Number of RAMB18X2s                       8 out of 148     5%
    Number of RAMB36_EXPs                    37 out of 148    25%
-   Number of Slices                       4476 out of 17280  25%
-   Number of Slice Registers              9003 out of 69120  13%
-      Number used as Flip Flops           8986
+   Number of Slices                       4551 out of 17280  26%
+   Number of Slice Registers              8909 out of 69120  12%
+      Number used as Flip Flops           8892
       Number used as Latches                 0
       Number used as LatchThrus             17
 
-   Number of Slice LUTS                   8241 out of 69120  11%
-   Number of Slice LUT-Flip Flop pairs   12066 out of 69120  17%
+   Number of Slice LUTS                   8159 out of 69120  11%
+   Number of Slice LUT-Flip Flop pairs   12093 out of 69120  17%
 
 
 Overall effort level (-ol):   High 
@@ -57,7 +57,7 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
    consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 26 secs 
+Starting initial Timing Analysis.  REAL time: 27 secs 
 Finished initial Timing Analysis.  REAL time: 27 secs 
 
 WARNING:Par:288 - The signal cam_exclk_IBUF has no load.  PAR will not attempt to route this signal.
@@ -81,7 +81,7 @@ WARNING:Par:288 - The signal Inst_MB/dlmb_LMB_ABus<30> has no load.  PAR will no
 Starting Router
 
 
-Phase  1  : 57406 unrouted;      REAL time: 30 secs 
+Phase  1  : 56946 unrouted;      REAL time: 31 secs 
 INFO:Route:538 - One or more MIG cores have been detected in your design and have been successfully
    placed and routed. These MIG core(s) have critical skew and delay requirements 
    that are independent of the user (UCF) timing constraints. These MIG-related timing 
@@ -89,63 +89,59 @@ INFO:Route:538 - One or more MIG cores have been detected in your design and hav
    separately that all timing constraints specified in the UCF file have been met.
 
 
-Phase  2  : 47064 unrouted;      REAL time: 34 secs 
+Phase  2  : 46671 unrouted;      REAL time: 35 secs 
 
-Phase  3  : 16349 unrouted;      REAL time: 55 secs 
+Phase  3  : 16251 unrouted;      REAL time: 57 secs 
 
-Phase  4  : 16337 unrouted; (Setup:0, Hold:196993, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
+Phase  4  : 16247 unrouted; (Setup:0, Hold:77990, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
 
 Updating file: System_tl.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:214969, Component Switching Limit:0)     REAL time: 1 mins 21 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:81955, Component Switching Limit:0)     REAL time: 1 mins 24 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:214969, Component Switching Limit:0)     REAL time: 1 mins 21 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:81955, Component Switching Limit:0)     REAL time: 1 mins 24 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:214969, Component Switching Limit:0)     REAL time: 1 mins 21 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:81955, Component Switching Limit:0)     REAL time: 1 mins 24 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:214969, Component Switching Limit:0)     REAL time: 1 mins 21 secs 
-WARNING:Route:466 - Unusually high hold time violation detected among 46 connections. The top 20 such instances are
-   printed below. The router will continue and try to fix it
+Phase  8  : 0 unrouted; (Setup:0, Hold:81955, Component Switching Limit:0)     REAL time: 1 mins 24 secs 
+WARNING:Route:522 - Unusually high hold time violation detected among 13 connections.The router will continue and try to
+   fix it 
 	Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>:AQ ->
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr_sync2cons<0><3>:B
-X -3511
+X -3437
 	Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>:DQ ->
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr_sync2cons<0><3>:D
-X -3346
-	rd_cnt<11>:CQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<11>:CX -3342
-	Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>:CQ ->
-Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr_sync2cons<0><3>:A
-X -3336
+X -3403
 	Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>:BQ ->
 Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr_sync2cons<0><3>:C
-X -3316
-	rd_cnt<27>:CQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<27>:CX -3316
-	rd_cnt<11>:AQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<11>:AX -3314
-	rd_cnt<3>:CQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<3>:CX -3261
-	rd_cnt<11>:BQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<11>:BX -3239
-	rd_cnt<3>:AQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<3>:AX -3229
-	rd_cnt<11>:DQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<11>:DX -3221
-	rd_cnt<27>:AQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<27>:AX -3166
-	rd_cnt<3>:DQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<3>:DX -3136
-	rd_cnt<3>:BQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<3>:BX -3100
-	rd_cnt<7>:DQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<7>:DX -3081
-	rd_cnt<27>:DQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<27>:DX -3050
-	rd_cnt<27>:BQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<27>:BX -3050
-	fifo_ready:AQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/IPIC_DECODE_I/dev_in_access_int_d1:C5 -3042
-	rd_cnt<7>:BQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<7>:BX -3039
-	rd_cnt<7>:CQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<7>:CX -2970
+X -3267
+	Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>:CQ ->
+Inst_MB/DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr_sync2cons<0><3>:A
+X -3259
+	Inst_edge_detector_write_enable/edge_f:AQ ->
+Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<31>:CX -3064
+	fifo_ready:AQ -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd3:C5 -2626
+	fifo_ready:AQ -> Inst_MB/mb_plb_Sl_MBusy<6>:C4 -2386
+	Inst_MB/mb_plb_Sl_MBusy<6>:C -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt<3>:C5 -2386
+	Inst_MB/mb_plb_Sl_MBusy<6>:C -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt<0>:C6 -2325
+	Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt<3>:COUT ->
+Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt<0>:CIN -2240
+	Inst_MB/mb_plb_Sl_MBusy<6>:C -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt<3>:A5 -2220
+	Inst_MB/mb_plb_Sl_MBusy<6>:C -> Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/dev_rdy_addrcnt<3>:AX -2112
+	Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/SYNC_CNTL_I/state_cs_FSM_FFd3:C ->
+Inst_MB/xps_epc_0/xps_epc_0/EPC_CORE_I/DATA_STEER_I/sync_ip2bus_data<31>:CE -2030
 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:13509, Component Switching Limit:0)     REAL time: 1 mins 22 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:13366, Component Switching Limit:0)     REAL time: 1 mins 25 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:13509, Component Switching Limit:0)     REAL time: 1 mins 26 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:13366, Component Switching Limit:0)     REAL time: 1 mins 29 secs 
 WARNING:Route:452 - 
     Not all timing constraints have been achieved.  Please consult the `Post-Place & Route Static Timing Report' to
    determine the actual timing results.  For suggestions on how to work around this problem go to
    http://support.xilinx.com and `Search Answers Database' using the text of this message.
 
-Total REAL time to Router completion: 1 mins 27 secs 
-Total CPU time to Router completion: 1 mins 31 secs 
+Total REAL time to Router completion: 1 mins 29 secs 
+Total CPU time to Router completion: 1 mins 33 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -164,24 +160,24 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_MB/clk_100_0000 |              |      |      |            |             |
-|             MHzPLL0 | BUFGCTRL_X0Y3| No   | 2400 |  0.538     |  2.075      |
-+---------------------+--------------+------+------+------------+-------------+
-|Inst_MB/clk_200_0000 |              |      |      |            |             |
-|             MHzPLL0 | BUFGCTRL_X0Y5| No   | 1456 |  0.643     |  2.172      |
-+---------------------+--------------+------+------+------------+-------------+
-|Inst_MB/clk_200_0000 |              |      |      |            |             |
-|           MHz90PLL0 | BUFGCTRL_X0Y4| No   |  162 |  0.247     |  2.046      |
-+---------------------+--------------+------+------+------------+-------------+
-|fpga_0_clk_1_sys_clk |              |      |      |            |             |
-|          _pin_BUFGP | BUFGCTRL_X0Y0| No   |   41 |  0.485     |  2.032      |
-+---------------------+--------------+------+------+------------+-------------+
-|      cam_pclk_BUFGP | BUFGCTRL_X0Y2| No   |   31 |  0.543     |  2.172      |
+|             MHzPLL0 | BUFGCTRL_X0Y3| No   | 2380 |  0.527     |  2.075      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_MB/mdm_0/Dbg_Cl |              |      |      |            |             |
-|                 k_1 | BUFGCTRL_X0Y1| No   |   70 |  0.298     |  1.859      |
+|                 k_1 | BUFGCTRL_X0Y1| No   |   70 |  0.299     |  1.849      |
++---------------------+--------------+------+------+------------+-------------+
+|Inst_MB/clk_200_0000 |              |      |      |            |             |
+|           MHz90PLL0 | BUFGCTRL_X0Y4| No   |  159 |  0.285     |  2.046      |
++---------------------+--------------+------+------+------------+-------------+
+|Inst_MB/clk_200_0000 |              |      |      |            |             |
+|             MHzPLL0 | BUFGCTRL_X0Y5| No   | 1452 |  0.661     |  2.189      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_MB/clock_genera |              |      |      |            |             |
-|       tor_0_CLKOUT4 | BUFGCTRL_X0Y6| No   |   63 |  0.254     |  2.012      |
+|       tor_0_CLKOUT4 | BUFGCTRL_X0Y6| No   |   65 |  0.267     |  2.012      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_clk_1_sys_clk |              |      |      |            |             |
+|          _pin_BUFGP | BUFGCTRL_X0Y0| No   |   33 |  0.481     |  2.032      |
++---------------------+--------------+------+------+------------+-------------+
+|      cam_pclk_BUFGP | BUFGCTRL_X0Y2| No   |   31 |  0.472     |  2.189      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_MB/DDR2_SDRAM/D |              |      |      |            |             |
 |DR2_SDRAM/mpmc_core_ |              |      |      |            |             |
@@ -232,10 +228,10 @@ Generating Clock Report
 |   _0/delayed_dqs<7> |        IO Clk| No   |   17 |  0.101     |  0.425      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_MB/mdm_0/Dbg_Up |              |      |      |            |             |
-|              date_1 |         Local|      |   21 |  1.414     |  2.358      |
+|              date_1 |         Local|      |   21 |  1.273     |  2.221      |
 +---------------------+--------------+------+------+------------+-------------+
 |Inst_MB/xps_timer_0_ |              |      |      |            |             |
-|           Interrupt |         Local|      |    1 |  0.000     |  1.039      |
+|           Interrupt |         Local|      |    1 |  0.000     |  0.914      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -246,7 +242,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 13509 (Setup: 0, Hold: 13509, Component Switching Limit: 0)
+Timing Score: 13366 (Setup: 0, Hold: 13366, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -274,19 +270,24 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |     0.031ns|     4.969ns|       0|           0
-  tor_0_SIG_PLL0_CLKOUT2 = PERIOD         T | HOLD        |    -3.511ns|            |       4|       13509
+* TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |     0.008ns|     4.992ns|       0|           0
+  tor_0_SIG_PLL0_CLKOUT2 = PERIOD         T | HOLD        |    -3.437ns|            |       4|       13366
   IMEGRP "Inst_MB_clock_generator_0_clock_g |             |            |            |        |            
   enerator_0_SIG_PLL0_CLKOUT2"         TS_s |             |            |            |        |            
   ys_clk_pin * 2 HIGH 50%                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.012ns|     0.838ns|       0|           0
   M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/gen_dqs[2].u_iob_dqs/en_dqs |             |            |            |        |            
+  _0/u_phy_io_0/gen_dqs[7].u_iob_dqs/en_dqs |             |            |            |        |            
+  _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.015ns|     0.835ns|       0|           0
+  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
+  _0/u_phy_io_0/gen_dqs[1].u_iob_dqs/en_dqs |             |            |            |        |            
   _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_ | SETUP       |     0.038ns|     1.862ns|       0|           0
-  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS"       | HOLD        |     1.004ns|            |       0|           0
+  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS"       | HOLD        |     0.998ns|            |       0|           0
      1.9 ns                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
@@ -296,17 +297,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
   M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/gen_dqs[1].u_iob_dqs/en_dqs |             |            |            |        |            
-  _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
-  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
   _0/u_phy_io_0/gen_dqs[0].u_iob_dqs/en_dqs |             |            |            |        |            
-  _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
-  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/gen_dqs[3].u_iob_dqs/en_dqs |             |            |            |        |            
   _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
@@ -321,7 +312,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
   M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/gen_dqs[7].u_iob_dqs/en_dqs |             |            |            |        |            
+  _0/u_phy_io_0/gen_dqs[3].u_iob_dqs/en_dqs |             |            |            |        |            
+  _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
+  _0/u_phy_io_0/gen_dqs[2].u_iob_dqs/en_dqs |             |            |            |        |            
   _sync"         MAXDELAY = 0.85 ns         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.072ns|     0.528ns|       0|           0
@@ -331,7 +327,22 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
   M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/en_dqs<7>"         MAXDELAY |             |            |            |        |            
+  _0/u_phy_io_0/en_dqs<0>"         MAXDELAY |             |            |            |        |            
+   = 0.6 ns                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
+  _0/u_phy_io_0/en_dqs<2>"         MAXDELAY |             |            |            |        |            
+   = 0.6 ns                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
+  _0/u_phy_io_0/en_dqs<3>"         MAXDELAY |             |            |            |        |            
+   = 0.6 ns                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
+  _0/u_phy_io_0/en_dqs<4>"         MAXDELAY |             |            |            |        |            
    = 0.6 ns                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
@@ -344,147 +355,122 @@ Asterisk (*) preceding a constraint indicates it was not met.
   _0/u_phy_io_0/en_dqs<5>"         MAXDELAY |             |            |            |        |            
    = 0.6 ns                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.079ns|     0.521ns|       0|           0
   M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/en_dqs<4>"         MAXDELAY |             |            |            |        |            
+  _0/u_phy_io_0/en_dqs<7>"         MAXDELAY |             |            |            |        |            
    = 0.6 ns                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/en_dqs<3>"         MAXDELAY |             |            |            |        |            
-   = 0.6 ns                                 |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/en_dqs<2>"         MAXDELAY |             |            |            |        |            
-   = 0.6 ns                                 |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
-  M/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if |             |            |            |        |            
-  _0/u_phy_io_0/en_dqs<0>"         MAXDELAY |             |            |            |        |            
-   = 0.6 ns                                 |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     0.168ns|     9.664ns|       0|           0
-  pin" 100 MHz HIGH 50%                     | HOLD        |     0.366ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |     0.307ns|     4.693ns|       0|           0
-  tor_0_SIG_PLL0_CLKOUT1 = PERIOD         T | HOLD        |     0.472ns|            |       0|           0
-  IMEGRP "Inst_MB_clock_generator_0_clock_g |             |            |            |        |            
-  enerator_0_SIG_PLL0_CLKOUT1"         TS_s |             |            |            |        |            
-  ys_clk_pin * 2 PHASE 1.25 ns HIGH 50%     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |     0.341ns|     4.659ns|       0|           0
-  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO      | HOLD        |     0.542ns|            |       0|           0
-      TIMEGRP "FFS" TS_sys_clk_pin * 2      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |     0.344ns|     9.312ns|       0|           0
-  tor_0_SIG_PLL0_CLKOUT0 = PERIOD         T | HOLD        |     0.034ns|            |       0|           0
+  TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |     0.104ns|     9.792ns|       0|           0
+  tor_0_SIG_PLL0_CLKOUT0 = PERIOD         T | HOLD        |     0.005ns|            |       0|           0
   IMEGRP "Inst_MB_clock_generator_0_clock_g |             |            |            |        |            
   enerator_0_SIG_PLL0_CLKOUT0"         TS_s |             |            |            |        |            
   ys_clk_pin HIGH 50%                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP | SETUP       |     0.469ns|     4.531ns|       0|           0
-   "TNM_RD_DATA_SEL" TO TIMEGRP "FFS"       | HOLD        |     0.040ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     0.168ns|     9.664ns|       0|           0
+  pin" 100 MHz HIGH 50%                     | HOLD        |     0.367ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |     0.384ns|     4.616ns|       0|           0
+  tor_0_SIG_PLL0_CLKOUT1 = PERIOD         T | HOLD        |     0.409ns|            |       0|           0
+  IMEGRP "Inst_MB_clock_generator_0_clock_g |             |            |            |        |            
+  enerator_0_SIG_PLL0_CLKOUT1"         TS_s |             |            |            |        |            
+  ys_clk_pin * 2 PHASE 1.25 ns HIGH 50%     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |     0.795ns|     4.205ns|       0|           0
+  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO      | HOLD        |     0.485ns|            |       0|           0
+      TIMEGRP "FFS" TS_sys_clk_pin * 2      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP | SETUP       |     0.897ns|     4.103ns|       0|           0
+   "TNM_RD_DATA_SEL" TO TIMEGRP "FFS"       | HOLD        |     0.152ns|            |       0|           0
      TS_sys_clk_pin * 2                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     0.921ns|     1.079ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<1>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.039ns|     0.961ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.109ns|     0.891ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/cmd |             |            |            |        |            
   _reset<0>"         MAXDELAY = 2 ns        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.056ns|     0.944ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<0>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.070ns|     0.930ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ConsObjPtr<7>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.102ns|     0.898ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<6>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.136ns|     0.864ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/rdf |             |            |            |        |            
-  ifo_reset_or_flush<0>"         MAXDELAY = |             |            |            |        |            
-   2 ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.148ns|     0.852ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ConsObjPtr<2>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.198ns|     0.802ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ConsObjPtr<4>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.226ns|     0.774ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/wrf |             |            |            |        |            
-  ifo_reset_or_flush<1>"         MAXDELAY = |             |            |            |        |            
-   2 ns                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.266ns|     0.734ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<2>"     |             |            |            |        |            
-       MAXDELAY = 2 ns                      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.316ns|     0.684ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<2>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.318ns|     0.682ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ProdObjPtr<5>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.321ns|     0.679ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ProdObjPtr<0>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.326ns|     0.674ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.133ns|     0.867ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
   WrDataFifo/ConsObjPtr<0>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.363ns|     0.637ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.144ns|     0.856ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ProdObjPtr<3>"         MAXDELA |             |            |            |        |            
+  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<6>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.376ns|     0.624ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.145ns|     0.855ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ProdObjPtr<7>"         MAXDELA |             |            |            |        |            
+  WrDataFifo/ConsObjPtr<6>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.379ns|     0.621ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.167ns|     0.833ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ConsObjPtr<4>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.193ns|     0.807ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ConsObjPtr<2>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.234ns|     0.766ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ConsObjPtr<7>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.242ns|     0.758ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>"     |             |            |            |        |            
+       MAXDELAY = 2 ns                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.251ns|     0.749ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ConsObjPtr<5>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.263ns|     0.737ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<3>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.308ns|     0.692ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ProdObjPtr<0>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.314ns|     0.686ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
   WrDataFifo/ProdObjPtr<2>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.380ns|     0.620ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.321ns|     0.679ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ProdObjPtr<7>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.328ns|     0.672ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ProdObjPtr<4>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.359ns|     0.641ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ConsObjPtr<3>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.365ns|     0.635ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
   WrDataFifo/ConsObjPtr<1>"         MAXDELA |             |            |            |        |            
@@ -492,51 +478,51 @@ Asterisk (*) preceding a constraint indicates it was not met.
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.390ns|     0.610ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<0>"     |             |            |            |        |            
-       MAXDELAY = 2 ns                      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.397ns|     0.603ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ConsObjPtr<5>"         MAXDELA |             |            |            |        |            
+  WrDataFifo/ProdObjPtr<1>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.398ns|     0.602ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ConsObjPtr<6>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.412ns|     0.588ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.410ns|     0.590ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<3>"         MAXDELA |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<1>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.426ns|     0.574ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.422ns|     0.578ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<1>"     |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ProdObjPtr<5>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.434ns|     0.566ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<2>"     |             |            |            |        |            
        MAXDELAY = 2 ns                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.429ns|     0.571ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.447ns|     0.553ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<5>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.449ns|     0.551ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/rdf |             |            |            |        |            
+  ifo_reset_or_flush<0>"         MAXDELAY = |             |            |            |        |            
+   2 ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.451ns|     0.549ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
   WrDataFifo/ProdObjPtr<6>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.449ns|     0.551ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<2>"     |             |            |            |        |            
-       MAXDELAY = 2 ns                      |             |            |            |        |            
+  TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |     1.458ns|     3.542ns|       0|           0
+  NM_GATE_DLY" TO TIMEGRP "FFS"         TS_ | HOLD        |     0.206ns|            |       0|           0
+  sys_clk_pin * 2                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.463ns|     0.537ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.467ns|     0.533ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<1>"     |             |            |            |        |            
-       MAXDELAY = 2 ns                      |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.470ns|     0.530ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>"     |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<2>"     |             |            |            |        |            
        MAXDELAY = 2 ns                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.480ns|     0.520ns|       0|           0
@@ -544,73 +530,83 @@ Asterisk (*) preceding a constraint indicates it was not met.
   _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<0>"     |             |            |            |        |            
        MAXDELAY = 2 ns                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |     1.484ns|     3.516ns|       0|           0
-  NM_GATE_DLY" TO TIMEGRP "FFS"         TS_ | HOLD        |     0.167ns|            |       0|           0
-  sys_clk_pin * 2                           |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.503ns|     0.497ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.484ns|     0.516ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ConsObjPtr<3>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.525ns|     0.475ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ProdObjPtr<1>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.529ns|     0.471ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
-  WrDataFifo/ProdObjPtr<4>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.544ns|     0.456ns|       0|           0
-  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<3>"     |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<1>"     |             |            |            |        |            
        MAXDELAY = 2 ns                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.606ns|     0.394ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.488ns|     0.512ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<5>"         MAXDELA |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<2>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.625ns|     0.375ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.495ns|     0.505ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
-  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
-  RdDataFifo/ProdObjPtr<7>"         MAXDELA |             |            |            |        |            
-  Y = 2 ns                                  |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<1>"     |             |            |            |        |            
+       MAXDELAY = 2 ns                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.695ns|     0.305ns|       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.501ns|     0.499ns|       0|           0
   M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
   _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
   RdDataFifo/ProdObjPtr<4>"         MAXDELA |             |            |            |        |            
   Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGR | SETUP       |     3.089ns|     1.911ns|       0|           0
-  P "TNM_CAL_RDEN_DLY" TO TIMEGRP "FFS"     | HOLD        |     0.135ns|            |       0|           0
-       TS_sys_clk_pin * 2                   |             |            |            |        |            
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.502ns|     0.498ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.U |             |            |            |        |            
+  WrDataFifo/ProdObjPtr<3>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |     3.115ns|     1.885ns|       0|           0
-  NM_RDEN_DLY" TO TIMEGRP "FFS"         TS_ | HOLD        |     0.002ns|            |       0|           0
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.507ns|     0.493ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ProdObjPtr<0>"     |             |            |            |        |            
+       MAXDELAY = 2 ns                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.539ns|     0.461ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/wrf |             |            |            |        |            
+  ifo_reset_or_flush<1>"         MAXDELAY = |             |            |            |        |            
+   2 ns                                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.568ns|     0.432ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _CMD_FIFOS[0].UCmdFifo/ConsObjPtr<3>"     |             |            |            |        |            
+       MAXDELAY = 2 ns                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.572ns|     0.428ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<7>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "Inst_MB/DDR2_SDRAM/DDR2_SDRA | MAXDELAY    |     1.629ns|     0.371ns|       0|           0
+  M/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN |             |            |            |        |            
+  _RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.U |             |            |            |        |            
+  RdDataFifo/ProdObjPtr<0>"         MAXDELA |             |            |            |        |            
+  Y = 2 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |     2.874ns|     2.126ns|       0|           0
+  NM_RDEN_DLY" TO TIMEGRP "FFS"         TS_ | HOLD        |     0.249ns|            |       0|           0
   sys_clk_pin * 2                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |    15.196ns|     9.608ns|       0|           0
-  tor_0_SIG_PLL0_CLKOUT4 = PERIOD         T | HOLD        |     0.472ns|            |       0|           0
+  TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGR | SETUP       |     3.087ns|     1.913ns|       0|           0
+  P "TNM_CAL_RDEN_DLY" TO TIMEGRP "FFS"     | HOLD        |     0.154ns|            |       0|           0
+       TS_sys_clk_pin * 2                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_Inst_MB_clock_generator_0_clock_genera | SETUP       |    15.248ns|     9.504ns|       0|           0
+  tor_0_SIG_PLL0_CLKOUT4 = PERIOD         T | HOLD        |     0.456ns|            |       0|           0
   IMEGRP "Inst_MB_clock_generator_0_clock_g |             |            |            |        |            
   enerator_0_SIG_PLL0_CLKOUT4"         TS_s |             |            |            |        |            
   ys_clk_pin * 0.25 HIGH 50%                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_SPLB2MPLB_xps_tft_0_path" TIG    | SETUP       |         N/A|     1.777ns|     N/A|           0
+  PATH "TS_MPLB2TFT_xps_tft_0_path" TIG     | SETUP       |         N/A|     1.011ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_MPLB2TFT_xps_tft_0_path" TIG     | SETUP       |         N/A|     0.978ns|     N/A|           0
-----------------------------------------------------------------------------------------------------------
-  PATH "TS_TFT_MPLB_CLOCK_xps_tft_0_path" T | SETUP       |         N/A|     3.300ns|     N/A|           0
+  PATH "TS_TFT_MPLB_CLOCK_xps_tft_0_path" T | SETUP       |         N/A|     3.468ns|     N/A|           0
   IG                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_MPLB2TFT1_xps_tft_0_path" TIG    | SETUP       |         N/A|     1.154ns|     N/A|           0
+  PATH "TS_MPLB2TFT1_xps_tft_0_path" TIG    | SETUP       |         N/A|     1.275ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_SPLB2MPLB_xps_tft_0_path" TIG    | SETUP       |         N/A|     2.164ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
   TS_MC_PHY_INIT_DATA_SEL_0 = MAXDELAY FROM | N/A         |         N/A|         N/A|     N/A|         N/A
    TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO       |             |            |            |        |            
@@ -628,23 +624,23 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     10.000ns|      9.664ns|      9.938ns|            0|            4|         2718|       571929|
-| TS_MC_RD_DATA_SEL             |      5.000ns|      4.531ns|          N/A|            0|            0|          384|            0|
+|TS_sys_clk_pin                 |     10.000ns|      9.664ns|      9.984ns|            0|            4|          414|       571242|
+| TS_MC_RD_DATA_SEL             |      5.000ns|      4.103ns|          N/A|            0|            0|          384|            0|
 | TS_MC_PHY_INIT_DATA_SEL_0     |      5.000ns|          N/A|          N/A|            0|            0|            0|            0|
-| TS_MC_PHY_INIT_DATA_SEL_90    |      5.000ns|      4.659ns|          N/A|            0|            0|           53|            0|
-| TS_MC_GATE_DLY                |      5.000ns|      3.516ns|          N/A|            0|            0|           40|            0|
-| TS_MC_RDEN_DLY                |      5.000ns|      1.885ns|          N/A|            0|            0|            5|            0|
-| TS_MC_CAL_RDEN_DLY            |      5.000ns|      1.911ns|          N/A|            0|            0|            5|            0|
-| TS_Inst_MB_clock_generator_0_c|     10.000ns|      9.312ns|          N/A|            0|            0|       538068|            0|
+| TS_MC_PHY_INIT_DATA_SEL_90    |      5.000ns|      4.205ns|          N/A|            0|            0|           53|            0|
+| TS_MC_GATE_DLY                |      5.000ns|      3.542ns|          N/A|            0|            0|           40|            0|
+| TS_MC_RDEN_DLY                |      5.000ns|      2.126ns|          N/A|            0|            0|            5|            0|
+| TS_MC_CAL_RDEN_DLY            |      5.000ns|      1.913ns|          N/A|            0|            0|            5|            0|
+| TS_Inst_MB_clock_generator_0_c|     10.000ns|      9.792ns|          N/A|            0|            0|       537381|            0|
 | lock_generator_0_SIG_PLL0_CLKO|             |             |             |             |             |             |             |
 | UT0                           |             |             |             |             |             |             |             |
-| TS_Inst_MB_clock_generator_0_c|      5.000ns|      4.693ns|          N/A|            0|            0|          898|            0|
+| TS_Inst_MB_clock_generator_0_c|      5.000ns|      4.616ns|          N/A|            0|            0|          898|            0|
 | lock_generator_0_SIG_PLL0_CLKO|             |             |             |             |             |             |             |
 | UT1                           |             |             |             |             |             |             |             |
-| TS_Inst_MB_clock_generator_0_c|      5.000ns|      4.969ns|          N/A|            4|            0|        31449|            0|
+| TS_Inst_MB_clock_generator_0_c|      5.000ns|      4.992ns|          N/A|            4|            0|        31449|            0|
 | lock_generator_0_SIG_PLL0_CLKO|             |             |             |             |             |             |             |
 | UT2                           |             |             |             |             |             |             |             |
-| TS_Inst_MB_clock_generator_0_c|     40.000ns|      9.608ns|          N/A|            0|            0|         1027|            0|
+| TS_Inst_MB_clock_generator_0_c|     40.000ns|      9.504ns|          N/A|            0|            0|         1027|            0|
 | lock_generator_0_SIG_PLL0_CLKO|             |             |             |             |             |             |             |
 | UT4                           |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
@@ -663,10 +659,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 16 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 35 secs 
-Total CPU time to PAR completion: 1 mins 40 secs 
+Total REAL time to PAR completion: 1 mins 38 secs 
+Total CPU time to PAR completion: 1 mins 41 secs 
 
-Peak Memory Usage:  1033 MB
+Peak Memory Usage:  1032 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Fri Nov 23 12:00:08 2012
+Fri Nov 23 12:35:10 2012
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -250,7 +250,7 @@ Pinout by Pin Number:
 |AF31      |fpga_0_DDR2_SDRAM_DDR2_DQ_pin<2>      |IOB      |IO_L14P_17              |BIDIR               |SSTL18_II     |17            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AF32      |                                      |         |GND                     |                    |              |              |          |         |           |         |         |          |           |                |
 |AF33      |                                      |IOBM     |IO_L8P_CC_SM1P_13       |UNUSED              |              |13            |          |         |           |         |         |          |           |                |
-|AF34      |xps_tft_0_TFT_DPS_pin                 |IOB      |IO_L9P_CC_SM0P_13       |OUTPUT              |LVCMOS25*     |13            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|AF34      |                                      |IOBM     |IO_L9P_CC_SM0P_13       |UNUSED              |              |13            |          |         |           |         |         |          |           |                |
 |AG1       |                                      |IPAD     |MGTRXN1_118             |UNUSED              |              |              |          |         |           |         |         |          |           |                |
 |AG2       |                                      |         |GND                     |                    |              |              |          |         |           |         |         |          |           |                |
 |AG3       |                                      |         |MGTAVCC_118             |                    |              |              |          |         |           |         |         |          |           |                |
@@ -316,7 +316,7 @@ Pinout by Pin Number:
 |AH29      |                                      |IOBM     |IO_L19P_17              |UNUSED              |              |17            |          |         |           |         |         |          |           |                |
 |AH30      |                                      |IOBS     |IO_L18N_17              |UNUSED              |              |17            |          |         |           |         |         |          |           |                |
 |AH31      |                                      |         |VCCO_17                 |                    |              |17            |          |         |           |         |1.80     |          |           |                |
-|AH32      |                                      |IOBS     |IO_L14N_VREF_13         |UNUSED              |              |13            |          |         |           |         |         |          |           |                |
+|AH32      |xps_tft_0_TFT_DPS_pin                 |IOB      |IO_L14N_VREF_13         |OUTPUT              |LVCMOS25*     |13            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |AH33      |                                      |IOBS     |IO_L12N_VRP_13          |UNUSED              |              |13            |          |         |           |         |         |          |           |                |
 |AH34      |cam_pclk                              |IOB      |IO_L10P_CC_13           |INPUT               |LVCMOS25*     |13            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |AJ2       |                                      |OPAD     |MGTTXP1_118             |UNUSED              |              |              |          |         |           |         |         |          |           |                |
