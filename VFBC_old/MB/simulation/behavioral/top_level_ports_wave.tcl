@@ -2,7 +2,7 @@
 #  Xilinx EDK 13.4 EDK_O.87xd
 #  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 #
-#  File     top_level_ports_wave.tcl (Mon Nov 19 13:50:00 2012)
+#  File     top_level_ports_wave.tcl (Mon Nov 26 15:21:15 2012)
 #
 if { [info exists PathSeparator] } { set ps $PathSeparator } else { set ps "/" }
 if { ![info exists tbpath] } { set tbpath "${ps}MB_tb${ps}dut" }
@@ -58,4 +58,14 @@ wave add $tbpath${ps}DDR2_SDRAM_VFBC2_Rd_Flush_pin -into $id
 wave add $tbpath${ps}DDR2_SDRAM_VFBC2_Rd_Data_pin -into $id 
 wave add $tbpath${ps}DDR2_SDRAM_VFBC2_Rd_Empty_pin -into $id 
 wave add $tbpath${ps}DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_HSYNC_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_VSYNC_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_DE_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_DPS_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_VGA_CLK_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_DVI_CLK_P_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_DVI_CLK_N_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_DVI_DATA_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_IIC_SCL_pin -into $id 
+wave add $tbpath${ps}xps_tft_0_TFT_IIC_SDA_pin -into $id 
 

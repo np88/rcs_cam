@@ -932,6 +932,9 @@ Managing cache ...
 IPNAME:microblaze INSTANCE:microblaze_0 -
 /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 81 - Copying cache
 implementation netlist
+IPNAME:plb_v46 INSTANCE:mb_plb -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 95 - Copying cache
+implementation netlist
 IPNAME:lmb_v10 INSTANCE:ilmb -
 /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 102 - Copying cache
 implementation netlist
@@ -947,11 +950,40 @@ implementation netlist
 IPNAME:bram_block INSTANCE:lmb_bram -
 /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 134 - Copying cache
 implementation netlist
+IPNAME:xps_gpio INSTANCE:push_buttons_5bit -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 141 - Copying cache
+implementation netlist
+IPNAME:mpmc INSTANCE:ddr2_sdram -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 155 - Copying cache
+implementation netlist
+IPNAME:xps_timer INSTANCE:xps_timer_0 -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 223 - Copying cache
+implementation netlist
+IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_0 -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 234 - Copying cache
+implementation netlist
 IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_0_block -
 /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 244 - Copying cache
 implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs
+line 279 - Copying cache implementation netlist
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
 /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 291 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:gpio_fifo -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 304 - Copying cache
+implementation netlist
+IPNAME:xps_intc INSTANCE:xps_intc_0 -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 320 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:xps_fifo_cam_data -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 330 - Copying cache
+implementation netlist
+IPNAME:xps_epc INSTANCE:xps_epc_0 -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 358 - Copying cache
+implementation netlist
+IPNAME:xps_tft INSTANCE:xps_tft_0 -
+/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 377 - Copying cache
 implementation netlist
 
 Elaborating instances ...
@@ -967,7 +999,7 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 2.00 seconds
+Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -983,47 +1015,18 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:mb_plb - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 95 -
-Running XST synthesis
-INSTANCE:push_buttons_5bit - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs
-line 141 - Running XST synthesis
-INSTANCE:ddr2_sdram - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line
-155 - Running XST synthesis
-INSTANCE:xps_timer_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line
-223 - Running XST synthesis
-INSTANCE:xps_bram_if_cntlr_0 -
-/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 234 - Running XST
-synthesis
 INSTANCE:clock_generator_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs
 line 250 - Running XST synthesis
-INSTANCE:mdm_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 279 -
-Running XST synthesis
-INSTANCE:gpio_fifo - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line
-304 - Running XST synthesis
-INSTANCE:xps_intc_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line
-320 - Running XST synthesis
-INSTANCE:xps_fifo_cam_data - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs
-line 330 - Running XST synthesis
 INSTANCE:xps_central_dma_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs
 line 345 - Running XST synthesis
-INSTANCE:xps_epc_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line
-358 - Running XST synthesis
-INSTANCE:xps_tft_0 - /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line
-377 - Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
-/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 155 - Running NGCBUILD
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 250 - Running NGCBUILD
-IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
-/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 320 - Running NGCBUILD
-IPNAME:xps_tft_0_wrapper INSTANCE:xps_tft_0 -
-/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/MB.mhs line 377 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/MB.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 768.00 seconds
+Total run time: 98.00 seconds

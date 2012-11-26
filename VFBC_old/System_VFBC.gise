@@ -25,10 +25,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="DDR2_SDRAM_wave.tcl"/>
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="MB.ncf"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="MB.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MB.ngc"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MB.prj"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="MB.vhd"/>
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="MB.vhi"/>
@@ -97,57 +94,45 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="cam_control.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="cam_control.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="cam_control.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="cam_control.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cam_control.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="cam_control.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="cam_control.syr"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="cam_control.vhi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="cam_control.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cam_control_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cam_control_xst.xrpt"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="clock_generator_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="clock_generator_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="clock_generator_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="clock_generator_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="ddr2_sdram_wrapper.ncf"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="ddr2_sdram_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ddr2_sdram_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="ddr2_sdram_wrapper.v"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="dlmb_cntlr_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="dlmb_cntlr_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="dlmb_cntlr_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="dlmb_cntlr_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="dlmb_wave.tcl"/>
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="dlmb_wrapper.ncf"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="dlmb_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="dlmb_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="dlmb_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="edge_detector.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="edge_detector.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="edge_detector.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="edge_detector_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="edge_detector_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="edge_detector_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="elaborate"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="gpio_FIFO_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="gpio_fifo_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="gpio_fifo_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="gpio_fifo_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="ilmb_cntlr_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="ilmb_cntlr_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ilmb_cntlr_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="ilmb_cntlr_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="ilmb_wave.tcl"/>
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="ilmb_wrapper.ncf"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="ilmb_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ilmb_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="ilmb_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -169,42 +154,27 @@
     <file xil_pn:fileType="FILE_MEM" xil_pn:name="lmb_bram_combined_8.mem"/>
     <file xil_pn:fileType="FILE_MEM" xil_pn:name="lmb_bram_combined_9.mem"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="lmb_bram_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="lmb_bram_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="lmb_bram_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="lmb_bram_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="mb_plb_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="mb_plb_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="mb_plb_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="mb_plb_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="mdm_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="mdm_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="mdm_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="mdm_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="microblaze_0_wave.tcl"/>
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0_wrapper.ncf"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="microblaze_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="proc_sys_reset_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="proc_sys_reset_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="proc_sys_reset_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="proc_sys_reset_0_wrapper.vhd"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="push_buttons_5bit_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="push_buttons_5bit_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="push_buttons_5bit_wrapper.vhd"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_CC_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_CC_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_CC_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="top_level_ports_wave.tcl"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="vfbc_test_isim_beh.exe"/>
@@ -217,50 +187,28 @@
     <file xil_pn:fileType="FILE_MEM" xil_pn:name="xps_bram_if_cntlr_0_block_combined_0.mem"/>
     <file xil_pn:fileType="FILE_MEM" xil_pn:name="xps_bram_if_cntlr_0_block_combined_1.mem"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_bram_if_cntlr_0_block_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_bram_if_cntlr_0_block_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_bram_if_cntlr_0_block_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_bram_if_cntlr_0_block_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_bram_if_cntlr_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_bram_if_cntlr_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_bram_if_cntlr_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_bram_if_cntlr_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_central_dma_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_central_dma_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_central_dma_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_central_dma_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_epc_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_epc_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_epc_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_epc_0_wrapper.vhd"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_fifo_cam_data_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_fifo_cam_data_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_fifo_cam_data_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_intc_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_intc_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_intc_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_intc_0_wrapper.vhd"/>
+    <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_tft_0_wave.tcl"/>
     <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="xps_tft_0_wrapper.ncf"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_tft_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_tft_0_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_tft_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_TCL" xil_pn:name="xps_timer_0_wave.tcl"/>
-    <file xil_pn:fileType="FILE_NGC" xil_pn:name="xps_timer_0_wrapper.ngc">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="PostSynthSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="xps_timer_0_wrapper.ngc"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="xps_timer_0_wrapper.vhd"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
@@ -270,60 +218,52 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353329374" xil_pn:in_ck="-672042689123492406" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1353329374">
+    <transform xil_pn:end_ts="1353946521" xil_pn:in_ck="-8750779136604167150" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1353946521">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../I2C/i2cmaster.vhd"/>
       <outfile xil_pn:name="FIFO_13_1_asynch/FIFO_CONST.vhd"/>
       <outfile xil_pn:name="FIFO_13_1_asynch/edge_detector.vhd"/>
       <outfile xil_pn:name="FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd"/>
       <outfile xil_pn:name="MB/MB.xmp"/>
       <outfile xil_pn:name="SM_vfbc_control.vhd"/>
       <outfile xil_pn:name="System_dma_tl.vhd"/>
+      <outfile xil_pn:name="cam_control.vhd"/>
       <outfile xil_pn:name="fifo_resetter.vhd"/>
+      <outfile xil_pn:name="test_CC.vhd"/>
       <outfile xil_pn:name="vfbc_test.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1353329374" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1255283796879953519" xil_pn:start_ts="1353329374">
+    <transform xil_pn:end_ts="1353939645" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4769389680110692443" xil_pn:start_ts="1353939645">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353329374" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8400709465093191487" xil_pn:start_ts="1353329374">
+    <transform xil_pn:end_ts="1353939645" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6319831679330813833" xil_pn:start_ts="1353939645">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353317781" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7821631483659167460" xil_pn:start_ts="1353317781">
+    <transform xil_pn:end_ts="1353939408" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7821631483659167460" xil_pn:start_ts="1353939408">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353329374" xil_pn:in_ck="-672042689123492406" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1353329374">
+    <transform xil_pn:end_ts="1353946521" xil_pn:in_ck="-8750779136604167150" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1353946521">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../I2C/i2cmaster.vhd"/>
       <outfile xil_pn:name="FIFO_13_1_asynch/FIFO_CONST.vhd"/>
       <outfile xil_pn:name="FIFO_13_1_asynch/edge_detector.vhd"/>
       <outfile xil_pn:name="FIFO_13_1_asynch/ipcore_dir/fifo_13_1_asynch.vhd"/>
       <outfile xil_pn:name="MB/MB.xmp"/>
       <outfile xil_pn:name="SM_vfbc_control.vhd"/>
       <outfile xil_pn:name="System_dma_tl.vhd"/>
+      <outfile xil_pn:name="cam_control.vhd"/>
       <outfile xil_pn:name="fifo_resetter.vhd"/>
+      <outfile xil_pn:name="test_CC.vhd"/>
       <outfile xil_pn:name="vfbc_test.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1353329430" xil_pn:in_ck="-3679516079436020236" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3604490696231219058" xil_pn:start_ts="1353329374">
+    <transform xil_pn:end_ts="1353946547" xil_pn:in_ck="-628705921955609028" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4327315286797800947" xil_pn:start_ts="1353946521">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="DDR2_SDRAM_wave.tcl"/>
       <outfile xil_pn:name="MB.prj"/>
@@ -339,8 +279,6 @@
       <outfile xil_pn:name="dlmb_cntlr_wrapper.vhd"/>
       <outfile xil_pn:name="dlmb_wave.tcl"/>
       <outfile xil_pn:name="dlmb_wrapper.vhd"/>
-      <outfile xil_pn:name="edge_detector_beh.prj"/>
-      <outfile xil_pn:name="edge_detector_isim_beh.exe"/>
       <outfile xil_pn:name="elaborate"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="gpio_FIFO_wave.tcl"/>
@@ -378,6 +316,8 @@
       <outfile xil_pn:name="proc_sys_reset_0_wave.tcl"/>
       <outfile xil_pn:name="proc_sys_reset_0_wrapper.vhd"/>
       <outfile xil_pn:name="push_buttons_5bit_wrapper.vhd"/>
+      <outfile xil_pn:name="test_CC_beh.prj"/>
+      <outfile xil_pn:name="test_CC_isim_beh.exe"/>
       <outfile xil_pn:name="top_level_ports_wave.tcl"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
       <outfile xil_pn:name="xilinxsim_edk.ini"/>
@@ -395,45 +335,45 @@
       <outfile xil_pn:name="xps_fifo_cam_data_wrapper.vhd"/>
       <outfile xil_pn:name="xps_intc_0_wave.tcl"/>
       <outfile xil_pn:name="xps_intc_0_wrapper.vhd"/>
+      <outfile xil_pn:name="xps_tft_0_wave.tcl"/>
+      <outfile xil_pn:name="xps_tft_0_wrapper.vhd"/>
       <outfile xil_pn:name="xps_timer_0_wave.tcl"/>
       <outfile xil_pn:name="xps_timer_0_wrapper.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1353329431" xil_pn:in_ck="-1534372488520509044" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="550264644635458090" xil_pn:start_ts="1353329430">
+    <transform xil_pn:end_ts="1353946547" xil_pn:in_ck="-215506873565274336" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1338054039061451701" xil_pn:start_ts="1353946547">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="edge_detector_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="test_CC_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1352294597" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1352294597">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1352294597" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8205608466893329131" xil_pn:start_ts="1352294597">
+    <transform xil_pn:end_ts="1353937459" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8205608466893329131" xil_pn:start_ts="1353937459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1352294597" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7821631483659167460" xil_pn:start_ts="1352294597">
+    <transform xil_pn:end_ts="1353937459" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7821631483659167460" xil_pn:start_ts="1353937459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1352294597" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1352294597">
+    <transform xil_pn:end_ts="1353937459" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1353937459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1352294597" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7227600825961839577" xil_pn:start_ts="1352294597">
+    <transform xil_pn:end_ts="1353937459" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7227600825961839577" xil_pn:start_ts="1353937459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353665075" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8458126479482839362" xil_pn:start_ts="1353665075">
+    <transform xil_pn:end_ts="1353937459" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-8458126479482839362" xil_pn:start_ts="1353937459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353667117" xil_pn:in_ck="3250058354557415307" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3193235515505297958" xil_pn:start_ts="1353666061">
+    <transform xil_pn:end_ts="1353937469" xil_pn:in_ck="3250058354557415307" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3193235515505297958" xil_pn:start_ts="1353937459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MB.ngc"/>
@@ -464,7 +404,7 @@
       <outfile xil_pn:name="xps_tft_0_wrapper.ngc"/>
       <outfile xil_pn:name="xps_timer_0_wrapper.ngc"/>
     </transform>
-    <transform xil_pn:end_ts="1353680644" xil_pn:in_ck="-2548786237412265462" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-2632313822235235444" xil_pn:start_ts="1353680455">
+    <transform xil_pn:end_ts="1353946653" xil_pn:in_ck="-4178106452387224163" xil_pn:name="TRANEXT_xstsynthesize_virtex5" xil_pn:prop_ck="-2632313822235235444" xil_pn:start_ts="1353946451">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -480,14 +420,15 @@
       <outfile xil_pn:name="System_tl.xst"/>
       <outfile xil_pn:name="System_tl_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="cam_control.ngr"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1353667977" xil_pn:in_ck="-8219382094188029823" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6254478883995403900" xil_pn:start_ts="1353667977">
+    <transform xil_pn:end_ts="1353937673" xil_pn:in_ck="-8219382094188029823" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6254478883995403900" xil_pn:start_ts="1353937673">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1353680728" xil_pn:in_ck="967700204866993755" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="562122541292661679" xil_pn:start_ts="1353680644">
+    <transform xil_pn:end_ts="1353946737" xil_pn:in_ck="-1474182277361362574" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="562122541292661679" xil_pn:start_ts="1353946653">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -498,7 +439,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1353680996" xil_pn:in_ck="2607527803202725932" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1353680728">
+    <transform xil_pn:end_ts="1353946988" xil_pn:in_ck="2607527803202725932" xil_pn:name="TRANEXT_map_virtex5" xil_pn:prop_ck="6733564432430981316" xil_pn:start_ts="1353946737">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -512,7 +453,7 @@
       <outfile xil_pn:name="System_tl_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1353681139" xil_pn:in_ck="2037107766048288069" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1353680996">
+    <transform xil_pn:end_ts="1353947161" xil_pn:in_ck="2037107766048288069" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4097515898943074650" xil_pn:start_ts="1353946988">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -527,7 +468,7 @@
       <outfile xil_pn:name="System_tl_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1353681244" xil_pn:in_ck="-2841865824881932921" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="-4008143788065839743" xil_pn:start_ts="1353681139">
+    <transform xil_pn:end_ts="1353947264" xil_pn:in_ck="-2841865824881932921" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="-4008143788065839743" xil_pn:start_ts="1353947161">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -540,19 +481,11 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1353681251" xil_pn:in_ck="7130501177761801108" xil_pn:name="TRAN_exportToSDK" xil_pn:prop_ck="4296800" xil_pn:start_ts="1353681244">
+    <transform xil_pn:end_ts="1353947272" xil_pn:in_ck="7130501177761801108" xil_pn:name="TRAN_exportToSDK" xil_pn:prop_ck="4296800" xil_pn:start_ts="1353947264">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1352299827" xil_pn:in_ck="-2841865824881945775" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7814804799388247210" xil_pn:start_ts="1352299826">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1353681139" xil_pn:in_ck="2607527803202725800" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1353681102">
+    <transform xil_pn:end_ts="1353947161" xil_pn:in_ck="2607527803202725800" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1353947125">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="System_tl.twr"/>

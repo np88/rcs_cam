@@ -2,7 +2,7 @@
 #  Xilinx EDK 13.4 EDK_O.87xd
 #  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 #
-#  File     clock_generator_0_wave.tcl (Mon Nov 19 13:50:00 2012)
+#  File     clock_generator_0_wave.tcl (Mon Nov 26 15:21:16 2012)
 #
 #  Module   clock_generator_0_wrapper
 #  Instance clock_generator_0
@@ -14,7 +14,7 @@ if { ![info exists tbpath] } { set tbpath "${ps}MB_tb${ps}dut" }
   wave add $tbpath${ps}clock_generator_0${ps}CLKOUT1 -into $id
   wave add $tbpath${ps}clock_generator_0${ps}CLKOUT2 -into $id
   wave add $tbpath${ps}clock_generator_0${ps}CLKOUT3 -into $id
-# wave add $tbpath${ps}clock_generator_0${ps}CLKOUT4 -into $id
+  wave add $tbpath${ps}clock_generator_0${ps}CLKOUT4 -into $id
 # wave add $tbpath${ps}clock_generator_0${ps}CLKOUT5 -into $id
 # wave add $tbpath${ps}clock_generator_0${ps}CLKOUT6 -into $id
 # wave add $tbpath${ps}clock_generator_0${ps}CLKOUT7 -into $id

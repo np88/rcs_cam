@@ -1,0 +1,542 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> 
+Reading design: cam_control.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cam_control.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cam_control"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : cam_control
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Off
+Reduce Control Sets                : Off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"FIFO_13_1_asynch" "FIFO_13_1_asynch/ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/I2C/i2cmaster.vhd" in Library work.
+Architecture i2cmaster_arch of Entity i2cmaster is up to date.
+Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" in Library work.
+Entity <cam_control> compiled.
+Entity <cam_control> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd" in Library work.
+Entity <mb> compiled.
+Entity <mb> (Architecture <structure>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <cam_control> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <i2cmaster> in library <work> (architecture <i2cmaster_arch>) with generics.
+	i2c_cycles = 252
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <cam_control> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:753 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" line 93: Unconnected output port 'data_read_out' of component 'i2cmaster'.
+WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" line 124: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start_transfer>, <ready>, <data_write_ack>
+Entity <cam_control> analyzed. Unit <cam_control> generated.
+
+Analyzing generic Entity <i2cmaster> in library <work> (Architecture <i2cmaster_arch>).
+	i2c_cycles = 252
+WARNING:Xst:819 - "/DIST/home/peters/nadja_cam_repo/I2C/i2cmaster.vhd" line 283: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <read_ack>
+Entity <i2cmaster> analyzed. Unit <i2cmaster> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <i2cmaster>.
+    Related source file is "/DIST/home/peters/nadja_cam_repo/I2C/i2cmaster.vhd".
+    Found finite state machine <FSM_0> for signal <z>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 29                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 16                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | z_waiting                                      |
+    | Power Up State     | z_init                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <bit_cntr>.
+    Found 4-bit adder for signal <bit_cntr$addsub0000> created at line 252.
+    Found 7-bit register for signal <bus_delay_cntr>.
+    Found 7-bit subtractor for signal <bus_delay_cntr_next$sub0000> created at line 141.
+    Found 1-bit register for signal <data_dir<0>>.
+    Found 8-bit register for signal <data_read>.
+    Found 8-bit register for signal <data_write>.
+    Found 1-bit 8-to-1 multiplexer for signal <data_write$mux0001> created at line 330.
+    Found 1-bit register for signal <last_transfer_stopped<0>>.
+    Found 1-bit register for signal <read_ack<0>>.
+    Found 1-bit register for signal <stop_condition<0>>.
+    Found 1-bit register for signal <write_ack<0>>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <i2cmaster> synthesized.
+
+
+Synthesizing Unit <cam_control>.
+    Related source file is "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd".
+INFO:Xst:1799 - State cl_wait_second_byte is never reached in FSM <current_state>.
+INFO:Xst:1799 - State cl_wait_third_byte is never reached in FSM <current_state>.
+INFO:Xst:1799 - State cl_start_third_byte is never reached in FSM <current_state>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_i                     (rising_edge)        |
+    | Reset              | rst_i                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | cl_wait_for_transfer                           |
+    | Power Up State     | cl_wait_for_transfer                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit tristate buffer for signal <cam_i2c_scl_io>.
+    Found 1-bit tristate buffer for signal <cam_i2c_sda_io>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Tristate(s).
+Unit <cam_control> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Registers                                            : 9
+ 1-bit register                                        : 5
+ 4-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:2]> with sequential encoding.
+----------------------------------
+ State                | Encoding
+----------------------------------
+ cl_wait_for_transfer | 00
+ cl_start_first_byte  | 01
+ cl_start_second_byte | 11
+ cl_start_third_byte  | unreached
+ cl_wait_first_byte   | 10
+ cl_wait_second_byte  | unreached
+ cl_wait_third_byte   | unreached
+----------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <i2cmaster_inst/z/FSM> on signal <z[1:13]> with one-hot encoding.
+--------------------------------------
+ State               | Encoding
+--------------------------------------
+ z_init              | 0000000000001
+ z_waiting           | 0000000000010
+ z_start_condition_1 | 0000000001000
+ z_start_condition_2 | 0000000100000
+ z_start_condition_3 | 0000000000100
+ z_start_condition_4 | 0000001000000
+ z_data_setup        | 0000000010000
+ z_data_stretch      | 0000010000000
+ z_data_hold         | 0000100000000
+ z_data_wait         | 0001000000000
+ z_stop_condition_1  | 0010000000000
+ z_stop_condition_2  | 0100000000000
+ z_stop_condition_3  | 1000000000000
+--------------------------------------
+INFO:Xst:2261 - The FF/Latch <read_ack_0> in Unit <i2cmaster_inst> is equivalent to the following FF/Latch, which will be removed : <stop_condition_0> 
+WARNING:Xst:1426 - The value init of the FF/Latch FFd13 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_write_0> (without init value) has a constant value of 0 in block <i2cmaster_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_write_2> (without init value) has a constant value of 0 in block <i2cmaster_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_write_3> (without init value) has a constant value of 0 in block <i2cmaster_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_write_5> (without init value) has a constant value of 0 in block <i2cmaster_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_write_7> (without init value) has a constant value of 0 in block <i2cmaster_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <read_ack_0> has a constant value of 0 in block <i2cmaster_inst>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd13 hinder the constant cleaning in the block FSM_0-parent.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <stop_condition_0> has a constant value of 0 in block <i2cmaster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <read_ack_0> has a constant value of 0 in block <i2cmaster>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <data_write_0> in Unit <i2cmaster> is equivalent to the following 4 FFs/Latches, which will be removed : <data_write_2> <data_write_3> <data_write_5> <data_write_7> 
+INFO:Xst:2261 - The FF/Latch <data_dir_0> in Unit <i2cmaster> is equivalent to the following FF/Latch, which will be removed : <data_write_1> 
+WARNING:Xst:1293 - FF/Latch <FSM_FFd3> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <FSM_FFd2> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <FSM_FFd1> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_write_0> (without init value) has a constant value of 0 in block <i2cmaster>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <cam_control> ...
+
+Optimizing unit <i2cmaster> ...
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_7> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_6> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_5> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_4> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_3> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_2> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_1> of sequential type is unconnected in block <cam_control>.
+WARNING:Xst:2677 - Node <i2cmaster_inst/data_read_0> of sequential type is unconnected in block <cam_control>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cam_control, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : cam_control.ngr
+Top Level Output File Name         : cam_control
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 59
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 5
+#      LUT4                        : 10
+#      LUT5                        : 9
+#      LUT6                        : 25
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 28
+#      FDC                         : 2
+#      FDR                         : 17
+#      FDRE                        : 7
+#      FDS                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      IOBUF                       : 1
+#      OBUFT                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              28  out of  69120     0%  
+ Number of Slice LUTs:                   56  out of  69120     0%  
+    Number used as Logic:                56  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     59
+   Number with an unused Flip Flop:      31  out of     59    52%  
+   Number with an unused LUT:             3  out of     59     5%  
+   Number of fully used LUT-FF pairs:    25  out of     59    42%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    640     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_i                              | BUFGP                  | 28    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------+-----------------------------+-------+
+Control Signal                                                         | Buffer(FF name)             | Load  |
+-----------------------------------------------------------------------+-----------------------------+-------+
+current_state_FSM_Acst_FSM_inv(current_state_FSM_Acst_FSM_inv1_INV_0:O)| NONE(current_state_FSM_FFd1)| 2     |
+-----------------------------------------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.668ns (Maximum Frequency: 374.813MHz)
+   Minimum input arrival time before clock: 2.845ns
+   Maximum output required time after clock: 5.258ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_i'
+  Clock period: 2.668ns (frequency: 374.813MHz)
+  Total number of paths / destination ports: 343 / 34
+-------------------------------------------------------------------------
+Delay:               2.668ns (Levels of Logic = 3)
+  Source:            i2cmaster_inst/bit_cntr_2 (FF)
+  Destination:       i2cmaster_inst/bus_delay_cntr_3 (FF)
+  Source Clock:      clk_i rising
+  Destination Clock: clk_i rising
+
+  Data Path: i2cmaster_inst/bit_cntr_2 to i2cmaster_inst/bus_delay_cntr_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.471   0.816  i2cmaster_inst/bit_cntr_2 (i2cmaster_inst/bit_cntr_2)
+     LUT4:I0->O            6   0.094   0.507  i2cmaster_inst/z_FSM_FFd9-In11 (i2cmaster_inst/N14)
+     LUT4:I3->O            4   0.094   0.592  i2cmaster_inst/bus_delay_cntr_set_mux0002_SW1 (N14)
+     LUT6:I4->O            1   0.094   0.000  i2cmaster_inst/bus_delay_cntr_3_rstpot (i2cmaster_inst/bus_delay_cntr_3_rstpot)
+     FDR:D                    -0.018          i2cmaster_inst/bus_delay_cntr_3
+    ----------------------------------------
+    Total                      2.668ns (0.753ns logic, 1.915ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
+  Total number of paths / destination ports: 43 / 37
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 3)
+  Source:            cam_i2c_sda_io (PAD)
+  Destination:       i2cmaster_inst/bus_delay_cntr_3 (FF)
+  Destination Clock: clk_i rising
+
+  Data Path: cam_i2c_sda_io to i2cmaster_inst/bus_delay_cntr_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O          12   0.818   1.129  cam_i2c_sda_io_IOBUF (N111)
+     LUT6:I0->O            1   0.094   0.710  i2cmaster_inst/bus_delay_cntr_next<3>11_SW0 (N25)
+     LUT6:I3->O            1   0.094   0.000  i2cmaster_inst/bus_delay_cntr_3_rstpot (i2cmaster_inst/bus_delay_cntr_3_rstpot)
+     FDR:D                    -0.018          i2cmaster_inst/bus_delay_cntr_3
+    ----------------------------------------
+    Total                      2.845ns (1.006ns logic, 1.839ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
+  Total number of paths / destination ports: 26 / 2
+-------------------------------------------------------------------------
+Offset:              5.258ns (Levels of Logic = 3)
+  Source:            i2cmaster_inst/z_FSM_FFd4 (FF)
+  Destination:       cam_i2c_sda_io (PAD)
+  Source Clock:      clk_i rising
+
+  Data Path: i2cmaster_inst/z_FSM_FFd4 to cam_i2c_sda_io
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.471   0.838  i2cmaster_inst/z_FSM_FFd4 (i2cmaster_inst/z_FSM_FFd4)
+     LUT4:I0->O            1   0.094   0.973  i2cmaster_inst/i2c_sda_out12 (i2cmaster_inst/i2c_sda_out12)
+     LUT5:I0->O            1   0.094   0.336  i2cmaster_inst/i2c_sda_out100 (cam_i2c_sda_io_not0001_inv)
+     IOBUF:T->IO               2.452          cam_i2c_sda_io_IOBUF (cam_i2c_sda_io)
+    ----------------------------------------
+    Total                      5.258ns (3.111ns logic, 2.147ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.27 secs
+ 
+--> 
+
+
+Total memory usage is 568144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

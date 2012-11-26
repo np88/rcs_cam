@@ -52,10 +52,10 @@ entity xps_central_dma_0_wrapper is
     Sl_rdDAck : out std_logic;
     Sl_rdComp : out std_logic;
     Sl_rdBTerm : out std_logic;
-    Sl_MBusy : out std_logic_vector(0 to 2);
-    Sl_MWrErr : out std_logic_vector(0 to 2);
-    Sl_MRdErr : out std_logic_vector(0 to 2);
-    Sl_MIRQ : out std_logic_vector(0 to 2);
+    Sl_MBusy : out std_logic_vector(0 to 3);
+    Sl_MWrErr : out std_logic_vector(0 to 3);
+    Sl_MRdErr : out std_logic_vector(0 to 3);
+    Sl_MIRQ : out std_logic_vector(0 to 3);
     IP2INTC_Irpt : out std_logic;
     MPLB_MAddrAck : in std_logic;
     MPLB_MSSize : in std_logic_vector(0 to 1);
@@ -194,14 +194,14 @@ begin
 
   xps_central_dma_0 : xps_central_dma
     generic map (
-      C_FIFO_DEPTH => 16,
+      C_FIFO_DEPTH => 48,
       C_RD_BURST_SIZE => 16,
       C_WR_BURST_SIZE => 16,
       C_BASEADDR => X"80200000",
       C_HIGHADDR => X"8020ffff",
       C_SPLB_DWIDTH => 64,
       C_SPLB_AWIDTH => 32,
-      C_SPLB_NUM_MASTERS => 3,
+      C_SPLB_NUM_MASTERS => 4,
       C_SPLB_MID_WIDTH => 2,
       C_SPLB_P2P => 0,
       C_SPLB_NATIVE_DWIDTH => 32,

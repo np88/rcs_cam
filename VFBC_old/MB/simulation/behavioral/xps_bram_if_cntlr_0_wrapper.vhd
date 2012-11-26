@@ -50,10 +50,10 @@ entity xps_bram_if_cntlr_0_wrapper is
     Sl_rdDAck : out std_logic;
     Sl_rdComp : out std_logic;
     Sl_rdBTerm : out std_logic;
-    Sl_MBusy : out std_logic_vector(0 to 2);
-    Sl_MWrErr : out std_logic_vector(0 to 2);
-    Sl_MRdErr : out std_logic_vector(0 to 2);
-    Sl_MIRQ : out std_logic_vector(0 to 2);
+    Sl_MBusy : out std_logic_vector(0 to 3);
+    Sl_MWrErr : out std_logic_vector(0 to 3);
+    Sl_MRdErr : out std_logic_vector(0 to 3);
+    Sl_MIRQ : out std_logic_vector(0 to 3);
     BRAM_Rst : out std_logic;
     BRAM_Clk : out std_logic;
     BRAM_EN : out std_logic;
@@ -137,12 +137,12 @@ begin
 
   xps_bram_if_cntlr_0 : xps_bram_if_cntlr
     generic map (
-      C_BASEADDR => X"8a208000",
-      C_HIGHADDR => X"8a209fff",
+      C_BASEADDR => X"8b708000",
+      C_HIGHADDR => X"8b709fff",
       C_SPLB_NATIVE_DWIDTH => 32,
       C_SPLB_AWIDTH => 32,
       C_SPLB_DWIDTH => 64,
-      C_SPLB_NUM_MASTERS => 3,
+      C_SPLB_NUM_MASTERS => 4,
       C_SPLB_MID_WIDTH => 2,
       C_SPLB_SUPPORT_BURSTS => 1,
       C_SPLB_P2P => 0,

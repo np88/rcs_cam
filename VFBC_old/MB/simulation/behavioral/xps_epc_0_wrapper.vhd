@@ -31,9 +31,9 @@ entity xps_epc_0_wrapper is
     Sl_rdDBus : out std_logic_vector(0 to 63);
     Sl_rdDAck : out std_logic;
     Sl_rdComp : out std_logic;
-    Sl_MBusy : out std_logic_vector(0 to 2);
-    Sl_MWrErr : out std_logic_vector(0 to 2);
-    Sl_MRdErr : out std_logic_vector(0 to 2);
+    Sl_MBusy : out std_logic_vector(0 to 3);
+    Sl_MWrErr : out std_logic_vector(0 to 3);
+    Sl_MRdErr : out std_logic_vector(0 to 3);
     PLB_UABus : in std_logic_vector(0 to 31);
     PLB_SAValid : in std_logic;
     PLB_rdPrim : in std_logic;
@@ -53,7 +53,7 @@ entity xps_epc_0_wrapper is
     Sl_wrBTerm : out std_logic;
     Sl_rdWdAddr : out std_logic_vector(0 to 3);
     Sl_rdBTerm : out std_logic;
-    Sl_MIRQ : out std_logic_vector(0 to 2);
+    Sl_MIRQ : out std_logic_vector(0 to 3);
     PRH_Clk : in std_logic;
     PRH_Rst : in std_logic;
     PRH_CS_n : out std_logic_vector(0 to 0);
@@ -259,7 +259,7 @@ begin
       C_SPLB_DWIDTH => 64,
       C_SPLB_P2P => 0,
       C_SPLB_MID_WIDTH => 2,
-      C_SPLB_NUM_MASTERS => 3,
+      C_SPLB_NUM_MASTERS => 4,
       C_SPLB_NATIVE_DWIDTH => 32,
       C_SPLB_SUPPORT_BURSTS => 0,
       C_NUM_PERIPHERALS => 1,

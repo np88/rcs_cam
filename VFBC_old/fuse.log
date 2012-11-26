@@ -1,4 +1,4 @@
-Running: /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -rangecheck -lib secureip -o /DIST/home/peters/nadja_cam_repo/VFBC_old/edge_detector_isim_beh.exe -prj /DIST/home/peters/nadja_cam_repo/VFBC_old/edge_detector_beh.prj work.edge_detector 
+Running: /DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -rangecheck -lib secureip -o /DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC_isim_beh.exe -prj /DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC_beh.prj work.test_CC 
 ISim O.87xd (signature 0x8ddf5b5d)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
@@ -475,6 +475,23 @@ Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIP
 Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/data_steer.vhd" into library xps_epc_v1_02_a
 Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/epc_core.vhd" into library xps_epc_v1_02_a
 Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_epc_v1_02_a/hdl/vhdl/xps_epc.vhd" into library xps_epc_v1_02_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/plb_mstr_addr_gen.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/rd_wr_calc_burst.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/rd_wr_controller.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/llink_rd_backend_no_fifo.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/llink_wr_backend_no_fifo.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/data_width_adapter.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/data_mirror_128.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/cc_brst_exp_adptr.vhd" into library plbv46_master_burst_v1_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_master_burst_v1_01_a/hdl/vhdl/plbv46_master_burst.vhd" into library plbv46_master_burst_v1_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/iic_init.v" into library xps_tft_v2_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/slave_register.v" into library xps_tft_v2_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/line_buffer.v" into library xps_tft_v2_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/h_sync.v" into library xps_tft_v2_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/v_sync.v" into library xps_tft_v2_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/tft_interface.v" into library xps_tft_v2_01_a
+Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/verilog/tft_controller.v" into library xps_tft_v2_01_a
+Parsing VHDL file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_tft_v2_01_a/hdl/vhdl/xps_tft.vhd" into library xps_tft_v2_01_a
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/microblaze_0_wrapper.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/mb_plb_wrapper.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/ilmb_wrapper.vhd" into library work
@@ -656,21 +673,28 @@ Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/xps_intc_0_wrapper.
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/xps_fifo_cam_data_wrapper.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/xps_central_dma_0_wrapper.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/xps_epc_0_wrapper.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/xps_tft_0_wrapper.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB_tb.vhd" into library work
 Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/verilog/src/glbl.v" into library work
-Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/edge_detector.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/../I2C/i2cmaster.vhd" into library work
+Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" into library work
+WARNING:HDLCompiler:946 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" Line 96: Actual for formal port reset is neither a static name nor a globally static expression
+Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 196072 KB
-Fuse CPU Usage: 15480 ms
+Fuse Memory Usage: 198388 KB
+Fuse CPU Usage: 14130 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity edge_detector
+Compiling package numeric_std
+Compiling architecture i2cmaster_arch of entity i2cmaster [i2cmaster_default]
+Compiling architecture behavioral of entity cam_control [cam_control_default]
+Compiling architecture behavior of entity test_cc
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 3 VHDL Units
-Built simulation executable /DIST/home/peters/nadja_cam_repo/VFBC_old/edge_detector_isim_beh.exe
-Fuse Memory Usage: 300960 KB
-Fuse CPU Usage: 15530 ms
-GCC CPU Usage: 540 ms
+Compiled 8 VHDL Units
+Built simulation executable /DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC_isim_beh.exe
+Fuse Memory Usage: 244884 KB
+Fuse CPU Usage: 14250 ms
+GCC CPU Usage: 750 ms

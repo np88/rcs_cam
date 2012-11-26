@@ -75,7 +75,17 @@ architecture STRUCTURE of MB_tb is
       DDR2_SDRAM_VFBC2_Rd_Flush_pin : in std_logic;
       DDR2_SDRAM_VFBC2_Rd_Data_pin : out std_logic_vector(15 downto 0);
       DDR2_SDRAM_VFBC2_Rd_Empty_pin : out std_logic;
-      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : out std_logic
+      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin : out std_logic;
+      xps_tft_0_TFT_HSYNC_pin : out std_logic;
+      xps_tft_0_TFT_VSYNC_pin : out std_logic;
+      xps_tft_0_TFT_DE_pin : out std_logic;
+      xps_tft_0_TFT_DPS_pin : out std_logic;
+      xps_tft_0_TFT_VGA_CLK_pin : out std_logic;
+      xps_tft_0_TFT_DVI_CLK_P_pin : out std_logic;
+      xps_tft_0_TFT_DVI_CLK_N_pin : out std_logic;
+      xps_tft_0_TFT_DVI_DATA_pin : out std_logic_vector(11 downto 0);
+      xps_tft_0_TFT_IIC_SCL_pin : inout std_logic;
+      xps_tft_0_TFT_IIC_SDA_pin : inout std_logic
     );
   end component;
 
@@ -132,6 +142,16 @@ architecture STRUCTURE of MB_tb is
   signal xps_epc_0_PRH_Data_I_pin : std_logic_vector(31 downto 0);
   signal xps_epc_0_PRH_Rdy_pin : std_logic;
   signal xps_epc_0_PRH_Rst_pin : std_logic;
+  signal xps_tft_0_TFT_DE_pin : std_logic;
+  signal xps_tft_0_TFT_DPS_pin : std_logic;
+  signal xps_tft_0_TFT_DVI_CLK_N_pin : std_logic;
+  signal xps_tft_0_TFT_DVI_CLK_P_pin : std_logic;
+  signal xps_tft_0_TFT_DVI_DATA_pin : std_logic_vector(11 downto 0);
+  signal xps_tft_0_TFT_HSYNC_pin : std_logic;
+  signal xps_tft_0_TFT_IIC_SCL_pin : std_logic;
+  signal xps_tft_0_TFT_IIC_SDA_pin : std_logic;
+  signal xps_tft_0_TFT_VGA_CLK_pin : std_logic;
+  signal xps_tft_0_TFT_VSYNC_pin : std_logic;
 
   -- START USER CODE (Do not remove this line)
 
@@ -194,7 +214,17 @@ begin
       DDR2_SDRAM_VFBC2_Rd_Flush_pin => DDR2_SDRAM_VFBC2_Rd_Flush_pin,
       DDR2_SDRAM_VFBC2_Rd_Data_pin => DDR2_SDRAM_VFBC2_Rd_Data_pin,
       DDR2_SDRAM_VFBC2_Rd_Empty_pin => DDR2_SDRAM_VFBC2_Rd_Empty_pin,
-      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin
+      DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin => DDR2_SDRAM_VFBC2_Rd_Almost_Empty_pin,
+      xps_tft_0_TFT_HSYNC_pin => xps_tft_0_TFT_HSYNC_pin,
+      xps_tft_0_TFT_VSYNC_pin => xps_tft_0_TFT_VSYNC_pin,
+      xps_tft_0_TFT_DE_pin => xps_tft_0_TFT_DE_pin,
+      xps_tft_0_TFT_DPS_pin => xps_tft_0_TFT_DPS_pin,
+      xps_tft_0_TFT_VGA_CLK_pin => xps_tft_0_TFT_VGA_CLK_pin,
+      xps_tft_0_TFT_DVI_CLK_P_pin => xps_tft_0_TFT_DVI_CLK_P_pin,
+      xps_tft_0_TFT_DVI_CLK_N_pin => xps_tft_0_TFT_DVI_CLK_N_pin,
+      xps_tft_0_TFT_DVI_DATA_pin => xps_tft_0_TFT_DVI_DATA_pin,
+      xps_tft_0_TFT_IIC_SCL_pin => xps_tft_0_TFT_IIC_SCL_pin,
+      xps_tft_0_TFT_IIC_SDA_pin => xps_tft_0_TFT_IIC_SDA_pin
     );
 
   -- Clock generator for fpga_0_clk_1_sys_clk_pin

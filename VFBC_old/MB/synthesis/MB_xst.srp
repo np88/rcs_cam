@@ -1485,25 +1485,26 @@ Design Statistics
 # IOs                              : 291
 
 Cell Usage :
-# BELS                             : 11037
+# BELS                             : 11098
 #      BUF                         : 43
 #      GND                         : 23
 #      INV                         : 225
 #      LUT1                        : 206
 #      LUT2                        : 1221
-#      LUT3                        : 1496
-#      LUT4                        : 1130
-#      LUT5                        : 1574
-#      LUT6                        : 2509
+#      LUT3                        : 1507
+#      LUT4                        : 1131
+#      LUT5                        : 1592
+#      LUT6                        : 2502
 #      LUT6_2                      : 79
 #      MULT_AND                    : 139
 #      MUXCY                       : 937
-#      MUXCY_L                     : 387
-#      MUXF7                       : 270
+#      MUXCY_L                     : 391
+#      MUXF7                       : 268
+#      MUXF7_D                     : 32
 #      OR3                         : 2
 #      VCC                         : 18
-#      XORCY                       : 778
-# FlipFlops/Latches                : 10628
+#      XORCY                       : 782
+# FlipFlops/Latches                : 10632
 #      FD                          : 1807
 #      FD_1                        : 11
 #      FDC                         : 4
@@ -1521,7 +1522,7 @@ Cell Usage :
 #      FDRS                        : 162
 #      FDRSE                       : 468
 #      FDRSE_1                     : 136
-#      FDS                         : 497
+#      FDS                         : 501
 #      FDS_1                       : 2
 #      FDSE                        : 148
 #      IDDR_2CLK                   : 64
@@ -1531,11 +1532,11 @@ Cell Usage :
 #      RAM32X1D                    : 103
 #      RAMB16                      : 42
 #      RAMB36_EXP                  : 19
-# Shift Registers                  : 378
+# Shift Registers                  : 410
 #      SRL16                       : 29
 #      SRL16E                      : 32
 #      SRLC16E                     : 268
-#      SRLC32E                     : 49
+#      SRLC32E                     : 81
 # Clock Buffers                    : 9
 #      BUFG                        : 9
 # IO Buffers                       : 84
@@ -1560,18 +1561,18 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:           10628  out of  69120    15%  
- Number of Slice LUTs:                 9088  out of  69120    13%  
-    Number used as Logic:              8440  out of  69120    12%  
-    Number used as Memory:              648  out of  17920     3%  
+ Number of Slice Registers:           10632  out of  69120    15%  
+ Number of Slice LUTs:                 9143  out of  69120    13%  
+    Number used as Logic:              8463  out of  69120    12%  
+    Number used as Memory:              680  out of  17920     3%  
        Number used as RAM:              270
-       Number used as SRL:              378
+       Number used as SRL:              410
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  15282
-   Number with an unused Flip Flop:    4654  out of  15282    30%  
-   Number with an unused LUT:          6194  out of  15282    40%  
-   Number of fully used LUT-FF pairs:  4434  out of  15282    29%  
+ Number of LUT Flip Flop pairs used:  15337
+   Number with an unused Flip Flop:    4705  out of  15337    30%  
+   Number with an unused LUT:          6194  out of  15337    40%  
+   Number of fully used LUT-FF pairs:  4438  out of  15337    28%  
    Number of unique control sets:      1274
 
 IO Utilization: 
@@ -1606,7 +1607,7 @@ Clock Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                                                                                            | Clock buffer(FF name)                                                                                                         | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
-clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0                                                                                                                                                                                    | BUFG                                                                                                                          | 6140  |
+clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0                                                                                                                                                                                    | BUFG                                                                                                                          | 6176  |
 mdm_0/mdm_0/drck_i                                                                                                                                                                                                                      | BUFG                                                                                                                          | 208   |
 mdm_0/bscan_update1                                                                                                                                                                                                                     | BUFG                                                                                                                          | 42    |
 clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT2                                                                                                                                                                                    | BUFG                                                                                                                          | 4134  |
@@ -1665,7 +1666,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 7.433ns (Maximum Frequency: 134.538MHz)
+   Minimum period: 7.681ns (Maximum Frequency: 130.194MHz)
    Minimum input arrival time before clock: 2.750ns
    Maximum output required time after clock: 8.043ns
    Maximum combinational path delay: 0.579ns
@@ -1676,10 +1677,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0'
-  Clock period: 7.433ns (frequency: 134.538MHz)
-  Total number of paths / destination ports: 706602 / 15085
+  Clock period: 7.681ns (frequency: 130.194MHz)
+  Total number of paths / destination ports: 708413 / 15317
 -------------------------------------------------------------------------
-Delay:               7.433ns (Levels of Logic = 10)
+Delay:               7.681ns (Levels of Logic = 11)
   Source:            xps_bram_if_cntlr_0/xps_bram_if_cntlr_0/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_ATTACH/I_FLOP_SET_SLBUSY (FF)
   Destination:       xps_central_dma_0/xps_central_dma_0/MASTER_ATTACHMENT_I/start_write_cs (FF)
   Source Clock:      clock_generator_0/clock_generator_0/SIG_PLL0_CLKOUT0 rising
@@ -1695,17 +1696,18 @@ Delay:               7.433ns (Levels of Logic = 10)
      begin scope: 'mb_plb'
      LUT6:I1->O            1   0.094   0.480  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRBTERM_OR/Y_0_or0000_SW0 (N172)
      LUT6:I5->O            4   0.094   0.496  mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRBTERM_OR/Y_0_or0000 (PLB_SwrBTerm)
-     LUT2:I1->O            7   0.094   1.006  mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MWrBTerm_2_and00001 (PLB_MWrBTerm<2>)
+     LUT2:I1->O            6   0.094   1.000  mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MWrBTerm_2_and00001 (PLB_MWrBTerm<2>)
      end scope: 'mb_plb'
      begin scope: 'xps_central_dma_0'
      LUT5:I0->O            4   0.094   0.592  xps_central_dma_0/MASTER_ATTACHMENT_I/write_state_machine_cs_FSM_FFd1-In11 (xps_central_dma_0/MASTER_ATTACHMENT_I/N23)
-     LUT6:I4->O            2   0.094   0.485  xps_central_dma_0/MASTER_ATTACHMENT_I/start_write_cs_mux0001_SW2 (N146)
-     LUT6:I5->O            1   0.094   0.973  xps_central_dma_0/MASTER_ATTACHMENT_I/write_state_machine_cs_FSM_FFd3-In2967_SW5 (N238)
+     LUT6:I4->O            2   0.094   0.485  xps_central_dma_0/MASTER_ATTACHMENT_I/start_write_cs_mux0001_SW2 (N142)
+     LUT6:I5->O            1   0.094   0.000  xps_central_dma_0/MASTER_ATTACHMENT_I/write_state_machine_cs_FSM_FFd3-In2891_SW4_G (N219)
+     MUXF7:I1->O           1   0.254   0.973  xps_central_dma_0/MASTER_ATTACHMENT_I/write_state_machine_cs_FSM_FFd3-In2891_SW4 (N192)
      LUT6:I1->O            1   0.094   0.000  xps_central_dma_0/MASTER_ATTACHMENT_I/start_write_cs_rstpot (xps_central_dma_0/MASTER_ATTACHMENT_I/start_write_cs_rstpot)
      FDR:D                    -0.018          xps_central_dma_0/MASTER_ATTACHMENT_I/start_write_cs
     ----------------------------------------
-    Total                      7.433ns (1.223ns logic, 6.210ns route)
-                                       (16.5% logic, 83.5% route)
+    Total                      7.681ns (1.477ns logic, 6.204ns route)
+                                       (19.2% logic, 80.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mdm_0/mdm_0/drck_i'
@@ -2599,13 +2601,13 @@ Delay:               0.579ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 273.00 secs
-Total CPU time to Xst completion: 270.62 secs
+Total REAL time to Xst completion: 280.00 secs
+Total CPU time to Xst completion: 277.36 secs
  
 --> 
 
 
-Total memory usage is 742148 kilobytes
+Total memory usage is 742636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 1246 (   0 filtered)

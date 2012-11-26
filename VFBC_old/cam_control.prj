@@ -1,0 +1,3 @@
+vhdl work "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd"
+vhdl work "../I2C/i2cmaster.vhd"
+vhdl work "cam_control.vhd"

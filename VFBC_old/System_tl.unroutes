@@ -1,11 +1,11 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Fri Nov 23 15:31:38 2012
+Mon Nov 26 17:25:22 2012
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 16 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 14 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
    Inst_MB/dlmb_LMB_ABus<30>
@@ -14,8 +14,6 @@ WARNING:ParHelpers:361 - There are 16 loadless signals in this design. This desi
    Inst_MB/xps_bram_if_cntlr_0_port_BRAM_Addr<31>
    cam_exclk_IBUF
    cam_fodd_IBUF
-   cam_scl_IBUF
-   cam_sda_IBUF
    cam_vto_IBUF
    switches_i<1>_IBUF
    switches_i<2>_IBUF

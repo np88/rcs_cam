@@ -1,23 +1,36 @@
-V3 41
+V3 49
+FL /DIST/home/peters/nadja_cam_repo/I2C/i2cmaster.vhd 2012/11/26.12:26:40 O.87xd
+EN work/i2cmaster 1353946461 \
+      FL /DIST/home/peters/nadja_cam_repo/I2C/i2cmaster.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
+AR work/i2cmaster/i2cmaster_arch 1353946462 \
+      FL /DIST/home/peters/nadja_cam_repo/I2C/i2cmaster.vhd EN work/i2cmaster 1353946461
+FL /DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd 2012/11/26.17:14:06 O.87xd
+EN work/cam_control 1353946465 \
+      FL /DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
+AR work/cam_control/Behavioral 1353946466 \
+      FL /DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd \
+      EN work/cam_control 1353946465 CP work/i2cmaster
 FL /DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/edge_detector.vhd 2012/11/19.14:47:40 O.87xd
-EN work/edge_detector 1353680463 \
+EN work/edge_detector 1353946459 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/edge_detector.vhd \
       PB ieee/std_logic_1164 1325952872
-AR work/edge_detector/Behavioral 1353680464 \
+AR work/edge_detector/Behavioral 1353946460 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/edge_detector.vhd \
-      EN work/edge_detector 1353680463
+      EN work/edge_detector 1353946459
 FL /DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/FIFO_CONST.vhd 2012/08/14.16:07:38 O.87xd
-PH work/FIFO_CONST 1353680465 \
+PH work/FIFO_CONST 1353946463 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/FIFO_CONST.vhd \
       PB ieee/std_logic_1164 1325952872
-PB work/FIFO_CONST 1353680466 \
+PB work/FIFO_CONST 1353946464 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/FIFO_13_1_asynch/FIFO_CONST.vhd \
-      PH work/FIFO_CONST 1353680465
-FL /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd 2012/11/23.11:21:20 O.87xd
-EN work/MB 1353680469 FL /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd \
+      PH work/FIFO_CONST 1353946463
+FL /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd 2012/11/26.12:13:07 O.87xd
+EN work/MB 1353946469 FL /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd \
       PB ieee/std_logic_1164 1325952872 LB UNISIM PH unisim/VCOMPONENTS 1325952880
-AR work/MB/STRUCTURE 1353680470 \
-      FL /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd EN work/MB 1353680469 \
+AR work/MB/STRUCTURE 1353946470 \
+      FL /DIST/home/peters/nadja_cam_repo/VFBC_old/MB/hdl/MB.vhd EN work/MB 1353946469 \
       CP microblaze_0_wrapper CP mb_plb_wrapper CP ilmb_wrapper CP dlmb_wrapper \
       CP dlmb_cntlr_wrapper CP ilmb_cntlr_wrapper CP lmb_bram_wrapper \
       CP push_buttons_5bit_wrapper CP ddr2_sdram_wrapper CP xps_timer_0_wrapper \
@@ -27,17 +40,18 @@ AR work/MB/STRUCTURE 1353680470 \
       CP xps_central_dma_0_wrapper CP xps_epc_0_wrapper CP xps_tft_0_wrapper \
       CP IOBUF
 FL /DIST/home/peters/nadja_cam_repo/VFBC_old/SM_vfbc_control.vhd 2012/11/23.15:19:48 O.87xd
-EN work/SM_vfbc_control 1353680467 \
+EN work/SM_vfbc_control 1353946467 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/SM_vfbc_control.vhd \
       PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
-AR work/SM_vfbc_control/Behavioral 1353680468 \
+AR work/SM_vfbc_control/Behavioral 1353946468 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/SM_vfbc_control.vhd \
-      EN work/SM_vfbc_control 1353680467 CP edge_detector
-FL /DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd 2012/11/23.12:24:28 O.87xd
-EN work/System_tl 1353680471 \
+      EN work/SM_vfbc_control 1353946467 CP edge_detector
+FL /DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd 2012/11/26.16:42:48 O.87xd
+EN work/System_tl 1353946471 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd \
-      PB ieee/std_logic_1164 1325952872 PB work/FIFO_CONST 1353680466 \
+      PB ieee/std_logic_1164 1325952872 PB work/FIFO_CONST 1353946464 \
       PB ieee/NUMERIC_STD 1325952877
-AR work/System_tl/Behavioral 1353680472 \
+AR work/System_tl/Behavioral 1353946472 \
       FL /DIST/home/peters/nadja_cam_repo/VFBC_old/System_dma_tl.vhd \
-      EN work/System_tl 1353680471 CP edge_detector CP SM_vfbc_control CP MB
+      EN work/System_tl 1353946471 CP cam_control CP edge_detector \
+      CP SM_vfbc_control CP MB

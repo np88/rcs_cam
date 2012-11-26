@@ -84,6 +84,18 @@ end System_tl;
 
 architecture Behavioral of System_tl is
 
+	COMPONENT cam_control
+	PORT(
+		clk_i : IN std_logic;
+		rst_i : IN std_logic;
+		start_transfer_i : IN std_logic;       
+		cam_i2c_scl_io : INOUT std_logic;
+		cam_i2c_sda_io : INOUT std_logic;
+		idle_state_o : OUT std_logic
+		);
+	END COMPONENT;
+	
+
 	COMPONENT edge_detector
 	PORT(
 		clk_i : IN std_logic;
@@ -177,7 +189,6 @@ architecture Behavioral of System_tl is
 		);
 	END COMPONENT;
 
-	
 	attribute box_type : string;
 	attribute box_type of MB : component is "user_black_box";
 	
@@ -202,7 +213,7 @@ architecture Behavioral of System_tl is
 	signal pos_leds: std_logic_vector(4 downto 0); 
 	signal btn_south_edge, btn_center_edge, fifo_empty, fifo_rd_en_i, fifo_valid, fifo_wr_en_i, fifo_read_clk, xps_epc_0_PRH_CS_n_pin : std_logic;
 	signal fifo_data_out: std_logic_vector(C_fifo_input_width downto 0);
-	signal btn_north_edge, cmd_reset, fifo_almost_full, fifo_ready, cam_pclk_edge, write_enable, button_edge, fifo_ready_tmp: std_logic;
+	signal idle_state_o, btn_north_edge, cmd_reset, fifo_almost_full, fifo_ready, cam_pclk_edge, write_enable, button_edge, fifo_ready_tmp: std_logic;
 	signal fifo_wr_data_count, fifo_rd_data_count: STD_LOGIC_VECTOR(C_fifo_width DOWNTO 0);
 	signal gpio_camera_I2 : std_logic_vector(9 downto 0); 
 	signal gpio_camera_I1: std_logic_vector(2 downto 0); 
@@ -214,6 +225,15 @@ architecture Behavioral of System_tl is
 	signal rd_cnt_reg_reverse : std_logic_vector(0 to 31) := (others => '0');
 
 begin
+
+	Inst_cam_control: cam_control PORT MAP(
+		clk_i => fpga_0_clk_1_sys_clk_pin,
+		rst_i => fpga_0_rst_1_sys_rst_pin,
+		start_transfer_i => btn_north_edge,
+		cam_i2c_scl_io => cam_scl,
+		cam_i2c_sda_io => cam_sda,
+		idle_state_o => LEDs_Positions_GPIO_IO_O_pin(2)
+	);
 
 	-- edge detector to get positive edges from camera pixel clock signal
 	Inst_edge_detector: edge_detector PORT MAP(
@@ -403,7 +423,7 @@ begin
 	--wr_en_i <= Push_Buttons_5Bit_GPIO_IO_I_pin(4) and gpio_camera_IO(7);
 	LEDs_Positions_GPIO_IO_O_pin(0) <= DDR2_SDRAM_VFBC2_Wd_Full_pin; --center
 	fifo_rd_en_i <= NOT xps_epc_0_PRH_CS_n_pin;
-	LEDs_Positions_GPIO_IO_O_pin(2) <= fifo_ready; -- south
+	--LEDs_Positions_GPIO_IO_O_pin(2) <= fifo_ready; -- south
 	LEDs_Positions_GPIO_IO_O_pin(3) <= DDR2_SDRAM_VFBC2_Cmd_Idle_pin; -- east
 	LEDs_Positions_GPIO_IO_O_pin(4) <= fpga_0_rst_1_sys_rst_pin; --north
 	LEDs_8Bit_GPIO_IO_O_pin <= fifo_data_out(7 downto 0);

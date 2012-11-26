@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -rangecheck -lib "secureip" -o "/DIST/home/peters/nadja_cam_repo/VFBC_old/edge_detector_isim_beh.exe" -prj "/DIST/home/peters/nadja_cam_repo/VFBC_old/edge_detector_beh.prj" "work.edge_detector" 
+-intstyle "ise" -incremental -rangecheck -lib "secureip" -o "/DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC_isim_beh.exe" -prj "/DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC_beh.prj" "work.test_CC" 

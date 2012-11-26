@@ -2,7 +2,7 @@
 #  Xilinx EDK 13.4 EDK_O.87xd
 #  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 #
-#  File     xps_central_dma_0_wave.tcl (Mon Nov 19 13:50:00 2012)
+#  File     xps_central_dma_0_wave.tcl (Mon Nov 26 15:21:16 2012)
 #
 #  Module   xps_central_dma_0_wrapper
 #  Instance xps_central_dma_0
