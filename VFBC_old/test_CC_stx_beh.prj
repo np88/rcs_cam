@@ -1,0 +1,3 @@
+vhdl isim_temp "../I2C/i2cmaster.vhd"
+vhdl isim_temp "cam_control.vhd"
+vhdl isim_temp "test_CC.vhd"

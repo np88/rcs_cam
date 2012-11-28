@@ -88,7 +88,8 @@ architecture Behavioral of System_tl is
 	PORT(
 		clk_i : IN std_logic;
 		rst_i : IN std_logic;
-		start_transfer_i : IN std_logic;       
+		start_transfer_i : IN std_logic;    
+		data_read_o : out STD_LOGIC_VECTOR;		
 		cam_i2c_scl_io : INOUT std_logic;
 		cam_i2c_sda_io : INOUT std_logic;
 		idle_state_o : OUT std_logic
@@ -223,7 +224,7 @@ architecture Behavioral of System_tl is
 	signal rd_cnt, rd_cnt_reg : std_logic_vector(31 downto 0); 
 	signal wd_fifo_full_reg, counted, stop_counting, cam_href_edge, write_enable_edge_r, write_enable_edge_f, cam_vsyn_edge: std_logic := '0';
 	signal rd_cnt_reg_reverse : std_logic_vector(0 to 31) := (others => '0');
-
+	signal data_read_o : std_logic_vector(7 downto 0);
 begin
 
 	Inst_cam_control: cam_control PORT MAP(
@@ -232,6 +233,7 @@ begin
 		start_transfer_i => btn_north_edge,
 		cam_i2c_scl_io => cam_scl,
 		cam_i2c_sda_io => cam_sda,
+		data_read_o => data_read_o,
 		idle_state_o => LEDs_Positions_GPIO_IO_O_pin(2)
 	);
 
@@ -409,9 +411,8 @@ begin
 --		end loop;
 --	end process;
 	
-	rd_cnt_reg_reverse(31) <= write_enable_edge_f;
-	--rd_cnt_reg_reverse(0 to 31) <= "00000000000000001111111111111111";
-	fifo_ready_tmp <= fifo_ready;
+	rd_cnt_reg_reverse(0 to 31) <= data_read_o & (23 downto 0 => '1');
+	fifo_ready_tmp <= '1';
 	
 	--DDR2_SDRAM_VFBC2_Wd_Data_pin <= "11111111" & switches_i;
 	DDR2_SDRAM_VFBC2_Wd_Write_pin <= cam_href and write_enable;

@@ -2,7 +2,7 @@
 #  Xilinx EDK 13.4 EDK_O.87xd
 #  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 #
-#  File     clock_generator_0_wave.tcl (Mon Nov 26 15:21:16 2012)
+#  File     clock_generator_0_wave.tcl (Tue Nov 27 16:45:12 2012)
 #
 #  Module   clock_generator_0_wrapper
 #  Instance clock_generator_0

@@ -34,6 +34,7 @@ entity cam_control is port (
 		rst_i : in  STD_LOGIC;
 		start_transfer_i: in STD_LOGIC;		
 		idle_state_o : out STD_LOGIC;
+		data_read_o : out STD_LOGIC_VECTOR(7 downto 0);
 		--low level bus connections
 		cam_i2c_scl_io : inout  STD_LOGIC; 		--i2c scl 
 		cam_i2c_sda_io : inout  STD_LOGIC 		--i2c sda 
@@ -75,7 +76,13 @@ component i2cmaster is
 		CL_start_third_byte,
 		CL_wait_first_byte,
 		CL_wait_second_byte,
-		CL_wait_third_byte
+		CL_wait_third_byte,
+		CL_start_first_read,
+		CL_wait_first_read,
+		CL_start_second_read,
+		CL_wait_second_read,
+		CL_start_third_read,
+		CL_wait_third_read		
 	);
 	
 	constant CAM_IIC_READ_ADDRESS : STD_LOGIC_VECTOR(7 downto 0) := x"43";
@@ -85,8 +92,8 @@ component i2cmaster is
 	
 	signal current_state, next_state : cam_control_type;
 	signal i2c_scl_out, i2c_scl_in, i2c_sda_out, i2c_sda_in : std_logic;
-	signal ready, start, dir, start_condition, stop_condition, data_write_ack : std_logic;
-	signal data_write : std_logic_vector(7 downto 0);
+	signal ready, start, dir, start_condition, stop_condition, data_write_ack, data_read_ack : std_logic;
+	signal data_write, data_read : std_logic_vector(7 downto 0) := (others => '0');
 	
 begin
 
@@ -105,10 +112,11 @@ begin
 			stop_condition_in => stop_condition,
 			data_write_in => data_write,
 			data_write_ack_out => data_write_ack,
-			data_read_out => open,
-			data_read_ack_in => '0'
+			data_read_out => data_read,
+			data_read_ack_in => data_read_ack
 	);
 
+	data_read_o <= data_read;
 
 	Cam_control_Store: process (clk_i, rst_i)
 	begin
@@ -154,7 +162,7 @@ begin
 				-- wait for write ack from bus	
 				when CL_wait_second_byte =>
 					if ready = '1' then
-						next_state <= CL_wait_third_byte;
+						next_state <= CL_start_third_byte;
 					else
 						next_state <= CL_wait_second_byte;
 					end if;
@@ -166,10 +174,45 @@ begin
 				-- wait for write ack from bus	
 				when CL_wait_third_byte =>
 					if ready = '1' then
-						next_state <= CL_wait_for_transfer;
+						next_state <= CL_start_first_read;
 					else
 						next_state <= CL_wait_third_byte;
-					end if;						
+					end if;	
+					
+				-- start reading the byte (test)
+				-- write read address
+				when CL_start_first_read =>
+					next_state <= CL_wait_first_read;
+					
+				when CL_wait_first_read =>
+					if ready = '1' then
+						next_state <= CL_start_second_read;
+					else
+						next_state <= CL_wait_first_read;
+					end if;
+					
+				-- write register to be read
+				when CL_start_second_read =>
+					next_state <= CL_wait_second_read;
+					
+				when CL_wait_second_read =>
+					if ready = '1' then
+						next_state <= CL_start_third_read;
+					else
+						next_state <= CL_wait_second_read;
+					end if;
+					
+				-- read register 
+				when CL_start_third_read =>
+					next_state <= CL_wait_third_read;
+					
+				when CL_wait_third_read =>	
+					if ready = '1' then
+						next_state <= CL_wait_for_transfer;
+					else
+						next_state <= CL_wait_third_read;
+					end if;
+
 			end case;
 		end if;
 	
@@ -185,8 +228,10 @@ begin
 		start_condition <= '0';
 		stop_condition <= '0';
 		idle_state_o <= '0';
+		data_read_ack <= '0';
 		
 		case current_state is
+	
 			when CL_wait_for_transfer =>
 				idle_state_o <= '1';
 
@@ -219,8 +264,38 @@ begin
 			when CL_wait_third_byte =>
 					dir <= '1';
 					stop_condition <= '1';
-					data_write <= CAM_IIC_SET_RGB;	
-			
+					data_write <= CAM_IIC_SET_RGB;
+
+				-- start reading the byte (test)
+				when CL_start_first_read =>
+					dir <= '1';
+					start <= '1';
+					start_condition <= '1';
+					data_write <= CAM_IIC_READ_ADDRESS;
+					
+				when CL_wait_first_read =>
+					dir <= '1';
+					start_condition <= '1';
+					data_write <= CAM_IIC_READ_ADDRESS;
+					
+				when CL_start_second_read =>
+					start <= '1';
+					dir <= '1';
+					data_write <= CAM_IIC_REG_12;			
+					
+				when CL_wait_second_read =>
+					dir <= '1';
+					data_write <= CAM_IIC_REG_12;			
+					
+				when CL_start_third_read =>
+					start <= '1';
+					stop_condition <= '1';
+					data_read_ack <= '1';
+					
+				when CL_wait_third_read =>	
+					stop_condition <= '1';
+					data_read_ack <= '1';
+					
 		end case;
 	
 	end process output;

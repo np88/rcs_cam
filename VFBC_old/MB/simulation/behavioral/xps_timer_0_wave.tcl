@@ -2,7 +2,7 @@
 #  Xilinx EDK 13.4 EDK_O.87xd
 #  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 #
-#  File     xps_timer_0_wave.tcl (Mon Nov 26 15:21:15 2012)
+#  File     xps_timer_0_wave.tcl (Tue Nov 27 16:45:12 2012)
 #
 #  Module   xps_timer_0_wrapper
 #  Instance xps_timer_0

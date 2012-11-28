@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Nov 26 17:25:21 2012
+Tue Nov 27 16:58:41 2012
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -384,7 +384,7 @@ Pinout by Pin Number:
 |AK31      |fpga_0_DDR2_SDRAM_DDR2_DQ_pin<1>      |IOB      |IO_L16N_17              |BIDIR               |SSTL18_II     |17            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AK32      |cam_UV<2>                             |IOB      |IO_L15N_13              |INPUT               |LVCMOS25*     |13            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |AK33      |cam_UV<0>                             |IOB      |IO_L13N_13              |INPUT               |LVCMOS25*     |13            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AK34      |xps_tft_0_TFT_DPS_pin                 |IOB      |IO_L13P_13              |OUTPUT              |LVCMOS25*     |13            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|AK34      |                                      |IOBM     |IO_L13P_13              |UNUSED              |              |13            |          |         |           |         |         |          |           |                |
 |AL1       |                                      |IPAD     |MGTRXP0_122             |UNUSED              |              |              |          |         |           |         |         |          |           |                |
 |AL2       |                                      |OPAD     |MGTTXN0_122             |UNUSED              |              |              |          |         |           |         |         |          |           |                |
 |AL3       |                                      |         |MGTAVTTRX_122           |                    |              |              |          |         |           |         |         |          |           |                |
@@ -484,7 +484,7 @@ Pinout by Pin Number:
 |AN29      |                                      |IOBS     |IO_L5N_25               |UNUSED              |              |25            |          |         |           |         |         |          |           |                |
 |AN30      |                                      |IOBM     |IO_L2P_25               |UNUSED              |              |25            |          |         |           |         |         |          |           |                |
 |AN31      |                                      |         |GND                     |                    |              |              |          |         |           |         |         |          |           |                |
-|AN32      |                                      |IOBM     |IO_L19P_13              |UNUSED              |              |13            |          |         |           |         |         |          |           |                |
+|AN32      |xps_tft_0_TFT_DPS_pin                 |IOB      |IO_L19P_13              |OUTPUT              |LVCMOS25*     |13            |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |AN33      |cam_vto                               |IOB      |IO_L18N_13              |INPUT               |LVCMOS25*     |13            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |AN34      |test1                                 |IOB      |IO_L18P_13              |OUTPUT              |LVCMOS25*     |13            |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
 |AP2       |                                      |IPAD     |MGTRXN1_122             |UNUSED              |              |              |          |         |           |         |         |          |           |                |
@@ -953,7 +953,7 @@ Pinout by Pin Number:
 |P31       |fpga_0_DDR2_SDRAM_DDR2_Addr_pin<6>    |IOB      |IO_L10P_CC_15           |OUTPUT              |SSTL18_II     |15            |          |         |           |         |         |LOCATED   |YES        |NONE            |
 |P32       |                                      |IOBM     |IO_L15P_SM13P_11        |UNUSED              |              |11            |          |         |           |         |         |          |           |                |
 |P33       |                                      |         |VCCO_15                 |                    |              |15            |          |         |           |         |1.80     |          |           |                |
-|P34       |cam_sda                               |IOB      |IO_L14P_11              |TRISTATE            |LVCMOS25*     |11            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P34       |cam_sda                               |IOB      |IO_L14P_11              |BIDIR               |LVCMOS25*     |11            |12        |SLOW     |           |NONE     |         |LOCATED   |NO         |NONE            |
 |R1        |                                      |IPAD     |MGTRXN1_112             |UNUSED              |              |              |          |         |           |         |         |          |           |                |
 |R2        |                                      |         |GND                     |                    |              |              |          |         |           |         |         |          |           |                |
 |R3        |                                      |         |MGTAVCC_112             |                    |              |              |          |         |           |         |         |          |           |                |

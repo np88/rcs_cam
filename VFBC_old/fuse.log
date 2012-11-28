@@ -679,12 +679,12 @@ Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/MB_tb.vhd" into lib
 Analyzing Verilog file "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/ISE/verilog/src/glbl.v" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/../I2C/i2cmaster.vhd" into library work
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" into library work
-WARNING:HDLCompiler:946 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" Line 96: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/DIST/home/peters/nadja_cam_repo/VFBC_old/cam_control.vhd" Line 103: Actual for formal port reset is neither a static name nor a globally static expression
 Parsing VHDL file "/DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 198388 KB
-Fuse CPU Usage: 14130 ms
+Fuse Memory Usage: 198416 KB
+Fuse CPU Usage: 16150 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -695,6 +695,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 8 VHDL Units
 Built simulation executable /DIST/home/peters/nadja_cam_repo/VFBC_old/test_CC_isim_beh.exe
-Fuse Memory Usage: 244884 KB
-Fuse CPU Usage: 14250 ms
-GCC CPU Usage: 750 ms
+Fuse Memory Usage: 310452 KB
+Fuse CPU Usage: 16330 ms
+GCC CPU Usage: 940 ms

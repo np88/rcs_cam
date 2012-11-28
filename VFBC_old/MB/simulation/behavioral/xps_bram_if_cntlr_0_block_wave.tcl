@@ -2,7 +2,7 @@
 #  Xilinx EDK 13.4 EDK_O.87xd
 #  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 #
-#  File     xps_bram_if_cntlr_0_block_wave.tcl (Mon Nov 26 15:21:16 2012)
+#  File     xps_bram_if_cntlr_0_block_wave.tcl (Tue Nov 27 16:45:12 2012)
 #
 #  Module   xps_bram_if_cntlr_0_block_wrapper
 #  Instance xps_bram_if_cntlr_0_block

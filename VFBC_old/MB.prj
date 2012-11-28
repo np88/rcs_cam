@@ -2,7 +2,7 @@
 --  Xilinx EDK 13.4 EDK_O.87xd
 --  Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --
---  File     MB.prj (Mon Nov 26 15:21:15 2012)
+--  File     MB.prj (Tue Nov 27 16:45:12 2012)
 --
 vhdl microblaze_v8_20_b "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_20_b/hdl/vhdl/microblaze_types_pkg.vhd"
 vhdl microblaze_v8_20_b "/DIST/it/sw/amd64/xilinx/13.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/microblaze_v8_20_b/hdl/vhdl/microblaze_types_pkg_body.vhd"

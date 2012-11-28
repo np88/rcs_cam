@@ -44,6 +44,8 @@ ARCHITECTURE behavior OF test_CC IS
          clk_i : IN  std_logic;
          rst_i : IN  std_logic;
          start_transfer_i : IN  std_logic;
+			idle_state_o : out STD_LOGIC;
+			data_read_o : out STD_LOGIC_VECTOR;			
          cam_i2c_scl_io : INOUT  std_logic;
          cam_i2c_sda_io : INOUT  std_logic
         );
@@ -54,7 +56,8 @@ ARCHITECTURE behavior OF test_CC IS
    signal clk_i : std_logic := '0';
    signal rst_i : std_logic := '0';
    signal start_transfer_i : std_logic := '0';
-
+	signal idle_state_o : STD_LOGIC;
+	signal data_read_o : STD_LOGIC_VECTOR(7 downto 0);
 	--BiDirs
    signal cam_i2c_scl_io : std_logic := 'H';
    signal cam_i2c_sda_io : std_logic := 'H';
@@ -68,6 +71,8 @@ BEGIN
    uut: cam_control PORT MAP (
           clk_i => clk_i,
           rst_i => rst_i,
+			 data_read_o => data_read_o,
+			 idle_state_o => idle_state_o,
           start_transfer_i => start_transfer_i,
           cam_i2c_scl_io => cam_i2c_scl_io,
           cam_i2c_sda_io => cam_i2c_sda_io

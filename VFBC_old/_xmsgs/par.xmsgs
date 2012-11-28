@@ -57,7 +57,7 @@ separately that all timing constraints specified in the UCF file have been met.
 
 </msg>
 
-<msg type="warning" file="Route" num="522" delta="new" >Unusually high hold time violation detected among <arg fmt="%d" index="1">8</arg> connections.The router will continue and try to fix it 
+<msg type="warning" file="Route" num="466" delta="new" >Unusually high hold time violation detected among <arg fmt="%d" index="1">25</arg> connections. The top <arg fmt="%d" index="2">20</arg> such instances are printed below. The router will continue and try to fix it
 </msg>
 
 <msg type="warning" file="Route" num="452" delta="old" >

@@ -122,6 +122,7 @@ int main()
     u32 * src = (u32 *)XPAR_DDR2_SDRAM_MPMC_BASEADDR;
     u32 i = 0, j = 0;
     u32 dma_status = 0;
+    u32 * add = 0;
     u32 val;
     u8 val1;
 
@@ -136,16 +137,43 @@ int main()
     XTft_DrawSolidBox(&TftInstance, 480, 0,559,479,0x777777); // not-so-grey
     XTft_DrawSolidBox(&TftInstance, 560, 0,639,479,0x333333); // lite grey
 //        xil_printf("done.\n");
-    while(1){
-    	for(j = 0; j < 240; j = j + 1){
-			for (i = 0; i < 160; i = i + 1){
-				// j is row, i is col
-				val1 = *(src + j*160*2 + i*2);
-				//dest[4*(j * 1024)+i] = rgb[j * 640 + i];
-				val =  val1<<16|val1<<8|val1;
-				XTft_SetPixel(&TftInstance,i,j,val);
-			}
-    	}
+//    while(1){
+//    	for(j = 0; j < 240; j = j + 1){
+//			for (i = 0; i < 160; i = i + 1){
+//				// j is row, i is col
+//				val1 = *(src + j*160*2 + i*2);
+//				add = src + j*160*2 + i*2;
+//				//dest[4*(j * 1024)+i] = rgb[j * 640 + i];
+//				//val =  val1<<16|val1<<8|val1;
+//				val = (*(add+3)<<16) | *(add+2)<<8 | *add;
+//				XTft_SetPixel(&TftInstance,i,j,val);
+//			}
+//    	}
+
+        while(1){
+        	for(j = 0; j < 240; j = j + 2){
+    			for (i = 0; i < 320; i = i + 2){
+    				// j is row, i is col
+    				//val1 = *(src + j*80*4 + i*4);
+    				add = src + j*160*2 + i*2;
+    				//dest[4*(j * 1024)+i] = rgb[j * 640 + i];
+    				//val =  val1<<16|val1<<8|val1;
+
+    				// blue
+    				val = 0 | *add;
+    				XTft_SetPixel(&TftInstance,i,j,val);
+    				// green
+    				val = 0 | (*(add+1)<<8);
+    				XTft_SetPixel(&TftInstance,i+1,j,val);
+    				// green
+    				val = 0 | (*(add+2)<<8);
+    				XTft_SetPixel(&TftInstance,i,j+1,val);
+    				// red
+    				val = 0 | (*(add+3)<<16);
+    				XTft_SetPixel(&TftInstance,i+1,j+1,val);
+    			}
+        	}
+
 //    	XDmaCentral_SetControl(&dma, XDMC_DMACR_DEST_INCR_MASK | XDMC_DMACR_SOURCE_INCR_MASK);
 //    	dma_status = XDmaCentral_GetStatus(&dma);
     	//while ((dma_status = XDmaCentral_GetStatus(&dma)) != XDMC_IXR_DMA_DONE_MASK){}
