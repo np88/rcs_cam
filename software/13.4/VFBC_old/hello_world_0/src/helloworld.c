@@ -29,6 +29,11 @@
 #include "xdmacentral.h"
 #include <inttypes.h>
 #include "simpleIPC/sipc_image.h"
+
+#define MASK_RED 0x00FF0000
+#define MASK_GREEN 0x0000FF00
+#define MASK_BLUE 0x000000FF
+
 #define DISPLAY_COLUMNS  640
 #define DISPLAY_ROWS     480
 
@@ -123,7 +128,7 @@ int main()
     u32 i = 0, j = 0;
     u32 dma_status = 0;
     u32 * add = 0;
-    u32 val;
+    u32 val = 0, g = 0, b = 0, r = 0;
     u8 val1;
 
     XTft_SetColor(&TftInstance, 0, 0);
@@ -151,26 +156,56 @@ int main()
 //    	}
 
         while(1){
+        	// j is row, i is col
         	for(j = 0; j < 240; j = j + 2){
-    			for (i = 0; i < 320; i = i + 2){
-    				// j is row, i is col
+    			for (i = 0; i < 160; i = i + 2){
     				//val1 = *(src + j*80*4 + i*4);
     				add = src + j*160*2 + i*2;
     				//dest[4*(j * 1024)+i] = rgb[j * 640 + i];
     				//val =  val1<<16|val1<<8|val1;
 
+    				// XTft_SetPixel (tft instance, col, row, color value) B-G-G-R (blau richtig)
     				// blue
-    				val = 0 | *add;
-    				XTft_SetPixel(&TftInstance,i,j,val);
+//    				val = MASK_BLUE & ((*add)>>24);
+//    				XTft_SetPixel(&TftInstance,i,j,val);
+//    				// green
+//    				val = MASK_GREEN & ((*add)>>8);
+//    				XTft_SetPixel(&TftInstance,i,j+1,val);
+//    				// green
+//    				val = MASK_GREEN & (*add);
+//    				XTft_SetPixel(&TftInstance,i+1,j,val);
+//    				// red
+//    				val = MASK_RED & ((*add)<<16);
+//    				XTft_SetPixel(&TftInstance,i+1,j+1,val);
+
+
+    				// XTft_SetPixel (tft instance, col, row, color value) G-B-R-G (rot richtig)
     				// green
-    				val = 0 | (*(add+1)<<8);
-    				XTft_SetPixel(&TftInstance,i+1,j,val);
-    				// green
-    				val = 0 | (*(add+2)<<8);
-    				XTft_SetPixel(&TftInstance,i,j+1,val);
+//    				val = MASK_GREEN & ((*add)>>16);
+//    				XTft_SetPixel(&TftInstance,i,j,val);
+//    				// blue
+//    				val = MASK_BLUE & ((*add)>>16);
+//    				XTft_SetPixel(&TftInstance,i,j+1,val);
+//    				// red
+//    				val = MASK_RED & ((*add)<<8);
+//    				XTft_SetPixel(&TftInstance,i+1,j,val);
+//    				// green
+//    				val = MASK_GREEN & ((*add)<<8);
+//    				XTft_SetPixel(&TftInstance,i+1,j+1,val);
+
+    				// XTft_SetPixel (tft instance, col, row, color value) B-G-R-G
+    				// blue
+    				b = MASK_BLUE & ((*add)>>24);
+    				XTft_SetPixel(&TftInstance,i,j,b);
     				// red
-    				val = 0 | (*(add+3)<<16);
-    				XTft_SetPixel(&TftInstance,i+1,j+1,val);
+    				r = MASK_RED & ((*add)<<8);
+    				XTft_SetPixel(&TftInstance,i+1,j,r);
+    				// green
+    				g = MASK_GREEN & ((*add)>>8);// | r | b;
+    				XTft_SetPixel(&TftInstance,i,j+1,g);
+    				// green
+    				g = MASK_GREEN  & ((*add)<<8);// | r | b;
+    				XTft_SetPixel(&TftInstance,i+1,j+1,g);
     			}
         	}
 
